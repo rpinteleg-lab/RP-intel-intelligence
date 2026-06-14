@@ -1,0 +1,2581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>redcon — Intelligence Feed</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Arabic:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* ── REDCON Brand Colors ──
+         Pantone 2034 C (coated) / Pantone 2347 U (uncoated)
+         CMYK: ef412a  |  RGB: #F9423A
+      */
+      --brand:       #F9423A;
+      --brand-dark:  #e03530;
+      --brand-deep:  #c42d27;
+      --grad-start:  #F9423A;
+      --grad-end:    #e03530;
+      --red:         #F9423A;
+      --red-light:   rgba(249,66,58,0.12);
+      --bg:          #F7F5F4;
+      --surface:     #FFFFFF;
+      --surface-2:   #F2F0EF;
+      --border:      rgba(0,0,0,0.07);
+      --border-red:  rgba(249,66,58,0.25);
+      --text-1:      #1A1A1A;
+      --text-2:      #555;
+      --text-3:      #999;
+      --radius:      10px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin:0; padding:0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text-1);
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 14.5px;
+      line-height: 1.65;
+    }
+
+    /* ── TOPBAR ── */
+    .topbar {
+      background: var(--brand);
+      padding: 0 32px; height: 58px;
+      display: flex; align-items: center; justify-content: space-between;
+      position: sticky; top: 0; z-index: 100;
+      box-shadow: 0 2px 16px rgba(249,66,58,0.35);
+    }
+    .logo { display: flex; align-items: baseline; gap: 6px; }
+    .logo-word { font-weight: 300; font-size: 22px; letter-spacing: -0.02em; color: rgba(255,255,255,0.95); }
+    .logo-word strong { font-weight: 600; }
+    .logo-sub { font-size: 10px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.6); }
+    .topbar-right { font-size: 11px; color: rgba(255,255,255,0.65); letter-spacing: 0.04em; }
+    .global-lang-toggle {
+      display: flex; background: rgba(255,255,255,0.15);
+      border-radius: 20px; padding: 3px; gap: 2px;
+    }
+    .global-lang-btn {
+      padding: 5px 18px; border-radius: 16px; border: none;
+      background: transparent;
+      font-family: 'Inter', 'Noto Sans Arabic', sans-serif;
+      font-size: 12px; font-weight: 500;
+      color: rgba(255,255,255,0.7); cursor: pointer; transition: all 0.2s;
+    }
+    .global-lang-btn.active { background: rgba(255,255,255,0.95); color: var(--brand); font-weight: 600; }
+    .global-lang-btn:hover:not(.active) { color: #fff; background: rgba(255,255,255,0.1); }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--brand);
+      padding: 44px 32px 44px;
+      position: relative; overflow: hidden;
+      display: flex; align-items: center; justify-content: space-between; gap: 32px;
+    }
+    .hero::after {
+      content: 'redcon'; position: absolute; right: -20px; top: 50%;
+      transform: translateY(-50%);
+      font-size: clamp(100px, 16vw, 160px); font-weight: 700;
+      letter-spacing: -0.05em; color: rgba(255,255,255,0.055);
+      pointer-events: none; line-height: 1; white-space: nowrap;
+      z-index: 0;
+    }
+    .hero-inner { max-width: 480px; position: relative; z-index: 1; flex-shrink: 0; }
+    .hero-eyebrow { font-size: 10px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-bottom: 10px; }
+    .hero-title { font-size: clamp(24px, 3.8vw, 40px); font-weight: 300; color: #fff; line-height: 1.15; letter-spacing: -0.02em; }
+    .hero-title strong { font-weight: 600; }
+    .hero-sub { margin-top: 10px; font-size: 13px; color: rgba(255,255,255,0.65); font-weight: 300; max-width: 400px; }
+    .hero-meta { margin-top: 18px; font-size: 11px; color: rgba(255,255,255,0.45); letter-spacing: 0.04em; }
+
+    /* ── WEATHER WIDGET ── */
+    .wx-widget {
+      position: relative; z-index: 1;
+      background: rgba(0,0,0,0.12);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.22);
+      border-radius: 20px;
+      padding: 18px 16px 14px;
+      min-width: 220px; max-width: 260px;
+      flex-shrink: 0;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    }
+    .wx-current { margin-bottom: 14px; }
+    .wx-location { font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 6px; }
+    .wx-flag { letter-spacing: 0; }
+    .wx-big-row { display: flex; align-items: center; gap: 6px; margin-bottom: 2px; }
+    .wx-big-icon { font-size: 36px; line-height: 1; }
+    .wx-big-temp { font-size: 48px; font-weight: 200; color: #fff; letter-spacing: -0.04em; line-height: 1; font-variant-numeric: tabular-nums; }
+    .wx-condition { font-size: 13px; font-weight: 400; color: rgba(255,255,255,0.8); margin-bottom: 2px; }
+    .wx-range { font-size: 11px; color: rgba(255,255,255,0.45); letter-spacing: 0.03em; }
+    .wx-hourly { display: flex; align-items: center; gap: 4px; border-top: 1px solid rgba(255,255,255,0.15); padding-top: 12px; }
+    .wx-slots { display: flex; gap: 2px; flex: 1; overflow: hidden; }
+    .wx-slot { display: flex; flex-direction: column; align-items: center; gap: 3px; flex: 1; padding: 6px 4px; border-radius: 10px; background: rgba(255,255,255,0.07); transition: background 0.2s; min-width: 0; }
+    .wx-slot.wx-now { background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); }
+    .wx-slot-time { font-size: 8.5px; font-weight: 600; letter-spacing: 0.06em; color: rgba(255,255,255,0.45); white-space: nowrap; }
+    .wx-slot.wx-now .wx-slot-time { color: rgba(255,255,255,0.9); }
+    .wx-slot-icon { font-size: 14px; line-height: 1; }
+    .wx-slot-temp { font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.85); font-variant-numeric: tabular-nums; }
+    .wx-slot.wx-now .wx-slot-temp { color: #fff; }
+    .wx-nav { background: rgba(255,255,255,0.12); border: none; color: rgba(255,255,255,0.7); width: 22px; height: 22px; border-radius: 50%; font-size: 16px; line-height: 1; cursor: pointer; flex-shrink: 0; display: flex; align-items: center; justify-content: center; transition: background 0.2s, color 0.2s; }
+    .wx-nav:hover { background: rgba(255,255,255,0.25); color: #fff; }
+    .wx-nav:disabled { opacity: 0.25; cursor: default; }
+    .wx-dots { display: flex; justify-content: center; gap: 4px; margin-top: 8px; }
+    .wx-dot { width: 5px; height: 5px; border-radius: 50%; background: rgba(255,255,255,0.25); transition: background 0.2s; }
+    .wx-dot.active { background: rgba(255,255,255,0.85); }
+
+    @media (max-width: 700px) {
+      .hero { flex-direction: column; align-items: flex-start; }
+      .wx-widget { min-width: 100%; max-width: 100%; }
+    }
+
+    /* ── INDICES BAR ── */
+    .indices-bar { background: var(--surface); border-bottom: 1px solid var(--border); padding: 11px 32px; display: flex; align-items: center; gap: 24px; position: relative; }
+    .indices-eyebrow { font-size: 9px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-3); white-space: nowrap; padding-right: 20px; border-right: 1px solid var(--border); }
+    .indices-items { display: flex; gap: 32px; flex-wrap: wrap; align-items: center; }
+    .idx-item { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .idx-label { display: flex; align-items: center; gap: 5px; font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-3); }
+    .idx-value { font-size: 15px; font-weight: 600; color: var(--brand); letter-spacing: -0.01em; font-variant-numeric: tabular-nums; }
+    .idx-time { font-size: 10px; color: var(--text-3); }
+    .idx-info-btn { display: inline-flex; align-items: center; justify-content: center; width: 14px; height: 14px; border-radius: 50%; border: 1.5px solid var(--text-3); background: transparent; cursor: pointer; font-size: 8.5px; font-weight: 700; font-style: italic; font-family: Georgia, serif; color: var(--text-3); line-height: 1; transition: border-color 0.15s, color 0.15s, background 0.15s; vertical-align: middle; flex-shrink: 0; }
+    .idx-info-btn:hover { border-color: var(--brand); color: var(--brand); background: var(--red-light); }
+    .tip-bubble { display: none; position: fixed; z-index: 999; background: var(--text-1); color: #fff; border-radius: 10px; padding: 12px 28px 12px 14px; max-width: 280px; box-shadow: 0 8px 24px rgba(0,0,0,0.28); font-size: 12.5px; line-height: 1.6; font-weight: 300; }
+    .tip-bubble.show { display: block; }
+    .tip-bubble::before { content: ''; position: absolute; top: -6px; left: 14px; width: 12px; height: 6px; background: var(--text-1); clip-path: polygon(50% 0%, 0% 100%, 100% 100%); }
+    .tip-close { position: absolute; top: 8px; right: 10px; background: none; border: none; color: rgba(255,255,255,0.4); font-size: 11px; cursor: pointer; line-height: 1; }
+    .tip-close:hover { color: #fff; }
+
+    /* ── TABS ── */
+    .tabs-bar {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 0 32px;
+      display: flex;
+      gap: 0;
+      position: sticky;
+      top: 58px;
+      z-index: 90;
+    }
+    .tab-btn {
+      padding: 14px 24px;
+      border: none;
+      background: none;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-3);
+      cursor: pointer;
+      border-bottom: 2.5px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: -1px;
+    }
+    .tab-btn:hover { color: var(--text-1); }
+    .tab-btn.active { color: var(--brand); border-bottom-color: var(--brand); font-weight: 600; }
+    .tab-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--surface-2);
+      color: var(--text-3);
+      font-size: 10px;
+      font-weight: 600;
+      border-radius: 20px;
+      padding: 1px 7px;
+      min-width: 20px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .tab-btn.active .tab-badge {
+      background: var(--red-light);
+      color: var(--brand);
+    }
+
+    /* ── MAIN ── */
+    .page-wrap { max-width: 900px; margin: 0 auto; padding: 12px 24px 80px; }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+    .search-wrap { padding: 20px 0 4px; display: flex; gap: 12px; align-items: center; }
+    .search-wrap input { flex: 1; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 10px 16px; font-family: 'Inter', sans-serif; font-size: 13.5px; color: var(--text-1); outline: none; transition: border-color 0.2s, box-shadow 0.2s; }
+    .search-wrap input:focus { border-color: var(--border-red); box-shadow: 0 0 0 3px rgba(249,66,58,0.08); }
+    .search-wrap input::placeholder { color: var(--text-3); }
+    #filter-count { font-size: 12px; color: var(--text-3); white-space: nowrap; }
+
+    /* ── DAY GROUP ── */
+    .day-group { margin-top: 36px; }
+    .day-header { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+    .day-label { font-size: 12px; font-weight: 600; color: var(--brand); letter-spacing: 0.06em; white-space: nowrap; }
+    .day-rule { flex: 1; height: 1px; background: var(--border); }
+    .day-count { font-size: 11px; color: var(--text-3); white-space: nowrap; letter-spacing: 0.04em; }
+
+    /* ── CARD ── */
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); margin-bottom: 8px; overflow: hidden; cursor: pointer; transition: box-shadow 0.2s, border-color 0.2s; }
+    .card:hover { box-shadow: 0 4px 20px rgba(249,66,58,0.1); border-color: var(--border-red); }
+    .card-head { padding: 16px 20px; display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
+    .card-title { font-size: 15px; font-weight: 500; color: var(--text-1); line-height: 1.4; flex: 1; }
+    .card-chevron { color: var(--text-3); font-size: 22px; line-height: 1; transition: transform 0.3s, color 0.2s; flex-shrink: 0; margin-top: -1px; }
+    .card.open .card-chevron { transform: rotate(90deg); color: var(--brand); }
+    .card-body { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1); }
+    .card.open .card-body { max-height: 10000px; }
+    .card-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 16px 16px 6px; border-top: 1px solid var(--border); }
+    @media (max-width: 600px) { .card-grid { grid-template-columns: 1fr; } }
+    .field { background: var(--surface-2); border-radius: 7px; padding: 13px 15px; }
+    .field.full { grid-column: 1 / -1; }
+    .field-label { font-size: 9.5px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--brand); margin-bottom: 7px; }
+    .field-text { font-size: 13px; color: var(--text-2); line-height: 1.7; font-weight: 300; }
+    .ar-content { text-align: right; }
+    .ar-content .field-label { font-family: 'Noto Sans Arabic', sans-serif; letter-spacing: 0; font-size: 11px; }
+    .ar-content .field-text { font-family: 'Noto Sans Arabic', sans-serif; font-size: 13.5px; line-height: 1.9; }
+    .title-ar { font-family: 'Noto Sans Arabic', sans-serif; }
+    body.lang-en .ar-content, body.lang-en .title-ar { display: none; }
+    body.lang-en .en-content, body.lang-en .title-en { display: block; }
+    body.lang-ar .en-content, body.lang-ar .title-en { display: none; }
+    body.lang-ar .ar-content { display: block; }
+    body.lang-ar .title-ar  { display: block; }
+    .card-title .title-en, .card-title .title-ar { display: inline; }
+    body.lang-en .card-title .ar-content, body.lang-en .card-title .title-ar { display: none; }
+    body.lang-ar .card-title .en-content, body.lang-ar .card-title .title-en { display: none; }
+    .card-foot { padding: 10px 16px 14px; display: flex; justify-content: flex-end; }
+    .source-link { font-size: 11px; color: var(--text-3); text-decoration: none; transition: color 0.2s; letter-spacing: 0.04em; }
+    .source-link:hover { color: var(--brand); }
+
+    .empty { text-align: center; padding: 80px 20px; color: var(--text-3); }
+    .empty-icon { font-size: 48px; margin-bottom: 16px; }
+    .empty h2 { font-size: 20px; font-weight: 500; margin-bottom: 8px; color: var(--text-2); }
+    .empty p { font-size: 14px; }
+
+    /* Archive note */
+    .archive-note {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 14px 20px;
+      margin-top: 20px;
+      font-size: 12.5px;
+      color: var(--text-3);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .archive-note-icon { font-size: 18px; flex-shrink: 0; }
+  </style>
+</head>
+<body class="lang-en">
+
+<!-- TOPBAR -->
+<header class="topbar">
+  <div class="logo">
+    <span class="logo-word">red<strong>con</strong></span>
+    <span class="logo-sub">Properties</span>
+  </div>
+  <div class="global-lang-toggle">
+    <button class="global-lang-btn active" onclick="setLang('en')">English</button>
+    <button class="global-lang-btn" onclick="setLang('ar')">العربية</button>
+  </div>
+  <span class="topbar-right">Intelligence Feed</span>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Daily Market Briefing</div>
+    <h1 class="hero-title">Redcon Properties<br><strong>Intelligence Feed</strong></h1>
+    <p class="hero-sub">Daily News analyzed for Egypt's construction, infrastructure, and real estate market.</p>
+    <div class="hero-meta">Last updated: 14 June 2026, 13:41</div>
+  </div>
+  
+<div class="wx-widget" id="wxWidget">
+  <div class="wx-current">
+    <div class="wx-location">Cairo <span class="wx-flag">🇪🇬</span></div>
+    <div class="wx-big-row">
+      <span class="wx-big-icon">🌤️</span>
+      <span class="wx-big-temp">32°</span>
+    </div>
+    <div class="wx-condition">Mainly clear</div>
+    <div class="wx-range">H 35° &nbsp;·&nbsp; L 22°</div>
+  </div>
+  <div class="wx-hourly">
+    <button class="wx-nav wx-prev" onclick="wxPage(-1)" aria-label="Previous hours">&#x2039;</button>
+    <div class="wx-slots" id="wxSlots"></div>
+    <button class="wx-nav wx-next" onclick="wxPage(1)"  aria-label="Next hours">&#x203A;</button>
+  </div>
+  <div class="wx-dots" id="wxDots"></div>
+</div>
+</div>
+
+
+<!-- INDICES -->
+<div class="indices-bar">
+  <span class="indices-eyebrow">Market Indices</span>
+  <div class="indices-items">
+    
+  <div class="idx-item">
+    <span class="idx-label">
+      EGX 30
+      <button class="idx-info-btn" data-tip="Benchmark index representing the 30 most liquid and actively traded stocks on the Egyptian Exchange." onclick="showTip(this)" title="About EGX 30">i</button>
+    </span>
+    <span class="idx-value">50,818.84</span>
+    <span class="idx-time">as of 08:52</span>
+  </div>
+    
+  <div class="idx-item">
+    <span class="idx-label">
+      Construction Index
+      <button class="idx-info-btn" data-tip="Sector index representing Egyptian companies operating in construction, cement, steel, and building materials." onclick="showTip(this)" title="About Construction Index">i</button>
+    </span>
+    <span class="idx-value">9,047.36</span>
+    <span class="idx-time">as of 08:52</span>
+  </div>
+  </div>
+</div>
+<!-- TOOLTIP BUBBLE -->
+<div class="tip-bubble" id="tipBubble">
+  <button class="tip-close" onclick="closeTip()">✕</button>
+  <p class="tip-text" id="tipText"></p>
+</div>
+
+
+<!-- TABS -->
+<div class="tabs-bar">
+  <button class="tab-btn active" id="tab-today" onclick="switchTab('today')">
+    Today's Briefing
+    <span class="tab-badge">12</span>
+  </button>
+  <button class="tab-btn" id="tab-archive" onclick="switchTab('archive')">
+    Archive
+    <span class="tab-badge">35</span>
+  </button>
+</div>
+
+<!-- MAIN -->
+<main class="page-wrap">
+
+  <!-- TODAY -->
+  <div class="tab-panel active" id="panel-today">
+    <div class="search-wrap">
+      <input type="text" id="q-today" placeholder="Search today's headlines and summaries…" oninput="filter('today')"/>
+      <span id="filter-count-today"></span>
+    </div>
+    <div id="feed-today">
+      
+  <section class="day-group">
+    <div class="day-header">
+      <span class="day-label">2026-06-14</span>
+      <div class="day-rule"></div>
+      <span class="day-count">12 articles</span>
+    </div>
+    
+    <div class="card" id="c0" onclick="toggle('c0')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">EGX30 Falls 0.9% on Thursday</span>
+          <span class="title-ar" dir="rtl">مؤشر EGX30 ينخفض 0.9% يوم الخميس</span>
+        </div>
+        <div class="card-chevron">&#x203A;</div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">The EGX30 index declined 0.9% on Thursday, with international investors being the sole net buyers. The index is still up 21.5% year-to-date. Orascom Construction and CIB saw gains, while Ibnsina Pharma and Misr Cement declined.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Future Implications</div>
+          <div class="field-text">The decline may impact investor confidence in the Egyptian market. However, the year-to-date gain of 21.5% suggests a positive outlook. Opportunities may arise for construction and real estate development companies like REDCON Egypt to capitalize on infrastructure projects.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Actionable Advice</div>
+          <div class="field-text">REDCON Egypt should monitor the market trend and consider diversifying its portfolio to mitigate risks. The company should also explore potential partnerships with international investors to leverage their buying interest.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">انخفض مؤشر EGX30 بنسبة 0.9% يوم الخميس، حيث كان المستثمرون الدوليون هم الوحيدون الذين قاموا بشراء صافي. ومع ذلك، فإن المؤشر لا يزال مرتفعاً بنسبة 21.5% منذ بداية السنة. وشهدت أوراسكوم للإنشاءات وCIB مكاسب، بينما انخفضت أسهم Ibnsina Pharma والمصرية للأسمنت.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التداعيات المستقبلية</div>
+          <div class="field-text">من المحتمل أن يؤثر الانخفاض على ثقة المستثمرين في السوق المصرية. ومع ذلك، فإن الارتفاع منذ بداية السنة بنسبة 21.5% يشير إلى نظرة إيجابية. قد ت出现 فرص للمشاريع التابعة لشركة REDCON مصر في مجال البنية التحتية والتنمية العقارية.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التوصيات</div>
+          <div class="field-text">يجب على شركة REDCON مصر مراقبة اتجاه السوق ودراسة إمكانية تنويع محفظة الاستثمارات لتقليل المخاطر. كما يجب على الشركة استكشاف فرص الشراكات مع المستثمرين الدوليين للاستفادة من اهتمامهم بالشراء.</div>
+        </div>
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/06/14/is-an-uptick-in-bdc-bond-sales-offering-reprieve-for-private-credit/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card" id="c1" onclick="toggle('c1')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">LimeVest Invests in Saudi Pharma</span>
+          <span class="title-ar" dir="rtl">ليمفيست تستثمر في مصنع أدوية في السعودية</span>
+        </div>
+        <div class="card-chevron">&#x203A;</div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">LimeVest plans to invest $70mn in a pharma factory in Saudi Arabia. Its subsidiary LVP Pharma increased its stake in EGX-listed Rameda to 31.5% with an EGP 847mn share purchase.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Future Implications</div>
+          <div class="field-text">This investment may boost Saudi Arabia&#x27;s pharmaceutical industry, creating opportunities for construction and infrastructure development. MENA region may see increased healthcare investments, benefiting Egypt&#x27;s economy.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Actionable Advice</div>
+          <div class="field-text">REDCON Egypt should monitor LimeVest&#x27;s pharma factory project, exploring potential partnerships for construction and infrastructure services, and consider investing in Egypt&#x27;s growing healthcare sector.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">تخطط ليمفيست للاستثمار في مصنع أدوية في السعودية بقيمة 70 مليون دولار. كما زاد فرعها ليف بي فارما حصة ему في شركة رameda إلى 31.5% من خلال شراء أسهم بقيمة 847 مليون جنيه</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التداعيات المستقبلية</div>
+          <div class="field-text">قد يؤدي هذا الاستثمار إلى تعزيز صناعة الأدوية في السعودية، مما يخلق فرصًا للبناء وتطوير البنية التحتية. قد تشهد المنطقة العربية زيادة في الاستثمارات الصحية، مما يفيد الاقتصاد المصري</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التوصيات</div>
+          <div class="field-text">ينبغي لشركة ريدكون مصر مراقبة مشروع مصنع ليمفيست للأدوية، واستكشاف فرص الشراكات المحتملة لخدمات البناء والبنية التحتية، والتفكير في الاستثمار في قطاع الرعاية الصحية المتنامي في مصر</div>
+        </div>
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/06/14/canadas-avelon-to-set-up-usd-27-mn-technical-textiles-plant-in-east-port-said/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card" id="c2" onclick="toggle('c2')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">SCZone Inks Deal for Denim Factory</span>
+          <span class="title-ar" dir="rtl">المنطقة الاقتصادية تبرم اتفاقية لإنشاء مصنع دنيم</span>
+        </div>
+        <div class="card-chevron">&#x203A;</div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">The SCZone signed a contract with Prestige Denim Mills to build a $20mn denim fabric facility in Qantara West, producing 20mn meters annually, with 70% for export. Meanwhile, LimeVest considers investing $70mn in a pharma factory in Saudi Arabia.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Future Implications</div>
+          <div class="field-text">The denim factory will boost Egypt&#x27;s textile exports, while LimeVest&#x27;s potential investment in Saudi Arabia may expand its regional presence. This could create opportunities for REDCON Egypt in construction and infrastructure projects.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Actionable Advice</div>
+          <div class="field-text">REDCON Egypt should explore potential partnerships with Prestige Denim Mills and LimeVest to capitalize on upcoming construction and infrastructure projects, particularly in the SCZone and Saudi Arabia.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">أبرمت المنطقة الاقتصادية اتفاقية مع شركة بريستيج دنيم ميلز لإنشاء مصنع دنيم بقيمة 20 مليون دولار في قنترة الغربية، لإنتاج 20 مليون متر من القماش سنويًا، مع تصدير 70٪ منه. وفي غضون ذلك، تفكر لايmvست في استثمار 70 مليون دولار في مصنع أدوية في السعودية.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التداعيات المستقبلية</div>
+          <div class="field-text">من المتوقع أن يزيد مصنع الدنيم من صادرات مصر من القطاع النسيجي، في حين قد يوسع استثمار لايmvست المحتمل في السعودية من وجودها الإقليمي. ويمكن أن يفتح ذلك فرصًا لشركة ريدكون مصر في مشاريع البناء والبنية التحتية.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التوصيات</div>
+          <div class="field-text">ينبغي لشركة ريدكون مصر استكشاف فرص الشراكة المحتملة مع شركة بريستيج دنيم ميلز ولايمفست لتسخير المشاريع القادمة في البناء والبنية التحتية، لا سيما في المنطقة الاقتصادية والسعودية.</div>
+        </div>
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/06/14/canadas-avelon-to-set-up-usd-27-mn-technical-textiles-plant-in-east-port-said/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card" id="c3" onclick="toggle('c3')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">EEP Prepares for EGX Float</span>
+          <span class="title-ar" dir="rtl">منصة التعليم المصرية تستعد للطرح على البورصة</span>
+        </div>
+        <div class="card-chevron">&#x203A;</div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Egypt Education Platform is restructuring its capital ahead of a potential 25% share float on the EGX. The company has approved a 10-for-1 stock split and a EGP 611.9 million capital increase, taking its issued capital to EGP 2.6 billion.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Future Implications</div>
+          <div class="field-text">The float could attract local and regional investors, boosting Egypt&#x27;s education sector. EEP&#x27;s expansion into higher education and potential USD 100 million Gulf-focused fundraising round may drive growth in the MENA region&#x27;s education market.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Actionable Advice</div>
+          <div class="field-text">REDCON Egypt should monitor EEP&#x27;s float and consider potential partnerships or investments in the education sector, leveraging the company&#x27;s expertise in construction and infrastructure to support EEP&#x27;s expansion plans.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">تستعد منصة التعليم المصرية لإعادة هيكلة رأس مالها قبل الطرح المحتمل لما يصل إلى 25% من أسهمها على البورصة المصرية. وافقت الشركة على تقسيم أسهم 10 إلى 1 وزيادة رأس المال بمقدار 611.9 مليون جنيه، مما رفع رأس مالها الصافي إلى 2.6 مليار جنيه.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التداعيات المستقبلية</div>
+          <div class="field-text">يمكن أن يجذب الطرح مستثمرين محليين وإقليميين، مما يعزز قطاع التعليم في مصر. يمكن أن يدفع توسع منصة التعليم المصرية في التعليم العالي وجولة التمويل المحتملة البالغة 100 مليون دولار التي تركز على الخليج إلى نمو سوق التعليم في المنطقة.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التوصيات</div>
+          <div class="field-text">ينبغي لشركة ريدكون مصر مراقبة طرح منصة التعليم المصرية والتفكير في الشراكات أو الاستثمارات المحتملة في قطاع التعليم، واستخدام خبرة الشركة في البناء والبنية التحتية لدعم خطط التوسع لمنصة التعليم المصرية.</div>
+        </div>
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/06/14/egypt-education-platform-lines-up-25-egx-float/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card" id="c4" onclick="toggle('c4')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">NBE Expands Reach Beyond Education</span>
+          <span class="title-ar" dir="rtl">البنك الأهلي يوسع نطاقه خارج القطاع التعليمي</span>
+        </div>
+        <div class="card-chevron">&#x203A;</div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">NBE&#x27;s investment arm, Al Ahly Capital, led a strategic investment in MNT-Halan, raising its valuation to $1.4bn. NBE also acquired a 20% stake in Scatec&#x27;s Obelisk solar project and is expanding regionally.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Future Implications</div>
+          <div class="field-text">NBE&#x27;s expansion into NBFS, green energy, and regional markets may create opportunities for growth in Egypt and the MENA region, but also poses risks of increased competition and regulatory challenges.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Actionable Advice</div>
+          <div class="field-text">REDCON Egypt should monitor NBE&#x27;s investments in green energy and NBFS, and consider potential partnerships or collaborations to leverage these opportunities.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">قادت ذراع الاستثمار التابعة للبنك الأهلي، شركة الأهلي كابيتال، جولة استثمارية استراتيجية في شركة إم أن تي هالان، مما رفع قيمتها إلى 1.4 مليار دولار. كما استحوذ البنك على 20% من مشروع سكاتيك للطاقة الشمسية وأوسع نطاقه على الصعيد الإقليمي.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التداعيات المستقبلية</div>
+          <div class="field-text">يمكن أن تخلق توسعة البنك الأهلي في قطاع الخدمات المالية غير المصرفية والطاقة النظيفة والأسواق الإقليمية فرصًا للنمو في مصر ومنطقة الشرق الأوسط وشمال أفريقيا، ولكنها تشكل أيضًا مخاطر من زيادة المنافسة والتحديات التنظيمية.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التوصيات</div>
+          <div class="field-text">ينبغي لشركة ريدكون مصر مراقبة استثمارات البنك الأهلي في قطاع الطاقة النظيفة والخدمات المالية غير المصرفية، والتفكير في شراكات أو تعاونات محتملة للاستفادة من هذه الفرص.</div>
+        </div>
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/06/14/nbe-acquires-20-of-egyptian-alliance-for-education-in-broader-equity-pivot/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card" id="c5" onclick="toggle('c5')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">AD Ports Acquires ALCN Stake</span>
+          <span class="title-ar" dir="rtl">مجموعة موانئ أبوظبي تكتسب حصة في شركة الإسكندرية</span>
+        </div>
+        <div class="card-chevron">&#x203A;</div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">AD Ports Group is finalizing its consolidation of Alexandria Container and Cargo Handling Company, valuing shares at EGP 27.47 per piece. The transaction will see Black Caspian acquire up to 90% of ALCN, with the state retaining a 42.9% stake.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Future Implications</div>
+          <div class="field-text">This acquisition strengthens AD Ports&#x27; presence in Egypt&#x27;s ports and logistics sector, with potential opportunities for growth in the Mediterranean gateway. However, it also poses risks of increased competition for local players, including REDCON Egypt, in the construction and infrastructure sectors.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Actionable Advice</div>
+          <div class="field-text">REDCON Egypt should monitor the acquisition&#x27;s impact on the local market and assess potential partnerships or collaborations with AD Ports Group to leverage their expanded presence in Egypt&#x27;s ports and logistics sector.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">تستكمل مجموعة موانئ أبوظبي استحواذها على شركة الإسكندرية لمعالجة الحاويات والبضائع، بتقييم الأسهم عند 27.47 جنيه للوحدة. وسترى الصفقة شركة بلاك كاسبيان تكتسب حتى 90% من شركة الإسكندرية، مع احتفاظ الدولة بحصة 42.9%.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التداعيات المستقبلية</div>
+          <div class="field-text">يعزز هذا الاستحواذ وجود مجموعة موانئ أبوظبي في قطاع الموانئ واللوجستيات في مصر، مع فرص محتملة للنمو في بوابة البحر الأبيض المتوسط. ومع ذلك، فإنه يطرح أيضًا مخاطر زيادة المنافسة لأصحاب المصلحة المحلية، بمن فيهم شركة REDCON مصر، في قطاعات البناء والبنية التحتية.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التوصيات</div>
+          <div class="field-text">ينبغي لشركة REDCON مصر مراقبة تأثير الاستحواذ على السوق المحلية وتقييم الشراكات أو التعاون المحتمل مع مجموعة موانئ أبوظبي للاستفادة من توسعهم في قطاع الموانئ واللوجستيات في مصر.</div>
+        </div>
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/06/14/ad-ports-bumps-up-alex-containers-offer-to-egp-27-47-per-share-to-consolidate-51-3-majority/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card" id="c6" onclick="toggle('c6')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egypt&#x27;s Petroleum Sector Privatization</span>
+          <span class="title-ar" dir="rtl">خصخصة قطاع البترول في مصر</span>
+        </div>
+        <div class="card-chevron">&#x203A;</div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Petroleum Marine Services applies to list $120mn on EGX, joining Enppi, Petrojet, and Midor. The government plans to list 20 public sector companies by June and float a 20% stake in Misr Life Ins.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Future Implications</div>
+          <div class="field-text">Privatization of petroleum companies may attract foreign investment, boosting Egypt&#x27;s energy sector. However, it also poses risks of job losses and price increases. The government&#x27;s plan to restructure state-owned companies by 2026 may lead to increased efficiency and competitiveness.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Actionable Advice</div>
+          <div class="field-text">REDCON Egypt should monitor the privatization process and consider potential partnerships or investments in the petroleum sector. The company should also assess the potential impact of the State Ownership Policy document on its operations and strategy.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">تقدم شركة الخدمات البحرية البترولية للاكتتاب في البورصة المصرية بقيمة 120 مليون دولار. الحكومة تخطط للاكتتاب في 20 شركة قطاعية عامة قبل نهاية يونيو وتسعى لطرح 20% من أسهم شركة مصر للاستثمار التأميني.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التداعيات المستقبلية</div>
+          <div class="field-text">يمكن أن تجذب خصخصة شركات البترول الاستثمارات الأجنبية وتنشط قطاع الطاقة في مصر. ومع ذلك، تطرح مخاطر فقدان الوظائف وزيادة الأسعار. خطة الحكومة لإعادة هيكلة الشركات المملوكة للدولة قبل نهاية 2026 قد تؤدي إلى زيادة الكفاءة والتنافسية.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التوصيات</div>
+          <div class="field-text">ينبغي لشركة REDCON مصر مراقبة عملية الخصخصة والتفكير في الشراكات أو الاستثمارات المحتملة في قطاع البترول. كما ينبغي للشركة تقييم التأثير المحتمل لوثيقة سياسة الملكية الحكومية على عملياتها واستراتيجيتها.</div>
+        </div>
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/06/14/taqa-arabia-acquires-10-of-172-wataneya-stations/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card" id="c7" onclick="toggle('c7')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">SpaceX IPO Sets Record</span>
+          <span class="title-ar" dir="rtl">إصدار سهم SpaceX يحقق رقمًا قياسيًا</span>
+        </div>
+        <div class="card-chevron">&#x203A;</div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">SpaceX made its debut on the Nasdaq, raising $75bn in its IPO, overtaking Saudi Aramco. Shares ended up 19% at $160.95, valuing the company at over $2tn. Elon Musk&#x27;s net worth reached $1.1tn.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Future Implications</div>
+          <div class="field-text">The SpaceX IPO may have implications for Egypt and the MENA region in terms of investment and technological advancements. Potential opportunities include increased investment in local tech startups and collaboration with international companies.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Actionable Advice</div>
+          <div class="field-text">REDCON Egypt should consider exploring potential partnerships with SpaceX or other tech companies to leverage their expertise and technology in local projects, particularly in areas like transportation and logistics.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">تم إدراج سهم شركة SpaceX في بورصة ناسداك، حيث جمعت 75 مليار دولار من العرض الأولي للجمهور، متجاوزة شركة أرامكو السعودية. انتهت الأسهم بنسبة ارتفاع 19% عند 160.95 دولار، مع تقييم الشركة عند أكثر من 2 تريليون دولار. بلغت ثروة إيلون ماسك 1.1 تريليون دولار.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التداعيات المستقبلية</div>
+          <div class="field-text">قد يكون لصعود شركة SpaceX إلى السوق تأثيرات على مصر ومنطقة الشرق الأوسط وشمال أفريقيا من حيث الاستثمار والتقدم التكنولوجي. تشمل الفرص المحتملة زيادة الاستثمار في الشركات الناشئة المحلية والتعاون مع الشركات الدولية.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التوصيات</div>
+          <div class="field-text">ينبغي لشركة REDCON مصر النظر في استكشاف الشراكات المحتملة مع شركة SpaceX أو شركات تكنولوجية أخرى للاستفادة من خبراتهم وتقنياتهم في المشاريع المحلية، خاصة في مجالات مثل النقل واللوجستيات.</div>
+        </div>
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/06/14/govt-rolls-out-temporary-tax-cards-to-speed-up-corporate-formation/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card" id="c8" onclick="toggle('c8')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">SpaceX IPO Sets Record</span>
+          <span class="title-ar" dir="rtl">إصدار سهمي سبيس إكس يحقق رقمًا قياسيًا</span>
+        </div>
+        <div class="card-chevron">&#x203A;</div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">SpaceX made its debut on the Nasdaq, raising $75bn in its IPO, overtaking Saudi Aramco as the largest IPO in history. Shares ended the day up 19% at $160.95, pushing the company&#x27;s valuation to over $2tn. CEO Elon Musk&#x27;s net worth reached $1.1tn.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Future Implications</div>
+          <div class="field-text">The SpaceX IPO may have implications for Egypt and the MENA region, particularly in the areas of construction, infrastructure, and energy. The company&#x27;s focus on space exploration and technology could lead to new opportunities for investment and collaboration.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Actionable Advice</div>
+          <div class="field-text">REDCON Egypt should consider exploring potential partnerships or investments in companies related to space technology and exploration, as well as monitoring the impact of the SpaceX IPO on the global market and potential opportunities for growth in the MENA region.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">أدرجت سبيس إكس أسهمها في بورصة ناسداك، وجمعت 75 مليار دولار في إصدارها العام الأول، متجاوزة أرامكو السعودية كأكبر إصدار عام في التاريخ. انتهت الأسهم يومها مع ارتفاع بنسبة 19% عند 160.95 دولار، مما رفع قيمة الشركة إلى أكثر من 2 تريليون دولار. بلغت ثروة الرئيس التنفيذي إيلون ماسك 1.1 تريليون دولار.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التداعيات المستقبلية</div>
+          <div class="field-text">قد يكون لإصدار سهمي سبيس إكس تأثيرات على مصر ومنطقة الشرق الأوسط وشمال أفريقيا، خاصة في مجالات البناء والبنية التحتية والطاقة. قد يؤدي تركيز الشركة على استكشاف الفضاء والتكنولوجيا إلى فرص جديدة للاستثمار والتعاون.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التوصيات</div>
+          <div class="field-text">ينبغي لشركة ريدكون مصر النظر في استكشاف الشراكات أو الاستثمارات المحتملة في الشركات المتعلقة بتكنولوجيا الفضاء واستكشافه، بالإضافة إلى مراقبة تأثير إصدار سهمي سبيس إكس على السوق العالمية وفرص النمو المحتملة في منطقة الشرق الأوسط وشمال أفريقيا.</div>
+        </div>
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/06/14/govt-rolls-out-temporary-tax-cards-to-speed-up-corporate-formation/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card" id="c9" onclick="toggle('c9')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egypt Exempts Transit Shipments from ACI</span>
+          <span class="title-ar" dir="rtl">مصر تعفى الشحنات العابرة من التسجيل المسبق</span>
+        </div>
+        <div class="card-chevron">&#x203A;</div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Egypt&#x27;s Customs Authority has extended a six-month exemption for indirect transit shipments from mandatory registration under the Advance Cargo Information system. The exemption now includes six East African nations, key for Egypt&#x27;s maritime and port infrastructure.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Future Implications</div>
+          <div class="field-text">The exemption may enhance Egypt&#x27;s trade relations with East African nations, boosting its logistics and port infrastructure. However, it also poses risks of increased smuggling and customs evasion, requiring effective monitoring and enforcement.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Actionable Advice</div>
+          <div class="field-text">REDCON Egypt should monitor the exemption&#x27;s impact on trade volumes and customs revenue, while exploring opportunities for logistics and infrastructure development in East Africa. The company should also assess potential risks and develop strategies to mitigate them.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">أعلنت الهيئة الجمركية المصرية عن تمديد الإعفاء لمدة ستة أشهر للشحنات العابرة غير المباشرة من التسجيل الإلزامي في نظام المعلومات المسبقة للبضائع. ويشمل الإعفاء الآن ست دول أفريقية شرقية، وهي دول مهمة لبنية التحتية البحرية والموانئ المصرية.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التداعيات المستقبلية</div>
+          <div class="field-text">قد يعزز الإعفاء العلاقات التجارية لمصر مع الدول الأفريقية الشرقية، مما يعزز بنية تحتية لوجستية وموانئ. ومع ذلك، فإنه يطرح أيضًا مخاطر زيادة التهريب والتهرب الجمركي، مما يتطلب مراقبة وفعالية في تنفيذ القوانين.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التوصيات</div>
+          <div class="field-text">ينبغي لشركة REDCON مصر مراقبة تأثير الإعفاء على حجم التجارة وإيرادات الجمارك، في حين استكشاف الفرص لتطوير البنية التحتية اللوجستية في أفريقيا الشرقية. وينبغي للشركة تقييم المخاطر المحتملة ووضع استراتيجيات للتغلب عليها.</div>
+        </div>
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/06/14/govt-rolls-out-temporary-tax-cards-to-speed-up-corporate-formation/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card" id="c10" onclick="toggle('c10')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egypt Expands Sukuk Program</span>
+          <span class="title-ar" dir="rtl">مصر توسع برنامج السكوك</span>
+        </div>
+        <div class="card-chevron">&#x203A;</div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Egypt&#x27;s Finance Ministry is expanding its local sovereign sukuk program with a new land allocation in Zafarana, aiming to widen the investor base and reduce funding costs. The program, launched last year, has already drawn strong demand from banks and offers yields 3-4 percentage points below traditional debt instruments.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Future Implications</div>
+          <div class="field-text">The expansion of the sukuk program is expected to have positive implications for Egypt&#x27;s construction, infrastructure, and real estate sectors, as well as the broader MENA region. It may attract more Islamic investors and provide a cheaper funding alternative for projects, supporting economic growth and development.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Actionable Advice</div>
+          <div class="field-text">REDCON Egypt should consider exploring opportunities to participate in the sukuk program, potentially by partnering with the Finance Ministry or other investors to develop projects backed by the allocated land. The company should also monitor the program&#x27;s progress and be prepared to adapt to any changes in the market or regulatory environment.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">توسع وزارة المالية المصرية برنامج السكوك المحلي الحكومي مع تخصيص أراضي جديد في ظفارنة، بهدف توسيع قاعدة المستثمرين وتخفيض تكاليف التمويل. البرنامج، الذي تم إطلاقه العام الماضي، قد جذب بالفعل طلبا قويا من البنوك ويوفر عوائد أقل بنسبة 3-4 نقاط مئوية من أدوات الدين التقليدية.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التداعيات المستقبلية</div>
+          <div class="field-text">من المتوقع أن يكون لتوسيع برنامج السكوك آثار إيجابية على قطاعات البناء والبنية التحتية والعقارات في مصر، وكذلك المنطقة العربية بشكل أوسع. قد يجذب المزيد من المستثمرين الإسلاميين ويوفر بديلا أرخص للتمويل للمشاريع، مما يدعم النمو الاقتصادي والتنمية.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التوصيات</div>
+          <div class="field-text">ينبغي لشركة REDCON مصر النظر في استكشاف الفرص للمشاركة في برنامج السكوك، ربما من خلال الشراكة مع وزارة المالية أو مستثمرين آخرين لتطوير مشاريع مدعومة بالأراضي المخصصة. يجب على الشركة أيضًا مراقبة تقدم البرنامج والاستعداد للتكيف مع أي تغييرات في السوق أو البيئة التنظيمية.</div>
+        </div>
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/06/14/govt-rolls-out-temporary-tax-cards-to-speed-up-corporate-formation/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card" id="c11" onclick="toggle('c11')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egypt Eases Corporate Formation</span>
+          <span class="title-ar" dir="rtl">مصر تسهل تأسيس الشركات</span>
+        </div>
+        <div class="card-chevron">&#x203A;</div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Egypt&#x27;s government is introducing a temporary tax card to speed up corporate formation, allowing new companies to establish and license quickly. The move aims to increase tax revenues and coax the informal economy into the formal sector.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Future Implications</div>
+          <div class="field-text">The new tax card and sukuk program may attract more investors to Egypt&#x27;s construction and infrastructure sectors, boosting economic growth. However, the shortened 8-month tax card period and stricter bookkeeping requirements may pose challenges for micro-businesses.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Actionable Advice</div>
+          <div class="field-text">REDCON Egypt should monitor the implementation of the tax card and sukuk program, exploring opportunities for partnerships and investments in the construction and infrastructure sectors. The company should also assess the potential impact of the new regulations on its operations and supply chain.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">ت Introduced حكومة مصر بطاقة ضريبية مؤقتة لتسريع عملية تأسيس الشركات، مما يسمح للشركات الجديدة بالحصول على تراخيص سريعة. الهدف من هذه الخطوة هو زيادة الإيرادات الضريبية وجذب القطاع غير الرسمي إلى القطاع الرسمي.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التداعيات المستقبلية</div>
+          <div class="field-text">قد تجذب بطاقة الضريبة المؤقتة وبرنامج السكوك المزيد من المستثمرين إلى قطاعات البناء والبنية التحتية في مصر، مما يعزز النمو الاقتصادي. ومع ذلك، قد تطرح الفترة القصيرة البالغة 8 أشهر للبطاقة الضريبية ومتطلبات المحاسبة الصارمة تحديات للشركات الصغيرة.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التوصيات</div>
+          <div class="field-text">ينبغي لشركة REDCON مصر مراقبة تنفيذ بطاقة الضريبة وبرنامج السكوك، واستكشاف الفرص للشراكات والاستثمارات في قطاعات البناء والبنية التحتية. يجب على الشركة تقييم التأثير المحتمل لللوائح الجديدة على عملياتها وسلسلة التوريد.</div>
+        </div>
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/06/14/govt-rolls-out-temporary-tax-cards-to-speed-up-corporate-formation/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+  </section>
+      
+    </div>
+  </div>
+
+  <!-- ARCHIVE -->
+  <div class="tab-panel" id="panel-archive">
+    <div class="archive-note">
+      <span class="archive-note-icon">📁</span>
+      Previous days' intelligence briefings. Each day's articles are appended here automatically when the next day's run completes.
+    </div>
+    <div class="search-wrap">
+      <input type="text" id="q-archive" placeholder="Search archived headlines and summaries…" oninput="filter('archive')"/>
+      <span id="filter-count-archive"></span>
+    </div>
+    <div id="feed-archive">
+      
+  <section class="day-group">
+    <div class="day-header">
+      <span class="day-label">2026-06-11</span>
+      <div class="day-rule"></div>
+      <span class="day-count">16 articles</span>
+    </div>
+    
+    <div class="card" id="c12" onclick="toggle('c12')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egypt&#x27;s Automotive Market Shift</span>
+          <span class="title-ar" dir="rtl">تغيرات السوق السيارات في مصر</span>
+        </div>
+        <div class="card-chevron">&#x203A;</div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Karim El Rawas, CEO of Rawas Motors, discusses the dynamic Egyptian automotive market, dominated by Chinese brands. His company has expanded to include six standalone dealerships and is focusing on multi-brand showrooms.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Future Implications</div>
+          <div class="field-text">The rise of Chinese vehicles may disrupt traditional European manufacturers. Egypt&#x27;s market is expected to see increased competition, with opportunities for growth in the automotive and related industries, such as logistics and infrastructure.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Actionable Advice</div>
+          <div class="field-text">REDCON Egypt should monitor the automotive market&#x27;s shift and consider partnerships or investments in related industries, such as electric vehicle infrastructure or logistics. Immediate actions include analyzing market trends and identifying potential opportunities for collaboration.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">يكشف كاريم الراوس، الرئيس التنفيذي لشركة رواس موتورز، عن السوق السيارات الديناميكي في مصر، الذي يهيمن عليه العلامات التجارية الصينية. وقد وسعت شركته لتشمل ستة معارض مستقلة وتُركّز على معارض العلامات التجارية المتعددة.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التداعيات المستقبلية</div>
+          <div class="field-text">من المحتمل أن يؤدي صعود المركبات الصينية إلى تعطيل المصنعين الأوروبيين التقليدية. ومن المتوقع أن تشهد السوق المصرية زيادة في المنافسة، مع فرص للنمو في الصناعات السياراتية والصناعات المرتبطة بها، مثل اللوجستيات والبنية التحتية.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التوصيات</div>
+          <div class="field-text">ينبغي لشركة ريدكون مصر مراقبة تحولات السوق السيارات والتفكير في الشراكات أو الاستثمارات في الصناعات المرتبطة، مثل بنية تحتية المركبات الكهربائية أو اللوجستيات. وتشمل الإجراءات الفورية تحليل اتجاهات السوق وتحديد الفرص المحتملة للتعاون.</div>
+        </div>
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/06/11/my-morning-routine-karim-el-rawas-ceo-of-rawas-motors/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card" id="c13" onclick="toggle('c13')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">EGX30 Falls 2.1% Amid Mixed Sector Performance</span>
+          <span class="title-ar" dir="rtl">مؤشر EGX30 ينخفض 2.1% وسط أداء قطاعي متباين</span>
+        </div>
+        <div class="card-chevron">&#x203A;</div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">The EGX30 index declined 2.1% with a turnover of EGP 10.8 billion, exceeding the 90-day average. Local investors were net buyers, while Orascom Construction gained 1.2%. Raya Holding, Qalaa Holdings, and Kima declined.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Future Implications</div>
+          <div class="field-text">The decline may impact investor confidence in Egypt&#x27;s construction and real estate sectors. However, Orascom Construction&#x27;s gain could indicate resilience in the industry, presenting opportunities for REDCON Egypt to capitalize on.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Actionable Advice</div>
+          <div class="field-text">REDCON Egypt should monitor the market&#x27;s reaction to the EGX30&#x27;s decline and consider strategic investments in construction and real estate, focusing on sectors with potential for growth.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">انخفض مؤشر EGX30 بنسبة 2.1% مع حجم تداول بلغ 10.8 مليار جنيه مصري، متجاوزاً المعدل لمدة 90 يوماً. وكان المستثمرون المحليون هم المشترون الشبكة، في حين حقق بناء أوراسكوم مكاسب بنسبة 1.2%. وانخفضت أسهم رايا هولدينج وقلاء هولدينج وكايما.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التداعيات المستقبلية</div>
+          <div class="field-text">قد يؤثر الانخفاض على ثقة المستثمرين في قطاعات البناء والعقارات في مصر. ومع ذلك، قد تدل مكاسب بناء أوراسكوم على متانة في الصناعة، مما يقدم فرصاً لشركة REDCON مصر للاستفادة منها.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التوصيات</div>
+          <div class="field-text">ينبغي لشركة REDCON مصر مراقبة رد فعل السوق على انخفاض مؤشر EGX30 والتفكير في الاستثمارات الاستراتيجية في قطاعات البناء والعقارات، مع التركيز على القطاعات التي تتمتع بإمكانات نمو</div>
+        </div>
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/06/11/fitch-turns-bearish-on-global-sovereigns-and-the-middle-east-is-taking-the-hardest-hit/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card" id="c14" onclick="toggle('c14')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">ADCB Egypt Enters Mutual Fund Market</span>
+          <span class="title-ar" dir="rtl">دخول بنك ADCB مصر إلى سوق الصندوق المتوافق</span>
+        </div>
+        <div class="card-chevron">&#x203A;</div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">ADCB Egypt launched its first mutual fund, Zayed Kol Youm, in partnership with EFG Hermes. The money market fund offers daily cumulative returns and subscriptions. This marks ADCB&#x27;s entry into the local mutual fund market, with potential for broader partnerships.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Future Implications</div>
+          <div class="field-text">The move may increase competition in Egypt&#x27;s fund market, particularly in money market funds. This could lead to opportunities for REDCON Egypt in terms of investment and partnerships, but also poses risks of increased competition in the construction and real estate sectors.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Actionable Advice</div>
+          <div class="field-text">REDCON Egypt should monitor ADCB&#x27;s expansion into the mutual fund market and explore potential partnerships or investment opportunities. The company should also assess the impact of increased competition on its own investments and strategies.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">أطلق بنك ADCB مصر صندوقه المتوافق الأول، زايد كل يوم، بالتعاون مع إيف جي هرمس. يقدم الصندوق عوائد متراكمة يومية وتسجيلات وسيولة يومية. هذا يدل على دخول بنك ADCB إلى سوق الصندوق المتوافق المحلي، مع إمكانية شراكات أوسع نطاقا</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التداعيات المستقبلية</div>
+          <div class="field-text">قد يزيد هذا الإجراء من المنافسة في سوق الصندوق المتوافق في مصر، خاصة في مجال صناديق السوق النقدي. قد يؤدي هذا إلى فرص لشركة REDCON مصر في مجال الاستثمار والشراكات، ولكنه يطرح أيضا مخاطر منافسة متزايدة في قطاعات البناء والعقارات.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التوصيات</div>
+          <div class="field-text">ينبغي لشركة REDCON مصر مراقبة توسع بنك ADCB في سوق الصندوق المتوافق واستكشاف الفرص المحتملة للشراكات أو الاستثمارات. يجب على الشركة تقييم تأثير المنافسة المتزايدة على استثماراتها وخططها أيضا</div>
+        </div>
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/06/11/egypt-tenders-128-km-transmission-line-to-plug-in-el-dabaa/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card" id="c15" onclick="toggle('c15')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egypt&#x27;s Fund Market Expands</span>
+          <span class="title-ar" dir="rtl">توسع سوق الصندوق في مصر</span>
+        </div>
+        <div class="card-chevron">&#x203A;</div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Beltone Asset Management aims to grow its funds to EGP 60 bn by year-end, launching two funds by June. ADCB Egypt also enters the market with a money market fund, in partnership with EFG Hermes.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Future Implications</div>
+          <div class="field-text">Egypt&#x27;s fund market growth presents opportunities for construction and real estate development, with potential for increased investment in infrastructure and industrial projects. However, risks include market volatility and competition.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Actionable Advice</div>
+          <div class="field-text">REDCON Egypt should consider partnering with fund managers to access new capital sources and explore opportunities in commercial real estate development, given the growing demand for investment products.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">تستهدف إدارة أصول بيلتون增长 أموالها إلى 60 مليار جنيه مصري بحلول نهاية العام، مع إطلاق两个 صناديق قبل نهاية يونيو. كما دخلت بنك أديكب مصر السوق مع صندوق سوق المال، بالشراكة مع إيف جي هرمس.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التداعيات المستقبلية</div>
+          <div class="field-text">يعرض نمو سوق الصندوق في مصر فرصًا للبناء والتنمية العقارية، مع إمكانية زيادة الاستثمار في مشاريع البنية التحتية والصناعية. ومع ذلك، توجد مخاطر مثل تقلبات السوق والمنافسة.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التوصيات</div>
+          <div class="field-text">ينبغي لشركة ريدكون مصر النظر في الشراكة مع مديري الصندوق للوصول إلى مصادر رأس المال الجديدة واستكشاف الفرص في تطوير العقارات التجارية، بالنظر إلى الطلب المتزايد على المنتجات الاستثمارية.</div>
+        </div>
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/06/11/egypt-tenders-128-km-transmission-line-to-plug-in-el-dabaa/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card" id="c16" onclick="toggle('c16')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egypt&#x27;s Industrial Zone Expansion</span>
+          <span class="title-ar" dir="rtl">توسيع المنطقة الصناعية في مصر</span>
+        </div>
+        <div class="card-chevron">&#x203A;</div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">A 6 mn sqm industrial zone in Safaga is expected to be developed, with a contract to be signed within two months. The project is part of the Golden Triangle Economic Zone, which is gaining momentum with new investments and infrastructure development.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Future Implications</div>
+          <div class="field-text">The development of the industrial zone and related infrastructure projects will boost Egypt&#x27;s industrial and logistics capabilities, attracting more investments and creating opportunities for growth in the construction, energy, and transportation sectors.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Actionable Advice</div>
+          <div class="field-text">REDCON Egypt should consider exploring opportunities for partnership or investment in the Golden Triangle Economic Zone, particularly in the industrial and logistics sectors, and monitor the development of the Safaga 2 multi-purpose terminal to capitalize on potential business opportunities.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">من المتوقع توقيع عقد لتطوير منطقة صناعية بمساحة 6 ملايين متر مربع في سفاجا خلال شهرين. هذا المشروع جزء من منطقة المثلث الذهبي الاقتصادية، التي تشهد زخماً مع استثمارات جديدة وتطوير البنية التحتية.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التداعيات المستقبلية</div>
+          <div class="field-text">سوف يساهم تطوير المنطقة الصناعية والمشاريع التحتية ذات الصلة في تعزيز القدرات الصناعية واللوجستية لمصر، وجذب المزيد من الاستثمارات وإنشاء فرص للنمو في قطاعات البناء والطاقة والنقل.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التوصيات</div>
+          <div class="field-text">يجب على شركة REDCON مصر النظر في استكشاف الفرص للشراكة أو الاستثمار في منطقة المثلث الذهبي الاقتصادية، ولا سيما في القطاعات الصناعية واللوجستية، ومراقبة تطور ميناء سفاجا 2 المتعدد الأغراض للاستفادة من الفرص التجارية المحتملة.</div>
+        </div>
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/06/11/egypt-tenders-128-km-transmission-line-to-plug-in-el-dabaa/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card" id="c17" onclick="toggle('c17')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egypt Eyes LNG Imports, Industrial Growth</span>
+          <span class="title-ar" dir="rtl">مصر تهدف إلى استيراد الغاز الطبيعي المسال والنمو الصناعي</span>
+        </div>
+        <div class="card-chevron">&#x203A;</div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Egypt plans to import 30 LNG cargoes in 4Q 2026, worth $1.6-1.8 billion. The country is also developing industrial zones, including a 6 million sqm zone in Safaga, and expanding export infrastructure.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Future Implications</div>
+          <div class="field-text">Increased LNG imports and industrial growth may boost Egypt&#x27;s energy security and economic development, but also pose risks of dependence on foreign energy sources and environmental concerns. The Golden Triangle economic zone is expected to attract significant investments, driving growth in the construction and logistics sectors.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Actionable Advice</div>
+          <div class="field-text">REDCON Egypt should consider investing in LNG infrastructure, industrial zone development, and export-oriented construction projects. The company should also explore partnerships with international investors and developers to capitalize on the growing demand for industrial and logistics facilities.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">تخطط مصر لاستيراد 30 شحنة غاز طبيعي مسال في الربع الرابع من 2026، بقيمة 1.6-1.8 مليار دولار. كما تعمل على تطوير المناطق الصناعية، بما في ذلك منطقة صناعية تبلغ مساحتها 6 ملايين متر مربع في سفاجا، وتوسيع البنية التحتية للتصدير.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التداعيات المستقبلية</div>
+          <div class="field-text">من المتوقع أن يزيد استيراد الغاز الطبيعي المسال والنمو الصناعي من أمن الطاقة والمطورين الاقتصاديين في مصر، ولكنه قد يطرح أيضًا مخاطر الاعتماد على مصادر الطاقة الأجنبية والقضايا البيئية. ومن المتوقع أن تجذب منطقة المثلث الذهبي استثمارات كبيرة، مما يدفع النمو في قطاعات البناء واللوجستيات.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التوصيات</div>
+          <div class="field-text">ينبغي لشركة REDCON مصر النظر في الاستثمار في بنية تحتية للغاز الطبيعي المسال، وتطوير المناطق الصناعية، ومشاريع البناء الموجهة للتصدير. كما ينبغي للشركة استكشاف الشراكات مع المستثمرين والمطورين الدوليين للاستفادة من الطلب المتزايد على المرافق الصناعية واللوجستية.</div>
+        </div>
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/06/11/egypt-tenders-128-km-transmission-line-to-plug-in-el-dabaa/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card" id="c18" onclick="toggle('c18')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egypt Launches Industrial Land Leasing Scheme</span>
+          <span class="title-ar" dir="rtl">مصر تطلق مخطط إيجار أراضي صناعية</span>
+        </div>
+        <div class="card-chevron">&#x203A;</div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Egypt&#x27;s Industry Ministry is introducing a new industrial land leasing scheme for SMEs, allowing them to spread land payments over 21 years. The scheme aims to boost non-oil exports and improve the country&#x27;s trade balance.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Future Implications</div>
+          <div class="field-text">The scheme may increase investment in key sectors such as textiles, food processing, and automotive, driving economic growth and industrial development in Egypt and the MENA region. However, it also poses risks such as land speculation and unequal access to financing.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Actionable Advice</div>
+          <div class="field-text">REDCON Egypt should explore opportunities for partnerships with SMEs and industrial investors, and consider investing in industrial e-commerce platforms and research hubs to stay ahead of the competition.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">تطلق وزارة الصناعة المصرية مخطط إيجار جديد للأراضي الصناعية لصالح الشركات الصغيرة والمتوسطة، يسمح لهم بتقسيط مدفوعات الأراضي على مدى 21 عامًا. يهدف المخطط إلى تعزيز الصادرات غير النفطية وتحسين ميزان التجارة.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التداعيات المستقبلية</div>
+          <div class="field-text">قد يزيد المخطط الاستثمارات في القطاعات الرئيسية مثل النسيج والغذاء والسيارات، مما يدفع النمو الاقتصادي والتنمية الصناعية في مصر ومنطقة الشرق الأوسط وشمال أفريقيا. ومع ذلك، فإنه يطرح أيضًا مخاطر مثل التكهن بالأراضي وعدم المساواة في الوصول إلى التمويل.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التوصيات</div>
+          <div class="field-text">يجب على شركة REDCON مصر استكشاف الفرص للشراكات مع الشركات الصغيرة والمتوسطة والاستثمار في منصات التجارة الإلكترونية الصناعية ومراكز البحث لتبقى في طليعة المنافسة.</div>
+        </div>
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/06/11/industry-ministry-preparing-to-launch-new-industrial-land-leasing-scheme-for-smes/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card" id="c19" onclick="toggle('c19')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egypt Exits IMF Program</span>
+          <span class="title-ar" dir="rtl">مصر تخرج من برنامج الصندوق.Monetary</span>
+        </div>
+        <div class="card-chevron">&#x203A;</div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Egypt will not pursue a new IMF program after the current $8bn facility expires in December. The government will focus on completing the seventh and eighth reviews and will continue to receive technical support from the IMF.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Future Implications</div>
+          <div class="field-text">Egypt&#x27;s exit from the IMF program may lead to increased reliance on other international financing institutions. The country&#x27;s ability to finance its twin deficits will be crucial, with potential opportunities for debt-for-investment swaps and privatization.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Actionable Advice</div>
+          <div class="field-text">REDCON Egypt should monitor Egypt&#x27;s fiscal reforms and subsidy restructuring, and explore potential partnerships with international institutions for future projects.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">أفادت مصادر حكومية أن مصر لن تطلب برنامجًا جديدًا من الصندوق الدولي بعد انتهاء البرنامج الحالي البالغ 8 مليارات دولار في ديسمبر. وستركز الحكومة على إكمال المراجعة السابعة والثامنة وستستمر في الحصول على الدعم الفني من الصندوق.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التداعيات المستقبلية</div>
+          <div class="field-text">يمكن أن يؤدي خروج مصر من برنامج الصندوق الدولي إلى زيادة الاعتماد على مؤسسات التمويل الدولية الأخرى. وسيكون من الضروري قدرة مصر على تمويل عجزها المزدوج، مع فرص محتملة للتبادل بين الدين والاستثمار وبرامج الخصخصة.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التوصيات</div>
+          <div class="field-text">ينبغي لشركة REDCON مصر مراقبة إصلاحات مصر المالية وإعادة هيكلة الدعم، واستكشاف فرص الشراكات مع المؤسسات الدولية لمشاريع مستقبلية.</div>
+        </div>
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/06/11/the-rationale-behind-madboulys-no-new-imf-program-signal/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card" id="c20" onclick="toggle('c20')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egypt Inflation Eases to 14.6%</span>
+          <span class="title-ar" dir="rtl">تضخم مصر يهبط إلى 14.6%</span>
+        </div>
+        <div class="card-chevron">&#x203A;</div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Egypt&#x27;s urban inflation cooled for the second consecutive month in May, easing to 14.6% y-o-y. Monthly inflation accelerated to 1.6% m-o-m, driven by higher food and housing prices. Analysts expect the central bank to keep interest rates unchanged.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Future Implications</div>
+          <div class="field-text">The inflation trend has implications for Egypt&#x27;s construction and real estate sectors, as higher costs may impact project viability. The steady inflation rate may also influence investment decisions in the MENA region, with potential opportunities in industries with low import dependence.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Actionable Advice</div>
+          <div class="field-text">REDCON Egypt should monitor inflation trends and adjust project costs accordingly. The company should also explore opportunities in sectors with low import dependence and consider diversifying its portfolio to mitigate potential risks.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">انخفض التضخم الحضري في مصر لشهر مايو، ليصل إلى 14.6% على أساس سنوي. وارتفعت معدلات التضخم الشهري إلى 1.6%، بفعل ارتفاع أسعار الغذاء والسكن. يتوقع المحللون أن يبقى البنك المركزي على أسعار الفائدة دون تغيير.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التداعيات المستقبلية</div>
+          <div class="field-text">للتضخم تأثيرات على قطاعي البناء والعقارات في مصر، حيث قد يؤثر ارتفاع التكاليف على جدوى المشاريع. قد يؤثر معدل التضخم المستقر أيضًا على قرارات الاستثمار في منطقة الشرق الأوسط وشمال أفريقيا، مع فرص محتملة في الصناعات التي تعتمد على الواردات بدرجة منخفضة.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التوصيات</div>
+          <div class="field-text">يجب على شركة REDCON مصر مراقبة اتجاهات التضخم وتعديل تكاليف المشاريع وفقًا لذلك. يجب على الشركة أيضًا استكشاف الفرص في القطاعات التي تعتمد على الواردات بدرجة منخفضة ومراعاة تنويع محفظة الاستثمارات لتحديد المخاطر المحتملة.</div>
+        </div>
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/06/11/egypts-urban-inflation-eases-to-14-6-but-dont-expect-a-rate-cut-just-yet/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card" id="c21" onclick="toggle('c21')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">US-Iran Conflict Escalates</span>
+          <span class="title-ar" dir="rtl">تتوسع النزاع بين الولايات المتحدة وإيران</span>
+        </div>
+        <div class="card-chevron">&#x203A;</div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">The US launched attacks on Iran, prompting Iranian strikes in Bahrain. Oil prices rose 2% as markets reacted to the escalating conflict. The US reported 4.2% inflation, its highest in three years, increasing the likelihood of a rate hike.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Future Implications</div>
+          <div class="field-text">The conflict may disrupt oil supplies, impacting Egypt and the MENA region&#x27;s energy and construction sectors. Potential opportunities include increased investment in alternative energy sources, while risks include higher construction costs and supply chain disruptions.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Actionable Advice</div>
+          <div class="field-text">REDCON Egypt should monitor oil price fluctuations and assess potential impacts on project costs. Consider diversifying energy sources and developing contingency plans for supply chain disruptions.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">شنت الولايات المتحدة غارات على إيران، ما أدى إلى ردود إيرانية في البحرين. تراجعت الأسواق استجابةً للنزاع المتزايد، وارتفعت أسعار النفط بنسبة 2%. سجلت الولايات المتحدة تضخمًا بنسبة 4.2%، أعلى معدل لها في ثلاث سنوات.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التداعيات المستقبلية</div>
+          <div class="field-text">قد يؤدي النزاع إلى تعطيل إمدادات النفط، مما يؤثر على قطاعات الطاقة والبناء في مصر والمنطقة العربية. تشمل الفرص المحتملة زيادة الاستثمار في مصادر الطاقة البديلة، بينما تشمل المخاطر زيادة تكاليف البناء واضطرابات في سلاسل التوريد.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التوصيات</div>
+          <div class="field-text">ينبغي لشركة REDCON مصر مراقبة تقلبات أسعار النفط وتقييم الآثار المحتملة على تكاليف المشاريع. يجب考虑 تنويع مصادر الطاقة ووضع خطط احتياطية لاضطرابات سلاسل التوريد.</div>
+        </div>
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/06/11/govt-fully-clears-usd-6-1-bn-in-arrears-to-intl-oil-companies/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card" id="c22" onclick="toggle('c22')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egypt Weather Update</span>
+          <span class="title-ar" dir="rtl">تقرير الطقس في مصر</span>
+        </div>
+        <div class="card-chevron">&#x203A;</div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Cairo expects a high of 35°C and a low of 23°C, while Alexandria will be cooler with a high of 29°C and a low of 21°C. Similar temperatures are expected over the weekend.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Future Implications</div>
+          <div class="field-text">The warm weather may impact construction and infrastructure projects in Egypt, particularly in outdoor settings. Companies should plan for heat management and worker safety.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Actionable Advice</div>
+          <div class="field-text">REDCON Egypt should review outdoor project schedules and implement heat mitigation measures to ensure worker safety and productivity.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">تتوقع القاهرة درجات حرارة تصل إلى 35 درجة مئوية، في حين سيكون المناخ أبرد في الإسكندرية بدرجة حرارة تصل إلى 29 درجة مئوية. ومن المتوقع أن يستمر المناخ المماثل خلال عطلة نهاية الأسبوع.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التداعيات المستقبلية</div>
+          <div class="field-text">قد يؤثر الطقس الحار على مشاريع البناء والبنية التحتية في مصر، خاصة في المناطق الخارجية. يجب على الشركات التخطيط لإدارة الحرارة وضمان سلامة العمال.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التوصيات</div>
+          <div class="field-text">يجب على شركة REDCON مصر مراجعة جداول المشاريع الخارجية وتنفيذ إجراءات لتخفيف الحرارة لضمان سلامة العمال وإنتاجيتهم.</div>
+        </div>
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/06/11/govt-fully-clears-usd-6-1-bn-in-arrears-to-intl-oil-companies/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card" id="c23" onclick="toggle('c23')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Korra Energi IPO Launches on EGX</span>
+          <span class="title-ar" dir="rtl">إطلاق طرح كورا للطاقة في البورصة المصرية</span>
+        </div>
+        <div class="card-chevron">&#x203A;</div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Korra Energi&#x27;s IPO will launch on the EGX with an opening price of EGP 2.97 per share. The company is floating 247.5 million shares, representing an 11% stake. Retail demand exceeded institutional appetite, with a 31.35x oversubscription.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Future Implications</div>
+          <div class="field-text">The IPO&#x27;s success will indicate investor appetite in the region amidst uncertainty. A positive outcome could boost Egypt&#x27;s construction and energy sectors, while a negative outcome may deter foreign investment.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Actionable Advice</div>
+          <div class="field-text">REDCON Egypt should monitor the IPO&#x27;s performance and adjust its investment strategy accordingly. Consider diversifying portfolios to mitigate risks and capitalize on potential opportunities in the energy sector.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">سيتم إطلاق طرح كورا للطاقة في البورصة المصرية بسعر إفتتاحي قدره 2.97 جنيه للسهم. وتطرح الشركة 247.5 مليون سهم، ممثلاً 11% من رأس المال. وتجاوز الطلب من قبل المستثمرين من القطاع الخاص الطلب من قبل المؤسسات المالية، بنسبة 31.35 مرة.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التداعيات المستقبلية</div>
+          <div class="field-text">سيكون نجاح الطرح دليلاً على شهية المستثمرين في المنطقة في ظل عدم اليقين. ويمكن أن يعزز النتيج الإيجابي قطاع الطاقة والبناء في مصر، بينما يمكن أن يردع النتيج السلبي الاستثمار الأجنبي.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التوصيات</div>
+          <div class="field-text">ينبغي لشركة ريدكون مصر مراقبة أداء الطرح وتعديل استراتيجية الاستثمار وفقاً لذلك. وينبغي النظر في تنويع المحفظة لتحديد المخاطر والاستفادة من الفرص المحتملة في قطاع الطاقة.</div>
+        </div>
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/06/11/govt-fully-clears-usd-6-1-bn-in-arrears-to-intl-oil-companies/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card" id="c24" onclick="toggle('c24')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Qalaa Holding&#x27;s NPM IPO Delayed</span>
+          <span class="title-ar" dir="rtl">تأجيل طرح أسهم شركة إدارة الموانئ الوطنية</span>
+        </div>
+        <div class="card-chevron">&#x203A;</div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Qalaa Holding&#x27;s logistics arm, National Ports Management, delays IPO to September. The company plans to float three subsidiaries within a year to reduce debt. The move follows Banque du Caire&#x27;s IPO delay due to summer market lull and regional tensions.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Future Implications</div>
+          <div class="field-text">The IPO delay may impact Egypt&#x27;s construction and logistics sectors. Regional tensions and market fluctuations could affect investor appetite, posing risks to REDCON Egypt&#x27;s projects. However, a successful IPO could attract investments and boost economic growth.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Actionable Advice</div>
+          <div class="field-text">REDCON Egypt should monitor the IPO&#x27;s progress and adjust its investment strategies accordingly. The company should also diversify its portfolio to mitigate potential risks and capitalize on opportunities in the logistics and construction sectors.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">أعلنت شركة قلاة القابضة عن تأجيل طرح أسهم شركة إدارة الموانئ الوطنية إلى سبتمبر. تعتزم الشركة طرح ثلاث شركات فرعية أخرى خلال عام لتحسين وضعها المالي. هذا القرار يأتي بعد تأجيل طرح أسهم بنك القاهرة بسبب بطء السوق الصيفي والتوترات الإقليمية.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التداعيات المستقبلية</div>
+          <div class="field-text">قد يؤثر تأجيل طرح الأسهم على قطاعات البناء واللوجستيات في مصر. قد تؤدي التوترات الإقليمية وتنقلبات السوق إلى تأثير على رغبة المستثمرين، مما يشكل مخاطر على مشاريع شركة ريدكون مصر. ومع ذلك، قد ي吸ب طرح أسهم ناجح استثمارات ويعزز النمو الاقتصادي.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التوصيات</div>
+          <div class="field-text">ينبغي لشركة ريدكون مصر مراقبة تقدم طرح الأسهم وتعديل استراتيجيات الاستثمار الخاصة بها وفقًا لذلك. يجب على الشركة أيضًا تنويع محفظتها لتحديد المخاطر المحتملة والاستفادة من الفرص في قطاعات اللوجستيات والبناء.</div>
+        </div>
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/06/11/govt-fully-clears-usd-6-1-bn-in-arrears-to-intl-oil-companies/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card" id="c25" onclick="toggle('c25')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">EBRD Targets EUR 7.5bn Egypt Investment</span>
+          <span class="title-ar" dir="rtl">البريد الإلكتروني يستهدف 7.5 مليار يورو للاستثمار في مصر</span>
+        </div>
+        <div class="card-chevron">&#x203A;</div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">The EBRD plans to invest EUR 7.5bn in Egypt over the next five years, with a focus on green construction and real estate. Developers must adopt green models to receive funding. The investment targets various sectors, including infrastructure and MSMEs.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Future Implications</div>
+          <div class="field-text">The EBRD&#x27;s investment will drive Egypt&#x27;s green economy transition, creating opportunities for sustainable development and growth. However, it also poses risks if developers fail to adapt to green construction models. The investment will also impact the MENA region&#x27;s infrastructure, energy, and transportation sectors.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Actionable Advice</div>
+          <div class="field-text">REDCON Egypt should prioritize green construction models and certifications like EDGE and LEED to access EBRD funding. The company should also explore opportunities in MSMEs and infrastructure development, while monitoring regional geopolitical tensions and their impact on investment.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">تخطط البريد الإلكتروني للاستثمار في 7.5 مليار يورو في مصر خلال الخمس سنوات القادمة، مع التركيز على البناء الأخضر والقطاع العقاري. يجب على المطورين تبني نماذج بناء خضراء للحصول على التمويل.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التداعيات المستقبلية</div>
+          <div class="field-text">سيؤدي استثمار البريد الإلكتروني إلى دفع انتقالات مصر الاقتصادية الخضراء، مما يخلق فرصًا للتنمية المستدامة والنمو. ومع ذلك، فإنه يطرح أيضًا مخاطر إذا فشل المطورون في التكيف مع نماذج البناء الخضراء. سيتأثر الاستثمار أيضًا بقطاعات البنية التحتية والطاقة والنقل في المنطقة.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التوصيات</div>
+          <div class="field-text">يجب على شركة REDCON مصر أن تprioritize نماذج البناء الخضراء والشهادات مثل EDGE وLEED للوصول إلى تمويل البريد الإلكتروني. يجب على الشركة أيضًا استكشاف الفرص في قطاع الشركات الصغيرة والمتوسطة والبنية التحتية، مع مراقبة التوترات الجيوسياسية الإقليمية وتأثيرها على الاستثمار.</div>
+        </div>
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/06/11/govt-fully-clears-usd-6-1-bn-in-arrears-to-intl-oil-companies/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card" id="c26" onclick="toggle('c26')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egypt&#x27;s Renewable Energy Boost</span>
+          <span class="title-ar" dir="rtl">تعزيز الطاقة المتجددة في مصر</span>
+        </div>
+        <div class="card-chevron">&#x203A;</div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Alcazar Energy&#x27;s Gabal El Ziet wind farm will operate for 25 years at $0.03/kWh. The Egyptian Electricity Transmission Company will off-take all generated power. The project will help Egypt reach its renewable energy targets and reduce reliance on natural gas.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Future Implications</div>
+          <div class="field-text">The agreement implies a significant opportunity for Egypt to increase its renewable energy capacity, reducing carbon emissions and dependence on natural gas. The EBRD&#x27;s $7.5 billion financing target for Egypt will also drive green construction and logistics, presenting opportunities for developers and investors.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Actionable Advice</div>
+          <div class="field-text">REDCON Egypt should explore partnerships with Alcazar Energy and the EBRD to leverage the growing demand for renewable energy and green construction. The company should also consider investing in certifications like EDGE and LEED to enhance its portfolio and attract investors.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">سوف تعمل مزرعة رياح جبل الزيت لشركة Alcazar Energy لمدة 25 عامًا عند سعر 0.03 دولار لكل كيلووات ساعة. سوف تشتري شركة النقل الكهربائي المصرية جميع الطاقة المولدة. سيساهم المشروع في مساعدة مصر على تحقيق أهدافها في مجال الطاقة المتجددة وتقليل الاعتماد على الغاز الطبيعي.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التداعيات المستقبلية</div>
+          <div class="field-text">تؤشر الاتفاقية على فرصة كبيرة لمصر لزيادة سعتها من الطاقة المتجددة، مما يقلل من انبعاثات الكربون والاعتماد على الغاز الطبيعي. سوف يدفع هدف التمويل البالغ 7.5 مليار يورو للبنك الأوروبي لإعادة الإعمار والتنمية في مصر إلى بناء مستدام وتحديث البنية التحتية، مما يقدم فرصًا للمطورين والمستثمرين.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التوصيات</div>
+          <div class="field-text">ينبغي لشركة REDCON مصر أن ت探 فرص الشراكة مع شركة Alcazar Energy والبنك الأوروبي لإعادة الإعمار والتنمية للاستفادة من الطلب المتزايد على الطاقة المتجددة والبناء المستدام. يجب على الشركة أن تضع في الاعتبار الاستثمار في شهادات مثل EDGE وLEED لتعزيز محفظتها وجذب المستثمرين.</div>
+        </div>
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/06/11/govt-fully-clears-usd-6-1-bn-in-arrears-to-intl-oil-companies/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card" id="c27" onclick="toggle('c27')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egypt Clears Oil Arrears</span>
+          <span class="title-ar" dir="rtl">مصر تسدد المديونية النفطية</span>
+        </div>
+        <div class="card-chevron">&#x203A;</div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Egypt has paid $6.1bn in outstanding arrears to international oil companies, fulfilling a promise to restore investor confidence. This move is expected to unlock $19bn in investments and help the country reach its $6.2bn FDI target.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Future Implications</div>
+          <div class="field-text">The payment is likely to boost Egypt&#x27;s energy sector, with potential opportunities for growth in construction, infrastructure, and engineering. However, the country still faces challenges, including rising energy prices and a surging gas import bill.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Actionable Advice</div>
+          <div class="field-text">REDCON Egypt should consider investing in energy projects, particularly in the renewable energy sector, to capitalize on the government&#x27;s efforts to reduce reliance on natural gas. The company should also explore opportunities in green construction and logistics to tap into the EBRD&#x27;s financing initiatives.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">أدت مصر 6.1 مليار دولار من المديونية النفطية المتأخرة للشركات النفطية الدولية، مما ي満ي وعدها لاستعادة ثقة المستثمرين. ومن المتوقع أن يفتح هذا الإجراء الباب أمام استثمارات بقيمة 19 مليار دولار ومساعدة البلاد في تحقيق هدفها من 6.2 مليار دولار في الاستثمارات الأجنبية المباشرة.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التداعيات المستقبلية</div>
+          <div class="field-text">من المرجح أن يؤدي تسديد المديونية النفطية إلى تعزيز قطاع الطاقة في مصر، مع فرص محتملة للنمو في البناء والبنية التحتية والهندسة. ومع ذلك، لا تزال البلاد تواجه تحديات، بما في ذلك ارتفاع أسعار الطاقة وزيادة فاتورة استيراد الغاز.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التوصيات</div>
+          <div class="field-text">ينبغي لشركة REDCON مصر النظر في الاستثمار في مشاريع الطاقة، خاصة في قطاع الطاقة المتجددة، للاستفادة من جهود الحكومة لخفض الاعتماد على الغاز الطبيعي. يجب على الشركة كذلك استكشاف الفرص في البناء الأخضر واللوجستيات للاستفادة من مبادرات التمويل التي تقدمها البنك الأوروبي لإعادة البناء والتنمية.</div>
+        </div>
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/06/11/govt-fully-clears-usd-6-1-bn-in-arrears-to-intl-oil-companies/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+  </section>
+  <section class="day-group">
+    <div class="day-header">
+      <span class="day-label">2026-06-09</span>
+      <div class="day-rule"></div>
+      <span class="day-count">19 articles</span>
+    </div>
+    
+    <div class="card" id="c28" onclick="toggle('c28')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egypt&#x27;s First Agrivoltaics Pilot</span>
+          <span class="title-ar" dir="rtl">أول مشروع تجريبي لتقنية الأغروفتوفولتية في مصر</span>
+        </div>
+        <div class="card-chevron">&#x203A;</div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Engazaat is building Egypt&#x27;s first commercial-scale agrivoltaics pilot at Nuweiba, backed by EUR 4 mn. The project will test the feasibility of agrivoltaics in Egyptian conditions, aiming to generate power, shade crops, and reduce water consumption.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Future Implications</div>
+          <div class="field-text">The success of the pilot could have significant implications for Egypt&#x27;s agricultural and energy sectors, potentially reducing water consumption by up to 29% and increasing land-use efficiency. However, high financing costs and institutional barriers may hinder large-scale adoption.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Actionable Advice</div>
+          <div class="field-text">REDCON Egypt should monitor the pilot&#x27;s progress and consider partnering with Engazaat or other stakeholders to explore opportunities for integrating agrivoltaics into its construction and infrastructure projects, particularly in water-stressed areas.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">تطوير مشروع تجريبي لتقنية الأغروفتوفولتية في نوويبع، بدعم من 4 ملايين يورو. يهدف المشروع إلى اختبار جدوى تقنية الأغروفتوفولتية في الظروف المصرية، بهدف توليد الطاقة وتهدئة المحاصيل وتقليل استهلاك المياه.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التداعيات المستقبلية</div>
+          <div class="field-text">يمكن أن يكون نجاح المشروع التجريبي له تأثيرات كبيرة على قطاعي الزراعة والطاقة في مصر، حيث يمكن أن يقلل من استهلاك المياه بنسبة تصل إلى 29% ويزيد من كفاءة استخدام الأراضي. ومع ذلك، قد تعوق التكاليف المالية العالية والعوائق المؤسسية تبني هذه التقنية على نطاق واسع.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التوصيات</div>
+          <div class="field-text">ينبغي لشركة REDCON مصر مراقبة تقدم المشروع التجريبي والتفكير في الشراكة مع شركة Engazaat أو أطراف أخرى لاستكشاف الفرص لدمج تقنية الأغروفتوفولتية في مشاريع البناء والبنية التحتية، خاصة في المناطق التي تعاني من نقص المياه.</div>
+        </div>
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/goinggreens/egypts-first-commercial-scale-agrivoltaics-pilot-will-deliver-results-in-september-but-industry-players-are-split-on-what-it-will-show/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card" id="c29" onclick="toggle('c29')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">EGX30 Falls 0.5% Amidst Regional Selling</span>
+          <span class="title-ar" dir="rtl">مؤشر EGX30 ينخفض 0.5% وسط بيع إقليمي</span>
+        </div>
+        <div class="card-chevron">&#x203A;</div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">The EGX30 index declined 0.5% with a turnover of EGP 11.0 billion, 33% above the 90-day average. Orascom Investment Holding, GB Corp, and Juhayna saw gains, while Raya Holding, E-finance, and Emaar Misr declined.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Future Implications</div>
+          <div class="field-text">The decline may impact investor confidence in the Egyptian market. However, the index is still up 24% YTD, indicating potential for growth in construction and real estate sectors.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Actionable Advice</div>
+          <div class="field-text">REDCON Egypt should monitor market trends and consider diversifying investments to mitigate risks. Focus on sectors with growth potential, such as infrastructure and industrial development.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">انخفض مؤشر EGX30 بنسبة 0.5% مع حجم تداول بلغ 11.0 مليار جنيه، أي ما يعادل 33% فوق المعدل لآخر 90 يوما. سجلت أوراسكوم للاستثمار، وجي بي كورب، وجوهينة مكاسب، في حين انخفضت أسهم رايا هولدينج، وإي فاينانس، وإعمار مصر.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التداعيات المستقبلية</div>
+          <div class="field-text">قد يؤثر الانخفاض على ثقة المستثمرين في السوق المصرية. ومع ذلك، لا يزال المؤشر مرتفعا بنسبة 24% عن同期 من العام الماضي، مما يشير إلى إمكانات نمو في قطاعات البناء والอสكان.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التوصيات</div>
+          <div class="field-text">ينبغي لشركة REDCON مصر مراقبة الاتجاهات السوقية و考虑 تنويع الاستثمارات لتخفيف المخاطر. يجب التركيز على القطاعات التي تتمتع بإمكانات نمو، مثل البنية التحتية والتنمية الصناعية.</div>
+        </div>
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/06/09/software-dealmaking-is-under-pressure-from-ai/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card" id="c30" onclick="toggle('c30')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">MARKETS THIS MORNING-</span>
+          <span class="title-ar" dir="rtl">MARKETS THIS MORNING-</span>
+        </div>
+        <div class="card-chevron">&#x203A;</div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">The EGX30 index fell 0.5% with a turnover of EGP 11.0 bn, despite being up 24.0% YTD, as regional investors were net sellers, affecting stocks like Emaar Misr and Raya Holding</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Future Implications</div>
+          <div class="field-text">The decline in EGX30 may impact investor confidence in the Egyptian market, potentially affecting construction and infrastructure projects, while Orascom Investment Holding&#x27;s gain could indicate a positive outlook for real estate and investment in Egypt, with possible implications for MENA market investments, including potential shifts in funding for large-scale projects and changes in demand for construction materials</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Actionable Advice</div>
+          <div class="field-text">REDCON should closely monitor the EGX30 index and adjust its investment strategies accordingly, immediately reviewing its portfolio to identify potential risks and opportunities, and in the medium-term, consider diversifying its investments to mitigate potential losses and capitalize on growth opportunities in the Egyptian real estate and construction sectors</div>
+        </div>
+          
+          
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/06/09/software-dealmaking-is-under-pressure-from-ai/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card" id="c31" onclick="toggle('c31')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">EgyptAir Expands Fleet</span>
+          <span class="title-ar" dir="rtl">مصر للطيران توسع أسطولها</span>
+        </div>
+        <div class="card-chevron">&#x203A;</div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">EgyptAir plans to add 28 new aircraft to its fleet by 2027, aiming for 125 planes. AirCairo&#x27;s fleet will also expand from 42 to 82 aircraft within four years.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Future Implications</div>
+          <div class="field-text">Expanded fleets will increase air travel capacity, boosting tourism and economic growth in Egypt and the MENA region, with potential opportunities for infrastructure development and logistics investments.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Actionable Advice</div>
+          <div class="field-text">REDCON Egypt should consider investing in airport infrastructure and logistics services to capitalize on the growing air travel demand, and explore potential partnerships with EgyptAir and AirCairo.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">تخطط مصر للطيران لإضافة 28 طائرة جديدة إلى أسطولها في 2026 و 2027، بهدف الوصول إلى 125 طائرة في السنوات القادمة. كما سيتم توسيع أسطول شركة إير كايرو من 42 إلى 82 طائرة خلال الأربع سنوات القادمة.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التداعيات المستقبلية</div>
+          <div class="field-text">سيؤدي توسيع الأسطول إلى زيادة سعة السفر الجوي، مما يؤدي إلى تعزيز السياحة والنمو الاقتصادي في مصر ومنطقة الشرق الأوسط وشمال أفريقيا، مع فرص محتملة للاستثمار في البنية التحتية والخدمات اللوجستية.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التوصيات</div>
+          <div class="field-text">ينبغي لشركة REDCON مصر النظر في الاستثمار في بنية المطارات والخدمات اللوجستية للاستفادة من الطلب المتزايد على السفر الجوي، واستكشاف فرص الشراكات المحتملة مع مصر للطيران وشركة إير كايرو.</div>
+        </div>
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/06/09/trial-operations-kick-off-at-ad-ports-safaga-2-terminal/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card" id="c32" onclick="toggle('c32')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">AI Education Investment</span>
+          <span class="title-ar" dir="rtl">استثمار في تعليم الذكاء الاصطناعي</span>
+        </div>
+        <div class="card-chevron">&#x203A;</div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Efham.ai secures funding to scale AI training in Arab markets, launching 100 lessons by 3Q 2026. EgyptAir plans to expand fleet to 125 planes.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Future Implications</div>
+          <div class="field-text">Increased AI adoption in MENA may drive innovation, entrepreneurship, and economic growth. Expanded air fleets could enhance regional connectivity and trade.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Actionable Advice</div>
+          <div class="field-text">REDCON Egypt should explore partnerships with Efham.ai to upskill workforce in AI, and consider opportunities in aviation infrastructure development.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">حصلت Efham.ai على تمويل لتوسيع تدريب الذكاء الاصطناعي في الأسواق العربية، وإطلاق أكثر من 100 درس بحلول الربع الثالث من 2026. تخطط مصر للطيران لتوسيع أسطولها إلى 125 طائرة.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التداعيات المستقبلية</div>
+          <div class="field-text">من المحتمل أن يؤدي زيادة اعتماد الذكاء الاصطناعي في منطقة MENA إلى تعزيز الابتكار والريادة والنمو الاقتصادي. قد تؤدي الأساطيل الجوية الموسعة إلى تحسين الاتصال والتجارة الإقليمية.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التوصيات</div>
+          <div class="field-text">ينبغي لشركة REDCON مصر أن ت探 استثمار فرص الشراكة مع Efham.ai لتعزيز مهارات القوى العاملة في الذكاء الاصطناعي، والبحث في فرص التطوير البنيوي للطيران.</div>
+        </div>
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/06/09/trial-operations-kick-off-at-ad-ports-safaga-2-terminal/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card" id="c33" onclick="toggle('c33')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egypt Secures Kuwait Deposit Rollout</span>
+          <span class="title-ar" dir="rtl">مصر تتحصل على تمديد الإيداع الكويتي</span>
+        </div>
+        <div class="card-chevron">&#x203A;</div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Kuwait has rolled over its $2 billion deposit at the Central Bank of Egypt for an additional year, supporting Egypt&#x27;s foreign reserves growth. Egypt&#x27;s reserves rose by $125 million in May to $53.13 billion.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Future Implications</div>
+          <div class="field-text">The deposit rollout will positively impact Egypt&#x27;s economic growth and stability, attracting more investments in construction, infrastructure, and real estate. It may also boost confidence in Egypt&#x27;s economy, potentially leading to increased PPPs and industrial development.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Actionable Advice</div>
+          <div class="field-text">REDCON Egypt should consider leveraging the increased foreign reserves to secure funding for large-scale infrastructure projects, while exploring opportunities in the growing AI and aviation sectors.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">أعلنت الكويت عن تمديد إيداعها البالغ 2 مليار دولار عند البنك المركزي المصري لمدة عام إضافي، مما يدعم نمو احتياطي مصر الأجنبي. ارتفع احتياطي مصر بنسبة 125 مليون دولار في مايو إلى 53.13 مليار دولار.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التداعيات المستقبلية</div>
+          <div class="field-text">من المتوقع أن يؤثر تمديد الإيداع بشكل إيجابي على النمو الاقتصادي والاستقرار في مصر، مما يجذب المزيد من الاستثمارات في البنية التحتية والقطاعات العقارية. قد يزيد ذلك من الثقة في الاقتصاد المصري، مما قد يؤدي إلى زيادة الشراكات بين القطاعين العام والخاص والتنمية الصناعية.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التوصيات</div>
+          <div class="field-text">ينبغي لشركة REDCON مصر النظر في استغلال الاحتياطي الأجنبي المتزايد لتأمين التمويل لمشاريع البنية التحتية الكبيرة، مع استكشاف الفرص في قطاع الذكاء الاصطناعي والطيران النامي.</div>
+        </div>
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/06/09/trial-operations-kick-off-at-ad-ports-safaga-2-terminal/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card" id="c34" onclick="toggle('c34')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Nissan Launches Africa-Made Magnite</span>
+          <span class="title-ar" dir="rtl">نيسان تطلق موديل ماجنيت المصنع في أفريقيا</span>
+        </div>
+        <div class="card-chevron">&#x203A;</div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Nissan has rolled out the first Africa-made Nissan Magnite from its Sixth of October factory, with up to 55% local content. The company plans to export 7,000 units annually.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Future Implications</div>
+          <div class="field-text">The rollout aligns with Egypt&#x27;s Automotive Industry Development Program, targeting 100,000 vehicles annually with 60% local content. This may create opportunities for local suppliers and boost the economy.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Actionable Advice</div>
+          <div class="field-text">REDCON Egypt should consider partnering with Nissan to explore potential construction and infrastructure projects related to the automotive industry, such as building new assembly lines or logistics facilities.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">أطلقت نيسان أول موديل ماجنيت مصنع في أفريقيا من مصنعها في مدينة السادس من أكتوبر، بمكونات محلية تصل إلى 55%. وتخطط الشركة لتصدير 7 آلاف وحدة سنويا.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التداعيات المستقبلية</div>
+          <div class="field-text">يتوافق الإطلاق مع برنامج تطوير الصناعة السيارة في مصر، الذي يهدف إلى إنتاج 100 ألف سيارة سنويا بمكونات محلية تصل إلى 60%. ويمكن أن يخلق هذا فرصا لموردي المكونات المحلية ويعزز الاقتصاد.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التوصيات</div>
+          <div class="field-text">ينبغي لشركة ريدكون مصر النظر في الشراكة مع نيسان لاستكشاف المشاريع المحتملة المتعلقة بالصناعة السيارة، مثل بناء خطوط تجميع جديدة أو مرافق لوجستية.</div>
+        </div>
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/06/09/trial-operations-kick-off-at-ad-ports-safaga-2-terminal/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card" id="c35" onclick="toggle('c35')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Valmore Holding Appoints New CFO</span>
+          <span class="title-ar" dir="rtl">تعيين شادي مكاري في منصب المدير المالي لشركة فالмор</span>
+        </div>
+        <div class="card-chevron">&#x203A;</div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Valmore Holding appointed Shady Makary as CFO, bringing 25 years of experience in corporate finance and operational leadership. He will focus on optimizing financial performance and strengthening internal controls.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Future Implications</div>
+          <div class="field-text">Makary&#x27;s appointment may enhance Valmore&#x27;s financial stability and support its expansion into overseas markets, potentially increasing its competitiveness in the MENA region&#x27;s construction and real estate sectors.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Actionable Advice</div>
+          <div class="field-text">REDCON Egypt should monitor Valmore&#x27;s financial performance and assess potential partnership opportunities, considering Makary&#x27;s experience in optimizing financial operations and the company&#x27;s expansion plans.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">عينت شركة فالмор شادي مكاري في منصب المدير المالي، حيث يأتي معه خبرة 25 عامًا في الشؤون المالية والقيادة التشغيلية. سي集中 على تحسين الأداء المالي وتعزيز السيطرة الداخلية.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التداعيات المستقبلية</div>
+          <div class="field-text">يمكن أن يعزز تعيين مكاري الاستقرار المالي لشركة فالмор ويدعم توسعها في الأسواق الخارجية، مما قد يزيد من قدرتها التنافسية في قطاعات البناء والعقارات في منطقة الشرق الأوسط وشمال أفريقيا.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التوصيات</div>
+          <div class="field-text">يجب على شركة ريدكون مصر مراقبة الأداء المالي لشركة فالмор وتقييم الفرص المحتملة للشراكة، مع الأخذ في الاعتبار خبرة مكاري في تحسين العمليات المالية وخطط التوسع للشركة.</div>
+        </div>
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/06/09/valmore-holding-names-shady-makary-as-cfo/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card" id="c36" onclick="toggle('c36')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egypt Tax Reform</span>
+          <span class="title-ar" dir="rtl">إصلاح الضريبة في مصر</span>
+        </div>
+        <div class="card-chevron">&#x203A;</div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Egypt&#x27;s draft tax law applies a 2.5% tax rate to property disposals, exempts transfers between relatives, and eases bad debt write-offs. The law aims to increase tax revenues to EGP 3.5 tn in the coming fiscal year.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Future Implications</div>
+          <div class="field-text">The tax reform may attract more investment in Egypt&#x27;s real estate sector and boost economic growth. However, the increased tax burden on businesses may pose risks to their profitability and competitiveness.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Actionable Advice</div>
+          <div class="field-text">REDCON Egypt should review its tax strategy and assess the impact of the new tax law on its business operations. The company should also consider opportunities for investment in the real estate sector and explore ways to mitigate potential tax risks.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">تطبق مشروع قانون الضريبة في مصر معدل ضريبة موحد بنسبة 2.5% على عمليات بيع العقارات، وتستثني عمليات نقل ملكية بين الأقارب، وتسهل إجراءات تسوية الديون السيئة. يهدف القانون إلى زيادة الإيرادات الضريبية إلى 3.5 تريليون جنيه في السنة المالية القادمة.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التداعيات المستقبلية</div>
+          <div class="field-text">قد يجذب إصلاح الضريبة المزيد من الاستثمارات في قطاع العقارات في مصر ويعزز النمو الاقتصادي. ومع ذلك، قد تفرض زيادة العبء الضريبي على الشركات مخاطر على ربحيتها وتنافسيتها.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التوصيات</div>
+          <div class="field-text">ينبغي لشركة REDCON مصر مراجعة استراتيجيتها الضريبية وتقييم تأثير القانون الضريبي الجديد على عملياتها التجارية. كما ينبغي للشركة النظر في الفرص الاستثمارية في قطاع العقارات و探ر سبل التخفيف من المخاطر الضريبية المحتملة.</div>
+        </div>
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/06/09/finmins-finalizes-draft-tax-reforms-targeting-egp-900-bn-revenue-boost/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card" id="c37" onclick="toggle('c37')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egypt Tax Reforms Boost Investment</span>
+          <span class="title-ar" dir="rtl">إصلاحات ضريبية في مصر تعزز الاستثمار</span>
+        </div>
+        <div class="card-chevron">&#x203A;</div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Egypt&#x27;s new tax law allows taxpayers to add the CBE&#x27;s credit rate to acquisition costs, exempts holding companies from taxes on dividends, and provides relief for companies working on national infrastructure projects.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Future Implications</div>
+          <div class="field-text">The reforms may attract more investment in Egypt&#x27;s infrastructure and real estate sectors, increasing economic growth and development in the MENA region. However, the success of these reforms depends on effective implementation and potential risks such as inflation and tax evasion.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Actionable Advice</div>
+          <div class="field-text">REDCON Egypt should review its investment portfolio and consider taking advantage of the new tax incentives for infrastructure projects. The company should also assess its dividend distribution strategy and explore opportunities for growth in the real estate sector.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">سمحت الإصلاحات الضريبية الجديدة في مصر للمساهمين بإضافة معدل الائتمان التابع للبنك المركزي إلى تكلفة الاستحواذ، و免يت الشركات القابضة من الضرائب على الأرباح، ووفرت مساعدات للشركات العاملة على مشاريع البنية التحتية الوطنية.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التداعيات المستقبلية</div>
+          <div class="field-text">قد تجذب الإصلاحات المزيد من الاستثمارات في قطاعات البنية التحتية والعقارات في مصر، مما يزيد من النمو الاقتصادي والتنمية في المنطقة.然而، يعتمد نجاح هذه الإصلاحات على التنفيذ الفعال والمخاطر المحتملة مثل التضخم والتهرب الضريبي.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التوصيات</div>
+          <div class="field-text">ينبغي لشركة REDCON مصر أن تقيم محفظة استثماراتها وتنظر في الاستفادة من الحوافز الضريبية الجديدة لمشاريع البنية التحتية. كما ينبغي للشركة أن تقيم استراتيجية توزيع الأرباح وتستكشف فرص النمو في قطاع العقارات.</div>
+        </div>
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/06/09/finmins-finalizes-draft-tax-reforms-targeting-egp-900-bn-revenue-boost/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card" id="c38" onclick="toggle('c38')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egypt Introduces Tax Incentives</span>
+          <span class="title-ar" dir="rtl">مصر تطرح حوافز ضريبية</span>
+        </div>
+        <div class="card-chevron">&#x203A;</div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Egypt has introduced a 15% income tax deduction for companies listing on the EGX, aiming to encourage large companies to list and generate economic returns. The measure applies to companies with a market cap of at least EGP 50 bn or offering shares worth EGP 10 bn.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Future Implications</div>
+          <div class="field-text">The new tax incentives are expected to boost Egypt&#x27;s economy by encouraging large companies to list on the EGX, increasing investment, and generating revenue. This could lead to increased economic growth, improved infrastructure, and enhanced business opportunities in the MENA region.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Actionable Advice</div>
+          <div class="field-text">REDCON Egypt should consider listing on the EGX to take advantage of the 15% income tax deduction. The company should also explore opportunities for investing in national infrastructure projects, which will be exempt from the tax cap on deducting interest paid on loans and credit facilities.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">أعلنت مصر عن خصم 15% من ضريبة الدخل للشركات التي تطرح أسهمها في البورصة المصرية، بهدف تشجيع الشركات الكبيرة على التداول وزيادة العائدات الاقتصادية. تنطبق هذه الإجراء على الشركات التي تبلغ قيمتها السوقية 50 مليار جنيه على الأقل أو التي تقدم أسهمًا بقيمة 10 مليارات جنيه.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التداعيات المستقبلية</div>
+          <div class="field-text">تُتوقع أن تعزز الحوافز الضريبية الجديدة الاقتصاد المصري عن طريق تشجيع الشركات الكبيرة على التداول في البورصة المصرية، وزيادة الاستثمارات، وتوليد الإيرادات. قد يؤدي هذا إلى زيادة النمو الاقتصادي، وتحسين البنية التحتية، وزيادة الفرص التجارية في منطقة الشرق الأوسط وشمال أفريقيا.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التوصيات</div>
+          <div class="field-text">ينبغي للشركة المصرية REDCON النظر في التداول في البورصة المصرية للاستفادة من خصم 15% من ضريبة الدخل. كما ينبغي للشركة استكشاف الفرص للاستثمار في مشاريع البنية التحتية الوطنية، والتي ستكون معفاة من سقف الضريبة على الفوائد المدفوعة على القروض والمرافق الائتمانية.</div>
+        </div>
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/06/09/finmins-finalizes-draft-tax-reforms-targeting-egp-900-bn-revenue-boost/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card" id="c39" onclick="toggle('c39')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">MNT-Halan Reaches $1.4bn Valuation</span>
+          <span class="title-ar" dir="rtl">مجموعة MNT-Halan تصل إلى قيمة 1.4 مليار دولار</span>
+        </div>
+        <div class="card-chevron">&#x203A;</div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">MNT-Halan, a local fintech unicorn, has reached a $1.4bn valuation after securing a strategic investment round led by Al Ahly Capital Holding. The funds will be used to expand its Egypt business and support regional growth plans.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Future Implications</div>
+          <div class="field-text">This investment may encourage other lenders to follow suit, potentially increasing funding for non-banking financial institutions in Egypt and the MENA region, driving economic growth and financial inclusion.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Actionable Advice</div>
+          <div class="field-text">REDCON Egypt should monitor MNT-Halan&#x27;s expansion and consider potential partnerships or collaborations to leverage their fintech capabilities and reach underserved populations, particularly in remote areas.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">达ت قيمة شركة MNT-Halan، التابعة لقطاع التكنولوجيا المالية، 1.4 مليار دولار بعد حصولها على استثمار استراتيجي بقيادة شركة العهلي كابيتال هولدينج. سيتم استخدام الأموال لتوسيع أعمالها في مصر ودعم خطط النمو الإقليمي.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التداعيات المستقبلية</div>
+          <div class="field-text">قد يشجع هذا الاستثمار المزيد من المقرضين على اتباع نفس النهج، مما قد يزيد التمويل للمؤسسات المالية غير المصرفية في مصر ومنطقة الشرق الأوسط وشمال أفريقيا، مما يدفع النمو الاقتصادي والشمول المالي.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التوصيات</div>
+          <div class="field-text">ينبغي لشركة REDCON مصر مراقبة توسع شركة MNT-Halan والتفكير في الشراكات أو التعاون المحتمل للاستفادة من قدراتها التكنولوجية المالية والوصول إلى السكان المحرومين، خاصة في المناطق النائية.</div>
+        </div>
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/06/09/mnt-halan-hits-usd-1-4-bn-valuation-following-al-ahly-capital-led-funding-round/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card" id="c40" onclick="toggle('c40')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Alcazar Acquires Gabal El Zeit Wind Farm</span>
+          <span class="title-ar" dir="rtl">ألكازار تستحوذ على مزرعة الغازال للرياح</span>
+        </div>
+        <div class="card-chevron">&#x203A;</div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Alcazar Energy has signed a $420mn agreement to operate and upgrade the 580MW Gabal El Zeit wind farm, boosting Egypt&#x27;s renewable energy production and supporting privatization targets.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Future Implications</div>
+          <div class="field-text">This deal may attract more foreign investment in Egypt&#x27;s energy sector, driving growth and increasing the country&#x27;s renewable energy capacity, with potential opportunities for REDCON Egypt in infrastructure development and construction.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Actionable Advice</div>
+          <div class="field-text">REDCON Egypt should explore potential partnerships with Alcazar Energy and the New and Renewable Energy Authority to capitalize on upcoming infrastructure projects and privatization initiatives.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">وقعت شركة ألكازار للطاقة اتفاقاً بقيمة 420 مليون دولار لتشغيل وتحديث مزرعة الغازال للرياح التي تنتج 580 ميغاواط، مما يعزز إنتاج الطاقة المتجددة في مصر ويدعم أهداف الخصخصة.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التداعيات المستقبلية</div>
+          <div class="field-text">قد تجذب هذه الصفقة استثمارات أجنبية إضافية إلى قطاع الطاقة في مصر، مما يدفع النمو ويزيد من سعة الطاقة المتجددة في البلاد، مع فرص محتملة لشركة ريدكون مصر في تطوير البنية التحتية والإنشاءات.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التوصيات</div>
+          <div class="field-text">ينبغي لشركة ريدكون مصر استكشاف الشراكات المحتملة مع شركة ألكازار للطاقة والهيئة العامة للطاقة الجديدة والمتجددة للاستفادة من مشاريع البنية التحتية والخصخصة القادمة.</div>
+        </div>
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/06/09/alcazar-locks-in-usd-420-mn-deal-to-manage-gabal-el-zeit/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card" id="c41" onclick="toggle('c41')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Global Market Trends Impact Egypt</span>
+          <span class="title-ar" dir="rtl">اتجاهات السوق العالمية وتأثيرها على مصر</span>
+        </div>
+        <div class="card-chevron">&#x203A;</div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Regional tensions ease, while SpaceX and OpenAI prepare for IPOs. Apple unveils Siri AI, and a US judge rules against a fee on H-1B visa applications. Egypt explores agrivoltaics and green economy initiatives.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Future Implications</div>
+          <div class="field-text">Egypt and the MENA region may see opportunities in green energy and technology. However, regional tensions and global market trends could impact construction, infrastructure, and investment. Companies like REDCON Egypt should monitor these developments and adapt strategies accordingly.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Actionable Advice</div>
+          <div class="field-text">REDCON Egypt should consider investing in sustainable practices and green technologies, while diversifying its portfolio to mitigate risks from regional tensions and global market fluctuations. Immediate actions include monitoring IPOs and their potential impact on the Egyptian market.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">تخفيف التوترات الإقليمية، في حين تستعد سبايس إكس واوبن آي آي للطرح العام الأولي. كشفت أبل عن سيري آي آي، وقاض أمريكي حكم ضد رسوم على طلبات التأشيرة ه-1ب. تستكشف مصر مبادرات الطاقة الخضراء واقتصادها</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التداعيات المستقبلية</div>
+          <div class="field-text">قد تشهد مصر ومنطقة الشرق الأوسط وشمال أفريقيا فرصًا في الطاقة الخضراء والتكنولوجيا. ومع ذلك، قد تؤثر التوترات الإقليمية واتجاهات السوق العالمية على البناء والبنية التحتية والاستثمار. يجب على شركات مثل ريدكون مصر مراقبة هذه التطورات وتكييف استراتيجياتها وفقًا لذلك</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التوصيات</div>
+          <div class="field-text">يجب على ريدكون مصر النظر في الاستثمار في الممارسات المستدامة والتكنولوجيا الخضراء، في حين تنويع محفظة الاستثمارات لتخفيف المخاطر الناجمة عن التوترات الإقليمية وتقلبات السوق العالمية. وتشمل الإجراءات الفورية مراقبة الطرح العام الأولي وتأثيره المحتمل على السوق المصري</div>
+        </div>
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/06/09/egx-rolls-out-single-stock-futures-on-blue-chips-cib-and-tmg/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card" id="c42" onclick="toggle('c42')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egyptian Real Estate Faces Global Competition</span>
+          <span class="title-ar" dir="rtl">سوق العقارات المصري يواجه المنافسة العالمية</span>
+        </div>
+        <div class="card-chevron">&#x203A;</div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Egyptian real estate is competing with international markets, and investors must adapt to new rules and expanded toolkits for capital deployment. Regional tensions have eased, and tech companies like SpaceX and OpenAI are making headlines with IPOs and AI developments.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Future Implications</div>
+          <div class="field-text">Egypt&#x27;s real estate market may face increased competition, potentially affecting demand and prices. The country&#x27;s economic growth and infrastructure development may be impacted by regional tensions and global market trends. Opportunities for investment in renewable energy and sustainable practices may arise.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Actionable Advice</div>
+          <div class="field-text">REDCON Egypt should diversify its portfolio to include international markets and explore opportunities in renewable energy and sustainable practices. The company should also monitor regional tensions and their potential impact on the Egyptian economy and infrastructure development.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">سوق العقارات المصري في مواجهة منافسة مع الأسواق العالمية، ويجب على المستثمرين التكيف مع القواعد الجديدة وأدوات التمويل الموسعة. تقلصت التوترات الإقليمية، وتبدو الشركات التكنولوجية مثل سبيس إكس وأوبن آي آي في الأخبار مع الطروحات الأولية للأسهم وتنمية الذكاء الاصطناعي.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التداعيات المستقبلية</div>
+          <div class="field-text">قد يواجه سوق العقارات المصري منافسة متزايدة، مما قد يؤثر على الطلب والأسعار. قد تتأثر النمو الاقتصادي وتطوير البنية التحتية في مصر بالتوترات الإقليمية والاتجاهات السوقية العالمية. قد ت出现 فرص استثمارية في الطاقة المتجددة والممارسات المستدامة.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التوصيات</div>
+          <div class="field-text">يجب على شركة ريدكون مصر تنويع محفظتها لتشمل الأسواق الدولية والبحث عن فرص في الطاقة المتجددة والممارسات المستدامة. يجب على الشركة مراقبة التوترات الإقليمية وتأثيرها المحتمل على الاقتصاد المصري وتطوير البنية التحتية.</div>
+        </div>
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/06/09/egx-rolls-out-single-stock-futures-on-blue-chips-cib-and-tmg/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card" id="c43" onclick="toggle('c43')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egypt Freezones Attract $14.3bn Investment</span>
+          <span class="title-ar" dir="rtl">مناطق مصر الحرة تجذب استثمارات بقيمة 14.3 مليار دولار</span>
+        </div>
+        <div class="card-chevron">&#x203A;</div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Egypt&#x27;s freezones have attracted $14.3bn in invested capital, funding 1,300 active projects. This significant investment underscores the country&#x27;s growing appeal as a hub for international trade and commerce.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Future Implications</div>
+          <div class="field-text">The substantial investment in Egypt&#x27;s freezones is likely to boost the country&#x27;s economic growth, particularly in the construction, logistics, and industrial development sectors. This may present opportunities for REDCON Egypt to engage in infrastructure projects and partnerships.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Actionable Advice</div>
+          <div class="field-text">REDCON Egypt should explore potential partnerships and projects within the freezones, focusing on infrastructure development and logistics. Immediate actions include conducting a thorough market analysis and engaging with key stakeholders to identify opportunities.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">تجذب مناطق مصر الحرة استثمارات بقيمة 14.3 مليار دولار، وت финанси أكثر من 1300 مشروع نشط. هذا الاستثمار الكبير يؤكد على نمو مصر كمركز للتبادل التجاري الدولي.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التداعيات المستقبلية</div>
+          <div class="field-text">من المتوقع أن يعزز الاستثمار الكبير في مناطق مصر الحرة النمو الاقتصادي للبلاد، خاصة في قطاعات البناء واللوجستيات والتنمية الصناعية. قد تقدم هذه الفرصة لشركة REDCON مصر للتعاون في مشاريع البنية التحتية والشراكات.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التوصيات</div>
+          <div class="field-text">ينبغي لشركة REDCON مصر استكشاف الفرص والشراكات المحتملة داخل المناطق الحرة، مع التركيز على تطوير البنية التحتية واللوجستيات. ينبغي اتخاذ إجراءات فورية تشمل إجراء تحليل سوق شامل والتعاون مع أصحاب المصلحة الرئيسيين لتحديد الفرص.</div>
+        </div>
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/06/09/egx-rolls-out-single-stock-futures-on-blue-chips-cib-and-tmg/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card" id="c44" onclick="toggle('c44')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Acwa Power Invests in Egypt</span>
+          <span class="title-ar" dir="rtl">استثمار أكوا باور في مصر</span>
+        </div>
+        <div class="card-chevron">&#x203A;</div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Acwa Power plans to build a local factory in Egypt, partnering with a membrane manufacturer, to support the country&#x27;s desalination supply chain localization. The company also aims to set up a training center for Egyptian expertise in membrane manufacturing.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Future Implications</div>
+          <div class="field-text">This investment can enhance Egypt&#x27;s desalination capabilities, supporting the government&#x27;s goal to increase output from 1.8 mn cbm per day to 10 mn cbm per day. It may also create opportunities for local component manufacturing and job creation in the renewable energy sector.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Actionable Advice</div>
+          <div class="field-text">REDCON Egypt should consider partnering with Acwa Power to leverage their expertise in desalination and renewable energy, potentially exploring joint ventures or subcontracting opportunities. The company should also monitor the development of the local factory and training center to identify potential business opportunities.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">تخطط أكوا باور لإنشاء مصنع محلي في مصر، بالشراكة مع شركة تصنيع أغشية، لدعم توطين سلسلة توريد المياه المعالجة في البلاد. كما تهدف الشركة إلى إنشاء مركز تدريب لتعزيز الخبرات المصرية في تصنيع الأغشية.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التداعيات المستقبلية</div>
+          <div class="field-text">يمكن أن يعزز هذا الاستثمار قدرات مصر في معالجة المياه، مما يدعم هدف الحكومة لزيادة الإنتاج من 1.8 مليون متر مكعب يوميًا إلى 10 ملايين متر مكعب يوميًا. قد يخلق أيضًا فرصًا لتصنيع المكونات المحلية وخلق فرص عمل في قطاع الطاقة المتجددة.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التوصيات</div>
+          <div class="field-text">يجب على شركة REDCON مصر النظر في الشراكة مع أكوا باور للاستفادة من خبراتهم في معالجة المياه والطاقة المتجددة، وربما استكشاف فرص المشاريع المشتركة أو فرص التعاقد الفرعي. يجب على الشركة أيضًا مراقبة تطور المصنع المحلي ومركز التدريب لتحديد الفرص التجارية المحتملة.</div>
+        </div>
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/06/09/egx-rolls-out-single-stock-futures-on-blue-chips-cib-and-tmg/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card" id="c45" onclick="toggle('c45')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Hassan Allam Wins Railway Contract</span>
+          <span class="title-ar" dir="rtl">حسن علام تفوز بعقد سكك حديدية</span>
+        </div>
+        <div class="card-chevron">&#x203A;</div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Hassan Allam Construction Saudi and OHL Arabia secured a contract to build a 22.7 km freight railway connection for the Dammam 2nd Industrial City. The project links the city to the existing Dammam-Riyadh freight railway, expanding Saudi Arabia&#x27;s industrial and manufacturing capabilities.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Future Implications</div>
+          <div class="field-text">The contract win highlights Hassan Allam&#x27;s growing presence in the Saudi market and its ability to secure large-scale infrastructure projects. This could lead to increased competition for Egyptian construction companies in the MENA region. Additionally, the project&#x27;s focus on industrial and manufacturing development may create new opportunities for investment and economic growth in the region.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Actionable Advice</div>
+          <div class="field-text">REDCON Egypt should monitor Hassan Allam&#x27;s expansion in the Saudi market and assess potential partnerships or collaborations to enhance its own competitiveness. The company should also explore opportunities in industrial and manufacturing development, potentially leveraging its expertise in construction and infrastructure to support Egypt&#x27;s economic growth.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">فازت شركة حسن علام السعودية وشركة OHL Arabia بعقد لبناء خط سكك حديدية لتحويل البضائع بطول 22.7 كم لمدينة الدمام الصناعية الثانية. يربط المشروع المدينة بالخط الحالي للسكك الحديدية بين الدمام ورياض، مما يوسع قدرات المملكة العربية السعودية الصناعية والتصنيعية.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التداعيات المستقبلية</div>
+          <div class="field-text">يظهر فوز العقد على نمو وجود شركة حسن علام في السوق السعودية و能力ها في الحصول على مشاريع بنية تحتية كبيرة. قد يؤدي هذا إلى زيادة المنافسة على الشركات المصرية في المنطقة. بالإضافة إلى ذلك، قد يخلق تركيز المشروع على التنمية الصناعية والتصنيعية فرصًا جديدة للاستثمار والنمو الاقتصادي في المنطقة.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التوصيات</div>
+          <div class="field-text">ينبغي لشركة REDCON مصر مراقبة توسع شركة حسن علام في السوق السعودية وتقييم الشراكات أو التعاون المحتمل لتعزيز قدرتها التنافسية. يجب على الشركة أيضًا استكشاف الفرص في التنمية الصناعية والتصنيعية، وربما الاستفادة من خبرتها في البناء والبنية التحتية لدعم نمو مصر الاقتصادي.</div>
+        </div>
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/06/09/egx-rolls-out-single-stock-futures-on-blue-chips-cib-and-tmg/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card" id="c46" onclick="toggle('c46')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">EGX Introduces Single-Stock Futures</span>
+          <span class="title-ar" dir="rtl">البورصة المصرية تطرح عقود مستقبلية للأفراد</span>
+        </div>
+        <div class="card-chevron">&#x203A;</div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">The Egyptian Exchange (EGX) is introducing single-stock futures contracts for CIB and TMG, allowing investors to speculate or hedge against price moves without owning the stocks. The contracts will have three- and six-month maturities.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Future Implications</div>
+          <div class="field-text">The introduction of single-stock futures will provide investors with more tools to manage risk and speculate on individual stocks, potentially increasing trading activity and liquidity in the Egyptian market. This could also attract more foreign investors and boost the country&#x27;s economic growth.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Actionable Advice</div>
+          <div class="field-text">REDCON Egypt should consider exploring opportunities to invest in or partner with companies that will be affected by the introduction of single-stock futures, such as CIB and TMG. The company should also monitor the development of the derivatives market and adjust its investment strategies accordingly.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">أعلنت البورصة المصرية عن إطلاق عقود مستقبلية للأفراد لأسهم بنك الكوميرسيال الدولي وشركة طلعت مصطفى، مما يسمح للمستثمرين بالتداول أو التحوط ضد حركات الأسعار دون الحاجة إلى امتلاك الأسهم. ستكون العقود لمدة ثلاثة وستة أشهر</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التداعيات المستقبلية</div>
+          <div class="field-text">ستوفر إطلاق عقود المستقبل للأفراد للمستثمرين أدوات إضافية لإدارة المخاطر والتنبؤ بحركات الأسعار الفردية، مما قد يزيد من النشاط التجاري والسيولة في السوق المصرية. قد ي吸ب ذلك أيضًا المزيد من المستثمرين الأجانب ويعزز النمو الاقتصادي للبلاد.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التوصيات</div>
+          <div class="field-text">يجب على شركة REDCON مصرية النظر في استكشاف الفرص للاستثمار أو التعاون مع الشركات التي سوف تتأثر بإطلاق عقود المستقبل للأفراد، مثل بنك الكوميرسيال الدولي وشركة طلعت مصطفى. يجب على الشركة أيضًا مراقبة تطور سوق الأوراق المالية وتعديل استراتيجيات الاستثمار وفقًا لذلك.</div>
+        </div>
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/06/09/egx-rolls-out-single-stock-futures-on-blue-chips-cib-and-tmg/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+  </section>
+      
+    </div>
+  </div>
+
+</main>
+
+<script>
+// ── WEATHER PAGINATOR ──────────────────────────────────────────────────────────
+const WX_DATA   = [{t:"12AM",e:"🌙",c:28,d:"Clear",now:false},{t:"1AM",e:"🌙",c:27,d:"Mainly clear",now:false},{t:"2AM",e:"🌙",c:26,d:"Mainly clear",now:false},{t:"3AM",e:"🌙",c:25,d:"Mainly clear",now:false},{t:"4AM",e:"🌙",c:24,d:"Mainly clear",now:false},{t:"5AM",e:"🌙",c:23,d:"Clear",now:false},{t:"6AM",e:"☀️",c:22,d:"Clear",now:false},{t:"7AM",e:"⛅",c:22,d:"Partly cloudy",now:false},{t:"8AM",e:"⛅",c:24,d:"Partly cloudy",now:false},{t:"9AM",e:"🌤️",c:25,d:"Mainly clear",now:false},{t:"10AM",e:"🌤️",c:27,d:"Mainly clear",now:false},{t:"11AM",e:"🌤️",c:29,d:"Mainly clear",now:false},{t:"12PM",e:"🌤️",c:31,d:"Mainly clear",now:true},{t:"1PM",e:"🌤️",c:32,d:"Mainly clear",now:true},{t:"2PM",e:"🌤️",c:34,d:"Mainly clear",now:true},{t:"3PM",e:"🌤️",c:34,d:"Mainly clear",now:false},{t:"4PM",e:"🌤️",c:35,d:"Mainly clear",now:false},{t:"5PM",e:"⛅",c:34,d:"Partly cloudy",now:false},{t:"6PM",e:"🌤️",c:33,d:"Mainly clear",now:false},{t:"7PM",e:"🌙",c:32,d:"Mainly clear",now:false},{t:"8PM",e:"🌙",c:29,d:"Clear",now:false},{t:"9PM",e:"🌙",c:28,d:"Clear",now:false},{t:"10PM",e:"🌙",c:26,d:"Clear",now:false},{t:"11PM",e:"🌙",c:25,d:"Clear",now:false}];
+const WX_PAGE_SIZE = 3;
+let   wxPage_idx   = 0;
+
+function wxPage(dir) {
+  const pages = Math.ceil(WX_DATA.length / WX_PAGE_SIZE);
+  wxPage_idx  = Math.max(0, Math.min(wxPage_idx + dir, pages - 1));
+  wxRender();
+}
+
+function wxRender() {
+  if (!WX_DATA.length) return;
+  const pages   = Math.ceil(WX_DATA.length / WX_PAGE_SIZE);
+  const start   = wxPage_idx * WX_PAGE_SIZE;
+  const visible = WX_DATA.slice(start, start + WX_PAGE_SIZE);
+  const slotEl  = document.getElementById('wxSlots');
+  if (!slotEl) return;
+  slotEl.innerHTML = visible.map(s => `
+    <div class="wx-slot ${s.now ? 'wx-now' : ''}">
+      <span class="wx-slot-time">${s.t}</span>
+      <span class="wx-slot-icon">${s.e}</span>
+      <span class="wx-slot-temp">${s.c}°</span>
+    </div>`).join('');
+  const prev = document.querySelector('.wx-prev');
+  const next = document.querySelector('.wx-next');
+  if (prev) prev.disabled = wxPage_idx === 0;
+  if (next) next.disabled = wxPage_idx >= pages - 1;
+  const dotsEl = document.getElementById('wxDots');
+  if (dotsEl) {
+    dotsEl.innerHTML = Array.from({length: pages}, (_, i) =>
+      `<div class="wx-dot ${i === wxPage_idx ? 'active' : ''}"></div>`
+    ).join('');
+  }
+}
+
+(function() {
+  const nowIdx = WX_DATA.findIndex(s => s.now);
+  if (nowIdx >= 0) wxPage_idx = Math.floor(nowIdx / WX_PAGE_SIZE);
+  wxRender();
+})();
+
+// ── TABS ───────────────────────────────────────────────────────────────────────
+function switchTab(name) {
+  ['today', 'archive'].forEach(t => {
+    document.getElementById('panel-' + t).classList.toggle('active', t === name);
+    document.getElementById('tab-'   + t).classList.toggle('active', t === name);
+  });
+}
+
+// ── INDEX TOOLTIPS ─────────────────────────────────────────────────────────────
+function showTip(btn) {
+  const bubble = document.getElementById('tipBubble');
+  const text   = document.getElementById('tipText');
+  if (!bubble || !text) return;
+  text.textContent = btn.dataset.tip;
+  bubble.style.visibility = 'hidden';
+  bubble.classList.add('show');
+  const r = btn.getBoundingClientRect();
+  const bw = bubble.offsetWidth;
+  let left = r.left;
+  if (left + bw > window.innerWidth - 8) left = window.innerWidth - bw - 8;
+  bubble.style.left = left + 'px';
+  bubble.style.top  = (r.bottom + 8) + 'px';
+  bubble.style.visibility = '';
+}
+
+function closeTip() {
+  const bubble = document.getElementById('tipBubble');
+  if (bubble) bubble.classList.remove('show');
+}
+
+document.addEventListener('click', function(e) {
+  const bubble = document.getElementById('tipBubble');
+  if (!bubble) return;
+  if (!bubble.contains(e.target) && !e.target.classList.contains('idx-info-btn')) {
+    bubble.classList.remove('show');
+  }
+});
+
+// ── LANGUAGE SWITCH ────────────────────────────────────────────────────────────
+function setLang(lang) {
+  document.body.className = 'lang-' + lang;
+  document.querySelectorAll('.global-lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.textContent.trim() === (lang === 'en' ? 'English' : 'العربية'));
+  });
+}
+
+// ── CARD EXPAND ───────────────────────────────────────────────────────────────
+function toggle(id) {
+  document.getElementById(id).classList.toggle('open');
+}
+
+// ── SEARCH (per tab) ──────────────────────────────────────────────────────────
+function filter(tab) {
+  const q      = document.getElementById('q-' + tab).value.toLowerCase().trim();
+  const feed   = document.getElementById('feed-' + tab);
+  const cards  = Array.from(feed.querySelectorAll('.card'));
+  const groups = Array.from(feed.querySelectorAll('.day-group'));
+  let visible  = 0;
+  cards.forEach(card => {
+    const show = !q || card.textContent.toLowerCase().includes(q);
+    card.style.display = show ? '' : 'none';
+    if (show) visible++;
+  });
+  groups.forEach(group => {
+    const hasVisible = Array.from(group.querySelectorAll('.card')).some(c => c.style.display !== 'none');
+    group.style.display = hasVisible ? '' : 'none';
+  });
+  document.getElementById('filter-count-' + tab).textContent =
+    q ? `${visible} result${visible !== 1 ? 's' : ''}` : '';
+}
+</script>
+</body>
+</html>
