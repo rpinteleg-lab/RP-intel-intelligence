@@ -132,9 +132,11 @@
     }
 
     /* ── INDICES BAR ── */
-    .indices-bar { background: var(--surface); border-bottom: 1px solid var(--border); padding: 11px 32px; display: flex; align-items: center; gap: 24px; position: relative; }
-    .indices-eyebrow { font-size: 9px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-3); white-space: nowrap; padding-right: 20px; border-right: 1px solid var(--border); }
-    .indices-items { display: flex; gap: 32px; flex-wrap: wrap; align-items: center; }
+    .indices-bar { background: var(--surface); border-bottom: 1px solid var(--border); padding: 11px 32px; display: flex; align-items: center; gap: 0; position: relative; flex-wrap: wrap; row-gap: 8px; }
+    .indices-group { display: flex; align-items: center; gap: 20px; padding-right: 28px; margin-right: 28px; border-right: 1px solid var(--border); }
+    .indices-group:last-child { border-right: none; padding-right: 0; margin-right: 0; }
+    .indices-eyebrow { font-size: 9px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-3); white-space: nowrap; flex-shrink: 0; }
+    .indices-items { display: flex; gap: 28px; flex-wrap: wrap; align-items: center; }
     .idx-item { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
     .idx-label { display: flex; align-items: center; gap: 5px; font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-3); }
     .idx-value { font-size: 15px; font-weight: 600; color: var(--brand); letter-spacing: -0.01em; font-variant-numeric: tabular-nums; }
@@ -284,7 +286,7 @@
     <div class="hero-eyebrow">Daily Market Briefing</div>
     <h1 class="hero-title">Redcon Properties<br><strong>Intelligence Feed</strong></h1>
     <p class="hero-sub">Daily News analyzed for Egypt's construction, infrastructure, and real estate market.</p>
-    <div class="hero-meta">Last updated: 15 June 2026, 11:35</div>
+    <div class="hero-meta">Last updated: 15 June 2026, 11:40</div>
   </div>
   
 <div class="wx-widget" id="wxWidget">
@@ -309,26 +311,80 @@
 
 <!-- INDICES -->
 <div class="indices-bar">
-  <span class="indices-eyebrow">Market Indices</span>
-  <div class="indices-items">
-    
+  
+  <div class="indices-group">
+    <span class="indices-eyebrow">Market Indices</span>
+    <div class="indices-items">
+      
   <div class="idx-item">
     <span class="idx-label">
       EGX 30
       <button class="idx-info-btn" data-tip="Benchmark index representing the 30 most liquid and actively traded stocks on the Egyptian Exchange." onclick="showTip(this)" title="About EGX 30">i</button>
     </span>
-    <span class="idx-value">52,341.67</span>
-    <span class="idx-time">as of 11:35</span>
+    <span class="idx-value">52,345.06</span>
+    <span class="idx-time">as of 11:40</span>
   </div>
-    
+      
   <div class="idx-item">
     <span class="idx-label">
       Construction Index
       <button class="idx-info-btn" data-tip="Sector index representing Egyptian companies operating in construction, cement, steel, and building materials." onclick="showTip(this)" title="About Construction Index">i</button>
     </span>
-    <span class="idx-value">9,448.71</span>
-    <span class="idx-time">as of 11:35</span>
+    <span class="idx-value">9,455.40</span>
+    <span class="idx-time">as of 11:40</span>
   </div>
+    </div>
+  </div>
+  
+  <div class="indices-group">
+    <span class="indices-eyebrow">Commodities &amp; Prices</span>
+    <div class="indices-items">
+      
+  <div class="idx-item">
+    <span class="idx-label">
+      USD / EGP
+      <button class="idx-info-btn" data-tip="US Dollar to Egyptian Pound exchange rate, sourced from Investing.com." onclick="showTip(this)" title="About USD / EGP">i</button>
+    </span>
+    <span class="idx-value">50.58</span>
+    <span class="idx-time">as of 11:40</span>
+  </div>
+      
+  <div class="idx-item">
+    <span class="idx-label">
+      Gold (g)
+      <button class="idx-info-btn" data-tip="Gold price per gram in Egyptian Pounds, sourced from InstaDahab." onclick="showTip(this)" title="About Gold (g)">i</button>
+    </span>
+    <span class="idx-value">6,280.00</span>
+    <span class="idx-time">as of 11:40</span>
+  </div>
+      
+  <div class="idx-item">
+    <span class="idx-label">
+      Copper (kg)
+      <button class="idx-info-btn" data-tip="Copper price per kilogram in Egyptian Pounds, sourced from InstaDahab." onclick="showTip(this)" title="About Copper (kg)">i</button>
+    </span>
+    <span class="idx-value">691.59</span>
+    <span class="idx-time">as of 11:40</span>
+  </div>
+      
+  <div class="idx-item">
+    <span class="idx-label">
+      Iron — Ezz (t)
+      <button class="idx-info-btn" data-tip="Ezz Steel rebar price per tonne in Egyptian Pounds, scraped daily from Al-Masry Al-Youm building materials article." onclick="showTip(this)" title="About Iron — Ezz (t)">i</button>
+    </span>
+    <span class="idx-value">40,279</span>
+    <span class="idx-time">as of 15 Jun</span>
+  </div>
+      
+  <div class="idx-item">
+    <span class="idx-label">
+      Cement — Grey (t)
+      <button class="idx-info-btn" data-tip="Grey cement price per tonne in Egyptian Pounds, scraped daily from Al-Masry Al-Youm building materials article." onclick="showTip(this)" title="About Cement — Grey (t)">i</button>
+    </span>
+    <span class="idx-value">3,990</span>
+    <span class="idx-time">as of 15 Jun</span>
+  </div>
+    </div>
   </div>
 </div>
 <!-- TOOLTIP BUBBLE -->
