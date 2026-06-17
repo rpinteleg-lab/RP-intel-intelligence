@@ -75,8 +75,7 @@
       display: flex; align-items: center; justify-content: space-between; gap: 32px;
     }
     .hero::after {
-      content: 'redcon'; position: absolute; right: 240px; top: 50%;
-      transform: translateY(-50%);
+      content: 'redcon'; position: absolute; left: 50%; top: 50%; transform: translateX(-50%) translateY(-50%);
       font-size: clamp(100px, 16vw, 160px); font-weight: 700;
       letter-spacing: -0.05em; color: rgba(255,255,255,0.055);
       pointer-events: none; line-height: 1; white-space: nowrap;
@@ -302,7 +301,7 @@
     <div class="hero-eyebrow">Daily Market Briefing</div>
     <h1 class="hero-title">Redcon Properties<br><strong>Intelligence Feed</strong></h1>
     <p class="hero-sub">Daily News analyzed for Egypt's construction, infrastructure, and real estate market.</p>
-    <div class="hero-meta">Last updated: 17 June 2026, 11:10</div>
+    <div class="hero-meta">Last updated: 17 June 2026, 11:13</div>
   </div>
   
 <div class="wx-widget" id="wxWidget">
