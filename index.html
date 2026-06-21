@@ -302,18 +302,18 @@
     <div class="hero-eyebrow">Daily Market Briefing</div>
     <h1 class="hero-title">Redcon Properties<br><strong>Intelligence Feed</strong></h1>
     <p class="hero-sub">Daily News analyzed for Egypt's construction, infrastructure, and real estate market.</p>
-    <div class="hero-meta">Last updated: 21 June 2026, 23:55</div>
+    <div class="hero-meta">Last updated: 22 June 2026, 00:00</div>
   </div>
   
 <div class="wx-widget" id="wxWidget">
   <div class="wx-current">
     <div class="wx-location">Cairo <span class="wx-flag">🇪🇬</span></div>
     <div class="wx-big-row">
-      <span class="wx-big-icon">☁️</span>
-      <span class="wx-big-temp">26°</span>
+      <span class="wx-big-icon">🌙</span>
+      <span class="wx-big-temp">24°</span>
     </div>
-    <div class="wx-condition">Partly cloudy</div>
-    <div class="wx-range">H 34° &nbsp;·&nbsp; L 22°</div>
+    <div class="wx-condition">Mainly clear</div>
+    <div class="wx-range">H 34° &nbsp;·&nbsp; L 21°</div>
   </div>
   <div class="wx-hourly">
     <button class="wx-nav wx-prev" onclick="wxPage(-1)" aria-label="Previous hours">&#x2039;</button>
@@ -327,7 +327,7 @@
 
 <!-- INDICES -->
 <div class="indices-bar">
-  <span class="indices-as-of">As of 23:55</span>
+  <span class="indices-as-of">As of 00:00</span>
   
   <div class="indices-group">
     <span class="indices-eyebrow">Market Indices &amp; FX</span>
@@ -448,11 +448,11 @@
 <div class="tabs-bar">
   <button class="tab-btn active" id="tab-today" onclick="switchTab('today')">
     Today's Briefing
-    <span class="tab-badge">11</span>
+    <span class="tab-badge">0</span>
   </button>
   <button class="tab-btn" id="tab-archive" onclick="switchTab('archive')">
     Archive
-    <span class="tab-badge">0</span>
+    <span class="tab-badge">11</span>
   </button>
 </div>
 
@@ -467,11 +467,32 @@
     </div>
     <div id="feed-today">
       
+      
+  <div class="empty">
+    <div class="empty-icon">&#x1F4F0;</div>
+    <h2>No articles today yet</h2>
+    <p>Run the news engine script to populate today's articles.</p>
+  </div>
+    </div>
+  </div>
+
+  <!-- ARCHIVE -->
+  <div class="tab-panel" id="panel-archive">
+    <div class="archive-note">
+      <span class="archive-note-icon">📁</span>
+      Previous days' intelligence briefings. Each day's articles are appended here automatically when the next day's run completes.
+    </div>
+    <div class="search-wrap">
+      <input type="text" id="q-archive" placeholder="Search archived headlines and summaries…" oninput="filter('archive')"/>
+      <span id="filter-count-archive"></span>
+    </div>
+    <div id="feed-archive">
+      
   <section class="day-group">
     <div class="day-header">
-      <span class="day-label">Top Stories Today</span>
+      <span class="day-label">2026-06-21</span>
       <div class="day-rule"></div>
-      <span class="day-count">4 articles</span>
+      <span class="day-count">11 articles</span>
     </div>
     
     <div class="card card-mid" id="c0" onclick="toggle('c0')">
@@ -570,45 +591,6 @@
     <div class="card card-mid" id="c3" onclick="toggle('c3')">
       <div class="card-head">
         <div class="card-title">
-          <span class="title-en">Fed Keeps Rates Steady at 3.50%-3.75%</span>
-          <span class="title-ar" dir="rtl">البنك الفيدرالي يحافظ على أسعار الفائدة عند 3.50%-3.75%</span>
-        </div>
-        <div class="card-head-right">
-          <span class="tier-badge tier-mid">Summary</span>
-          <div class="card-chevron">&#x203A;</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="card-grid">
-          
-        <div class="field full en-content">
-          <div class="field-label">Executive Summary</div>
-          <div class="field-text">The Federal Open Market Committee (FOMC) held interest rates steady at 3.50%-3.75% in its first meeting under newly appointed Kevin Warsh. The updated &#x27;dot plot&#x27; revealed a sharp U-turn, with nine out of 19 policymakers forecasting at least one rate hike this year. This shift in stance could impact the Egyptian pound (EGP), which had rallied due to hot money chasing yields. A government source attributed the EGP&#x27;s appreciation to strong secondary market inflows, with foreign portfolio investments rising by USD 1.1 billion. The Fed&#x27;s &#x27;higher for longer&#x27; stance may trigger a global capital restructuring, potentially draining hot money from emerging markets. The removal of &#x27;forward guidance&#x27; may also lead to abrupt repricing of rate expectations, prompting hot money to flee vulnerable markets. Veteran banker Sahar El-Damaty noted that daily currency moves are normal in a flexible exchange-rate regime, with 4-5% movements not unusual under current conditions.</div>
-        </div>
-          
-          
-          
-        <div class="field full ar-content" dir="rtl">
-          <div class="field-label">الملخص التنفيذي</div>
-          <div class="field-text">حافظ مجلس السياسة المفتوحة الفيدرالي (FOMC) على أسعار الفائدة عند 3.50%-3.75% في اجتماعه الأول تحت الإدارة الجديدة لكيفن وارش. وكشفت مخطط النقاط المحدث عن تحول حاد، حيث توقع تسعة من أصل 19 من صناع السياسات على الأقل زيادة واحدة في أسعار الفائدة هذا العام. قد يؤثر هذا التحول في الموقف على الجنيه المصري (EGP)، الذي كان قد ارتفع بسبب الأموال الساخنة التي تسعى وراء العوائد. ويعزى مصدر حكومي ارتفاع الجنيه إلى تدفقات قوية في السوق الثانوية، مع ارتفاع الاستثمارات المحفظة الأجنبية بنحو 1.1 مليار دولار. قد يؤدي موقف البنك الفيدرالي &#x27;الأعلى لفترة أطول&#x27; إلى إعادة هيكلة رأس المال العالمي، مما قد يؤدي إلى إزالة الأموال الساخنة من الأسواق الناشئة. كما قد يؤدي إلغاء &#x27;التوجيه المتقدم&#x27; إلى إعادة تسعير فجائية لالتزامات أسعار الفائدة، مما قد يؤدي إلى فرار الأموال الساخنة من الأسواق الهشة. وأشار مصرفي مخضرم sahار الدماطي إلى أن الحركات اليومية للعملة هي طبيعية في نظام سعر صرف مرن، مع تحركات بنسبة 4-5% ليست غير عادية في ظل الظروف الحالية.</div>
-        </div>
-          
-          
-        </div>
-        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/06/21/the-government-is-keeping-its-stake-in-alexandria-containers/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
-      </div>
-    </div>
-  </section>
-  <section class="day-group">
-    <div class="day-header">
-      <span class="day-label">Also in the News</span>
-      <div class="day-rule"></div>
-      <span class="day-count">7 articles</span>
-    </div>
-    
-    <div class="card card-mid" id="c4" onclick="toggle('c4')">
-      <div class="card-head">
-        <div class="card-title">
           <span class="title-en">Egyptian National Railways Signs EUR 690mn Contracts</span>
           <span class="title-ar" dir="rtl">السكك الحديدية الوطنية المصرية توقع عقودا بقيمة 690 مليون يورو</span>
         </div>
@@ -637,7 +619,7 @@
         <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/06/21/alstom-consortium-inks-eur-690-mn-rail-upgrade-package/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c5" onclick="toggle('c5')">
+    <div class="card card-mid" id="c4" onclick="toggle('c4')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Egypt Targets $1.3bn Oil Exploration</span>
@@ -668,7 +650,7 @@
         <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/06/21/the-oil-ministry-is-eying-14-mediterranean-exploration-wells-in-usd-1-bn-drilling-push-this-year/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c6" onclick="toggle('c6')">
+    <div class="card card-mid" id="c5" onclick="toggle('c5')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">EIB Considers $152mn Loan for Alcazar Energy&#x27;s 500MW Wind Project</span>
@@ -699,7 +681,7 @@
         <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/06/21/eib-considers-backing-alcazars-ras-ghareb-scatecs-dandara-projects/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c7" onclick="toggle('c7')">
+    <div class="card card-mid" id="c6" onclick="toggle('c6')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">EU Disburses EUR 1.5bn to Egypt</span>
@@ -730,7 +712,7 @@
         <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/06/21/egypt-to-receive-fresh-eur-1-5-bn-from-eu-this-month/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c8" onclick="toggle('c8')">
+    <div class="card card-mid" id="c7" onclick="toggle('c7')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">EGX Launches CIB, TMG Single-Stock Futures</span>
@@ -754,6 +736,37 @@
         <div class="field full ar-content" dir="rtl">
           <div class="field-label">الملخص التنفيذي</div>
           <div class="field-text">ستبدأ البورصة المصرية في تداول عقود آجلة على أسهم بنك الكوميرسيال الدولي وشركة طلعت مصطفى في غضون ساعات. سيتم تداول العقود لمدة ثلاثة وأشهر ستة، مع حجم معياري يبلغ 100 سهم. يأتي هذا الإطلاق بعد إدخال عقود آجلة لمؤشر EGX30، وهو أول منتج مشتقات للبورصة، الذي تلقى استقبالًا باردًا. كان من المقرر في البداية إطلاق تداول عقود الأسهم يوم الخميس الماضي، لكنه تم تأجيله بمناسبة رأس السنة الهجرية. وفقًا لهاني جنينة، رئيس البحوث في شركة الأهلي فاروس، وضع عقود مشتقة على أسهم شائعة مثل بنك الكوميرسيال الدولي وشركة طلعت مصطفى قد يزيد من فرص النجاح، حيث أظهر المستثمرين المحليون تفضيلاً لأسهم الفردية على التعرض للمؤشر.</div>
+        </div>
+          
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/06/21/the-government-is-keeping-its-stake-in-alexandria-containers/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card card-mid" id="c8" onclick="toggle('c8')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Fed Keeps Rates Steady at 3.50%-3.75%</span>
+          <span class="title-ar" dir="rtl">البنك الفيدرالي يحافظ على أسعار الفائدة عند 3.50%-3.75%</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">The Federal Open Market Committee (FOMC) held interest rates steady at 3.50%-3.75% in its first meeting under newly appointed Kevin Warsh. The updated &#x27;dot plot&#x27; revealed a sharp U-turn, with nine out of 19 policymakers forecasting at least one rate hike this year. This shift in stance could impact the Egyptian pound (EGP), which had rallied due to hot money chasing yields. A government source attributed the EGP&#x27;s appreciation to strong secondary market inflows, with foreign portfolio investments rising by USD 1.1 billion. The Fed&#x27;s &#x27;higher for longer&#x27; stance may trigger a global capital restructuring, potentially draining hot money from emerging markets. The removal of &#x27;forward guidance&#x27; may also lead to abrupt repricing of rate expectations, prompting hot money to flee vulnerable markets. Veteran banker Sahar El-Damaty noted that daily currency moves are normal in a flexible exchange-rate regime, with 4-5% movements not unusual under current conditions.</div>
+        </div>
+          
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">حافظ مجلس السياسة المفتوحة الفيدرالي (FOMC) على أسعار الفائدة عند 3.50%-3.75% في اجتماعه الأول تحت الإدارة الجديدة لكيفن وارش. وكشفت مخطط النقاط المحدث عن تحول حاد، حيث توقع تسعة من أصل 19 من صناع السياسات على الأقل زيادة واحدة في أسعار الفائدة هذا العام. قد يؤثر هذا التحول في الموقف على الجنيه المصري (EGP)، الذي كان قد ارتفع بسبب الأموال الساخنة التي تسعى وراء العوائد. ويعزى مصدر حكومي ارتفاع الجنيه إلى تدفقات قوية في السوق الثانوية، مع ارتفاع الاستثمارات المحفظة الأجنبية بنحو 1.1 مليار دولار. قد يؤدي موقف البنك الفيدرالي &#x27;الأعلى لفترة أطول&#x27; إلى إعادة هيكلة رأس المال العالمي، مما قد يؤدي إلى إزالة الأموال الساخنة من الأسواق الناشئة. كما قد يؤدي إلغاء &#x27;التوجيه المتقدم&#x27; إلى إعادة تسعير فجائية لالتزامات أسعار الفائدة، مما قد يؤدي إلى فرار الأموال الساخنة من الأسواق الهشة. وأشار مصرفي مخضرم sahار الدماطي إلى أن الحركات اليومية للعملة هي طبيعية في نظام سعر صرف مرن، مع تحركات بنسبة 4-5% ليست غير عادية في ظل الظروف الحالية.</div>
         </div>
           
           
@@ -828,32 +841,11 @@
     </div>
   </div>
 
-  <!-- ARCHIVE -->
-  <div class="tab-panel" id="panel-archive">
-    <div class="archive-note">
-      <span class="archive-note-icon">📁</span>
-      Previous days' intelligence briefings. Each day's articles are appended here automatically when the next day's run completes.
-    </div>
-    <div class="search-wrap">
-      <input type="text" id="q-archive" placeholder="Search archived headlines and summaries…" oninput="filter('archive')"/>
-      <span id="filter-count-archive"></span>
-    </div>
-    <div id="feed-archive">
-      
-      
-  <div class="empty">
-    <div class="empty-icon">&#x1F4DA;</div>
-    <h2>No archived articles yet</h2>
-    <p>Previous days' articles will appear here automatically.</p>
-  </div>
-    </div>
-  </div>
-
 </main>
 
 <script>
 // ── WEATHER PAGINATOR ──────────────────────────────────────────────────────────
-const WX_DATA   = [{t:"12AM",e:"🌙",c:25,d:"Mainly clear",now:false},{t:"1AM",e:"🌙",c:24,d:"Mainly clear",now:false},{t:"2AM",e:"☁️",c:23,d:"Partly cloudy",now:false},{t:"3AM",e:"☁️",c:23,d:"Partly cloudy",now:false},{t:"4AM",e:"☁️",c:22,d:"Partly cloudy",now:false},{t:"5AM",e:"🌙",c:22,d:"Mainly clear",now:false},{t:"6AM",e:"⛅",c:22,d:"Partly cloudy",now:false},{t:"7AM",e:"⛅",c:22,d:"Partly cloudy",now:false},{t:"8AM",e:"⛅",c:23,d:"Partly cloudy",now:false},{t:"9AM",e:"⛅",c:25,d:"Partly cloudy",now:false},{t:"10AM",e:"🌤️",c:27,d:"Mainly clear",now:false},{t:"11AM",e:"🌤️",c:28,d:"Mainly clear",now:false},{t:"12PM",e:"🌤️",c:30,d:"Mainly clear",now:false},{t:"1PM",e:"🌤️",c:32,d:"Mainly clear",now:false},{t:"2PM",e:"🌤️",c:33,d:"Mainly clear",now:false},{t:"3PM",e:"🌤️",c:34,d:"Mainly clear",now:false},{t:"4PM",e:"⛅",c:34,d:"Partly cloudy",now:false},{t:"5PM",e:"🌤️",c:34,d:"Mainly clear",now:false},{t:"6PM",e:"⛅",c:34,d:"Partly cloudy",now:false},{t:"7PM",e:"☁️",c:33,d:"Partly cloudy",now:false},{t:"8PM",e:"☁️",c:31,d:"Partly cloudy",now:false},{t:"9PM",e:"☁️",c:29,d:"Partly cloudy",now:false},{t:"10PM",e:"☁️",c:27,d:"Partly cloudy",now:true},{t:"11PM",e:"☁️",c:26,d:"Partly cloudy",now:true}];
+const WX_DATA   = [{t:"12AM",e:"🌙",c:24,d:"Mainly clear",now:true},{t:"1AM",e:"🌙",c:24,d:"Mainly clear",now:true},{t:"2AM",e:"☁️",c:23,d:"Partly cloudy",now:false},{t:"3AM",e:"☁️",c:22,d:"Partly cloudy",now:false},{t:"4AM",e:"☁️",c:22,d:"Partly cloudy",now:false},{t:"5AM",e:"🌙",c:22,d:"Mainly clear",now:false},{t:"6AM",e:"🌤️",c:21,d:"Mainly clear",now:false},{t:"7AM",e:"⛅",c:22,d:"Partly cloudy",now:false},{t:"8AM",e:"🌤️",c:22,d:"Mainly clear",now:false},{t:"9AM",e:"⛅",c:24,d:"Partly cloudy",now:false},{t:"10AM",e:"🌤️",c:25,d:"Mainly clear",now:false},{t:"11AM",e:"🌤️",c:27,d:"Mainly clear",now:false},{t:"12PM",e:"☀️",c:29,d:"Clear",now:false},{t:"1PM",e:"🌤️",c:30,d:"Mainly clear",now:false},{t:"2PM",e:"🌤️",c:32,d:"Mainly clear",now:false},{t:"3PM",e:"🌤️",c:33,d:"Mainly clear",now:false},{t:"4PM",e:"🌤️",c:33,d:"Mainly clear",now:false},{t:"5PM",e:"🌤️",c:34,d:"Mainly clear",now:false},{t:"6PM",e:"🌤️",c:33,d:"Mainly clear",now:false},{t:"7PM",e:"☁️",c:33,d:"Partly cloudy",now:false},{t:"8PM",e:"☁️",c:31,d:"Partly cloudy",now:false},{t:"9PM",e:"☁️",c:29,d:"Partly cloudy",now:false},{t:"10PM",e:"🌙",c:28,d:"Mainly clear",now:false},{t:"11PM",e:"🌙",c:26,d:"Mainly clear",now:false}];
 const WX_PAGE_SIZE = 3;
 let   wxPage_idx   = 0;
 
