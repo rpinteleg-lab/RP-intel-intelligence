@@ -302,7 +302,7 @@
     <div class="hero-eyebrow">Daily Market Briefing</div>
     <h1 class="hero-title">Redcon Properties<br><strong>Intelligence Feed</strong></h1>
     <p class="hero-sub">Daily News analyzed for Egypt's construction, infrastructure, and real estate market.</p>
-    <div class="hero-meta">Last updated: 22 June 2026, 09:35</div>
+    <div class="hero-meta">Last updated: 22 June 2026, 09:37</div>
   </div>
   
 <div class="wx-widget" id="wxWidget">
@@ -1198,44 +1198,42 @@
 
 <script>
 // ── WEATHER PAGINATOR ──────────────────────────────────────────────────────────
-const WX_DATA   = [{t:"12AM",e:"🌙",c:24,d:"Mainly clear",now:false},{t:"1AM",e:"🌙",c:23,d:"Mainly clear",now:false},{t:"2AM",e:"☁️",c:23,d:"Partly cloudy",now:false},{t:"3AM",e:"☁️",c:22,d:"Partly cloudy",now:false},{t:"4AM",e:"☁️",c:22,d:"Partly cloudy",now:false},{t:"5AM",e:"☁️",c:22,d:"Partly cloudy",now:false},{t:"6AM",e:"⛅",c:21,d:"Partly cloudy",now:false},{t:"7AM",e:"⛅",c:21,d:"Partly cloudy",now:false},{t:"8AM",e:"⛅",c:22,d:"Partly cloudy",now:true},{t:"9AM",e:"⛅",c:24,d:"Partly cloudy",now:true},{t:"10AM",e:"⛅",c:25,d:"Partly cloudy",now:true},{t:"11AM",e:"🌤️",c:27,d:"Mainly clear",now:false},{t:"12PM",e:"🌤️",c:28,d:"Mainly clear",now:false},{t:"1PM",e:"🌤️",c:30,d:"Mainly clear",now:false},{t:"2PM",e:"🌤️",c:32,d:"Mainly clear",now:false},{t:"3PM",e:"🌤️",c:32,d:"Mainly clear",now:false},{t:"4PM",e:"🌤️",c:33,d:"Mainly clear",now:false},{t:"5PM",e:"☀️",c:33,d:"Clear",now:false},{t:"6PM",e:"🌤️",c:33,d:"Mainly clear",now:false},{t:"7PM",e:"☁️",c:32,d:"Partly cloudy",now:false},{t:"8PM",e:"☁️",c:31,d:"Partly cloudy",now:false},{t:"9PM",e:"🌙",c:29,d:"Mainly clear",now:false},{t:"10PM",e:"🌙",c:27,d:"Mainly clear",now:false},{t:"11PM",e:"🌙",c:26,d:"Mainly clear",now:false}];
-const WX_PAGE_SIZE = 3;
-let   wxPage_idx   = 0;
+const WX_DATA   = [{t:"12AM",e:"🌙",c:24,d:"Mainly clear",now:false},{t:"1AM",e:"🌙",c:23,d:"Mainly clear",now:false},{t:"2AM",e:"☁️",c:23,d:"Partly cloudy",now:false},{t:"3AM",e:"☁️",c:22,d:"Partly cloudy",now:false},{t:"4AM",e:"☁️",c:22,d:"Partly cloudy",now:false},{t:"5AM",e:"☁️",c:22,d:"Partly cloudy",now:false},{t:"6AM",e:"⛅",c:21,d:"Partly cloudy",now:false},{t:"7AM",e:"⛅",c:21,d:"Partly cloudy",now:false},{t:"8AM",e:"⛅",c:22,d:"Partly cloudy",now:false},{t:"9AM",e:"⛅",c:24,d:"Partly cloudy",now:true},{t:"10AM",e:"⛅",c:25,d:"Partly cloudy",now:false},{t:"11AM",e:"🌤️",c:27,d:"Mainly clear",now:false},{t:"12PM",e:"🌤️",c:28,d:"Mainly clear",now:false},{t:"1PM",e:"🌤️",c:30,d:"Mainly clear",now:false},{t:"2PM",e:"🌤️",c:32,d:"Mainly clear",now:false},{t:"3PM",e:"🌤️",c:32,d:"Mainly clear",now:false},{t:"4PM",e:"🌤️",c:33,d:"Mainly clear",now:false},{t:"5PM",e:"☀️",c:33,d:"Clear",now:false},{t:"6PM",e:"🌤️",c:33,d:"Mainly clear",now:false},{t:"7PM",e:"☁️",c:32,d:"Partly cloudy",now:false},{t:"8PM",e:"☁️",c:31,d:"Partly cloudy",now:false},{t:"9PM",e:"🌙",c:29,d:"Mainly clear",now:false},{t:"10PM",e:"🌙",c:27,d:"Mainly clear",now:false},{t:"11PM",e:"🌙",c:26,d:"Mainly clear",now:false}];
+let   wxCenter_idx = 0;  // index of the slot shown in the CENTER position
 
 function wxPage(dir) {
-  const pages = Math.ceil(WX_DATA.length / WX_PAGE_SIZE);
-  wxPage_idx  = Math.max(0, Math.min(wxPage_idx + dir, pages - 1));
+  wxCenter_idx = Math.max(0, Math.min(wxCenter_idx + dir, WX_DATA.length - 1));
   wxRender();
 }
 
 function wxRender() {
   if (!WX_DATA.length) return;
-  const pages   = Math.ceil(WX_DATA.length / WX_PAGE_SIZE);
-  const start   = wxPage_idx * WX_PAGE_SIZE;
-  const visible = WX_DATA.slice(start, start + WX_PAGE_SIZE);
+  // Always show 3 slots: center-1, center, center+1 (clamped to array bounds)
+  const indices = [wxCenter_idx - 1, wxCenter_idx, wxCenter_idx + 1];
+  const visible = indices.map(i => (i >= 0 && i < WX_DATA.length) ? WX_DATA[i] : null);
   const slotEl  = document.getElementById('wxSlots');
   if (!slotEl) return;
-  slotEl.innerHTML = visible.map(s => `
+  slotEl.innerHTML = visible.map(s => s ? `
     <div class="wx-slot ${s.now ? 'wx-now' : ''}">
       <span class="wx-slot-time">${s.t}</span>
       <span class="wx-slot-icon">${s.e}</span>
       <span class="wx-slot-temp">${s.c}°</span>
-    </div>`).join('');
+    </div>` : `<div class="wx-slot wx-slot-empty"></div>`).join('');
   const prev = document.querySelector('.wx-prev');
   const next = document.querySelector('.wx-next');
-  if (prev) prev.disabled = wxPage_idx === 0;
-  if (next) next.disabled = wxPage_idx >= pages - 1;
+  if (prev) prev.disabled = wxCenter_idx <= 0;
+  if (next) next.disabled = wxCenter_idx >= WX_DATA.length - 1;
   const dotsEl = document.getElementById('wxDots');
   if (dotsEl) {
-    dotsEl.innerHTML = Array.from({length: pages}, (_, i) =>
-      `<div class="wx-dot ${i === wxPage_idx ? 'active' : ''}"></div>`
+    dotsEl.innerHTML = WX_DATA.map((_, i) =>
+      `<div class="wx-dot ${i === wxCenter_idx ? 'active' : ''}"></div>`
     ).join('');
   }
 }
 
 (function() {
   const nowIdx = WX_DATA.findIndex(s => s.now);
-  if (nowIdx >= 0) wxPage_idx = Math.floor(nowIdx / WX_PAGE_SIZE);
+  wxCenter_idx = nowIdx >= 0 ? nowIdx : 0;
   wxRender();
 })();
 
