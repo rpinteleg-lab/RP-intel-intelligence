@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_ac7b05fbd01d3ed851e55d010087a18a {
+                #map_977cdf4f61036023d5732fbc9c1346a0 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -55,16 +55,16 @@
 <body>
     
     
-            <div class="folium-map" id="map_ac7b05fbd01d3ed851e55d010087a18a" ></div>
+            <div class="folium-map" id="map_977cdf4f61036023d5732fbc9c1346a0" ></div>
         
 </body>
 <script>
     
     
-            var map_ac7b05fbd01d3ed851e55d010087a18a = L.map(
-                "map_ac7b05fbd01d3ed851e55d010087a18a",
+            var map_977cdf4f61036023d5732fbc9c1346a0 = L.map(
+                "map_977cdf4f61036023d5732fbc9c1346a0",
                 {
-                    center: [29.88723560888889, 31.66997624222222],
+                    center: [28.77400243096371, 31.494256160531165],
                     crs: L.CRS.EPSG3857,
                     ...{
   "zoom": 10,
@@ -79,7 +79,7 @@
 
         
     
-            var tile_layer_07ee9502803efac614df21160592e112 = L.tileLayer(
+            var tile_layer_118e0c37e14ffefd95efacabc1fc81ae = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -96,46 +96,46 @@
             );
         
     
-            tile_layer_07ee9502803efac614df21160592e112.addTo(map_ac7b05fbd01d3ed851e55d010087a18a);
+            tile_layer_118e0c37e14ffefd95efacabc1fc81ae.addTo(map_977cdf4f61036023d5732fbc9c1346a0);
         
     
-    var color_map_8c72d67d29e3e389ac90a2bab4578113 = {};
+    var color_map_20aae518d399718cfbd1c51d10bfb9b5 = {};
 
     
-    color_map_8c72d67d29e3e389ac90a2bab4578113.color = d3.scale.threshold()
+    color_map_20aae518d399718cfbd1c51d10bfb9b5.color = d3.scale.threshold()
               .domain([102225.3308188372, 103061.50315121493, 103897.67548359267, 104733.8478159704, 105570.02014834812, 106406.19248072586, 107242.36481310359, 108078.53714548131, 108914.70947785905, 109750.88181023678, 110587.0541426145, 111423.22647499223, 112259.39880736997, 113095.5711397477, 113931.74347212542, 114767.91580450317, 115604.08813688089, 116440.26046925862, 117276.43280163634, 118112.60513401408, 118948.77746639181, 119784.94979876955, 120621.12213114728, 121457.294463525, 122293.46679590273, 123129.63912828047, 123965.8114606582, 124801.98379303594, 125638.15612541366, 126474.32845779139, 127310.50079016911, 128146.67312254684, 128982.84545492458, 129819.0177873023, 130655.19011968005, 131491.36245205777, 132327.5347844355, 133163.70711681322, 133999.87944919095, 134836.05178156868, 135672.22411394643, 136508.39644632416, 137344.56877870188, 138180.7411110796, 139016.91344345734, 139853.0857758351, 140689.2581082128, 141525.43044059054, 142361.60277296827, 143197.775105346, 144033.94743772372, 144870.11977010145, 145706.2921024792, 146542.4644348569, 147378.63676723465, 148214.80909961238, 149050.9814319901, 149887.15376436783, 150723.32609674556, 151559.4984291233, 152395.67076150104, 153231.84309387876, 154068.0154262565, 154904.18775863422, 155740.36009101197, 156576.53242338967, 157412.70475576742, 158248.87708814515, 159085.04942052288, 159921.2217529006, 160757.39408527833, 161593.56641765608, 162429.73875003378, 163265.91108241153, 164102.08341478926, 164938.255747167, 165774.4280795447, 166610.60041192244, 167446.7727443002, 168282.9450766779, 169119.11740905565, 169955.28974143337, 170791.4620738111, 171627.63440618885, 172463.80673856655, 173299.9790709443, 174136.151403322, 174972.32373569976, 175808.4960680775, 176644.6684004552, 177480.84073283296, 178317.01306521066, 179153.18539758842, 179989.35772996614, 180825.53006234387, 181661.70239472162, 182497.87472709932, 183334.04705947707, 184170.2193918548, 185006.39172423253, 185842.56405661025, 186678.73638898798, 187514.90872136573, 188351.08105374343, 189187.25338612119, 190023.4257184989, 190859.59805087664, 191695.77038325436, 192531.9427156321, 193368.11504800981, 194204.28738038754, 195040.4597127653, 195876.63204514302, 196712.80437752075, 197548.97670989847, 198385.1490422762, 199221.32137465393, 200057.49370703165, 200893.6660394094, 201729.83837178713, 202566.01070416486, 203402.18303654258, 204238.3553689203, 205074.52770129807, 205910.70003367576, 206746.87236605352, 207583.04469843124, 208419.21703080897, 209255.38936318672, 210091.56169556442, 210927.73402794218, 211763.90636031987, 212600.07869269763, 213436.25102507538, 214272.42335745308, 215108.59568983084, 215944.76802220853, 216780.9403545863, 217617.11268696398, 218453.28501934174, 219289.4573517195, 220125.6296840972, 220961.80201647495, 221797.97434885264, 222634.1466812304, 223470.31901360812, 224306.49134598585, 225142.6636783636, 225978.8360107413, 226815.00834311906, 227651.18067549678, 228487.3530078745, 229323.52534025224, 230159.69767262996, 230995.8700050077, 231832.0423373854, 232668.21466976317, 233504.38700214087, 234340.55933451862, 235176.73166689638, 236012.90399927407, 236849.07633165183, 237685.24866402952, 238521.42099640728, 239357.59332878498, 240193.76566116273, 241029.9379935405, 241866.11032591818, 242702.28265829594, 243538.4549906737, 244374.6273230514, 245210.7996554291, 246046.97198780684, 246883.1443201846, 247719.3166525623, 248555.48898494005, 249391.6613173178, 250227.8336496955, 251064.0059820732, 251900.17831445095, 252736.3506468287, 253572.5229792064, 254408.69531158416, 255244.86764396192, 256081.0399763396, 256917.2123087173, 257753.38464109506, 258589.55697347282, 259425.72930585052, 260261.90163822827, 261098.07397060603, 261934.24630298372, 262770.4186353614, 263606.5909677392, 264442.76330011693, 265278.9356324946, 266115.1079648724, 266951.28029725014, 267787.45262962783, 268623.62496200553, 269459.7972943833, 270295.96962676104, 271132.14195913874, 271968.3142915165, 272804.48662389425, 273640.65895627195, 274476.8312886497, 275313.0036210274, 276149.17595340515, 276985.34828578285, 277821.5206181606, 278657.69295053836, 279493.86528291606, 280330.0376152938, 281166.2099476715, 282002.38228004926, 282838.554612427, 283674.7269448047, 284510.8992771824, 285347.07160956017, 286183.2439419379, 287019.4162743156, 287855.5886066934, 288691.76093907113, 289527.9332714488, 290364.1056038265, 291200.2779362043, 292036.45026858203, 292872.62260095973, 293708.7949333375, 294544.96726571524, 295381.13959809294, 296217.31193047063, 297053.4842628484, 297889.65659522614, 298725.82892760384, 299562.0012599816, 300398.17359235935, 301234.34592473705, 302070.51825711475, 302906.6905894925, 303742.86292187026, 304579.03525424795, 305415.2075866257, 306251.37991900346, 307087.55225138116, 307923.7245837589, 308759.8969161366, 309596.06924851437, 310432.24158089206, 311268.4139132698, 312104.5862456476, 312940.75857802527, 313776.930910403, 314613.1032427807, 315449.2755751585, 316285.44790753623, 317121.62023991393, 317957.7925722917, 318793.9649046694, 319630.13723704714, 320466.30956942483, 321302.4819018026, 322138.65423418034, 322974.82656655804, 323810.9988989358, 324647.17123131355, 325483.34356369125, 326319.51589606894, 327155.6882284467, 327991.86056082445, 328828.03289320215, 329664.2052255799, 330500.37755795766, 331336.54989033536, 332172.72222271306, 333008.8945550908, 333845.06688746857, 334681.23921984626, 335517.411552224, 336353.5838846018, 337189.75621697947, 338025.92854935717, 338862.1008817349, 339698.2732141127, 340534.4455464904, 341370.6178788681, 342206.7902112459, 343042.9625436236, 343879.1348760013, 344715.30720837903, 345551.4795407568, 346387.6518731345, 347223.82420551224, 348059.99653789, 348896.1688702677, 349732.3412026454, 350568.51353502314, 351404.6858674009, 352240.8581997786, 353077.03053215635, 353913.20286453405, 354749.3751969118, 355585.54752928956, 356421.71986166725, 357257.892194045, 358094.0645264227, 358930.23685880046, 359766.40919117816, 360602.5815235559, 361438.75385593367, 362274.92618831136, 363111.0985206891, 363947.2708530669, 364783.4431854446, 365619.6155178223, 366455.7878502, 367291.9601825778, 368128.13251495553, 368964.30484733323, 369800.477179711, 370636.6495120887, 371472.82184446644, 372308.9941768442, 373145.1665092219, 373981.33884159965, 374817.51117397734, 375653.68350635504, 376489.8558387328, 377326.02817111055, 378162.20050348825, 378998.372835866, 379834.54516824376, 380670.71750062145, 381506.8898329992, 382343.06216537696, 383179.23449775466, 384015.4068301324, 384851.57916251017, 385687.75149488787, 386523.92382726556, 387360.09615964326, 388196.268492021, 389032.4408243988, 389868.61315677647, 390704.7854891542, 391540.957821532, 392377.1301539097, 393213.30248628743, 394049.4748186652, 394885.6471510429, 395721.81948342064, 396557.9918157984, 397394.16414817603, 398230.3364805538, 399066.50881293154, 399902.68114530924, 400738.853477687, 401575.0258100647, 402411.19814244244, 403247.3704748202, 404083.5428071979, 404919.71513957565, 405755.8874719534, 406592.0598043311, 407428.23213670886, 408264.4044690866, 409100.57680146425, 409936.749133842, 410772.92146621976, 411609.09379859746, 412445.2661309752, 413281.43846335297, 414117.61079573067, 414953.7831281084, 415789.9554604862, 416626.1277928639, 417462.3001252416, 418298.4724576193, 419134.6447899971, 419970.81712237484, 420806.9894547525, 421643.16178713023, 422479.334119508, 423315.5064518857, 424151.67878426344, 424987.8511166412, 425824.0234490189, 426660.19578139664, 427496.3681137744, 428332.5404461521, 429168.71277852985, 430004.8851109076, 430841.0574432853, 431677.22977566306, 432513.40210804075, 433349.57444041845, 434185.7467727962, 435021.9191051739, 435858.09143755166, 436694.2637699294, 437530.4361023071, 438366.60843468487, 439202.7807670626, 440038.9530994403, 440875.1254318181, 441711.2977641958, 442547.4700965735, 443383.6424289513, 444219.814761329, 445055.9870937067, 445892.1594260844, 446728.3317584622, 447564.5040908399, 448400.67642321764, 449236.8487555954, 450073.0210879731, 450909.19342035084, 451745.36575272854, 452581.5380851063, 453417.71041748405, 454253.88274986175, 455090.0550822395, 455926.2274146172, 456762.3997469949, 457598.57207937265, 458434.7444117504, 459270.9167441281, 460107.08907650586, 460943.2614088836, 461779.4337412613, 462615.60607363906, 463451.7784060168, 464287.9507383945, 465124.1230707723, 465960.29540315, 466796.46773552767, 467632.6400679054, 468468.8124002831, 469304.9847326609, 470141.1570650386, 470977.3293974163, 471813.5017297941, 472649.67406217183, 473485.84639454953, 474322.0187269273, 475158.19105930504, 475994.36339168274, 476830.5357240605, 477666.70805643825, 478502.8803888159, 479339.05272119364, 480175.2250535714, 481011.3973859491, 481847.56971832685, 482683.74205070455, 483519.9143830823, 484356.08671546006, 485192.25904783775, 486028.4313802155, 486864.60371259326, 487700.77604497096, 488536.9483773487, 489373.12070972647, 490209.2930421041, 491045.46537448186, 491881.6377068596, 492717.8100392373, 493553.9823716151, 494390.1547039928, 495226.3270363705, 496062.4993687483, 496898.67170112603, 497734.84403350373, 498571.0163658815, 499407.1886982592, 500243.36103063694, 501079.5333630147, 501915.70569539233, 502751.8780277701, 503588.05036014784, 504424.22269252554, 505260.3950249033, 506096.56735728105, 506932.73968965875, 507768.9120220365, 508605.08435441426, 509441.25668679195, 510277.4290191697, 511113.60135154746, 511949.77368392516, 512785.9460163029, 513622.1183486806, 514458.2906810583, 515294.46301343606, 516130.63534581376, 516966.8076781915, 517802.98001056927, 518639.15234294697, 519475.3246753247])
               .range(['#008000ff', '#018100ff', '#038200ff', '#048200ff', '#068300ff', '#078400ff', '#098500ff', '#0a8500ff', '#0c8600ff', '#0d8700ff', '#0f8800ff', '#108800ff', '#128900ff', '#148a00ff', '#158b00ff', '#178b00ff', '#188c00ff', '#1a8d00ff', '#1b8e00ff', '#1d8f00ff', '#1e8f00ff', '#209000ff', '#219100ff', '#239200ff', '#249200ff', '#269300ff', '#289400ff', '#299500ff', '#2b9500ff', '#2c9600ff', '#2e9700ff', '#2f9800ff', '#319900ff', '#329900ff', '#349a00ff', '#359b00ff', '#379c00ff', '#389c00ff', '#3a9d00ff', '#3c9e00ff', '#3d9f00ff', '#3f9f00ff', '#40a000ff', '#42a100ff', '#43a200ff', '#45a200ff', '#46a300ff', '#48a400ff', '#49a500ff', '#4ba600ff', '#4ca600ff', '#4ea700ff', '#50a800ff', '#51a900ff', '#53a900ff', '#54aa00ff', '#56ab00ff', '#57ac00ff', '#59ac00ff', '#5aad00ff', '#5cae00ff', '#5daf00ff', '#5fb000ff', '#60b000ff', '#62b100ff', '#64b200ff', '#65b300ff', '#67b300ff', '#68b400ff', '#6ab500ff', '#6bb600ff', '#6db600ff', '#6eb700ff', '#70b800ff', '#71b900ff', '#73b900ff', '#74ba00ff', '#76bb00ff', '#78bc00ff', '#79bd00ff', '#7bbd00ff', '#7cbe00ff', '#7ebf00ff', '#7fc000ff', '#81c000ff', '#82c100ff', '#84c200ff', '#85c300ff', '#87c300ff', '#88c400ff', '#8ac500ff', '#8cc600ff', '#8dc700ff', '#8fc700ff', '#90c800ff', '#92c900ff', '#93ca00ff', '#95ca00ff', '#96cb00ff', '#98cc00ff', '#99cd00ff', '#9bcd00ff', '#9cce00ff', '#9ecf00ff', '#a0d000ff', '#a1d000ff', '#a3d100ff', '#a4d200ff', '#a6d300ff', '#a7d400ff', '#a9d400ff', '#aad500ff', '#acd600ff', '#add700ff', '#afd700ff', '#b0d800ff', '#b2d900ff', '#b4da00ff', '#b5da00ff', '#b7db00ff', '#b8dc00ff', '#badd00ff', '#bbde00ff', '#bdde00ff', '#bedf00ff', '#c0e000ff', '#c1e100ff', '#c3e100ff', '#c5e200ff', '#c6e300ff', '#c8e400ff', '#c9e400ff', '#cbe500ff', '#cce600ff', '#cee700ff', '#cfe700ff', '#d1e800ff', '#d2e900ff', '#d4ea00ff', '#d5eb00ff', '#d7eb00ff', '#d9ec00ff', '#daed00ff', '#dcee00ff', '#ddee00ff', '#dfef00ff', '#e0f000ff', '#e2f100ff', '#e3f100ff', '#e5f200ff', '#e6f300ff', '#e8f400ff', '#e9f500ff', '#ebf500ff', '#edf600ff', '#eef700ff', '#f0f800ff', '#f1f800ff', '#f3f900ff', '#f4fa00ff', '#f6fb00ff', '#f7fb00ff', '#f9fc00ff', '#fafd00ff', '#fcfe00ff', '#fdfe00ff', '#ffff00ff', '#ffff00ff', '#ffff00ff', '#fffe00ff', '#fffe00ff', '#fffd00ff', '#fffc00ff', '#fffc00ff', '#fffb00ff', '#fffb00ff', '#fffa00ff', '#fffa00ff', '#fff900ff', '#fff900ff', '#fff800ff', '#fff800ff', '#fff700ff', '#fff600ff', '#fff600ff', '#fff500ff', '#fff500ff', '#fff400ff', '#fff400ff', '#fff300ff', '#fff300ff', '#fff200ff', '#fff200ff', '#fff100ff', '#fff000ff', '#fff000ff', '#ffef00ff', '#ffef00ff', '#ffee00ff', '#ffee00ff', '#ffed00ff', '#ffed00ff', '#ffec00ff', '#ffec00ff', '#ffeb00ff', '#ffea00ff', '#ffea00ff', '#ffe900ff', '#ffe900ff', '#ffe800ff', '#ffe800ff', '#ffe700ff', '#ffe700ff', '#ffe600ff', '#ffe600ff', '#ffe500ff', '#ffe500ff', '#ffe400ff', '#ffe300ff', '#ffe300ff', '#ffe200ff', '#ffe200ff', '#ffe100ff', '#ffe100ff', '#ffe000ff', '#ffe000ff', '#ffdf00ff', '#ffdf00ff', '#ffde00ff', '#ffdd00ff', '#ffdd00ff', '#ffdc00ff', '#ffdc00ff', '#ffdb00ff', '#ffdb00ff', '#ffda00ff', '#ffda00ff', '#ffd900ff', '#ffd900ff', '#ffd800ff', '#ffd700ff', '#ffd700ff', '#ffd600ff', '#ffd600ff', '#ffd500ff', '#ffd500ff', '#ffd400ff', '#ffd400ff', '#ffd300ff', '#ffd300ff', '#ffd200ff', '#ffd200ff', '#ffd100ff', '#ffd000ff', '#ffd000ff', '#ffcf00ff', '#ffcf00ff', '#ffce00ff', '#ffce00ff', '#ffcd00ff', '#ffcd00ff', '#ffcc00ff', '#ffcc00ff', '#ffcb00ff', '#ffca00ff', '#ffca00ff', '#ffc900ff', '#ffc900ff', '#ffc800ff', '#ffc800ff', '#ffc700ff', '#ffc700ff', '#ffc600ff', '#ffc600ff', '#ffc500ff', '#ffc400ff', '#ffc400ff', '#ffc300ff', '#ffc300ff', '#ffc200ff', '#ffc200ff', '#ffc100ff', '#ffc100ff', '#ffc000ff', '#ffc000ff', '#ffbf00ff', '#ffbe00ff', '#ffbe00ff', '#ffbd00ff', '#ffbd00ff', '#ffbc00ff', '#ffbc00ff', '#ffbb00ff', '#ffbb00ff', '#ffba00ff', '#ffba00ff', '#ffb900ff', '#ffb900ff', '#ffb800ff', '#ffb700ff', '#ffb700ff', '#ffb600ff', '#ffb600ff', '#ffb500ff', '#ffb500ff', '#ffb400ff', '#ffb400ff', '#ffb300ff', '#ffb300ff', '#ffb200ff', '#ffb100ff', '#ffb100ff', '#ffb000ff', '#ffb000ff', '#ffaf00ff', '#ffaf00ff', '#ffae00ff', '#ffae00ff', '#ffad00ff', '#ffad00ff', '#ffac00ff', '#ffab00ff', '#ffab00ff', '#ffaa00ff', '#ffaa00ff', '#ffa900ff', '#ffa900ff', '#ffa800ff', '#ffa800ff', '#ffa700ff', '#ffa700ff', '#ffa600ff', '#ffa600ff', '#ffa500ff', '#ffa400ff', '#ffa300ff', '#ffa200ff', '#ffa100ff', '#ffa000ff', '#ff9f00ff', '#ff9e00ff', '#ff9d00ff', '#ff9c00ff', '#ff9b00ff', '#ff9a00ff', '#ff9900ff', '#ff9800ff', '#ff9700ff', '#ff9600ff', '#ff9500ff', '#ff9400ff', '#ff9300ff', '#ff9200ff', '#ff9100ff', '#ff9000ff', '#ff8f00ff', '#ff8e00ff', '#ff8d00ff', '#ff8c00ff', '#ff8b00ff', '#ff8a00ff', '#ff8900ff', '#ff8800ff', '#ff8700ff', '#ff8600ff', '#ff8500ff', '#ff8400ff', '#ff8300ff', '#ff8200ff', '#ff8100ff', '#ff8000ff', '#ff7f00ff', '#ff7e00ff', '#ff7d00ff', '#ff7c00ff', '#ff7b00ff', '#ff7a00ff', '#ff7900ff', '#ff7800ff', '#ff7700ff', '#ff7600ff', '#ff7500ff', '#ff7400ff', '#ff7300ff', '#ff7200ff', '#ff7100ff', '#ff7000ff', '#ff6f00ff', '#ff6e00ff', '#ff6d00ff', '#ff6c00ff', '#ff6b00ff', '#ff6a00ff', '#ff6900ff', '#ff6800ff', '#ff6700ff', '#ff6600ff', '#ff6500ff', '#ff6400ff', '#ff6300ff', '#ff6200ff', '#ff6100ff', '#ff6000ff', '#ff5f00ff', '#ff5e00ff', '#ff5d00ff', '#ff5c00ff', '#ff5b00ff', '#ff5a00ff', '#ff5900ff', '#ff5800ff', '#ff5700ff', '#ff5600ff', '#ff5500ff', '#ff5400ff', '#ff5300ff', '#ff5200ff', '#ff5100ff', '#ff5000ff', '#ff4f00ff', '#ff4e00ff', '#ff4d00ff', '#ff4c00ff', '#ff4b00ff', '#ff4a00ff', '#ff4900ff', '#ff4800ff', '#ff4700ff', '#ff4600ff', '#ff4500ff', '#ff4400ff', '#ff4300ff', '#ff4200ff', '#ff4100ff', '#ff4000ff', '#ff3f00ff', '#ff3e00ff', '#ff3d00ff', '#ff3c00ff', '#ff3b00ff', '#ff3a00ff', '#ff3900ff', '#ff3800ff', '#ff3700ff', '#ff3600ff', '#ff3500ff', '#ff3400ff', '#ff3300ff', '#ff3200ff', '#ff3100ff', '#ff3000ff', '#ff2f00ff', '#ff2e00ff', '#ff2d00ff', '#ff2c00ff', '#ff2b00ff', '#ff2a00ff', '#ff2900ff', '#ff2800ff', '#ff2700ff', '#ff2600ff', '#ff2500ff', '#ff2400ff', '#ff2300ff', '#ff2200ff', '#ff2100ff', '#ff2000ff', '#ff1f00ff', '#ff1e00ff', '#ff1d00ff', '#ff1c00ff', '#ff1b00ff', '#ff1a00ff', '#ff1900ff', '#ff1800ff', '#ff1700ff', '#ff1600ff', '#ff1500ff', '#ff1400ff', '#ff1300ff', '#ff1200ff', '#ff1100ff', '#ff1000ff', '#ff0f00ff', '#ff0e00ff', '#ff0d00ff', '#ff0c00ff', '#ff0b00ff', '#ff0a00ff', '#ff0900ff', '#ff0800ff', '#ff0700ff', '#ff0600ff', '#ff0500ff', '#ff0400ff', '#ff0300ff', '#ff0200ff', '#ff0100ff', '#ff0000ff', '#ff0000ff']);
     
 
-    color_map_8c72d67d29e3e389ac90a2bab4578113.x = d3.scale.linear()
+    color_map_20aae518d399718cfbd1c51d10bfb9b5.x = d3.scale.linear()
               .domain([102225.3308188372, 519475.3246753247])
               .range([0, 450 - 50]);
 
-    color_map_8c72d67d29e3e389ac90a2bab4578113.legend = L.control({position: 'topright'});
-    color_map_8c72d67d29e3e389ac90a2bab4578113.legend.onAdd = function (map) {var div = L.DomUtil.create('div', 'legend'); return div};
-    color_map_8c72d67d29e3e389ac90a2bab4578113.legend.addTo(map_ac7b05fbd01d3ed851e55d010087a18a);
+    color_map_20aae518d399718cfbd1c51d10bfb9b5.legend = L.control({position: 'topright'});
+    color_map_20aae518d399718cfbd1c51d10bfb9b5.legend.onAdd = function (map) {var div = L.DomUtil.create('div', 'legend'); return div};
+    color_map_20aae518d399718cfbd1c51d10bfb9b5.legend.addTo(map_977cdf4f61036023d5732fbc9c1346a0);
 
-    color_map_8c72d67d29e3e389ac90a2bab4578113.xAxis = d3.svg.axis()
-        .scale(color_map_8c72d67d29e3e389ac90a2bab4578113.x)
+    color_map_20aae518d399718cfbd1c51d10bfb9b5.xAxis = d3.svg.axis()
+        .scale(color_map_20aae518d399718cfbd1c51d10bfb9b5.x)
         .orient("top")
         .tickSize(1)
         .tickValues([102225.3308188372, 241308.66210433305, 380391.9933898289, 519475.3246753247]);
 
-    color_map_8c72d67d29e3e389ac90a2bab4578113.svg = d3.select(".legend.leaflet-control").append("svg")
+    color_map_20aae518d399718cfbd1c51d10bfb9b5.svg = d3.select(".legend.leaflet-control").append("svg")
         .attr("id", 'legend')
         .attr("width", 450)
         .attr("height", 40);
 
-    color_map_8c72d67d29e3e389ac90a2bab4578113.g = color_map_8c72d67d29e3e389ac90a2bab4578113.svg.append("g")
+    color_map_20aae518d399718cfbd1c51d10bfb9b5.g = color_map_20aae518d399718cfbd1c51d10bfb9b5.svg.append("g")
         .attr("class", "key")
         .attr("fill", "black")
         .attr("transform", "translate(25,16)");
 
-    color_map_8c72d67d29e3e389ac90a2bab4578113.g.selectAll("rect")
-        .data(color_map_8c72d67d29e3e389ac90a2bab4578113.color.range().map(function(d, i) {
+    color_map_20aae518d399718cfbd1c51d10bfb9b5.g.selectAll("rect")
+        .data(color_map_20aae518d399718cfbd1c51d10bfb9b5.color.range().map(function(d, i) {
           return {
-            x0: i ? color_map_8c72d67d29e3e389ac90a2bab4578113.x(color_map_8c72d67d29e3e389ac90a2bab4578113.color.domain()[i - 1]) : color_map_8c72d67d29e3e389ac90a2bab4578113.x.range()[0],
-            x1: i < color_map_8c72d67d29e3e389ac90a2bab4578113.color.domain().length ? color_map_8c72d67d29e3e389ac90a2bab4578113.x(color_map_8c72d67d29e3e389ac90a2bab4578113.color.domain()[i]) : color_map_8c72d67d29e3e389ac90a2bab4578113.x.range()[1],
+            x0: i ? color_map_20aae518d399718cfbd1c51d10bfb9b5.x(color_map_20aae518d399718cfbd1c51d10bfb9b5.color.domain()[i - 1]) : color_map_20aae518d399718cfbd1c51d10bfb9b5.x.range()[0],
+            x1: i < color_map_20aae518d399718cfbd1c51d10bfb9b5.color.domain().length ? color_map_20aae518d399718cfbd1c51d10bfb9b5.x(color_map_20aae518d399718cfbd1c51d10bfb9b5.color.domain()[i]) : color_map_20aae518d399718cfbd1c51d10bfb9b5.x.range()[1],
             z: d
           };
         }))
@@ -145,36 +145,36 @@
         .attr("width", function(d) { return d.x1 - d.x0; })
         .style("fill", function(d) { return d.z; });
 
-    color_map_8c72d67d29e3e389ac90a2bab4578113.g.call(color_map_8c72d67d29e3e389ac90a2bab4578113.xAxis).append("text")
+    color_map_20aae518d399718cfbd1c51d10bfb9b5.g.call(color_map_20aae518d399718cfbd1c51d10bfb9b5.xAxis).append("text")
         .attr("class", "caption")
         .attr("y", 21)
         .attr("fill", "black")
         .text("Average Price per SQM");
     
-            var circle_marker_5cf28ef1becdcf61377e68d84d4a593a = L.circleMarker(
-                [29.9783715, 31.4336624],
+            var circle_marker_a9c94b878c3b0e1890f931445248c6d8 = L.circleMarker(
+                [29.983036301797146, 31.323137270933472],
                 {"bubblingMouseEvents": true, "color": "#008000ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#008000ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_ac7b05fbd01d3ed851e55d010087a18a);
+            ).addTo(map_977cdf4f61036023d5732fbc9c1346a0);
         
     
-        var popup_c93402e2811cd3a5f9124d380d1ff1ef = L.popup({
+        var popup_ea559a8d2a10ac9da60c49aec4eb54a3 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_cce11b185cf0573da2ff8fde1d2e2efb = $(`<div id="html_cce11b185cf0573da2ff8fde1d2e2efb" style="width: 100.0%; height: 100.0%;">     <b>41 Business District in New Cairo</b><br>     Developer: M Squared<br>     Avg Price/SQM: 102,225 EGP<br>     Units: 7     </div>`)[0];
-                popup_c93402e2811cd3a5f9124d380d1ff1ef.setContent(html_cce11b185cf0573da2ff8fde1d2e2efb);
+                var html_07d066ac1736951112299cd7ad343e5c = $(`<div id="html_07d066ac1736951112299cd7ad343e5c" style="width: 100.0%; height: 100.0%;">     <b>41 Business District in New Cairo</b><br>     Developer: M Squared<br>     Avg Price/SQM: 102,225 EGP<br>     Units: 7     </div>`)[0];
+                popup_ea559a8d2a10ac9da60c49aec4eb54a3.setContent(html_07d066ac1736951112299cd7ad343e5c);
             
         
 
-        circle_marker_5cf28ef1becdcf61377e68d84d4a593a.bindPopup(popup_c93402e2811cd3a5f9124d380d1ff1ef)
+        circle_marker_a9c94b878c3b0e1890f931445248c6d8.bindPopup(popup_ea559a8d2a10ac9da60c49aec4eb54a3)
         ;
 
         
     
     
-            circle_marker_5cf28ef1becdcf61377e68d84d4a593a.bindTooltip(
+            circle_marker_a9c94b878c3b0e1890f931445248c6d8.bindTooltip(
                 `<div>
                      41 Business District in New Cairo (7 units)
                  </div>`,
@@ -184,30 +184,30 @@
             );
         
     
-            var circle_marker_5135b53655b41e3cd4e47aecc200c682 = L.circleMarker(
-                [29.9988141, 31.4502045],
+            var circle_marker_62cd566d021b94c0a72ffa77c54f2064 = L.circleMarker(
+                [29.9990224396384, 31.450045625649558],
                 {"bubblingMouseEvents": true, "color": "#a1d100ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a1d100ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.011872336272722, "stroke": true, "weight": 3}
-            ).addTo(map_ac7b05fbd01d3ed851e55d010087a18a);
+            ).addTo(map_977cdf4f61036023d5732fbc9c1346a0);
         
     
-        var popup_dbe5dccfdc07af8294416740c6983eef = L.popup({
+        var popup_86803d7219e843163837b81969be38e1 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_a6c0096c250ab8c5918b8a10a6142607 = $(`<div id="html_a6c0096c250ab8c5918b8a10a6142607" style="width: 100.0%; height: 100.0%;">     <b>Axle in New Cairo</b><br>     Developer: Menassat Developments<br>     Avg Price/SQM: 190,100 EGP<br>     Units: 10     </div>`)[0];
-                popup_dbe5dccfdc07af8294416740c6983eef.setContent(html_a6c0096c250ab8c5918b8a10a6142607);
+                var html_2848eaf5e49e0355ce0e591b4cfc1d7a = $(`<div id="html_2848eaf5e49e0355ce0e591b4cfc1d7a" style="width: 100.0%; height: 100.0%;">     <b>Axle in New Cairo</b><br>     Developer: Menassat Developments<br>     Avg Price/SQM: 190,100 EGP<br>     Units: 10     </div>`)[0];
+                popup_86803d7219e843163837b81969be38e1.setContent(html_2848eaf5e49e0355ce0e591b4cfc1d7a);
             
         
 
-        circle_marker_5135b53655b41e3cd4e47aecc200c682.bindPopup(popup_dbe5dccfdc07af8294416740c6983eef)
+        circle_marker_62cd566d021b94c0a72ffa77c54f2064.bindPopup(popup_86803d7219e843163837b81969be38e1)
         ;
 
         
     
     
-            circle_marker_5135b53655b41e3cd4e47aecc200c682.bindTooltip(
+            circle_marker_62cd566d021b94c0a72ffa77c54f2064.bindTooltip(
                 `<div>
                      Axle in New Cairo (10 units)
                  </div>`,
@@ -217,30 +217,30 @@
             );
         
     
-            var circle_marker_de9b6c165aeb08f0a55ee1012aef674d = L.circleMarker(
-                [30.0033753, 31.4745255],
+            var circle_marker_ffdc961339b1c263560f1030a9353d13 = L.circleMarker(
+                [30.002924316161845, 31.474633783321355],
                 {"bubblingMouseEvents": true, "color": "#a5d300ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a5d300ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.357656669484113, "stroke": true, "weight": 3}
-            ).addTo(map_ac7b05fbd01d3ed851e55d010087a18a);
+            ).addTo(map_977cdf4f61036023d5732fbc9c1346a0);
         
     
-        var popup_5b12e09023661bbd9d3ca040249582f5 = L.popup({
+        var popup_8d72f77aebed9a779f1afda27ade2393 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_dd849381ff70c95548042cf7f0381d9c = $(`<div id="html_dd849381ff70c95548042cf7f0381d9c" style="width: 100.0%; height: 100.0%;">     <b>Begonia Residence in South Investors</b><br>     Developer: Menassat Developments<br>     Avg Price/SQM: 192,246 EGP<br>     Units: 11     </div>`)[0];
-                popup_5b12e09023661bbd9d3ca040249582f5.setContent(html_dd849381ff70c95548042cf7f0381d9c);
+                var html_2cdc9c3391fd4c1f9336b05bda7499ab = $(`<div id="html_2cdc9c3391fd4c1f9336b05bda7499ab" style="width: 100.0%; height: 100.0%;">     <b>Begonia Residence in South Investors</b><br>     Developer: Menassat Developments<br>     Avg Price/SQM: 192,246 EGP<br>     Units: 11     </div>`)[0];
+                popup_8d72f77aebed9a779f1afda27ade2393.setContent(html_2cdc9c3391fd4c1f9336b05bda7499ab);
             
         
 
-        circle_marker_de9b6c165aeb08f0a55ee1012aef674d.bindPopup(popup_5b12e09023661bbd9d3ca040249582f5)
+        circle_marker_ffdc961339b1c263560f1030a9353d13.bindPopup(popup_8d72f77aebed9a779f1afda27ade2393)
         ;
 
         
     
     
-            circle_marker_de9b6c165aeb08f0a55ee1012aef674d.bindTooltip(
+            circle_marker_ffdc961339b1c263560f1030a9353d13.bindTooltip(
                 `<div>
                      Begonia Residence in South Investors (11 units)
                  </div>`,
@@ -250,30 +250,63 @@
             );
         
     
-            var circle_marker_f506cc5f4524e1b7cc52cbd6687c2f8d = L.circleMarker(
-                [30.0508299, 31.514075],
-                {"bubblingMouseEvents": true, "color": "#ffee00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffee00ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_ac7b05fbd01d3ed851e55d010087a18a);
+            var circle_marker_3609360781373a560eff89348990540b = L.circleMarker(
+                [30.036643367169493, 31.55466866891058],
+                {"bubblingMouseEvents": true, "color": "#97cc00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#97cc00ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.69412336751626, "stroke": true, "weight": 3}
+            ).addTo(map_977cdf4f61036023d5732fbc9c1346a0);
         
     
-        var popup_98d85e87c78325711f961420211be26d = L.popup({
+        var popup_abf736fbde54a9e534fbccc721a30dd5 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_da13d5fe0eb0e4a26dfee768116db527 = $(`<div id="html_da13d5fe0eb0e4a26dfee768116db527" style="width: 100.0%; height: 100.0%;">     <b>Cairo Business Park in New Cairo</b><br>     Developer: Misr Italia Properties<br>     Avg Price/SQM: 269,006 EGP<br>     Units: 1     </div>`)[0];
-                popup_98d85e87c78325711f961420211be26d.setContent(html_da13d5fe0eb0e4a26dfee768116db527);
+                var html_0d392f0e521750e37e692e1a90db1697 = $(`<div id="html_0d392f0e521750e37e692e1a90db1697" style="width: 100.0%; height: 100.0%;">     <b>Bluetree in New Cairo</b><br>     Developer: Sky AD Developments<br>     Avg Price/SQM: 184,676 EGP<br>     Units: 12     </div>`)[0];
+                popup_abf736fbde54a9e534fbccc721a30dd5.setContent(html_0d392f0e521750e37e692e1a90db1697);
             
         
 
-        circle_marker_f506cc5f4524e1b7cc52cbd6687c2f8d.bindPopup(popup_98d85e87c78325711f961420211be26d)
+        circle_marker_3609360781373a560eff89348990540b.bindPopup(popup_abf736fbde54a9e534fbccc721a30dd5)
         ;
 
         
     
     
-            circle_marker_f506cc5f4524e1b7cc52cbd6687c2f8d.bindTooltip(
+            circle_marker_3609360781373a560eff89348990540b.bindTooltip(
+                `<div>
+                     Bluetree in New Cairo (12 units)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8868a05d5bcdcbdcdb256a0c16c077b3 = L.circleMarker(
+                [30.05112240496776, 31.514225200517085],
+                {"bubblingMouseEvents": true, "color": "#ffee00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffee00ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_977cdf4f61036023d5732fbc9c1346a0);
+        
+    
+        var popup_4b2a0d371ba26201f74400c4f146563a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4c087e0f0e6556ba22d67cf01c52d7c7 = $(`<div id="html_4c087e0f0e6556ba22d67cf01c52d7c7" style="width: 100.0%; height: 100.0%;">     <b>Cairo Business Park in New Cairo</b><br>     Developer: Misr Italia Properties<br>     Avg Price/SQM: 269,006 EGP<br>     Units: 1     </div>`)[0];
+                popup_4b2a0d371ba26201f74400c4f146563a.setContent(html_4c087e0f0e6556ba22d67cf01c52d7c7);
+            
+        
+
+        circle_marker_8868a05d5bcdcbdcdb256a0c16c077b3.bindPopup(popup_4b2a0d371ba26201f74400c4f146563a)
+        ;
+
+        
+    
+    
+            circle_marker_8868a05d5bcdcbdcdb256a0c16c077b3.bindTooltip(
                 `<div>
                      Cairo Business Park in New Cairo (1 units)
                  </div>`,
@@ -283,30 +316,30 @@
             );
         
     
-            var circle_marker_72c8bbcce830b7bd870e058db4830aab = L.circleMarker(
-                [30.0575579, 31.4410958],
+            var circle_marker_74bbf6a57cb1d73973e7aebc58917c92 = L.circleMarker(
+                [30.036360735964294, 31.478923433314385],
                 {"bubblingMouseEvents": true, "color": "#deef00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#deef00ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_ac7b05fbd01d3ed851e55d010087a18a);
+            ).addTo(map_977cdf4f61036023d5732fbc9c1346a0);
         
     
-        var popup_13432baa2da7f6527c7f451d943d3428 = L.popup({
+        var popup_f3fc6eba3dbc6c9eef14ced1e44dc5c3 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_96facfcffbed02867267a5f382095da5 = $(`<div id="html_96facfcffbed02867267a5f382095da5" style="width: 100.0%; height: 100.0%;">     <b>Chess Field in North Investors</b><br>     Developer: Al Jazi Egypt<br>     Avg Price/SQM: 223,210 EGP<br>     Units: 3     </div>`)[0];
-                popup_13432baa2da7f6527c7f451d943d3428.setContent(html_96facfcffbed02867267a5f382095da5);
+                var html_ea870dabcc120ae8686977417a7df56e = $(`<div id="html_ea870dabcc120ae8686977417a7df56e" style="width: 100.0%; height: 100.0%;">     <b>Chess Field in North Investors</b><br>     Developer: Al Jazi Egypt<br>     Avg Price/SQM: 223,210 EGP<br>     Units: 3     </div>`)[0];
+                popup_f3fc6eba3dbc6c9eef14ced1e44dc5c3.setContent(html_ea870dabcc120ae8686977417a7df56e);
             
         
 
-        circle_marker_72c8bbcce830b7bd870e058db4830aab.bindPopup(popup_13432baa2da7f6527c7f451d943d3428)
+        circle_marker_74bbf6a57cb1d73973e7aebc58917c92.bindPopup(popup_f3fc6eba3dbc6c9eef14ced1e44dc5c3)
         ;
 
         
     
     
-            circle_marker_72c8bbcce830b7bd870e058db4830aab.bindTooltip(
+            circle_marker_74bbf6a57cb1d73973e7aebc58917c92.bindTooltip(
                 `<div>
                      Chess Field in North Investors (3 units)
                  </div>`,
@@ -316,30 +349,30 @@
             );
         
     
-            var circle_marker_401b454c08ca09238aa31600d138d474 = L.circleMarker(
-                [30.0117472, 31.4979524],
+            var circle_marker_2047b34ae88879c0312ff5245dca19c4 = L.circleMarker(
+                [30.023116682108473, 31.558486806604535],
                 {"bubblingMouseEvents": true, "color": "#79bc00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#79bc00ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_ac7b05fbd01d3ed851e55d010087a18a);
+            ).addTo(map_977cdf4f61036023d5732fbc9c1346a0);
         
     
-        var popup_211e5c7eb87d73f0e95ec65f67fe1c06 = L.popup({
+        var popup_8d658efa4b21f2e660440ac0d1002b83 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_131cc82fd0cfed9cd661cef6402d828a = $(`<div id="html_131cc82fd0cfed9cd661cef6402d828a" style="width: 100.0%; height: 100.0%;">     <b>City Gate in New Cairo</b><br>     Developer: Qatari Diar<br>     Avg Price/SQM: 168,092 EGP<br>     Units: 4     </div>`)[0];
-                popup_211e5c7eb87d73f0e95ec65f67fe1c06.setContent(html_131cc82fd0cfed9cd661cef6402d828a);
+                var html_c8479bdc8e4777ef12f3d2e77c285d4a = $(`<div id="html_c8479bdc8e4777ef12f3d2e77c285d4a" style="width: 100.0%; height: 100.0%;">     <b>City Gate in New Cairo</b><br>     Developer: Qatari Diar<br>     Avg Price/SQM: 168,092 EGP<br>     Units: 4     </div>`)[0];
+                popup_8d658efa4b21f2e660440ac0d1002b83.setContent(html_c8479bdc8e4777ef12f3d2e77c285d4a);
             
         
 
-        circle_marker_401b454c08ca09238aa31600d138d474.bindPopup(popup_211e5c7eb87d73f0e95ec65f67fe1c06)
+        circle_marker_2047b34ae88879c0312ff5245dca19c4.bindPopup(popup_8d658efa4b21f2e660440ac0d1002b83)
         ;
 
         
     
     
-            circle_marker_401b454c08ca09238aa31600d138d474.bindTooltip(
+            circle_marker_2047b34ae88879c0312ff5245dca19c4.bindTooltip(
                 `<div>
                      City Gate in New Cairo (4 units)
                  </div>`,
@@ -349,30 +382,63 @@
             );
         
     
-            var circle_marker_d67dedddcd70ba0fb178c3796ac53b8f = L.circleMarker(
-                [30.0314958, 31.3614382],
-                {"bubblingMouseEvents": true, "color": "#d9ec00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d9ec00ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_ac7b05fbd01d3ed851e55d010087a18a);
+            var circle_marker_0129765b3d8b2d9df5af0822d4cd2f6c = L.circleMarker(
+                [29.973760917967645, 31.738030583161756],
+                {"bubblingMouseEvents": true, "color": "#ffad00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffad00ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.022271719754773, "stroke": true, "weight": 3}
+            ).addTo(map_977cdf4f61036023d5732fbc9c1346a0);
         
     
-        var popup_b15670b13a13ac1ed7bfd0eef2ffcecf = L.popup({
+        var popup_b6e8c8334aacd3267c8b16cd830cce00 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_200f275dbc1beadfe62f0319688e0fe2 = $(`<div id="html_200f275dbc1beadfe62f0319688e0fe2" style="width: 100.0%; height: 100.0%;">     <b>Citystars Park Street in New Cairo</b><br>     Developer: Sky Innovo Developments<br>     Avg Price/SQM: 220,556 EGP<br>     Units: 6     </div>`)[0];
-                popup_b15670b13a13ac1ed7bfd0eef2ffcecf.setContent(html_200f275dbc1beadfe62f0319688e0fe2);
+                var html_5100ceee35089fd4aaa117c99350def2 = $(`<div id="html_5100ceee35089fd4aaa117c99350def2" style="width: 100.0%; height: 100.0%;">     <b>City Hall in North Investors</b><br>     Developer: SERAC Developments<br>     Avg Price/SQM: 367,631 EGP<br>     Units: 13     </div>`)[0];
+                popup_b6e8c8334aacd3267c8b16cd830cce00.setContent(html_5100ceee35089fd4aaa117c99350def2);
             
         
 
-        circle_marker_d67dedddcd70ba0fb178c3796ac53b8f.bindPopup(popup_b15670b13a13ac1ed7bfd0eef2ffcecf)
+        circle_marker_0129765b3d8b2d9df5af0822d4cd2f6c.bindPopup(popup_b6e8c8334aacd3267c8b16cd830cce00)
         ;
 
         
     
     
-            circle_marker_d67dedddcd70ba0fb178c3796ac53b8f.bindTooltip(
+            circle_marker_0129765b3d8b2d9df5af0822d4cd2f6c.bindTooltip(
+                `<div>
+                     City Hall in North Investors (13 units)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2f2e4e30f23c0f125466f9fd60747f73 = L.circleMarker(
+                [29.988110337255485, 31.37228930008854],
+                {"bubblingMouseEvents": true, "color": "#d9ec00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d9ec00ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_977cdf4f61036023d5732fbc9c1346a0);
+        
+    
+        var popup_8c0f188914fcabf48fa1a94f27522225 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d785199c26ee2f0692912a839484a4a8 = $(`<div id="html_d785199c26ee2f0692912a839484a4a8" style="width: 100.0%; height: 100.0%;">     <b>Citystars Park Street in New Cairo</b><br>     Developer: Sky Innovo Developments<br>     Avg Price/SQM: 220,556 EGP<br>     Units: 6     </div>`)[0];
+                popup_8c0f188914fcabf48fa1a94f27522225.setContent(html_d785199c26ee2f0692912a839484a4a8);
+            
+        
+
+        circle_marker_2f2e4e30f23c0f125466f9fd60747f73.bindPopup(popup_8c0f188914fcabf48fa1a94f27522225)
+        ;
+
+        
+    
+    
+            circle_marker_2f2e4e30f23c0f125466f9fd60747f73.bindTooltip(
                 `<div>
                      Citystars Park Street in New Cairo (6 units)
                  </div>`,
@@ -382,30 +448,30 @@
             );
         
     
-            var circle_marker_078d88875d3380935a8bb3d2c3c022c3 = L.circleMarker(
-                [30.0858821, 31.5111687],
+            var circle_marker_c683d1501f665b9dd1664b57fd50e1d3 = L.circleMarker(
+                [30.08646739983833, 31.509393904675463],
                 {"bubblingMouseEvents": true, "color": "#72b900ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#72b900ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_ac7b05fbd01d3ed851e55d010087a18a);
+            ).addTo(map_977cdf4f61036023d5732fbc9c1346a0);
         
     
-        var popup_dc7f53c5b8405fe584d5fbec552c1cd7 = L.popup({
+        var popup_c52e394dda65eae9cef6f00fe6370563 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_56f178b4497843618f081e66312efb2f = $(`<div id="html_56f178b4497843618f081e66312efb2f" style="width: 100.0%; height: 100.0%;">     <b>Creektown in New Cairo</b><br>     Developer: IL Cazar Developments<br>     Avg Price/SQM: 164,634 EGP<br>     Units: 2     </div>`)[0];
-                popup_dc7f53c5b8405fe584d5fbec552c1cd7.setContent(html_56f178b4497843618f081e66312efb2f);
+                var html_1f659beae337eeab2bef64ef1a3f9c2a = $(`<div id="html_1f659beae337eeab2bef64ef1a3f9c2a" style="width: 100.0%; height: 100.0%;">     <b>Creektown in New Cairo</b><br>     Developer: IL Cazar Developments<br>     Avg Price/SQM: 164,634 EGP<br>     Units: 2     </div>`)[0];
+                popup_c52e394dda65eae9cef6f00fe6370563.setContent(html_1f659beae337eeab2bef64ef1a3f9c2a);
             
         
 
-        circle_marker_078d88875d3380935a8bb3d2c3c022c3.bindPopup(popup_dc7f53c5b8405fe584d5fbec552c1cd7)
+        circle_marker_c683d1501f665b9dd1664b57fd50e1d3.bindPopup(popup_c52e394dda65eae9cef6f00fe6370563)
         ;
 
         
     
     
-            circle_marker_078d88875d3380935a8bb3d2c3c022c3.bindTooltip(
+            circle_marker_c683d1501f665b9dd1664b57fd50e1d3.bindTooltip(
                 `<div>
                      Creektown in New Cairo (2 units)
                  </div>`,
@@ -415,30 +481,30 @@
             );
         
     
-            var circle_marker_34616e4f90d788e5bca66fba4964a59f = L.circleMarker(
-                [30.0011139, 31.5162825],
+            var circle_marker_93c0e077f431c80885d9e34c62e8c24e = L.circleMarker(
+                [29.955296787682375, 31.448335112330135],
                 {"bubblingMouseEvents": true, "color": "#fff700ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fff700ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_ac7b05fbd01d3ed851e55d010087a18a);
+            ).addTo(map_977cdf4f61036023d5732fbc9c1346a0);
         
     
-        var popup_074c6edec9449333eed05de786a0626e = L.popup({
+        var popup_f7a096c4d39f2705dbb469b1b1f4dcd7 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_bb852eafdaca5eea4a8b009265f46115 = $(`<div id="html_bb852eafdaca5eea4a8b009265f46115" style="width: 100.0%; height: 100.0%;">     <b>DISTRICT 5 in South New Cairo</b><br>     Developer: Marakez<br>     Avg Price/SQM: 254,842 EGP<br>     Units: 1     </div>`)[0];
-                popup_074c6edec9449333eed05de786a0626e.setContent(html_bb852eafdaca5eea4a8b009265f46115);
+                var html_844f711360e0dbdbcb07b17902f5a55e = $(`<div id="html_844f711360e0dbdbcb07b17902f5a55e" style="width: 100.0%; height: 100.0%;">     <b>DISTRICT 5 in South New Cairo</b><br>     Developer: Marakez<br>     Avg Price/SQM: 254,842 EGP<br>     Units: 1     </div>`)[0];
+                popup_f7a096c4d39f2705dbb469b1b1f4dcd7.setContent(html_844f711360e0dbdbcb07b17902f5a55e);
             
         
 
-        circle_marker_34616e4f90d788e5bca66fba4964a59f.bindPopup(popup_074c6edec9449333eed05de786a0626e)
+        circle_marker_93c0e077f431c80885d9e34c62e8c24e.bindPopup(popup_f7a096c4d39f2705dbb469b1b1f4dcd7)
         ;
 
         
     
     
-            circle_marker_34616e4f90d788e5bca66fba4964a59f.bindTooltip(
+            circle_marker_93c0e077f431c80885d9e34c62e8c24e.bindTooltip(
                 `<div>
                      DISTRICT 5 in South New Cairo (1 units)
                  </div>`,
@@ -448,30 +514,63 @@
             );
         
     
-            var circle_marker_b6c0f00ed14b6515c9322de3acb1d1da = L.circleMarker(
-                [30.0111753, 31.5161206],
-                {"bubblingMouseEvents": true, "color": "#ff5400ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff5400ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.011872336272722, "stroke": true, "weight": 3}
-            ).addTo(map_ac7b05fbd01d3ed851e55d010087a18a);
+            var circle_marker_fe578ba2734c90ca26870aa5a55817f1 = L.circleMarker(
+                [29.991300800981644, 31.381773682647633],
+                {"bubblingMouseEvents": true, "color": "#a0d000ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a0d000ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_977cdf4f61036023d5732fbc9c1346a0);
         
     
-        var popup_54aa4d1525be46589a07b89c99f3baf1 = L.popup({
+        var popup_aacd1ae5432cfe8fac60fec27119542d = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_0d7e5c4cdf509813bb57a5d26c7ae5cc = $(`<div id="html_0d7e5c4cdf509813bb57a5d26c7ae5cc" style="width: 100.0%; height: 100.0%;">     <b>Eastown in New Cairo</b><br>     Developer: SODIC<br>     Avg Price/SQM: 448,529 EGP<br>     Units: 10     </div>`)[0];
-                popup_54aa4d1525be46589a07b89c99f3baf1.setContent(html_0d7e5c4cdf509813bb57a5d26c7ae5cc);
+                var html_dc8c1b2d003402023541a928ae2746f9 = $(`<div id="html_dc8c1b2d003402023541a928ae2746f9" style="width: 100.0%; height: 100.0%;">     <b>Do in New Cairo</b><br>     Developer: One Development<br>     Avg Price/SQM: 189,205 EGP<br>     Units: 5     </div>`)[0];
+                popup_aacd1ae5432cfe8fac60fec27119542d.setContent(html_dc8c1b2d003402023541a928ae2746f9);
             
         
 
-        circle_marker_b6c0f00ed14b6515c9322de3acb1d1da.bindPopup(popup_54aa4d1525be46589a07b89c99f3baf1)
+        circle_marker_fe578ba2734c90ca26870aa5a55817f1.bindPopup(popup_aacd1ae5432cfe8fac60fec27119542d)
         ;
 
         
     
     
-            circle_marker_b6c0f00ed14b6515c9322de3acb1d1da.bindTooltip(
+            circle_marker_fe578ba2734c90ca26870aa5a55817f1.bindTooltip(
+                `<div>
+                     Do in New Cairo (5 units)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_39cf83d687ad10de951c68cb0f27f531 = L.circleMarker(
+                [30.008705287700543, 31.516956370003605],
+                {"bubblingMouseEvents": true, "color": "#ff5400ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff5400ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.011872336272722, "stroke": true, "weight": 3}
+            ).addTo(map_977cdf4f61036023d5732fbc9c1346a0);
+        
+    
+        var popup_4617a7a0a9ef440a5a47a708f979483e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_41624fd9384083941d1f5c9e11cb4546 = $(`<div id="html_41624fd9384083941d1f5c9e11cb4546" style="width: 100.0%; height: 100.0%;">     <b>Eastown in New Cairo</b><br>     Developer: SODIC<br>     Avg Price/SQM: 448,529 EGP<br>     Units: 10     </div>`)[0];
+                popup_4617a7a0a9ef440a5a47a708f979483e.setContent(html_41624fd9384083941d1f5c9e11cb4546);
+            
+        
+
+        circle_marker_39cf83d687ad10de951c68cb0f27f531.bindPopup(popup_4617a7a0a9ef440a5a47a708f979483e)
+        ;
+
+        
+    
+    
+            circle_marker_39cf83d687ad10de951c68cb0f27f531.bindTooltip(
                 `<div>
                      Eastown in New Cairo (10 units)
                  </div>`,
@@ -481,30 +580,30 @@
             );
         
     
-            var circle_marker_00890a587639b8b164eba3048d25d6de = L.circleMarker(
-                [29.9978486, 31.5048264],
+            var circle_marker_e98a8b963e6765c482a9464d36991c6d = L.circleMarker(
+                [29.998015824431075, 31.50480493931565],
                 {"bubblingMouseEvents": true, "color": "#70b800ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#70b800ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_ac7b05fbd01d3ed851e55d010087a18a);
+            ).addTo(map_977cdf4f61036023d5732fbc9c1346a0);
         
     
-        var popup_afa3e9564c384a6af7304c5f866a34f2 = L.popup({
+        var popup_3df89c2751982107d19f0c7c6e3e4dbc = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_950541dfbc826a918cdf63f0597f053c = $(`<div id="html_950541dfbc826a918cdf63f0597f053c" style="width: 100.0%; height: 100.0%;">     <b>Eastshire in New Cairo</b><br>     Developer: Al Qamzi Developments<br>     Avg Price/SQM: 163,449 EGP<br>     Units: 6     </div>`)[0];
-                popup_afa3e9564c384a6af7304c5f866a34f2.setContent(html_950541dfbc826a918cdf63f0597f053c);
+                var html_c5bfeb8a7f613536986698d042cb56f7 = $(`<div id="html_c5bfeb8a7f613536986698d042cb56f7" style="width: 100.0%; height: 100.0%;">     <b>Eastshire in New Cairo</b><br>     Developer: Al Qamzi Developments<br>     Avg Price/SQM: 163,449 EGP<br>     Units: 6     </div>`)[0];
+                popup_3df89c2751982107d19f0c7c6e3e4dbc.setContent(html_c5bfeb8a7f613536986698d042cb56f7);
             
         
 
-        circle_marker_00890a587639b8b164eba3048d25d6de.bindPopup(popup_afa3e9564c384a6af7304c5f866a34f2)
+        circle_marker_e98a8b963e6765c482a9464d36991c6d.bindPopup(popup_3df89c2751982107d19f0c7c6e3e4dbc)
         ;
 
         
     
     
-            circle_marker_00890a587639b8b164eba3048d25d6de.bindTooltip(
+            circle_marker_e98a8b963e6765c482a9464d36991c6d.bindTooltip(
                 `<div>
                      Eastshire in New Cairo (6 units)
                  </div>`,
@@ -514,30 +613,30 @@
             );
         
     
-            var circle_marker_995894a8cdf392df8d7fcf6cdd1347f9 = L.circleMarker(
-                [30.026427, 31.5940768],
+            var circle_marker_ad21fe0af1f42f5d57a9107c1e07f63e = L.circleMarker(
+                [30.027187530678333, 31.59471029698846],
                 {"bubblingMouseEvents": true, "color": "#f5fa00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f5fa00ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_ac7b05fbd01d3ed851e55d010087a18a);
+            ).addTo(map_977cdf4f61036023d5732fbc9c1346a0);
         
     
-        var popup_5fbd9121c3978e654b245d70e884a56d = L.popup({
+        var popup_d543862ac73bf4093c8edc77812fa340 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_c3d02e837962e722e3dbec19fd018961 = $(`<div id="html_c3d02e837962e722e3dbec19fd018961" style="width: 100.0%; height: 100.0%;">     <b>El Patio Oro in New Cairo</b><br>     Developer: La Vista Developments<br>     Avg Price/SQM: 235,786 EGP<br>     Units: 3     </div>`)[0];
-                popup_5fbd9121c3978e654b245d70e884a56d.setContent(html_c3d02e837962e722e3dbec19fd018961);
+                var html_cb1309914026f871c4e94a183eb9c96e = $(`<div id="html_cb1309914026f871c4e94a183eb9c96e" style="width: 100.0%; height: 100.0%;">     <b>El Patio Oro in New Cairo</b><br>     Developer: La Vista Developments<br>     Avg Price/SQM: 235,786 EGP<br>     Units: 3     </div>`)[0];
+                popup_d543862ac73bf4093c8edc77812fa340.setContent(html_cb1309914026f871c4e94a183eb9c96e);
             
         
 
-        circle_marker_995894a8cdf392df8d7fcf6cdd1347f9.bindPopup(popup_5fbd9121c3978e654b245d70e884a56d)
+        circle_marker_ad21fe0af1f42f5d57a9107c1e07f63e.bindPopup(popup_d543862ac73bf4093c8edc77812fa340)
         ;
 
         
     
     
-            circle_marker_995894a8cdf392df8d7fcf6cdd1347f9.bindTooltip(
+            circle_marker_ad21fe0af1f42f5d57a9107c1e07f63e.bindTooltip(
                 `<div>
                      El Patio Oro in New Cairo (3 units)
                  </div>`,
@@ -547,30 +646,30 @@
             );
         
     
-            var circle_marker_2974b03258b13b04989f0f12df3eb57c = L.circleMarker(
-                [30.0150791, 31.5264585],
+            var circle_marker_4f6a9342e1bf5a7855e1571d448558e4 = L.circleMarker(
+                [-30.01780326931973, 31.528338162869563],
                 {"bubblingMouseEvents": true, "color": "#8cc600ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8cc600ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.011872336272722, "stroke": true, "weight": 3}
-            ).addTo(map_ac7b05fbd01d3ed851e55d010087a18a);
+            ).addTo(map_977cdf4f61036023d5732fbc9c1346a0);
         
     
-        var popup_957ce4db8b18ceddfb8009361257d902 = L.popup({
+        var popup_0807adc9bd84bfb1dd4f88abfd858896 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_731f0e8f3f7905a28697c10368d74048 = $(`<div id="html_731f0e8f3f7905a28697c10368d74048" style="width: 100.0%; height: 100.0%;">     <b>FCC in Golden Square</b><br>     Developer: Al - Borouj Misr Developments Group (ABM)<br>     Avg Price/SQM: 178,354 EGP<br>     Units: 10     </div>`)[0];
-                popup_957ce4db8b18ceddfb8009361257d902.setContent(html_731f0e8f3f7905a28697c10368d74048);
+                var html_b03905f4843c2d258087dcd3e1e05cc4 = $(`<div id="html_b03905f4843c2d258087dcd3e1e05cc4" style="width: 100.0%; height: 100.0%;">     <b>FCC in Golden Square</b><br>     Developer: Al - Borouj Misr Developments Group (ABM)<br>     Avg Price/SQM: 178,354 EGP<br>     Units: 10     </div>`)[0];
+                popup_0807adc9bd84bfb1dd4f88abfd858896.setContent(html_b03905f4843c2d258087dcd3e1e05cc4);
             
         
 
-        circle_marker_2974b03258b13b04989f0f12df3eb57c.bindPopup(popup_957ce4db8b18ceddfb8009361257d902)
+        circle_marker_4f6a9342e1bf5a7855e1571d448558e4.bindPopup(popup_0807adc9bd84bfb1dd4f88abfd858896)
         ;
 
         
     
     
-            circle_marker_2974b03258b13b04989f0f12df3eb57c.bindTooltip(
+            circle_marker_4f6a9342e1bf5a7855e1571d448558e4.bindTooltip(
                 `<div>
                      FCC in Golden Square (10 units)
                  </div>`,
@@ -580,30 +679,30 @@
             );
         
     
-            var circle_marker_0a8c4644a5a54a13ebc0c31d31fe6674 = L.circleMarker(
-                [30.0311642, 31.4267147],
+            var circle_marker_ee1f9520348a97ee9a7dbb3ad51dbafc = L.circleMarker(
+                [30.021550170459296, 31.509860267855817],
                 {"bubblingMouseEvents": true, "color": "#ffd700ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffd700ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_ac7b05fbd01d3ed851e55d010087a18a);
+            ).addTo(map_977cdf4f61036023d5732fbc9c1346a0);
         
     
-        var popup_ae4e5e81c0332c3f9a677ece6383bb8d = L.popup({
+        var popup_5e99173223bf3e0afdecf582aea691ad = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_77ec8e23a99cabba079a10563cb9ccd2 = $(`<div id="html_77ec8e23a99cabba079a10563cb9ccd2" style="width: 100.0%; height: 100.0%;">     <b>Golden Gate in El Lotus</b><br>     Developer: Redcon for Offices and Commercial Centers<br>     Avg Price/SQM: 304,377 EGP<br>     Units: 2     </div>`)[0];
-                popup_ae4e5e81c0332c3f9a677ece6383bb8d.setContent(html_77ec8e23a99cabba079a10563cb9ccd2);
+                var html_d2fa5a937e0207c6e83bcd05ff5e9ff0 = $(`<div id="html_d2fa5a937e0207c6e83bcd05ff5e9ff0" style="width: 100.0%; height: 100.0%;">     <b>Golden Gate in El Lotus</b><br>     Developer: Redcon for Offices and Commercial Centers<br>     Avg Price/SQM: 304,377 EGP<br>     Units: 2     </div>`)[0];
+                popup_5e99173223bf3e0afdecf582aea691ad.setContent(html_d2fa5a937e0207c6e83bcd05ff5e9ff0);
             
         
 
-        circle_marker_0a8c4644a5a54a13ebc0c31d31fe6674.bindPopup(popup_ae4e5e81c0332c3f9a677ece6383bb8d)
+        circle_marker_ee1f9520348a97ee9a7dbb3ad51dbafc.bindPopup(popup_5e99173223bf3e0afdecf582aea691ad)
         ;
 
         
     
     
-            circle_marker_0a8c4644a5a54a13ebc0c31d31fe6674.bindTooltip(
+            circle_marker_ee1f9520348a97ee9a7dbb3ad51dbafc.bindTooltip(
                 `<div>
                      Golden Gate in El Lotus (2 units)
                  </div>`,
@@ -613,30 +712,30 @@
             );
         
     
-            var circle_marker_21203049208b05dc5d4c2d733cb1bc5b = L.circleMarker(
-                [30.0004925, 31.5733479],
+            var circle_marker_a8a6c4b52507ab2fd6a6b21c8da286d9 = L.circleMarker(
+                [30.03662516357041, 31.450431254607558],
                 {"bubblingMouseEvents": true, "color": "#ff9e00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff9e00ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_ac7b05fbd01d3ed851e55d010087a18a);
+            ).addTo(map_977cdf4f61036023d5732fbc9c1346a0);
         
     
-        var popup_799d2251eb9abdd4e3387d2451e8f387 = L.popup({
+        var popup_fa686e79f239baa13df00c0cdba6f6ce = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_325bf636269f7e60540da5b4c76c209c = $(`<div id="html_325bf636269f7e60540da5b4c76c209c" style="width: 100.0%; height: 100.0%;">     <b>H:RS Mall in New Cairo</b><br>     Developer: Main Marks<br>     Avg Price/SQM: 386,092 EGP<br>     Units: 9     </div>`)[0];
-                popup_799d2251eb9abdd4e3387d2451e8f387.setContent(html_325bf636269f7e60540da5b4c76c209c);
+                var html_7b29ab747a5e50bb8688f0c15f2945f2 = $(`<div id="html_7b29ab747a5e50bb8688f0c15f2945f2" style="width: 100.0%; height: 100.0%;">     <b>H:RS Mall in New Cairo</b><br>     Developer: Main Marks<br>     Avg Price/SQM: 386,092 EGP<br>     Units: 9     </div>`)[0];
+                popup_fa686e79f239baa13df00c0cdba6f6ce.setContent(html_7b29ab747a5e50bb8688f0c15f2945f2);
             
         
 
-        circle_marker_21203049208b05dc5d4c2d733cb1bc5b.bindPopup(popup_799d2251eb9abdd4e3387d2451e8f387)
+        circle_marker_a8a6c4b52507ab2fd6a6b21c8da286d9.bindPopup(popup_fa686e79f239baa13df00c0cdba6f6ce)
         ;
 
         
     
     
-            circle_marker_21203049208b05dc5d4c2d733cb1bc5b.bindTooltip(
+            circle_marker_a8a6c4b52507ab2fd6a6b21c8da286d9.bindTooltip(
                 `<div>
                      H:RS Mall in New Cairo (9 units)
                  </div>`,
@@ -646,30 +745,30 @@
             );
         
     
-            var circle_marker_695725b2ec0a3b238874c8d8f40873a1 = L.circleMarker(
-                [30.0282495, 31.4981213],
+            var circle_marker_7b2f39f53a7793e84456047b8f322221 = L.circleMarker(
+                [30.03866763153985, 31.53160805280895],
                 {"bubblingMouseEvents": true, "color": "#9cce00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#9cce00ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.011872336272722, "stroke": true, "weight": 3}
-            ).addTo(map_ac7b05fbd01d3ed851e55d010087a18a);
+            ).addTo(map_977cdf4f61036023d5732fbc9c1346a0);
         
     
-        var popup_41d8db8c907410e2ab121aa22f728f5b = L.popup({
+        var popup_a8b22ad5d18c5773d0de6777b8392c6a = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_0c63755baf9cfaa185d06c4bc3f39ebb = $(`<div id="html_0c63755baf9cfaa185d06c4bc3f39ebb" style="width: 100.0%; height: 100.0%;">     <b>Hubwalk in New Cairo</b><br>     Developer: Arabco Developments<br>     Avg Price/SQM: 187,382 EGP<br>     Units: 10     </div>`)[0];
-                popup_41d8db8c907410e2ab121aa22f728f5b.setContent(html_0c63755baf9cfaa185d06c4bc3f39ebb);
+                var html_665194b94358d19f1a7615a3f7df81f6 = $(`<div id="html_665194b94358d19f1a7615a3f7df81f6" style="width: 100.0%; height: 100.0%;">     <b>Hubwalk in New Cairo</b><br>     Developer: Arabco Developments<br>     Avg Price/SQM: 187,382 EGP<br>     Units: 10     </div>`)[0];
+                popup_a8b22ad5d18c5773d0de6777b8392c6a.setContent(html_665194b94358d19f1a7615a3f7df81f6);
             
         
 
-        circle_marker_695725b2ec0a3b238874c8d8f40873a1.bindPopup(popup_41d8db8c907410e2ab121aa22f728f5b)
+        circle_marker_7b2f39f53a7793e84456047b8f322221.bindPopup(popup_a8b22ad5d18c5773d0de6777b8392c6a)
         ;
 
         
     
     
-            circle_marker_695725b2ec0a3b238874c8d8f40873a1.bindTooltip(
+            circle_marker_7b2f39f53a7793e84456047b8f322221.bindTooltip(
                 `<div>
                      Hubwalk in New Cairo (10 units)
                  </div>`,
@@ -679,30 +778,30 @@
             );
         
     
-            var circle_marker_ede07b01a26b5ebd10b171ad2350a732 = L.circleMarker(
-                [29.982897, 31.5539893],
+            var circle_marker_4bc645db2033af22a511b59f304c6e82 = L.circleMarker(
+                [29.98268135027406, 31.547522939315208],
                 {"bubblingMouseEvents": true, "color": "#dbed00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#dbed00ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_ac7b05fbd01d3ed851e55d010087a18a);
+            ).addTo(map_977cdf4f61036023d5732fbc9c1346a0);
         
     
-        var popup_003805c2792f1e2dc0444b5c0845dbf9 = L.popup({
+        var popup_5b27efcc572b41e09bc5db0d82efe01d = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_cb589711b262c4a7c7cdb9d4cee149b1 = $(`<div id="html_cb589711b262c4a7c7cdb9d4cee149b1" style="width: 100.0%; height: 100.0%;">     <b>Hyde Park in New Cairo</b><br>     Developer: Hyde Park<br>     Avg Price/SQM: 221,323 EGP<br>     Units: 7     </div>`)[0];
-                popup_003805c2792f1e2dc0444b5c0845dbf9.setContent(html_cb589711b262c4a7c7cdb9d4cee149b1);
+                var html_be16a2874571a83b28a21c8bed692f11 = $(`<div id="html_be16a2874571a83b28a21c8bed692f11" style="width: 100.0%; height: 100.0%;">     <b>Hyde Park in New Cairo</b><br>     Developer: Hyde Park<br>     Avg Price/SQM: 221,323 EGP<br>     Units: 7     </div>`)[0];
+                popup_5b27efcc572b41e09bc5db0d82efe01d.setContent(html_be16a2874571a83b28a21c8bed692f11);
             
         
 
-        circle_marker_ede07b01a26b5ebd10b171ad2350a732.bindPopup(popup_003805c2792f1e2dc0444b5c0845dbf9)
+        circle_marker_4bc645db2033af22a511b59f304c6e82.bindPopup(popup_5b27efcc572b41e09bc5db0d82efe01d)
         ;
 
         
     
     
-            circle_marker_ede07b01a26b5ebd10b171ad2350a732.bindTooltip(
+            circle_marker_4bc645db2033af22a511b59f304c6e82.bindTooltip(
                 `<div>
                      Hyde Park in New Cairo (7 units)
                  </div>`,
@@ -712,30 +811,30 @@
             );
         
     
-            var circle_marker_35e22b3e5477a7989e659a4599a7c422 = L.circleMarker(
-                [29.9905023, 31.4473916],
+            var circle_marker_ff3fdbd353dc3154d0c2fbc8988d32ca = L.circleMarker(
+                [29.990743875328217, 31.447423783495193],
                 {"bubblingMouseEvents": true, "color": "#ffe800ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffe800ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.357656669484113, "stroke": true, "weight": 3}
-            ).addTo(map_ac7b05fbd01d3ed851e55d010087a18a);
+            ).addTo(map_977cdf4f61036023d5732fbc9c1346a0);
         
     
-        var popup_74b5cfc50efc30192e58529438bc6dd5 = L.popup({
+        var popup_17c6f521cebd85fbc9ce533106959e81 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_197f181f95939ab4704db22a23139d9d = $(`<div id="html_197f181f95939ab4704db22a23139d9d" style="width: 100.0%; height: 100.0%;">     <b>Katameya Creeks in New Cairo</b><br>     Developer: Starlight Developments<br>     Avg Price/SQM: 277,273 EGP<br>     Units: 11     </div>`)[0];
-                popup_74b5cfc50efc30192e58529438bc6dd5.setContent(html_197f181f95939ab4704db22a23139d9d);
+                var html_57339b45ff0161a223e3dc0ce2780072 = $(`<div id="html_57339b45ff0161a223e3dc0ce2780072" style="width: 100.0%; height: 100.0%;">     <b>Katameya Creeks in New Cairo</b><br>     Developer: Starlight Developments<br>     Avg Price/SQM: 277,273 EGP<br>     Units: 11     </div>`)[0];
+                popup_17c6f521cebd85fbc9ce533106959e81.setContent(html_57339b45ff0161a223e3dc0ce2780072);
             
         
 
-        circle_marker_35e22b3e5477a7989e659a4599a7c422.bindPopup(popup_74b5cfc50efc30192e58529438bc6dd5)
+        circle_marker_ff3fdbd353dc3154d0c2fbc8988d32ca.bindPopup(popup_17c6f521cebd85fbc9ce533106959e81)
         ;
 
         
     
     
-            circle_marker_35e22b3e5477a7989e659a4599a7c422.bindTooltip(
+            circle_marker_ff3fdbd353dc3154d0c2fbc8988d32ca.bindTooltip(
                 `<div>
                      Katameya Creeks in New Cairo (11 units)
                  </div>`,
@@ -745,30 +844,30 @@
             );
         
     
-            var circle_marker_95d58bfdab6fa1601210d2afaae188fa = L.circleMarker(
-                [30.0453748, 31.4499932],
+            var circle_marker_8725d166f2c1d272d8b0a3f7652cef3d = L.circleMarker(
+                [30.067042015829365, 31.416095442552287],
                 {"bubblingMouseEvents": true, "color": "#bcde00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#bcde00ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_ac7b05fbd01d3ed851e55d010087a18a);
+            ).addTo(map_977cdf4f61036023d5732fbc9c1346a0);
         
     
-        var popup_ca4c38c35bc718bfcc5dfd11f6b7bcf0 = L.popup({
+        var popup_e903cb09f217f3636556ee701a2117b6 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_9b186c57df7ca10d6892e62b233cbcab = $(`<div id="html_9b186c57df7ca10d6892e62b233cbcab" style="width: 100.0%; height: 100.0%;">     <b>Kinda in New Cairo</b><br>     Developer: Madinet Masr<br>     Avg Price/SQM: 204,521 EGP<br>     Units: 5     </div>`)[0];
-                popup_ca4c38c35bc718bfcc5dfd11f6b7bcf0.setContent(html_9b186c57df7ca10d6892e62b233cbcab);
+                var html_728ef3ad650ea4ebaf423ec389f1f4d0 = $(`<div id="html_728ef3ad650ea4ebaf423ec389f1f4d0" style="width: 100.0%; height: 100.0%;">     <b>Kinda in New Cairo</b><br>     Developer: Madinet Masr<br>     Avg Price/SQM: 204,521 EGP<br>     Units: 5     </div>`)[0];
+                popup_e903cb09f217f3636556ee701a2117b6.setContent(html_728ef3ad650ea4ebaf423ec389f1f4d0);
             
         
 
-        circle_marker_95d58bfdab6fa1601210d2afaae188fa.bindPopup(popup_ca4c38c35bc718bfcc5dfd11f6b7bcf0)
+        circle_marker_8725d166f2c1d272d8b0a3f7652cef3d.bindPopup(popup_e903cb09f217f3636556ee701a2117b6)
         ;
 
         
     
     
-            circle_marker_95d58bfdab6fa1601210d2afaae188fa.bindTooltip(
+            circle_marker_8725d166f2c1d272d8b0a3f7652cef3d.bindTooltip(
                 `<div>
                      Kinda in New Cairo (5 units)
                  </div>`,
@@ -778,30 +877,30 @@
             );
         
     
-            var circle_marker_fd88b0cc9b73cdad38c08d820b23eb93 = L.circleMarker(
-                [30.084986, 31.522165],
+            var circle_marker_06971816f8affeeb904355cb4b80bac1 = L.circleMarker(
+                [30.085210509187675, 31.522127941214777],
                 {"bubblingMouseEvents": true, "color": "#2d9700ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2d9700ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.357656669484113, "stroke": true, "weight": 3}
-            ).addTo(map_ac7b05fbd01d3ed851e55d010087a18a);
+            ).addTo(map_977cdf4f61036023d5732fbc9c1346a0);
         
     
-        var popup_34a5851fc71a1f6661ce4d48114c4419 = L.popup({
+        var popup_65620c53250a786dca44ff2fc4c164b8 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_12e30c1e62a83da7f0b4b681d939f0f9 = $(`<div id="html_12e30c1e62a83da7f0b4b681d939f0f9" style="width: 100.0%; height: 100.0%;">     <b>Life Wise in New Cairo</b><br>     Developer: EONS developments<br>     Avg Price/SQM: 126,984 EGP<br>     Units: 11     </div>`)[0];
-                popup_34a5851fc71a1f6661ce4d48114c4419.setContent(html_12e30c1e62a83da7f0b4b681d939f0f9);
+                var html_80ea675ca6e3e8e540a4af79896f6bca = $(`<div id="html_80ea675ca6e3e8e540a4af79896f6bca" style="width: 100.0%; height: 100.0%;">     <b>Life Wise in New Cairo</b><br>     Developer: EONS developments<br>     Avg Price/SQM: 126,984 EGP<br>     Units: 11     </div>`)[0];
+                popup_65620c53250a786dca44ff2fc4c164b8.setContent(html_80ea675ca6e3e8e540a4af79896f6bca);
             
         
 
-        circle_marker_fd88b0cc9b73cdad38c08d820b23eb93.bindPopup(popup_34a5851fc71a1f6661ce4d48114c4419)
+        circle_marker_06971816f8affeeb904355cb4b80bac1.bindPopup(popup_65620c53250a786dca44ff2fc4c164b8)
         ;
 
         
     
     
-            circle_marker_fd88b0cc9b73cdad38c08d820b23eb93.bindTooltip(
+            circle_marker_06971816f8affeeb904355cb4b80bac1.bindTooltip(
                 `<div>
                      Life Wise in New Cairo (11 units)
                  </div>`,
@@ -811,30 +910,30 @@
             );
         
     
-            var circle_marker_96fcdc5ec7400734a419f640078ba890 = L.circleMarker(
-                [30.0449792, 31.3884672],
+            var circle_marker_f07ad0dee79ee245f5c7a1157ffeea7b = L.circleMarker(
+                [29.93971475155371, 31.536803011426713],
                 {"bubblingMouseEvents": true, "color": "#52a900ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#52a900ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.424681795174461, "stroke": true, "weight": 3}
-            ).addTo(map_ac7b05fbd01d3ed851e55d010087a18a);
+            ).addTo(map_977cdf4f61036023d5732fbc9c1346a0);
         
     
-        var popup_362e25cf80a0a9de827669885fe3bc14 = L.popup({
+        var popup_d65faeb3a29bdd0b062512b17898a86d = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_252758ebe7127a9b720d7ad41c0879ed = $(`<div id="html_252758ebe7127a9b720d7ad41c0879ed" style="width: 100.0%; height: 100.0%;">     <b>Maliv in 6th settlement</b><br>     Developer: Kulture Developments<br>     Avg Price/SQM: 146,871 EGP<br>     Units: 21     </div>`)[0];
-                popup_362e25cf80a0a9de827669885fe3bc14.setContent(html_252758ebe7127a9b720d7ad41c0879ed);
+                var html_2cede8d2ae0dc2e8601dff9817c3359d = $(`<div id="html_2cede8d2ae0dc2e8601dff9817c3359d" style="width: 100.0%; height: 100.0%;">     <b>Maliv in 6th settlement</b><br>     Developer: Kulture Developments<br>     Avg Price/SQM: 146,871 EGP<br>     Units: 21     </div>`)[0];
+                popup_d65faeb3a29bdd0b062512b17898a86d.setContent(html_2cede8d2ae0dc2e8601dff9817c3359d);
             
         
 
-        circle_marker_96fcdc5ec7400734a419f640078ba890.bindPopup(popup_362e25cf80a0a9de827669885fe3bc14)
+        circle_marker_f07ad0dee79ee245f5c7a1157ffeea7b.bindPopup(popup_d65faeb3a29bdd0b062512b17898a86d)
         ;
 
         
     
     
-            circle_marker_96fcdc5ec7400734a419f640078ba890.bindTooltip(
+            circle_marker_f07ad0dee79ee245f5c7a1157ffeea7b.bindTooltip(
                 `<div>
                      Maliv in 6th settlement (21 units)
                  </div>`,
@@ -844,30 +943,30 @@
             );
         
     
-            var circle_marker_aa87f218c6276f4efceec63d036c61d9 = L.circleMarker(
-                [30.0302691, 31.5569071],
+            var circle_marker_ac38cab1a3084c54fdb428a0907f93d7 = L.circleMarker(
+                [30.06557099575335, 31.592288310481702],
                 {"bubblingMouseEvents": true, "color": "#7ebf00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7ebf00ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_ac7b05fbd01d3ed851e55d010087a18a);
+            ).addTo(map_977cdf4f61036023d5732fbc9c1346a0);
         
     
-        var popup_9fe50a0a8370a71c349a1714c6a35ae5 = L.popup({
+        var popup_8da597fba90c8085fb4af70317241ae2 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_b884cc5551042130cb1b417cb8240fa7 = $(`<div id="html_b884cc5551042130cb1b417cb8240fa7" style="width: 100.0%; height: 100.0%;">     <b>Mountain View ICity New Cairo in New Cairo</b><br>     Developer: Mountain View<br>     Avg Price/SQM: 170,687 EGP<br>     Units: 3     </div>`)[0];
-                popup_9fe50a0a8370a71c349a1714c6a35ae5.setContent(html_b884cc5551042130cb1b417cb8240fa7);
+                var html_833051688a084d32de3c8fbca07a13ad = $(`<div id="html_833051688a084d32de3c8fbca07a13ad" style="width: 100.0%; height: 100.0%;">     <b>Mountain View ICity New Cairo in New Cairo</b><br>     Developer: Mountain View<br>     Avg Price/SQM: 170,687 EGP<br>     Units: 3     </div>`)[0];
+                popup_8da597fba90c8085fb4af70317241ae2.setContent(html_833051688a084d32de3c8fbca07a13ad);
             
         
 
-        circle_marker_aa87f218c6276f4efceec63d036c61d9.bindPopup(popup_9fe50a0a8370a71c349a1714c6a35ae5)
+        circle_marker_ac38cab1a3084c54fdb428a0907f93d7.bindPopup(popup_8da597fba90c8085fb4af70317241ae2)
         ;
 
         
     
     
-            circle_marker_aa87f218c6276f4efceec63d036c61d9.bindTooltip(
+            circle_marker_ac38cab1a3084c54fdb428a0907f93d7.bindTooltip(
                 `<div>
                      Mountain View ICity New Cairo in New Cairo (3 units)
                  </div>`,
@@ -877,30 +976,30 @@
             );
         
     
-            var circle_marker_1177034c6029aebdbd84918084653c42 = L.circleMarker(
-                [30.0121034, 31.5311271],
+            var circle_marker_2204111b04d938c20ba92a1217a6cccf = L.circleMarker(
+                [30.046504610628542, 31.520434470004794],
                 {"bubblingMouseEvents": true, "color": "#76bb00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#76bb00ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_ac7b05fbd01d3ed851e55d010087a18a);
+            ).addTo(map_977cdf4f61036023d5732fbc9c1346a0);
         
     
-        var popup_5fcc4469ee5173ad8211007aa04ce9e7 = L.popup({
+        var popup_025e41dcaf72c4ef80b7372ecc484cc6 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_4343a9b9c37285701021331e333d852f = $(`<div id="html_4343a9b9c37285701021331e333d852f" style="width: 100.0%; height: 100.0%;">     <b>Neo Business Park in New Cairo</b><br>     Developer: Juzur Development<br>     Avg Price/SQM: 166,780 EGP<br>     Units: 5     </div>`)[0];
-                popup_5fcc4469ee5173ad8211007aa04ce9e7.setContent(html_4343a9b9c37285701021331e333d852f);
+                var html_8de59f9342f14046b001b3903adb73c1 = $(`<div id="html_8de59f9342f14046b001b3903adb73c1" style="width: 100.0%; height: 100.0%;">     <b>Neo Business Park in New Cairo</b><br>     Developer: Juzur Development<br>     Avg Price/SQM: 166,780 EGP<br>     Units: 5     </div>`)[0];
+                popup_025e41dcaf72c4ef80b7372ecc484cc6.setContent(html_8de59f9342f14046b001b3903adb73c1);
             
         
 
-        circle_marker_1177034c6029aebdbd84918084653c42.bindPopup(popup_5fcc4469ee5173ad8211007aa04ce9e7)
+        circle_marker_2204111b04d938c20ba92a1217a6cccf.bindPopup(popup_025e41dcaf72c4ef80b7372ecc484cc6)
         ;
 
         
     
     
-            circle_marker_1177034c6029aebdbd84918084653c42.bindTooltip(
+            circle_marker_2204111b04d938c20ba92a1217a6cccf.bindTooltip(
                 `<div>
                      Neo Business Park in New Cairo (5 units)
                  </div>`,
@@ -910,30 +1009,30 @@
             );
         
     
-            var circle_marker_53de658157e17a7cf59ee685767f8ae1 = L.circleMarker(
-                [30.0199672, 31.4511949],
+            var circle_marker_284105fed1b6e8824803e2db4aba5e93 = L.circleMarker(
+                [30.021096985510056, 31.412747981644383],
                 {"bubblingMouseEvents": true, "color": "#ffe000ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffe000ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_ac7b05fbd01d3ed851e55d010087a18a);
+            ).addTo(map_977cdf4f61036023d5732fbc9c1346a0);
         
     
-        var popup_ab7daead93711b8a2bdbb8ee1ae4efcd = L.popup({
+        var popup_87841259b6e949c0efbda305a1afaa10 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_0308358fa0ebf80b0687014cb77ad879 = $(`<div id="html_0308358fa0ebf80b0687014cb77ad879" style="width: 100.0%; height: 100.0%;">     <b>Noir in New Cairo</b><br>     Developer: Living Yards Developments<br>     Avg Price/SQM: 289,829 EGP<br>     Units: 3     </div>`)[0];
-                popup_ab7daead93711b8a2bdbb8ee1ae4efcd.setContent(html_0308358fa0ebf80b0687014cb77ad879);
+                var html_e065323fa20d2fdfba9731e6909d82bc = $(`<div id="html_e065323fa20d2fdfba9731e6909d82bc" style="width: 100.0%; height: 100.0%;">     <b>Noir in New Cairo</b><br>     Developer: Living Yards Developments<br>     Avg Price/SQM: 289,829 EGP<br>     Units: 3     </div>`)[0];
+                popup_87841259b6e949c0efbda305a1afaa10.setContent(html_e065323fa20d2fdfba9731e6909d82bc);
             
         
 
-        circle_marker_53de658157e17a7cf59ee685767f8ae1.bindPopup(popup_ab7daead93711b8a2bdbb8ee1ae4efcd)
+        circle_marker_284105fed1b6e8824803e2db4aba5e93.bindPopup(popup_87841259b6e949c0efbda305a1afaa10)
         ;
 
         
     
     
-            circle_marker_53de658157e17a7cf59ee685767f8ae1.bindTooltip(
+            circle_marker_284105fed1b6e8824803e2db4aba5e93.bindTooltip(
                 `<div>
                      Noir in New Cairo (3 units)
                  </div>`,
@@ -943,30 +1042,30 @@
             );
         
     
-            var circle_marker_8ec8428bfc59d7425cc7a05f40c0bdf6 = L.circleMarker(
-                [30.0137809, 31.4073041],
+            var circle_marker_a8815aa8188d2b278614d724f25073bb = L.circleMarker(
+                [30.013741827399954, 31.407820995136287],
                 {"bubblingMouseEvents": true, "color": "#ff4a00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4a00ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_ac7b05fbd01d3ed851e55d010087a18a);
+            ).addTo(map_977cdf4f61036023d5732fbc9c1346a0);
         
     
-        var popup_36ec46ba8b54cbb41ff1882bf90d7606 = L.popup({
+        var popup_f03d420ef069d28afc5b1513195658dc = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_134034b61b2a78fe7927e29fc8279f83 = $(`<div id="html_134034b61b2a78fe7927e29fc8279f83" style="width: 100.0%; height: 100.0%;">     <b>One - Ninety in New Cairo</b><br>     Developer: LMD<br>     Avg Price/SQM: 456,976 EGP<br>     Units: 7     </div>`)[0];
-                popup_36ec46ba8b54cbb41ff1882bf90d7606.setContent(html_134034b61b2a78fe7927e29fc8279f83);
+                var html_b36080049e4516212254267f3cbc668d = $(`<div id="html_b36080049e4516212254267f3cbc668d" style="width: 100.0%; height: 100.0%;">     <b>One - Ninety in New Cairo</b><br>     Developer: LMD<br>     Avg Price/SQM: 456,976 EGP<br>     Units: 7     </div>`)[0];
+                popup_f03d420ef069d28afc5b1513195658dc.setContent(html_b36080049e4516212254267f3cbc668d);
             
         
 
-        circle_marker_8ec8428bfc59d7425cc7a05f40c0bdf6.bindPopup(popup_36ec46ba8b54cbb41ff1882bf90d7606)
+        circle_marker_a8815aa8188d2b278614d724f25073bb.bindPopup(popup_f03d420ef069d28afc5b1513195658dc)
         ;
 
         
     
     
-            circle_marker_8ec8428bfc59d7425cc7a05f40c0bdf6.bindTooltip(
+            circle_marker_a8815aa8188d2b278614d724f25073bb.bindTooltip(
                 `<div>
                      One - Ninety in New Cairo (7 units)
                  </div>`,
@@ -976,30 +1075,30 @@
             );
         
     
-            var circle_marker_09aa7eeb02b46d4d69284485dad864ff = L.circleMarker(
-                [30.0155742, 31.2059926],
+            var circle_marker_3f2090a0308d05b89b940e7a55810fe4 = L.circleMarker(
+                [30.005932529277107, 31.401156039316007],
                 {"bubblingMouseEvents": true, "color": "#e0f000ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e0f000ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_ac7b05fbd01d3ed851e55d010087a18a);
+            ).addTo(map_977cdf4f61036023d5732fbc9c1346a0);
         
     
-        var popup_109bce854d34ba95bda74309b39395af = L.popup({
+        var popup_6fc8e4551f24f9482bab987684f37a0a = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_4680e8c635f20b5101fae9149083aa94 = $(`<div id="html_4680e8c635f20b5101fae9149083aa94" style="width: 100.0%; height: 100.0%;">     <b>Park St. Edition in New Cairo</b><br>     Developer: Sky Innovo Developments<br>     Avg Price/SQM: 224,132 EGP<br>     Units: 7     </div>`)[0];
-                popup_109bce854d34ba95bda74309b39395af.setContent(html_4680e8c635f20b5101fae9149083aa94);
+                var html_9abae0daa5119c137b3dda15279994e4 = $(`<div id="html_9abae0daa5119c137b3dda15279994e4" style="width: 100.0%; height: 100.0%;">     <b>Park St. Edition in New Cairo</b><br>     Developer: Sky Innovo Developments<br>     Avg Price/SQM: 224,132 EGP<br>     Units: 7     </div>`)[0];
+                popup_6fc8e4551f24f9482bab987684f37a0a.setContent(html_9abae0daa5119c137b3dda15279994e4);
             
         
 
-        circle_marker_09aa7eeb02b46d4d69284485dad864ff.bindPopup(popup_109bce854d34ba95bda74309b39395af)
+        circle_marker_3f2090a0308d05b89b940e7a55810fe4.bindPopup(popup_6fc8e4551f24f9482bab987684f37a0a)
         ;
 
         
     
     
-            circle_marker_09aa7eeb02b46d4d69284485dad864ff.bindTooltip(
+            circle_marker_3f2090a0308d05b89b940e7a55810fe4.bindTooltip(
                 `<div>
                      Park St. Edition in New Cairo (7 units)
                  </div>`,
@@ -1009,30 +1108,30 @@
             );
         
     
-            var circle_marker_e658afcd55b6c6400b48eae35f757d78 = L.circleMarker(
-                [26.9060999, 40.5681375],
+            var circle_marker_4013c4f7e0b6f1a043717a101e46efec = L.circleMarker(
+                [30.026458276465473, 31.464548270004343],
                 {"bubblingMouseEvents": true, "color": "#fff700ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fff700ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.964404506368992, "stroke": true, "weight": 3}
-            ).addTo(map_ac7b05fbd01d3ed851e55d010087a18a);
+            ).addTo(map_977cdf4f61036023d5732fbc9c1346a0);
         
     
-        var popup_d20ba9a13c3c0bd969f03b1d9f419d2b = L.popup({
+        var popup_868fe57eef0db8d45768119b6b3ce465 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_0d0cdc8d8308d5fa03a445be67cca2e4 = $(`<div id="html_0d0cdc8d8308d5fa03a445be67cca2e4" style="width: 100.0%; height: 100.0%;">     <b>Patterns in New Cairo</b><br>     Developer: Kulture Developments<br>     Avg Price/SQM: 254,631 EGP<br>     Units: 16     </div>`)[0];
-                popup_d20ba9a13c3c0bd969f03b1d9f419d2b.setContent(html_0d0cdc8d8308d5fa03a445be67cca2e4);
+                var html_c42aba44bce50bd427ac1ed03cb9d48a = $(`<div id="html_c42aba44bce50bd427ac1ed03cb9d48a" style="width: 100.0%; height: 100.0%;">     <b>Patterns in New Cairo</b><br>     Developer: Kulture Developments<br>     Avg Price/SQM: 254,631 EGP<br>     Units: 16     </div>`)[0];
+                popup_868fe57eef0db8d45768119b6b3ce465.setContent(html_c42aba44bce50bd427ac1ed03cb9d48a);
             
         
 
-        circle_marker_e658afcd55b6c6400b48eae35f757d78.bindPopup(popup_d20ba9a13c3c0bd969f03b1d9f419d2b)
+        circle_marker_4013c4f7e0b6f1a043717a101e46efec.bindPopup(popup_868fe57eef0db8d45768119b6b3ce465)
         ;
 
         
     
     
-            circle_marker_e658afcd55b6c6400b48eae35f757d78.bindTooltip(
+            circle_marker_4013c4f7e0b6f1a043717a101e46efec.bindTooltip(
                 `<div>
                      Patterns in New Cairo (16 units)
                  </div>`,
@@ -1042,30 +1141,30 @@
             );
         
     
-            var circle_marker_c2d2bd3116b4477e9a832e3e58f787af = L.circleMarker(
-                [30.0203208, 31.4950277],
+            var circle_marker_ce8e6e2c5862f2ccabb5a7ead1ae48a5 = L.circleMarker(
+                [30.02049727606232, 31.49500623931637],
                 {"bubblingMouseEvents": true, "color": "#d8ec00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d8ec00ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_ac7b05fbd01d3ed851e55d010087a18a);
+            ).addTo(map_977cdf4f61036023d5732fbc9c1346a0);
         
     
-        var popup_3717d267a3b70b44df36d6e621a429de = L.popup({
+        var popup_264bbc9e7b49eb74fbd25079c3bc783c = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_1237a17e4bd8affd9a4012998a347e09 = $(`<div id="html_1237a17e4bd8affd9a4012998a347e09" style="width: 100.0%; height: 100.0%;">     <b>Point 90 Mall in New Cairo</b><br>     Developer: PRE Group<br>     Avg Price/SQM: 219,950 EGP<br>     Units: 3     </div>`)[0];
-                popup_3717d267a3b70b44df36d6e621a429de.setContent(html_1237a17e4bd8affd9a4012998a347e09);
+                var html_128eb895c6a53dc74b616844c500cfac = $(`<div id="html_128eb895c6a53dc74b616844c500cfac" style="width: 100.0%; height: 100.0%;">     <b>Point 90 Mall in New Cairo</b><br>     Developer: PRE Group<br>     Avg Price/SQM: 219,950 EGP<br>     Units: 3     </div>`)[0];
+                popup_264bbc9e7b49eb74fbd25079c3bc783c.setContent(html_128eb895c6a53dc74b616844c500cfac);
             
         
 
-        circle_marker_c2d2bd3116b4477e9a832e3e58f787af.bindPopup(popup_3717d267a3b70b44df36d6e621a429de)
+        circle_marker_ce8e6e2c5862f2ccabb5a7ead1ae48a5.bindPopup(popup_264bbc9e7b49eb74fbd25079c3bc783c)
         ;
 
         
     
     
-            circle_marker_c2d2bd3116b4477e9a832e3e58f787af.bindTooltip(
+            circle_marker_ce8e6e2c5862f2ccabb5a7ead1ae48a5.bindTooltip(
                 `<div>
                      Point 90 Mall in New Cairo (3 units)
                  </div>`,
@@ -1075,30 +1174,30 @@
             );
         
     
-            var circle_marker_99bdb508aba924b186e845e0c29e8c78 = L.circleMarker(
-                [30.0279973, 31.5278225],
+            var circle_marker_6c2291347b86f8462a17b643ddcee7cc = L.circleMarker(
+                [30.02810800720407, 31.52801248349627],
                 {"bubblingMouseEvents": true, "color": "#c8e400ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c8e400ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_ac7b05fbd01d3ed851e55d010087a18a);
+            ).addTo(map_977cdf4f61036023d5732fbc9c1346a0);
         
     
-        var popup_fe97739d1b2bd613539c5a1d98925a8e = L.popup({
+        var popup_fce4c45f5b57ca2c8021aaa32a882cd5 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_eb80b04fdd84a2fc8beefe5a1647a5bb = $(`<div id="html_eb80b04fdd84a2fc8beefe5a1647a5bb" style="width: 100.0%; height: 100.0%;">     <b>Prk Vie in El Lotus</b><br>     Developer: Upwyde Developments<br>     Avg Price/SQM: 211,283 EGP<br>     Units: 3     </div>`)[0];
-                popup_fe97739d1b2bd613539c5a1d98925a8e.setContent(html_eb80b04fdd84a2fc8beefe5a1647a5bb);
+                var html_4b1092576c3c4c636ea0803404ce31eb = $(`<div id="html_4b1092576c3c4c636ea0803404ce31eb" style="width: 100.0%; height: 100.0%;">     <b>Prk Vie in El Lotus</b><br>     Developer: Upwyde Developments<br>     Avg Price/SQM: 211,283 EGP<br>     Units: 3     </div>`)[0];
+                popup_fce4c45f5b57ca2c8021aaa32a882cd5.setContent(html_4b1092576c3c4c636ea0803404ce31eb);
             
         
 
-        circle_marker_99bdb508aba924b186e845e0c29e8c78.bindPopup(popup_fe97739d1b2bd613539c5a1d98925a8e)
+        circle_marker_6c2291347b86f8462a17b643ddcee7cc.bindPopup(popup_fce4c45f5b57ca2c8021aaa32a882cd5)
         ;
 
         
     
     
-            circle_marker_99bdb508aba924b186e845e0c29e8c78.bindTooltip(
+            circle_marker_6c2291347b86f8462a17b643ddcee7cc.bindTooltip(
                 `<div>
                      Prk Vie in El Lotus (3 units)
                  </div>`,
@@ -1108,30 +1207,30 @@
             );
         
     
-            var circle_marker_0118ea427b3e3593e93ee45e61ce940c = L.circleMarker(
-                [30.0276114, 31.5226435],
+            var circle_marker_cf1fcea908421d1be9f89412c245bfe7 = L.circleMarker(
+                [30.027807163045633, 31.52267675466033],
                 {"bubblingMouseEvents": true, "color": "#b2d900ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b2d900ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_ac7b05fbd01d3ed851e55d010087a18a);
+            ).addTo(map_977cdf4f61036023d5732fbc9c1346a0);
         
     
-        var popup_135891cf9ba04336482e8163bb125624 = L.popup({
+        var popup_8548eccd5c4ed4c94df2a6f117590d94 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_eec0153b84898c6d8232766e28c364f0 = $(`<div id="html_eec0153b84898c6d8232766e28c364f0" style="width: 100.0%; height: 100.0%;">     <b>Rock Gold in El Lotus</b><br>     Developer: Rock developments<br>     Avg Price/SQM: 199,238 EGP<br>     Units: 1     </div>`)[0];
-                popup_135891cf9ba04336482e8163bb125624.setContent(html_eec0153b84898c6d8232766e28c364f0);
+                var html_64984614458cba1e70be896db1f8e337 = $(`<div id="html_64984614458cba1e70be896db1f8e337" style="width: 100.0%; height: 100.0%;">     <b>Rock Gold in El Lotus</b><br>     Developer: Rock developments<br>     Avg Price/SQM: 199,238 EGP<br>     Units: 1     </div>`)[0];
+                popup_8548eccd5c4ed4c94df2a6f117590d94.setContent(html_64984614458cba1e70be896db1f8e337);
             
         
 
-        circle_marker_0118ea427b3e3593e93ee45e61ce940c.bindPopup(popup_135891cf9ba04336482e8163bb125624)
+        circle_marker_cf1fcea908421d1be9f89412c245bfe7.bindPopup(popup_8548eccd5c4ed4c94df2a6f117590d94)
         ;
 
         
     
     
-            circle_marker_0118ea427b3e3593e93ee45e61ce940c.bindTooltip(
+            circle_marker_cf1fcea908421d1be9f89412c245bfe7.bindTooltip(
                 `<div>
                      Rock Gold in El Lotus (1 units)
                  </div>`,
@@ -1141,30 +1240,30 @@
             );
         
     
-            var circle_marker_8536269665ce2ff184a9d4e37208c773 = L.circleMarker(
-                [30.0486402, 31.4584755],
+            var circle_marker_c8bc5446473f2516cbd5c5a983b7bd90 = L.circleMarker(
+                [30.095437561600853, 31.484945174779536],
                 {"bubblingMouseEvents": true, "color": "#f5fa00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f5fa00ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.85466234994081, "stroke": true, "weight": 3}
-            ).addTo(map_ac7b05fbd01d3ed851e55d010087a18a);
+            ).addTo(map_977cdf4f61036023d5732fbc9c1346a0);
         
     
-        var popup_10b69b647d55003ddffc88854faecb82 = L.popup({
+        var popup_af734d61b29246cfa414662ba045731b = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_c757dd89507df18f40e5a734d59255af = $(`<div id="html_c757dd89507df18f40e5a734d59255af" style="width: 100.0%; height: 100.0%;">     <b>Saada in New Cairo</b><br>     Developer: Horizon Egypt Development<br>     Avg Price/SQM: 235,766 EGP<br>     Units: 19     </div>`)[0];
-                popup_10b69b647d55003ddffc88854faecb82.setContent(html_c757dd89507df18f40e5a734d59255af);
+                var html_41e627013b9a7746fd9d6147a3f733d2 = $(`<div id="html_41e627013b9a7746fd9d6147a3f733d2" style="width: 100.0%; height: 100.0%;">     <b>Saada in New Cairo</b><br>     Developer: Horizon Egypt Development<br>     Avg Price/SQM: 235,766 EGP<br>     Units: 19     </div>`)[0];
+                popup_af734d61b29246cfa414662ba045731b.setContent(html_41e627013b9a7746fd9d6147a3f733d2);
             
         
 
-        circle_marker_8536269665ce2ff184a9d4e37208c773.bindPopup(popup_10b69b647d55003ddffc88854faecb82)
+        circle_marker_c8bc5446473f2516cbd5c5a983b7bd90.bindPopup(popup_af734d61b29246cfa414662ba045731b)
         ;
 
         
     
     
-            circle_marker_8536269665ce2ff184a9d4e37208c773.bindTooltip(
+            circle_marker_c8bc5446473f2516cbd5c5a983b7bd90.bindTooltip(
                 `<div>
                      Saada in New Cairo (19 units)
                  </div>`,
@@ -1174,30 +1273,30 @@
             );
         
     
-            var circle_marker_999170d2b9a8cbdfab27695a9bf1a87e = L.circleMarker(
-                [30.0588133, 31.515776],
+            var circle_marker_a8edf7dffb5cd1f7245df9e73c5eb50a = L.circleMarker(
+                [30.098723672208884, 31.707122637467005],
                 {"bubblingMouseEvents": true, "color": "#b9dd00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b9dd00ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.141810630738087, "stroke": true, "weight": 3}
-            ).addTo(map_ac7b05fbd01d3ed851e55d010087a18a);
+            ).addTo(map_977cdf4f61036023d5732fbc9c1346a0);
         
     
-        var popup_a0366fb2e40fcc266a30eaf98c934a95 = L.popup({
+        var popup_274d5f826f7cf748bc34dfa6d7d88ac4 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_b26ff99fa030c9348fa259101d5c29bc = $(`<div id="html_b26ff99fa030c9348fa259101d5c29bc" style="width: 100.0%; height: 100.0%;">     <b>Sarai in New Cairo</b><br>     Developer: Madinet Masr<br>     Avg Price/SQM: 203,266 EGP<br>     Units: 20     </div>`)[0];
-                popup_a0366fb2e40fcc266a30eaf98c934a95.setContent(html_b26ff99fa030c9348fa259101d5c29bc);
+                var html_31e3172ae702c0ea06eff5a5cf38eda8 = $(`<div id="html_31e3172ae702c0ea06eff5a5cf38eda8" style="width: 100.0%; height: 100.0%;">     <b>Sarai in New Cairo</b><br>     Developer: Madinet Masr<br>     Avg Price/SQM: 203,266 EGP<br>     Units: 20     </div>`)[0];
+                popup_274d5f826f7cf748bc34dfa6d7d88ac4.setContent(html_31e3172ae702c0ea06eff5a5cf38eda8);
             
         
 
-        circle_marker_999170d2b9a8cbdfab27695a9bf1a87e.bindPopup(popup_a0366fb2e40fcc266a30eaf98c934a95)
+        circle_marker_a8edf7dffb5cd1f7245df9e73c5eb50a.bindPopup(popup_274d5f826f7cf748bc34dfa6d7d88ac4)
         ;
 
         
     
     
-            circle_marker_999170d2b9a8cbdfab27695a9bf1a87e.bindTooltip(
+            circle_marker_a8edf7dffb5cd1f7245df9e73c5eb50a.bindTooltip(
                 `<div>
                      Sarai in New Cairo (20 units)
                  </div>`,
@@ -1207,30 +1306,30 @@
             );
         
     
-            var circle_marker_de7183c5f829a7f8e6f9288fc5a856fa = L.circleMarker(
-                [30.0132503, 31.5002105],
+            var circle_marker_b6b47661ef48144a8a0531a09332642e = L.circleMarker(
+                [30.039208103809905, 31.57126721048102],
                 {"bubblingMouseEvents": true, "color": "#299500ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#299500ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_ac7b05fbd01d3ed851e55d010087a18a);
+            ).addTo(map_977cdf4f61036023d5732fbc9c1346a0);
         
     
-        var popup_f70e59c7687f4bd44b4f0c731d4efe4a = L.popup({
+        var popup_6b3cfe2a68f7f9998218c9018a89824a = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_28cd85969f03cfccf7149beea8aeb21b = $(`<div id="html_28cd85969f03cfccf7149beea8aeb21b" style="width: 100.0%; height: 100.0%;">     <b>Solay in New Cairo</b><br>     Developer: Living Yards Developments<br>     Avg Price/SQM: 124,818 EGP<br>     Units: 6     </div>`)[0];
-                popup_f70e59c7687f4bd44b4f0c731d4efe4a.setContent(html_28cd85969f03cfccf7149beea8aeb21b);
+                var html_5eaae83f8c1e9118c230c5c46e3bca74 = $(`<div id="html_5eaae83f8c1e9118c230c5c46e3bca74" style="width: 100.0%; height: 100.0%;">     <b>Solay in New Cairo</b><br>     Developer: Living Yards Developments<br>     Avg Price/SQM: 124,818 EGP<br>     Units: 6     </div>`)[0];
+                popup_6b3cfe2a68f7f9998218c9018a89824a.setContent(html_5eaae83f8c1e9118c230c5c46e3bca74);
             
         
 
-        circle_marker_de7183c5f829a7f8e6f9288fc5a856fa.bindPopup(popup_f70e59c7687f4bd44b4f0c731d4efe4a)
+        circle_marker_b6b47661ef48144a8a0531a09332642e.bindPopup(popup_6b3cfe2a68f7f9998218c9018a89824a)
         ;
 
         
     
     
-            circle_marker_de7183c5f829a7f8e6f9288fc5a856fa.bindTooltip(
+            circle_marker_b6b47661ef48144a8a0531a09332642e.bindTooltip(
                 `<div>
                      Solay in New Cairo (6 units)
                  </div>`,
@@ -1240,30 +1339,30 @@
             );
         
     
-            var circle_marker_b77cf390879da68c31eddb3f80eb28fb = L.circleMarker(
-                [30.0842395, 31.480758],
+            var circle_marker_bc55c5953aa03fc6e45d25b9b2d1210f = L.circleMarker(
+                [30.079691250629985, 31.48819903931822],
                 {"bubblingMouseEvents": true, "color": "#fffe00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fffe00ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.26631540240041, "stroke": true, "weight": 3}
-            ).addTo(map_ac7b05fbd01d3ed851e55d010087a18a);
+            ).addTo(map_977cdf4f61036023d5732fbc9c1346a0);
         
     
-        var popup_6a86e60076261171f1794649515e674b = L.popup({
+        var popup_7b347f4e74a5536d72674c154d22f36d = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_025f2647027d7c179994fd1c118280f9 = $(`<div id="html_025f2647027d7c179994fd1c118280f9" style="width: 100.0%; height: 100.0%;">     <b>Stei8ht in New Cairo</b><br>     Developer: LMD<br>     Avg Price/SQM: 243,362 EGP<br>     Units: 17     </div>`)[0];
-                popup_6a86e60076261171f1794649515e674b.setContent(html_025f2647027d7c179994fd1c118280f9);
+                var html_57e0981dfa64d0a3b6a0d636e3a5f5f7 = $(`<div id="html_57e0981dfa64d0a3b6a0d636e3a5f5f7" style="width: 100.0%; height: 100.0%;">     <b>Stei8ht in New Cairo</b><br>     Developer: LMD<br>     Avg Price/SQM: 243,362 EGP<br>     Units: 17     </div>`)[0];
+                popup_7b347f4e74a5536d72674c154d22f36d.setContent(html_57e0981dfa64d0a3b6a0d636e3a5f5f7);
             
         
 
-        circle_marker_b77cf390879da68c31eddb3f80eb28fb.bindPopup(popup_6a86e60076261171f1794649515e674b)
+        circle_marker_bc55c5953aa03fc6e45d25b9b2d1210f.bindPopup(popup_7b347f4e74a5536d72674c154d22f36d)
         ;
 
         
     
     
-            circle_marker_b77cf390879da68c31eddb3f80eb28fb.bindTooltip(
+            circle_marker_bc55c5953aa03fc6e45d25b9b2d1210f.bindTooltip(
                 `<div>
                      Stei8ht in New Cairo (17 units)
                  </div>`,
@@ -1273,30 +1372,30 @@
             );
         
     
-            var circle_marker_984109d7b7648fde69bcb2d0b393edaa = L.circleMarker(
-                [30.0690588, 31.4527407],
+            var circle_marker_811df328ed785d83e551da01cef18cee = L.circleMarker(
+                [30.058022423187282, 31.442488523973626],
                 {"bubblingMouseEvents": true, "color": "#fffb00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fffb00ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_ac7b05fbd01d3ed851e55d010087a18a);
+            ).addTo(map_977cdf4f61036023d5732fbc9c1346a0);
         
     
-        var popup_463435b20c8a39610668b60928753c6d = L.popup({
+        var popup_eb85b1792dfcb1aaa98fee08f61632df = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_3616e85e6b24971afb7c4da95d07e7c3 = $(`<div id="html_3616e85e6b24971afb7c4da95d07e7c3" style="width: 100.0%; height: 100.0%;">     <b>Swanlake Residences in New Cairo</b><br>     Developer: Hassan Allam Properties<br>     Avg Price/SQM: 247,813 EGP<br>     Units: 5     </div>`)[0];
-                popup_463435b20c8a39610668b60928753c6d.setContent(html_3616e85e6b24971afb7c4da95d07e7c3);
+                var html_abf6809ab8f6af27004808d69c773ce0 = $(`<div id="html_abf6809ab8f6af27004808d69c773ce0" style="width: 100.0%; height: 100.0%;">     <b>Swanlake Residences in New Cairo</b><br>     Developer: Hassan Allam Properties<br>     Avg Price/SQM: 247,813 EGP<br>     Units: 5     </div>`)[0];
+                popup_eb85b1792dfcb1aaa98fee08f61632df.setContent(html_abf6809ab8f6af27004808d69c773ce0);
             
         
 
-        circle_marker_984109d7b7648fde69bcb2d0b393edaa.bindPopup(popup_463435b20c8a39610668b60928753c6d)
+        circle_marker_811df328ed785d83e551da01cef18cee.bindPopup(popup_eb85b1792dfcb1aaa98fee08f61632df)
         ;
 
         
     
     
-            circle_marker_984109d7b7648fde69bcb2d0b393edaa.bindTooltip(
+            circle_marker_811df328ed785d83e551da01cef18cee.bindTooltip(
                 `<div>
                      Swanlake Residences in New Cairo (5 units)
                  </div>`,
@@ -1306,30 +1405,30 @@
             );
         
     
-            var circle_marker_d6d50b849daafe2e8b13f74333eca06c = L.circleMarker(
-                [30.019102, 31.4899447],
+            var circle_marker_84a404ac7a0562fe1afbc7ae20c96e20 = L.circleMarker(
+                [30.024857146566333, 31.471577383496296],
                 {"bubblingMouseEvents": true, "color": "#ffa700ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffa700ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_ac7b05fbd01d3ed851e55d010087a18a);
+            ).addTo(map_977cdf4f61036023d5732fbc9c1346a0);
         
     
-        var popup_8f391c962c774b55e31f8737b34596ee = L.popup({
+        var popup_2fd691004c2f32700b413c996c001f06 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_ea53e1925a6f98c2dc2cb67b385384e9 = $(`<div id="html_ea53e1925a6f98c2dc2cb67b385384e9" style="width: 100.0%; height: 100.0%;">     <b>The Ark in New Cairo</b><br>     Developer: The Ark Development<br>     Avg Price/SQM: 377,437 EGP<br>     Units: 3     </div>`)[0];
-                popup_8f391c962c774b55e31f8737b34596ee.setContent(html_ea53e1925a6f98c2dc2cb67b385384e9);
+                var html_ef57dd7f646491434752a42db4176b83 = $(`<div id="html_ef57dd7f646491434752a42db4176b83" style="width: 100.0%; height: 100.0%;">     <b>The Ark in New Cairo</b><br>     Developer: The Ark Development<br>     Avg Price/SQM: 377,437 EGP<br>     Units: 3     </div>`)[0];
+                popup_2fd691004c2f32700b413c996c001f06.setContent(html_ef57dd7f646491434752a42db4176b83);
             
         
 
-        circle_marker_d6d50b849daafe2e8b13f74333eca06c.bindPopup(popup_8f391c962c774b55e31f8737b34596ee)
+        circle_marker_84a404ac7a0562fe1afbc7ae20c96e20.bindPopup(popup_2fd691004c2f32700b413c996c001f06)
         ;
 
         
     
     
-            circle_marker_d6d50b849daafe2e8b13f74333eca06c.bindTooltip(
+            circle_marker_84a404ac7a0562fe1afbc7ae20c96e20.bindTooltip(
                 `<div>
                      The Ark in New Cairo (3 units)
                  </div>`,
@@ -1339,30 +1438,30 @@
             );
         
     
-            var circle_marker_fda52e9a2ca42b794c13207316f844f2 = L.circleMarker(
-                [30.0445807, 31.4318923],
+            var circle_marker_6612fb03ef2e205db68922d4dc64e23d = L.circleMarker(
+                [30.04965787620888, 31.516887955381296],
                 {"bubblingMouseEvents": true, "color": "#e9f400ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e9f400ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_ac7b05fbd01d3ed851e55d010087a18a);
+            ).addTo(map_977cdf4f61036023d5732fbc9c1346a0);
         
     
-        var popup_6b525add887da0d663242f7718279524 = L.popup({
+        var popup_72aafb9177553fb44e20a00f10198ff3 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_7ca9d69625e8cffe837fb2f75f2e8d32 = $(`<div id="html_7ca9d69625e8cffe837fb2f75f2e8d32" style="width: 100.0%; height: 100.0%;">     <b>The Gray in New Cairo</b><br>     Developer: Housing and Development Properties HDP<br>     Avg Price/SQM: 229,167 EGP<br>     Units: 6     </div>`)[0];
-                popup_6b525add887da0d663242f7718279524.setContent(html_7ca9d69625e8cffe837fb2f75f2e8d32);
+                var html_857226486a7a143bcc4136641b9468ab = $(`<div id="html_857226486a7a143bcc4136641b9468ab" style="width: 100.0%; height: 100.0%;">     <b>The Gray in New Cairo</b><br>     Developer: Housing and Development Properties HDP<br>     Avg Price/SQM: 229,167 EGP<br>     Units: 6     </div>`)[0];
+                popup_72aafb9177553fb44e20a00f10198ff3.setContent(html_857226486a7a143bcc4136641b9468ab);
             
         
 
-        circle_marker_fda52e9a2ca42b794c13207316f844f2.bindPopup(popup_6b525add887da0d663242f7718279524)
+        circle_marker_6612fb03ef2e205db68922d4dc64e23d.bindPopup(popup_72aafb9177553fb44e20a00f10198ff3)
         ;
 
         
     
     
-            circle_marker_fda52e9a2ca42b794c13207316f844f2.bindTooltip(
+            circle_marker_6612fb03ef2e205db68922d4dc64e23d.bindTooltip(
                 `<div>
                      The Gray in New Cairo (6 units)
                  </div>`,
@@ -1372,30 +1471,30 @@
             );
         
     
-            var circle_marker_01da7caa474c8a9098e984f25d3b765f = L.circleMarker(
-                [30.026255, 31.4717811],
+            var circle_marker_c96db64199a7f02ff3dfa13c5e30eca3 = L.circleMarker(
+                [29.998706598014014, 31.45221796815162],
                 {"bubblingMouseEvents": true, "color": "#cfe700ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#cfe700ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.518269693579391, "stroke": true, "weight": 3}
-            ).addTo(map_ac7b05fbd01d3ed851e55d010087a18a);
+            ).addTo(map_977cdf4f61036023d5732fbc9c1346a0);
         
     
-        var popup_7d248c7097eedf76ebdee59791ca6a1b = L.popup({
+        var popup_02ebefa950e7597ec7c4332a0570d08d = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_a45893a01256d6de43b381c4ae901446 = $(`<div id="html_a45893a01256d6de43b381c4ae901446" style="width: 100.0%; height: 100.0%;">     <b>The Gryd in New Cairo</b><br>     Developer: Upwyde Developments<br>     Avg Price/SQM: 215,045 EGP<br>     Units: 25     </div>`)[0];
-                popup_7d248c7097eedf76ebdee59791ca6a1b.setContent(html_a45893a01256d6de43b381c4ae901446);
+                var html_2afa2b3cb1b0d60e29625c32bf61b808 = $(`<div id="html_2afa2b3cb1b0d60e29625c32bf61b808" style="width: 100.0%; height: 100.0%;">     <b>The Gryd in New Cairo</b><br>     Developer: Upwyde Developments<br>     Avg Price/SQM: 215,045 EGP<br>     Units: 25     </div>`)[0];
+                popup_02ebefa950e7597ec7c4332a0570d08d.setContent(html_2afa2b3cb1b0d60e29625c32bf61b808);
             
         
 
-        circle_marker_01da7caa474c8a9098e984f25d3b765f.bindPopup(popup_7d248c7097eedf76ebdee59791ca6a1b)
+        circle_marker_c96db64199a7f02ff3dfa13c5e30eca3.bindPopup(popup_02ebefa950e7597ec7c4332a0570d08d)
         ;
 
         
     
     
-            circle_marker_01da7caa474c8a9098e984f25d3b765f.bindTooltip(
+            circle_marker_c96db64199a7f02ff3dfa13c5e30eca3.bindTooltip(
                 `<div>
                      The Gryd in New Cairo (25 units)
                  </div>`,
@@ -1405,30 +1504,30 @@
             );
         
     
-            var circle_marker_4f9a481c55fadcfbbffe5f4d1ec21247 = L.circleMarker(
-                [26.9060999, 30.8768375],
+            var circle_marker_d9fe5e0ad229f9fde53a72c65bb35029 = L.circleMarker(
+                [30.046725923195552, 31.45182501048114],
                 {"bubblingMouseEvents": true, "color": "#76bb00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#76bb00ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_ac7b05fbd01d3ed851e55d010087a18a);
+            ).addTo(map_977cdf4f61036023d5732fbc9c1346a0);
         
     
-        var popup_3159f251b177a6d0c8df138c3fc6a3c4 = L.popup({
+        var popup_eb7cac0e911efad09d27a1cfb5ab7493 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_53f4e091966d0e1f7c5e36280b73be11 = $(`<div id="html_53f4e091966d0e1f7c5e36280b73be11" style="width: 100.0%; height: 100.0%;">     <b>The Mornings in New Cairo</b><br>     Developer: Al Ahly Sabbour Developments<br>     Avg Price/SQM: 166,487 EGP<br>     Units: 7     </div>`)[0];
-                popup_3159f251b177a6d0c8df138c3fc6a3c4.setContent(html_53f4e091966d0e1f7c5e36280b73be11);
+                var html_ccd435a7a6ca7e68218caba7d61b5783 = $(`<div id="html_ccd435a7a6ca7e68218caba7d61b5783" style="width: 100.0%; height: 100.0%;">     <b>The Mornings in New Cairo</b><br>     Developer: Al Ahly Sabbour Developments<br>     Avg Price/SQM: 166,487 EGP<br>     Units: 7     </div>`)[0];
+                popup_eb7cac0e911efad09d27a1cfb5ab7493.setContent(html_ccd435a7a6ca7e68218caba7d61b5783);
             
         
 
-        circle_marker_4f9a481c55fadcfbbffe5f4d1ec21247.bindPopup(popup_3159f251b177a6d0c8df138c3fc6a3c4)
+        circle_marker_d9fe5e0ad229f9fde53a72c65bb35029.bindPopup(popup_eb7cac0e911efad09d27a1cfb5ab7493)
         ;
 
         
     
     
-            circle_marker_4f9a481c55fadcfbbffe5f4d1ec21247.bindTooltip(
+            circle_marker_d9fe5e0ad229f9fde53a72c65bb35029.bindTooltip(
                 `<div>
                      The Mornings in New Cairo (7 units)
                  </div>`,
@@ -1438,30 +1537,30 @@
             );
         
     
-            var circle_marker_200252713c7ee62aeafce385ddb1fc60 = L.circleMarker(
-                [30.0280776, 31.5512222],
+            var circle_marker_b52b7a8140f2d93b354b55d921c35870 = L.circleMarker(
+                [30.029753618001145, 31.551945203204696],
                 {"bubblingMouseEvents": true, "color": "#b2d900ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b2d900ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_ac7b05fbd01d3ed851e55d010087a18a);
+            ).addTo(map_977cdf4f61036023d5732fbc9c1346a0);
         
     
-        var popup_f7e593112bfb1b302c91d449b1e714f2 = L.popup({
+        var popup_17e81c7ff0d3cf2b9378dab20cc4af77 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_31b425323f9f12bdc73eaad86c819b3f = $(`<div id="html_31b425323f9f12bdc73eaad86c819b3f" style="width: 100.0%; height: 100.0%;">     <b>Three Sixty in New Cairo</b><br>     Developer: LMD<br>     Avg Price/SQM: 198,935 EGP<br>     Units: 6     </div>`)[0];
-                popup_f7e593112bfb1b302c91d449b1e714f2.setContent(html_31b425323f9f12bdc73eaad86c819b3f);
+                var html_95bb615debf320f6f06b8677206cf80f = $(`<div id="html_95bb615debf320f6f06b8677206cf80f" style="width: 100.0%; height: 100.0%;">     <b>Three Sixty in New Cairo</b><br>     Developer: LMD<br>     Avg Price/SQM: 198,935 EGP<br>     Units: 6     </div>`)[0];
+                popup_17e81c7ff0d3cf2b9378dab20cc4af77.setContent(html_95bb615debf320f6f06b8677206cf80f);
             
         
 
-        circle_marker_200252713c7ee62aeafce385ddb1fc60.bindPopup(popup_f7e593112bfb1b302c91d449b1e714f2)
+        circle_marker_b52b7a8140f2d93b354b55d921c35870.bindPopup(popup_17e81c7ff0d3cf2b9378dab20cc4af77)
         ;
 
         
     
     
-            circle_marker_200252713c7ee62aeafce385ddb1fc60.bindTooltip(
+            circle_marker_b52b7a8140f2d93b354b55d921c35870.bindTooltip(
                 `<div>
                      Three Sixty in New Cairo (6 units)
                  </div>`,
@@ -1471,30 +1570,30 @@
             );
         
     
-            var circle_marker_a4b415c7b9b72493fd2af2aa9f9d0351 = L.circleMarker(
-                [30.0250324, 31.4710837],
+            var circle_marker_5e035b3e6d8b048c19cf2efc0b82b6ee = L.circleMarker(
+                [29.99874312613277, 31.447538649335407],
                 {"bubblingMouseEvents": true, "color": "#ffed00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffed00ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.69412336751626, "stroke": true, "weight": 3}
-            ).addTo(map_ac7b05fbd01d3ed851e55d010087a18a);
+            ).addTo(map_977cdf4f61036023d5732fbc9c1346a0);
         
     
-        var popup_fbb0af28f647bf134c26be7400c4c2be = L.popup({
+        var popup_52c394c7478eedf7422c8226ff5bb652 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_02cad52ebcb5863b7cd8ea58fa5b878d = $(`<div id="html_02cad52ebcb5863b7cd8ea58fa5b878d" style="width: 100.0%; height: 100.0%;">     <b>VX 90 in New Cairo</b><br>     Developer: Mercon Developments<br>     Avg Price/SQM: 269,997 EGP<br>     Units: 12     </div>`)[0];
-                popup_fbb0af28f647bf134c26be7400c4c2be.setContent(html_02cad52ebcb5863b7cd8ea58fa5b878d);
+                var html_56805b6b45648ee836dc0d43306d38be = $(`<div id="html_56805b6b45648ee836dc0d43306d38be" style="width: 100.0%; height: 100.0%;">     <b>VX 90 in New Cairo</b><br>     Developer: Mercon Developments<br>     Avg Price/SQM: 269,997 EGP<br>     Units: 12     </div>`)[0];
+                popup_52c394c7478eedf7422c8226ff5bb652.setContent(html_56805b6b45648ee836dc0d43306d38be);
             
         
 
-        circle_marker_a4b415c7b9b72493fd2af2aa9f9d0351.bindPopup(popup_fbb0af28f647bf134c26be7400c4c2be)
+        circle_marker_5e035b3e6d8b048c19cf2efc0b82b6ee.bindPopup(popup_52c394c7478eedf7422c8226ff5bb652)
         ;
 
         
     
     
-            circle_marker_a4b415c7b9b72493fd2af2aa9f9d0351.bindTooltip(
+            circle_marker_5e035b3e6d8b048c19cf2efc0b82b6ee.bindTooltip(
                 `<div>
                      VX 90 in New Cairo (12 units)
                  </div>`,
@@ -1504,30 +1603,30 @@
             );
         
     
-            var circle_marker_c89ca44739942a36244bb1978d7a6312 = L.circleMarker(
-                [30.0099766, 31.5395466],
+            var circle_marker_7ce261cba6104eaf4771489b24f0ad06 = L.circleMarker(
+                [30.02446207983322, 31.52469956815259],
                 {"bubblingMouseEvents": true, "color": "#9bce00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#9bce00ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.342925711719625, "stroke": true, "weight": 3}
-            ).addTo(map_ac7b05fbd01d3ed851e55d010087a18a);
+            ).addTo(map_977cdf4f61036023d5732fbc9c1346a0);
         
     
-        var popup_fda489b62d23bbafb9bcbdccab87e350 = L.popup({
+        var popup_55d4a6662a23dd5fb5c4b08a6ba0929a = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_4ee77a5a561f9a92d8c7de42ae0946fb = $(`<div id="html_4ee77a5a561f9a92d8c7de42ae0946fb" style="width: 100.0%; height: 100.0%;">     <b>VX Golden Square in New Cairo</b><br>     Developer: Mercon Developments<br>     Avg Price/SQM: 186,857 EGP<br>     Units: 14     </div>`)[0];
-                popup_fda489b62d23bbafb9bcbdccab87e350.setContent(html_4ee77a5a561f9a92d8c7de42ae0946fb);
+                var html_0bb1c950658aff3322deca230fcfc172 = $(`<div id="html_0bb1c950658aff3322deca230fcfc172" style="width: 100.0%; height: 100.0%;">     <b>VX Golden Square in New Cairo</b><br>     Developer: Mercon Developments<br>     Avg Price/SQM: 186,857 EGP<br>     Units: 14     </div>`)[0];
+                popup_55d4a6662a23dd5fb5c4b08a6ba0929a.setContent(html_0bb1c950658aff3322deca230fcfc172);
             
         
 
-        circle_marker_c89ca44739942a36244bb1978d7a6312.bindPopup(popup_fda489b62d23bbafb9bcbdccab87e350)
+        circle_marker_7ce261cba6104eaf4771489b24f0ad06.bindPopup(popup_55d4a6662a23dd5fb5c4b08a6ba0929a)
         ;
 
         
     
     
-            circle_marker_c89ca44739942a36244bb1978d7a6312.bindTooltip(
+            circle_marker_7ce261cba6104eaf4771489b24f0ad06.bindTooltip(
                 `<div>
                      VX Golden Square in New Cairo (14 units)
                  </div>`,
@@ -1537,30 +1636,30 @@
             );
         
     
-            var circle_marker_bb121fc0694095aac76e5535c3088cc4 = L.circleMarker(
-                [29.9975367, 31.4452115],
+            var circle_marker_d3e035c4f5d034c403a95996ae87ba5e = L.circleMarker(
+                [29.997648174984914, 31.44516858164371],
                 {"bubblingMouseEvents": true, "color": "#ffda00ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ffda00ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_ac7b05fbd01d3ed851e55d010087a18a);
+            ).addTo(map_977cdf4f61036023d5732fbc9c1346a0);
         
     
-        var popup_f16def7ef94bbaef1eddb968c64f5f60 = L.popup({
+        var popup_d3bd90016613bdf0196cf12a7f76bee2 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_d0ecca53bcd58f7e06edad363624b3f7 = $(`<div id="html_d0ecca53bcd58f7e06edad363624b3f7" style="width: 100.0%; height: 100.0%;">     <b>Valory Mall in New Cairo</b><br>     Developer: Menassat Developments<br>     Avg Price/SQM: 299,182 EGP<br>     Units: 3     </div>`)[0];
-                popup_f16def7ef94bbaef1eddb968c64f5f60.setContent(html_d0ecca53bcd58f7e06edad363624b3f7);
+                var html_19ded132628ea4ef7ed68c1a54d4d1c4 = $(`<div id="html_19ded132628ea4ef7ed68c1a54d4d1c4" style="width: 100.0%; height: 100.0%;">     <b>Valory Mall in New Cairo</b><br>     Developer: Menassat Developments<br>     Avg Price/SQM: 299,182 EGP<br>     Units: 3     </div>`)[0];
+                popup_d3bd90016613bdf0196cf12a7f76bee2.setContent(html_19ded132628ea4ef7ed68c1a54d4d1c4);
             
         
 
-        circle_marker_bb121fc0694095aac76e5535c3088cc4.bindPopup(popup_f16def7ef94bbaef1eddb968c64f5f60)
+        circle_marker_d3e035c4f5d034c403a95996ae87ba5e.bindPopup(popup_d3bd90016613bdf0196cf12a7f76bee2)
         ;
 
         
     
     
-            circle_marker_bb121fc0694095aac76e5535c3088cc4.bindTooltip(
+            circle_marker_d3e035c4f5d034c403a95996ae87ba5e.bindTooltip(
                 `<div>
                      Valory Mall in New Cairo (3 units)
                  </div>`,
@@ -1570,30 +1669,30 @@
             );
         
     
-            var circle_marker_403f1769f05b27eda22a241706118bc7 = L.circleMarker(
-                [30.0409335, 31.5879678],
+            var circle_marker_acba6c1abaa33d1c7e6fa51712444958 = L.circleMarker(
+                [30.041938937474693, 31.508597352809034],
                 {"bubblingMouseEvents": true, "color": "#b3d900ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b3d900ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_ac7b05fbd01d3ed851e55d010087a18a);
+            ).addTo(map_977cdf4f61036023d5732fbc9c1346a0);
         
     
-        var popup_481a2ff918c21ec4046ed897b0087641 = L.popup({
+        var popup_c3f77bfc13a84649a5cd0ee42f53b7b5 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_600450b1db2a231cc839a1c8a7d8a91d = $(`<div id="html_600450b1db2a231cc839a1c8a7d8a91d" style="width: 100.0%; height: 100.0%;">     <b>W55 in New Cairo</b><br>     Developer: The Waterway Developments<br>     Avg Price/SQM: 199,686 EGP<br>     Units: 8     </div>`)[0];
-                popup_481a2ff918c21ec4046ed897b0087641.setContent(html_600450b1db2a231cc839a1c8a7d8a91d);
+                var html_1c4b86473ad86f81ca6e675580bdac4c = $(`<div id="html_1c4b86473ad86f81ca6e675580bdac4c" style="width: 100.0%; height: 100.0%;">     <b>W55 in New Cairo</b><br>     Developer: The Waterway Developments<br>     Avg Price/SQM: 199,686 EGP<br>     Units: 8     </div>`)[0];
+                popup_c3f77bfc13a84649a5cd0ee42f53b7b5.setContent(html_1c4b86473ad86f81ca6e675580bdac4c);
             
         
 
-        circle_marker_403f1769f05b27eda22a241706118bc7.bindPopup(popup_481a2ff918c21ec4046ed897b0087641)
+        circle_marker_acba6c1abaa33d1c7e6fa51712444958.bindPopup(popup_c3f77bfc13a84649a5cd0ee42f53b7b5)
         ;
 
         
     
     
-            circle_marker_403f1769f05b27eda22a241706118bc7.bindTooltip(
+            circle_marker_acba6c1abaa33d1c7e6fa51712444958.bindTooltip(
                 `<div>
                      W55 in New Cairo (8 units)
                  </div>`,
@@ -1603,30 +1702,30 @@
             );
         
     
-            var circle_marker_f7e3490087970319c1a95b98c2dd99d3 = L.circleMarker(
-                [30.0019185, 31.4072483],
+            var circle_marker_aa92679a4b7227f2ba9ad3c11c24d221 = L.circleMarker(
+                [30.007319190297444, 31.404498068151916],
                 {"bubblingMouseEvents": true, "color": "#ff0000ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff0000ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
-            ).addTo(map_ac7b05fbd01d3ed851e55d010087a18a);
+            ).addTo(map_977cdf4f61036023d5732fbc9c1346a0);
         
     
-        var popup_5261b55bb6f50f5f2cfd20c7171acd89 = L.popup({
+        var popup_267cfbb3ea7e51b080aa3db06c070737 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_73aede0e0e6a285b7831d1773cafa442 = $(`<div id="html_73aede0e0e6a285b7831d1773cafa442" style="width: 100.0%; height: 100.0%;">     <b>WBR1 in El Choueifat</b><br>     Developer: The Waterway Developments<br>     Avg Price/SQM: 519,475 EGP<br>     Units: 1     </div>`)[0];
-                popup_5261b55bb6f50f5f2cfd20c7171acd89.setContent(html_73aede0e0e6a285b7831d1773cafa442);
+                var html_d721c649c4d42a8a3e7bf9dbf3e83021 = $(`<div id="html_d721c649c4d42a8a3e7bf9dbf3e83021" style="width: 100.0%; height: 100.0%;">     <b>WBR1 in El Choueifat</b><br>     Developer: The Waterway Developments<br>     Avg Price/SQM: 519,475 EGP<br>     Units: 1     </div>`)[0];
+                popup_267cfbb3ea7e51b080aa3db06c070737.setContent(html_d721c649c4d42a8a3e7bf9dbf3e83021);
             
         
 
-        circle_marker_f7e3490087970319c1a95b98c2dd99d3.bindPopup(popup_5261b55bb6f50f5f2cfd20c7171acd89)
+        circle_marker_aa92679a4b7227f2ba9ad3c11c24d221.bindPopup(popup_267cfbb3ea7e51b080aa3db06c070737)
         ;
 
         
     
     
-            circle_marker_f7e3490087970319c1a95b98c2dd99d3.bindTooltip(
+            circle_marker_aa92679a4b7227f2ba9ad3c11c24d221.bindTooltip(
                 `<div>
                      WBR1 in El Choueifat (1 units)
                  </div>`,
