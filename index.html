@@ -310,7 +310,7 @@
     <div class="hero-eyebrow">Daily Market Briefing</div>
     <h1 class="hero-title">Redcon Properties<br><strong>Intelligence Feed</strong></h1>
     <p class="hero-sub">Daily News analyzed for Egypt's construction, infrastructure, and real estate market.</p>
-    <div class="hero-meta">Last updated: 7 July 2026, 23:55</div>
+    <div class="hero-meta">Last updated: 8 July 2026, 00:00</div>
   </div>
   
 <div class="wx-widget" id="wxWidget">
@@ -318,10 +318,10 @@
     <div class="wx-location">Cairo <span class="wx-flag">🇪🇬</span></div>
     <div class="wx-big-row">
       <span class="wx-big-icon">🌙</span>
-      <span class="wx-big-temp">26°</span>
+      <span class="wx-big-temp">25°</span>
     </div>
     <div class="wx-condition">Clear</div>
-    <div class="wx-range">H 36° &nbsp;·&nbsp; L 24°</div>
+    <div class="wx-range">H 34° &nbsp;·&nbsp; L 22°</div>
   </div>
   <div class="wx-hourly">
     <button class="wx-nav wx-prev" onclick="wxPage(-1)" aria-label="Previous hours">&#x2039;</button>
@@ -335,7 +335,7 @@
 
 <!-- INDICES -->
 <div class="indices-bar">
-  <span class="indices-as-of">As of 23:55</span>
+  <span class="indices-as-of">As of 00:00</span>
   
   <div class="indices-group">
     <span class="indices-eyebrow">Market Indices &amp; FX</span>
@@ -400,7 +400,7 @@
       Crude Oil
       <button class="idx-info-btn" data-tip="WTI Crude Oil futures price per barrel in USD, sourced from Yahoo Finance." onclick="showTip(this)" title="About Crude Oil">i</button>
     </span>
-    <span class="idx-value">$72.27</span>
+    <span class="idx-value">$72.15</span>
   </div>
       
   <div class="idx-item">
@@ -456,11 +456,11 @@
 <div class="tabs-bar">
   <button class="tab-btn active" id="tab-today" onclick="switchTab('today')">
     Today's Briefing
-    <span class="tab-badge">6</span>
+    <span class="tab-badge">0</span>
   </button>
   <button class="tab-btn" id="tab-archive" onclick="switchTab('archive')">
     Archive
-    <span class="tab-badge">96</span>
+    <span class="tab-badge">102</span>
   </button>
 </div>
 
@@ -475,11 +475,32 @@
     </div>
     <div id="feed-today">
       
+      
+  <div class="empty">
+    <div class="empty-icon">&#x1F4F0;</div>
+    <h2>No articles today yet</h2>
+    <p>Run the news engine script to populate today's articles.</p>
+  </div>
+    </div>
+  </div>
+
+  <!-- ARCHIVE -->
+  <div class="tab-panel" id="panel-archive">
+    <div class="archive-note">
+      <span class="archive-note-icon">📁</span>
+      Previous days' intelligence briefings. Each day's articles are appended here automatically when the next day's run completes.
+    </div>
+    <div class="search-wrap">
+      <input type="text" id="q-archive" placeholder="Search archived headlines and summaries…" oninput="filter('archive')"/>
+      <span id="filter-count-archive"></span>
+    </div>
+    <div id="feed-archive">
+      
   <section class="day-group">
     <div class="day-header">
-      <span class="day-label">Top Stories Today</span>
+      <span class="day-label">2026-07-07</span>
       <div class="day-rule"></div>
-      <span class="day-count">4 articles</span>
+      <span class="day-count">6 articles</span>
     </div>
     
     <div class="card card-mid" id="c0" onclick="toggle('c0')">
@@ -513,7 +534,38 @@
         <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/goinggreens/bankers-and-sustainability-analysts-tell-us-why-the-green-debt-market-went-quiet/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
       </div>
     </div>
-    <div class="card card-high" id="c1" onclick="toggle('c1')">
+    <div class="card card-mid" id="c1" onclick="toggle('c1')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">EGX30 Rises 2.7%</span>
+          <span class="title-ar" dir="rtl">مؤشر EGX30 يرتفع 2.7%</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">The EGX30 has risen by 2.7% as of the current year-to-date, with a value of 52,503. The USD to EGP exchange rate is 48.79 for buy and 48.93 for sell according to the Central Bank of Egypt. Interest rates are at 19.00% for deposit and 20.00% for lending. Other global market indices such as the S&amp;P 500, FTSE 100, and Euro Stoxx 50 have also been reported with their respective year-to-date changes. The prices of Brent crude, natural gas, gold, and BTC have been reported as USD 72.23, USD 3.26, USD 4,158, and USD 64,325 respectively.</div>
+        </div>
+          
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">ارتفع مؤشر EGX30 بنسبة 2.7% حتى الآن في السنة الحالية، بقيمة 52,503. سعر صرف الدولار الأمريكي مقابل الجنيه المصري هو 48.79 للشراء و 48.93 للبيع وفقًا للبنك المركزي المصري. تبلغ أسعار الفائدة 19.00% للودائع و 20.00% للقروض. تم الإبلاغ أيضًا عن مؤشرات السوق العالمية الأخرى مثل S&amp;P 500 و FTSE 100 و Euro Stoxx 50 مع التغييرات السنوية لها. تم الإبلاغ عن أسعار خام برنت و الغاز الطبيعي و الذهب و بيتكوين على أنها 72.23 دولار و 3.26 دولار و 4158 دولار و 64325 دولار على التوالي.</div>
+        </div>
+          
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/07/asian-loan-market-hits-16-year-low-in-1h/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card card-high" id="c2" onclick="toggle('c2')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Modon Awards Hassan Allam $200m Montage Ras El Hekma Contract</span>
@@ -560,7 +612,38 @@
         <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/07/hassan-allam-locks-in-modons-luxury-hotel-and-branded-villas/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
       </div>
     </div>
-    <div class="card card-high" id="c2" onclick="toggle('c2')">
+    <div class="card card-mid" id="c3" onclick="toggle('c3')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egypt&#x27;s Digital EGP Project</span>
+          <span class="title-ar" dir="rtl">مشروع الجنيه المصري الرقمي</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">The Central Bank of Egypt has completed the research phase for a digital Egyptian pound and is moving to a proof-of-concept stage, with a full rollout planned for 2030. The initiative aims to achieve 100% financial inclusion and expand active e-wallet users to 80 million by the end of the decade. The digital EGP seeks to lower cash-handling costs, improve payment efficiency, and provide a secure record of transactions. The project also aims to reduce leakage and enhance targeting of subsidies and social transfers through programmable-money features. The Central Bank of Egypt is working to balance inclusion goals with risk management to modernize Egypt&#x27;s payment ecosystem. The project is part of the 2024 cabinet IDSC roadmap and supports the state&#x27;s mandate for financial inclusion. Experts believe that the digital EGP could help formalize large segments of Egypt&#x27;s informal economy while maintaining cybersecurity and banking-sector stability.</div>
+        </div>
+          
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">أكملت البنك المركزي المصري مرحلة البحث لمشروع الجنيه المصري الرقمي وانتقلت إلى مرحلة概念 الإثبات، مع خطة للطرح الكامل في عام 2030. يهدف المشروع إلى تحقيق التضمين المالي بنسبة 100% وتوسيع عدد مستخدمي المحفظة الإلكترونية النشطة إلى 80 مليونًا بحلول نهاية العقد. يهدف الجنيه المصري الرقمي إلى خفض تكاليف التعامل النقدي وتحسين كفاءة الدفع وتوفير سجل آمن للتعاملات. يهدف المشروع أيضًا إلى خفض التسرب وتحسين استهداف الدعم والتحويلات الاجتماعية من خلال ميزات الأموال القابلة للبرمجة. يعمل البنك المركزي المصري على تحقيق توازن بين أهداف التضمين وإدارة المخاطر لتحديث نظام الدفع في مصر. يعد المشروع جزءًا من خارطة الطريق الخاصة بالحكومة لعام 2024 ويدعم مبدأ الدولة للتضمين المالي. يعتقد الخبراء أن الجنيه المصري الرقمي يمكن أن يساهم في تدوين قطاعات كبيرة من الاقتصاد غير الرسمي في مصر مع الحفاظ على الأمن السيبراني واستقرار قطاع البنوك.</div>
+        </div>
+          
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/07/central-bank-of-egypt-playing-long-game-on-digital-egp/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card card-high" id="c4" onclick="toggle('c4')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Misr Italia Co-Founders Resolve Dispute</span>
@@ -607,7 +690,7 @@
         <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/07/where-the-shareholders-authority-ends-and-the-boards-begins/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c3" onclick="toggle('c3')">
+    <div class="card card-mid" id="c5" onclick="toggle('c5')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Maersk, Hapag-Lloyd Reroute AE15 Service via Suez Canal</span>
@@ -639,92 +722,6 @@
       </div>
     </div>
   </section>
-  <section class="day-group">
-    <div class="day-header">
-      <span class="day-label">Also in the News</span>
-      <div class="day-rule"></div>
-      <span class="day-count">2 articles</span>
-    </div>
-    
-    <div class="card card-mid" id="c4" onclick="toggle('c4')">
-      <div class="card-head">
-        <div class="card-title">
-          <span class="title-en">EGX30 Rises 2.7%</span>
-          <span class="title-ar" dir="rtl">مؤشر EGX30 يرتفع 2.7%</span>
-        </div>
-        <div class="card-head-right">
-          <span class="tier-badge tier-mid">Summary</span>
-          <div class="card-chevron">&#x203A;</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="card-grid">
-          
-        <div class="field full en-content">
-          <div class="field-label">Executive Summary</div>
-          <div class="field-text">The EGX30 has risen by 2.7% as of the current year-to-date, with a value of 52,503. The USD to EGP exchange rate is 48.79 for buy and 48.93 for sell according to the Central Bank of Egypt. Interest rates are at 19.00% for deposit and 20.00% for lending. Other global market indices such as the S&amp;P 500, FTSE 100, and Euro Stoxx 50 have also been reported with their respective year-to-date changes. The prices of Brent crude, natural gas, gold, and BTC have been reported as USD 72.23, USD 3.26, USD 4,158, and USD 64,325 respectively.</div>
-        </div>
-          
-          
-          
-        <div class="field full ar-content" dir="rtl">
-          <div class="field-label">الملخص التنفيذي</div>
-          <div class="field-text">ارتفع مؤشر EGX30 بنسبة 2.7% حتى الآن في السنة الحالية، بقيمة 52,503. سعر صرف الدولار الأمريكي مقابل الجنيه المصري هو 48.79 للشراء و 48.93 للبيع وفقًا للبنك المركزي المصري. تبلغ أسعار الفائدة 19.00% للودائع و 20.00% للقروض. تم الإبلاغ أيضًا عن مؤشرات السوق العالمية الأخرى مثل S&amp;P 500 و FTSE 100 و Euro Stoxx 50 مع التغييرات السنوية لها. تم الإبلاغ عن أسعار خام برنت و الغاز الطبيعي و الذهب و بيتكوين على أنها 72.23 دولار و 3.26 دولار و 4158 دولار و 64325 دولار على التوالي.</div>
-        </div>
-          
-          
-        </div>
-        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/07/asian-loan-market-hits-16-year-low-in-1h/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
-      </div>
-    </div>
-    <div class="card card-mid" id="c5" onclick="toggle('c5')">
-      <div class="card-head">
-        <div class="card-title">
-          <span class="title-en">Egypt&#x27;s Digital EGP Project</span>
-          <span class="title-ar" dir="rtl">مشروع الجنيه المصري الرقمي</span>
-        </div>
-        <div class="card-head-right">
-          <span class="tier-badge tier-mid">Summary</span>
-          <div class="card-chevron">&#x203A;</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="card-grid">
-          
-        <div class="field full en-content">
-          <div class="field-label">Executive Summary</div>
-          <div class="field-text">The Central Bank of Egypt has completed the research phase for a digital Egyptian pound and is moving to a proof-of-concept stage, with a full rollout planned for 2030. The initiative aims to achieve 100% financial inclusion and expand active e-wallet users to 80 million by the end of the decade. The digital EGP seeks to lower cash-handling costs, improve payment efficiency, and provide a secure record of transactions. The project also aims to reduce leakage and enhance targeting of subsidies and social transfers through programmable-money features. The Central Bank of Egypt is working to balance inclusion goals with risk management to modernize Egypt&#x27;s payment ecosystem. The project is part of the 2024 cabinet IDSC roadmap and supports the state&#x27;s mandate for financial inclusion. Experts believe that the digital EGP could help formalize large segments of Egypt&#x27;s informal economy while maintaining cybersecurity and banking-sector stability.</div>
-        </div>
-          
-          
-          
-        <div class="field full ar-content" dir="rtl">
-          <div class="field-label">الملخص التنفيذي</div>
-          <div class="field-text">أكملت البنك المركزي المصري مرحلة البحث لمشروع الجنيه المصري الرقمي وانتقلت إلى مرحلة概念 الإثبات، مع خطة للطرح الكامل في عام 2030. يهدف المشروع إلى تحقيق التضمين المالي بنسبة 100% وتوسيع عدد مستخدمي المحفظة الإلكترونية النشطة إلى 80 مليونًا بحلول نهاية العقد. يهدف الجنيه المصري الرقمي إلى خفض تكاليف التعامل النقدي وتحسين كفاءة الدفع وتوفير سجل آمن للتعاملات. يهدف المشروع أيضًا إلى خفض التسرب وتحسين استهداف الدعم والتحويلات الاجتماعية من خلال ميزات الأموال القابلة للبرمجة. يعمل البنك المركزي المصري على تحقيق توازن بين أهداف التضمين وإدارة المخاطر لتحديث نظام الدفع في مصر. يعد المشروع جزءًا من خارطة الطريق الخاصة بالحكومة لعام 2024 ويدعم مبدأ الدولة للتضمين المالي. يعتقد الخبراء أن الجنيه المصري الرقمي يمكن أن يساهم في تدوين قطاعات كبيرة من الاقتصاد غير الرسمي في مصر مع الحفاظ على الأمن السيبراني واستقرار قطاع البنوك.</div>
-        </div>
-          
-          
-        </div>
-        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/07/central-bank-of-egypt-playing-long-game-on-digital-egp/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
-      </div>
-    </div>
-  </section>
-      
-    </div>
-  </div>
-
-  <!-- ARCHIVE -->
-  <div class="tab-panel" id="panel-archive">
-    <div class="archive-note">
-      <span class="archive-note-icon">📁</span>
-      Previous days' intelligence briefings. Each day's articles are appended here automatically when the next day's run completes.
-    </div>
-    <div class="search-wrap">
-      <input type="text" id="q-archive" placeholder="Search archived headlines and summaries…" oninput="filter('archive')"/>
-      <span id="filter-count-archive"></span>
-    </div>
-    <div id="feed-archive">
-      
   <section class="day-group">
     <div class="day-header">
       <span class="day-label">2026-07-06</span>
@@ -4181,7 +4178,7 @@
 
 <script>
 // ── WEATHER PAGINATOR ──────────────────────────────────────────────────────────
-const WX_DATA   = [{t:"12AM",e:"🌙",c:26,d:"Mainly clear",now:false},{t:"1AM",e:"☁️",c:26,d:"Partly cloudy",now:false},{t:"2AM",e:"☁️",c:25,d:"Partly cloudy",now:false},{t:"3AM",e:"☁️",c:25,d:"Partly cloudy",now:false},{t:"4AM",e:"☁️",c:24,d:"Partly cloudy",now:false},{t:"5AM",e:"🌙",c:24,d:"Mainly clear",now:false},{t:"6AM",e:"⛅",c:24,d:"Partly cloudy",now:false},{t:"7AM",e:"⛅",c:24,d:"Partly cloudy",now:false},{t:"8AM",e:"⛅",c:25,d:"Partly cloudy",now:false},{t:"9AM",e:"⛅",c:26,d:"Partly cloudy",now:false},{t:"10AM",e:"⛅",c:28,d:"Partly cloudy",now:false},{t:"11AM",e:"🌤️",c:30,d:"Mainly clear",now:false},{t:"12PM",e:"☀️",c:32,d:"Clear",now:false},{t:"1PM",e:"☀️",c:33,d:"Clear",now:false},{t:"2PM",e:"☀️",c:35,d:"Clear",now:false},{t:"3PM",e:"🌤️",c:35,d:"Mainly clear",now:false},{t:"4PM",e:"🌤️",c:36,d:"Mainly clear",now:false},{t:"5PM",e:"🌤️",c:35,d:"Mainly clear",now:false},{t:"6PM",e:"🌤️",c:34,d:"Mainly clear",now:false},{t:"7PM",e:"🌙",c:33,d:"Mainly clear",now:false},{t:"8PM",e:"🌙",c:31,d:"Mainly clear",now:false},{t:"9PM",e:"🌙",c:29,d:"Clear",now:false},{t:"10PM",e:"🌙",c:28,d:"Clear",now:false},{t:"11PM",e:"🌙",c:26,d:"Clear",now:true}];
+const WX_DATA   = [{t:"12AM",e:"🌙",c:25,d:"Clear",now:true},{t:"1AM",e:"🌙",c:24,d:"Clear",now:false},{t:"2AM",e:"🌙",c:24,d:"Clear",now:false},{t:"3AM",e:"🌙",c:23,d:"Clear",now:false},{t:"4AM",e:"🌙",c:23,d:"Clear",now:false},{t:"5AM",e:"🌙",c:23,d:"Clear",now:false},{t:"6AM",e:"☀️",c:22,d:"Clear",now:false},{t:"7AM",e:"☀️",c:23,d:"Clear",now:false},{t:"8AM",e:"☀️",c:24,d:"Clear",now:false},{t:"9AM",e:"☀️",c:25,d:"Clear",now:false},{t:"10AM",e:"🌤️",c:27,d:"Mainly clear",now:false},{t:"11AM",e:"🌤️",c:29,d:"Mainly clear",now:false},{t:"12PM",e:"☀️",c:30,d:"Clear",now:false},{t:"1PM",e:"🌤️",c:32,d:"Mainly clear",now:false},{t:"2PM",e:"🌤️",c:32,d:"Mainly clear",now:false},{t:"3PM",e:"🌤️",c:33,d:"Mainly clear",now:false},{t:"4PM",e:"⛅",c:33,d:"Partly cloudy",now:false},{t:"5PM",e:"⛅",c:34,d:"Partly cloudy",now:false},{t:"6PM",e:"🌤️",c:33,d:"Mainly clear",now:false},{t:"7PM",e:"🌙",c:33,d:"Mainly clear",now:false},{t:"8PM",e:"🌙",c:31,d:"Mainly clear",now:false},{t:"9PM",e:"🌙",c:30,d:"Mainly clear",now:false},{t:"10PM",e:"🌙",c:28,d:"Clear",now:false},{t:"11PM",e:"🌙",c:26,d:"Clear",now:false}];
 let   wxCenter_idx = 0;  // index of the slot shown in the CENTER position
 
 function wxPage(dir) {
