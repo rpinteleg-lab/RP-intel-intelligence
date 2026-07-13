@@ -310,7 +310,7 @@
     <div class="hero-eyebrow">Daily Market Briefing</div>
     <h1 class="hero-title">Redcon Properties<br><strong>Intelligence Feed</strong></h1>
     <p class="hero-sub">Daily News analyzed for Egypt's construction, infrastructure, and real estate market.</p>
-    <div class="hero-meta">Last updated: 13 July 2026, 23:55</div>
+    <div class="hero-meta">Last updated: 14 July 2026, 00:00</div>
   </div>
   
 <div class="wx-widget" id="wxWidget">
@@ -318,10 +318,10 @@
     <div class="wx-location">Cairo <span class="wx-flag">🇪🇬</span></div>
     <div class="wx-big-row">
       <span class="wx-big-icon">🌙</span>
-      <span class="wx-big-temp">28°</span>
+      <span class="wx-big-temp">27°</span>
     </div>
     <div class="wx-condition">Clear</div>
-    <div class="wx-range">H 36° &nbsp;·&nbsp; L 22°</div>
+    <div class="wx-range">H 37° &nbsp;·&nbsp; L 23°</div>
   </div>
   <div class="wx-hourly">
     <button class="wx-nav wx-prev" onclick="wxPage(-1)" aria-label="Previous hours">&#x2039;</button>
@@ -335,7 +335,7 @@
 
 <!-- INDICES -->
 <div class="indices-bar">
-  <span class="indices-as-of">As of 23:55</span>
+  <span class="indices-as-of">As of 00:00</span>
   
   <div class="indices-group">
     <span class="indices-eyebrow">Market Indices &amp; FX</span>
@@ -456,11 +456,11 @@
 <div class="tabs-bar">
   <button class="tab-btn active" id="tab-today" onclick="switchTab('today')">
     Today's Briefing
-    <span class="tab-badge">9</span>
+    <span class="tab-badge">0</span>
   </button>
   <button class="tab-btn" id="tab-archive" onclick="switchTab('archive')">
     Archive
-    <span class="tab-badge">124</span>
+    <span class="tab-badge">133</span>
   </button>
 </div>
 
@@ -475,14 +475,66 @@
     </div>
     <div id="feed-today">
       
+      
+  <div class="empty">
+    <div class="empty-icon">&#x1F4F0;</div>
+    <h2>No articles today yet</h2>
+    <p>Run the news engine script to populate today's articles.</p>
+  </div>
+    </div>
+  </div>
+
+  <!-- ARCHIVE -->
+  <div class="tab-panel" id="panel-archive">
+    <div class="archive-note">
+      <span class="archive-note-icon">📁</span>
+      Previous days' intelligence briefings. Each day's articles are appended here automatically when the next day's run completes.
+    </div>
+    <div class="search-wrap">
+      <input type="text" id="q-archive" placeholder="Search archived headlines and summaries…" oninput="filter('archive')"/>
+      <span id="filter-count-archive"></span>
+    </div>
+    <div id="feed-archive">
+      
   <section class="day-group">
     <div class="day-header">
-      <span class="day-label">Top Stories Today</span>
+      <span class="day-label">2026-07-13</span>
       <div class="day-rule"></div>
-      <span class="day-count">4 articles</span>
+      <span class="day-count">9 articles</span>
     </div>
     
     <div class="card card-mid" id="c0" onclick="toggle('c0')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Asia-Pacific Markets Down</span>
+          <span class="title-ar" dir="rtl">أسواق آسيا والمحيط الهادئ تنخفض</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Asia-Pacific markets are down in early trading due to escalating regional tensions, with South Korea&#x27;s Kospi down 4.7% and Japan&#x27;s Nikkei down 1.7%. The EGX30 is down 0.1% year-to-date, with a 24.9% increase. The USD to EGP exchange rate is 49.86 for buy and 50.00 for sell. Interest rates are 19.00% for deposit and 20.00% for lending. Other markets such as Tadawul, ADX, and DFM are up 0.1%, 0.6%, and 0.9% respectively. The S&amp;P 500 is up 0.4% and the FTSE 100 is up 0.2%. Brent crude is up 3.3% at USD 78.49, while natural gas and gold are down 0.8% and 0.8% respectively.</div>
+        </div>
+          
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">تنخفض أسواق آسيا والمحيط الهادئ في التداول المبكر بسبب تصاعد التوترات الإقليمية، حيث انخفضت سوق كوريا الجنوبية بنسبة 4.7٪ وسوق اليابان بنسبة 1.7٪. انخفض مؤشر EGX30 بنسبة 0.1٪ حتى تاريخه، مع زيادة بنسبة 24.9٪. سعر صرف الدولار الأمريكي مقابل الجنيه المصري هو 49.86 للشراء و 50.00 للبيع. تبلغ أسعار الفائدة 19.00٪ للودائع و 20.00٪ للقروض. سوق تداول و سوق أبوظبي و سوق دبي للأوراق المالية ارتفعت بنسبة 0.1٪ و 0.6٪ و 0.9٪ على التوالي. ارتفع مؤشر S&amp;P 500 بنسبة 0.4٪ ومؤشر FTSE 100 بنسبة 0.2٪. ارتفع سعر النفط البرنت بنسبة 3.3٪ إلى 78.49 دولارًا أمريكيًا، في حين انخفض سعر الغاز الطبيعي والذهب بنسبة 0.8٪ و 0.8٪ على التوالي.</div>
+        </div>
+          
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/13/gcc-2q-earnings-to-show-iran-wars-financial-impact/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card card-mid" id="c1" onclick="toggle('c1')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">GCC Firms&#x27; 2Q Earnings Reflect Iran War Impact</span>
@@ -513,7 +565,7 @@
         <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/13/gcc-2q-earnings-to-show-iran-wars-financial-impact/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
       </div>
     </div>
-    <div class="card card-high" id="c1" onclick="toggle('c1')">
+    <div class="card card-high" id="c2" onclick="toggle('c2')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Tatweer Misr Prepares IPO</span>
@@ -560,7 +612,7 @@
         <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/13/a-new-state-owned-real-estate-firm-could-become-the-govts-latest-debt-restructuring-tool/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
       </div>
     </div>
-    <div class="card card-high" id="c2" onclick="toggle('c2')">
+    <div class="card card-high" id="c3" onclick="toggle('c3')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Egypt Launches Asset Company, Targets 78% Debt Ratio</span>
@@ -607,7 +659,7 @@
         <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/13/a-new-state-owned-real-estate-firm-could-become-the-govts-latest-debt-restructuring-tool/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
       </div>
     </div>
-    <div class="card card-high" id="c3" onclick="toggle('c3')">
+    <div class="card card-high" id="c4" onclick="toggle('c4')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">NUCA Launches Relief Package for Egypt&#x27;s New-City Projects</span>
@@ -652,45 +704,6 @@
         </div>
         </div>
         <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/13/nuca-rolls-out-fee-cuts-and-penalty-waivers-for-real-estate-developers/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
-      </div>
-    </div>
-  </section>
-  <section class="day-group">
-    <div class="day-header">
-      <span class="day-label">Also in the News</span>
-      <div class="day-rule"></div>
-      <span class="day-count">5 articles</span>
-    </div>
-    
-    <div class="card card-mid" id="c4" onclick="toggle('c4')">
-      <div class="card-head">
-        <div class="card-title">
-          <span class="title-en">Asia-Pacific Markets Down</span>
-          <span class="title-ar" dir="rtl">أسواق آسيا والمحيط الهادئ تنخفض</span>
-        </div>
-        <div class="card-head-right">
-          <span class="tier-badge tier-mid">Summary</span>
-          <div class="card-chevron">&#x203A;</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="card-grid">
-          
-        <div class="field full en-content">
-          <div class="field-label">Executive Summary</div>
-          <div class="field-text">Asia-Pacific markets are down in early trading due to escalating regional tensions, with South Korea&#x27;s Kospi down 4.7% and Japan&#x27;s Nikkei down 1.7%. The EGX30 is down 0.1% year-to-date, with a 24.9% increase. The USD to EGP exchange rate is 49.86 for buy and 50.00 for sell. Interest rates are 19.00% for deposit and 20.00% for lending. Other markets such as Tadawul, ADX, and DFM are up 0.1%, 0.6%, and 0.9% respectively. The S&amp;P 500 is up 0.4% and the FTSE 100 is up 0.2%. Brent crude is up 3.3% at USD 78.49, while natural gas and gold are down 0.8% and 0.8% respectively.</div>
-        </div>
-          
-          
-          
-        <div class="field full ar-content" dir="rtl">
-          <div class="field-label">الملخص التنفيذي</div>
-          <div class="field-text">تنخفض أسواق آسيا والمحيط الهادئ في التداول المبكر بسبب تصاعد التوترات الإقليمية، حيث انخفضت سوق كوريا الجنوبية بنسبة 4.7٪ وسوق اليابان بنسبة 1.7٪. انخفض مؤشر EGX30 بنسبة 0.1٪ حتى تاريخه، مع زيادة بنسبة 24.9٪. سعر صرف الدولار الأمريكي مقابل الجنيه المصري هو 49.86 للشراء و 50.00 للبيع. تبلغ أسعار الفائدة 19.00٪ للودائع و 20.00٪ للقروض. سوق تداول و سوق أبوظبي و سوق دبي للأوراق المالية ارتفعت بنسبة 0.1٪ و 0.6٪ و 0.9٪ على التوالي. ارتفع مؤشر S&amp;P 500 بنسبة 0.4٪ ومؤشر FTSE 100 بنسبة 0.2٪. ارتفع سعر النفط البرنت بنسبة 3.3٪ إلى 78.49 دولارًا أمريكيًا، في حين انخفض سعر الغاز الطبيعي والذهب بنسبة 0.8٪ و 0.8٪ على التوالي.</div>
-        </div>
-          
-          
-        </div>
-        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/13/gcc-2q-earnings-to-show-iran-wars-financial-impact/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
       </div>
     </div>
     <div class="card card-mid" id="c5" onclick="toggle('c5')">
@@ -818,22 +831,6 @@
       </div>
     </div>
   </section>
-      
-    </div>
-  </div>
-
-  <!-- ARCHIVE -->
-  <div class="tab-panel" id="panel-archive">
-    <div class="archive-note">
-      <span class="archive-note-icon">📁</span>
-      Previous days' intelligence briefings. Each day's articles are appended here automatically when the next day's run completes.
-    </div>
-    <div class="search-wrap">
-      <input type="text" id="q-archive" placeholder="Search archived headlines and summaries…" oninput="filter('archive')"/>
-      <span id="filter-count-archive"></span>
-    </div>
-    <div id="feed-archive">
-      
   <section class="day-group">
     <div class="day-header">
       <span class="day-label">2026-07-12</span>
@@ -5350,7 +5347,7 @@
 
 <script>
 // ── WEATHER PAGINATOR ──────────────────────────────────────────────────────────
-const WX_DATA   = [{t:"12AM",e:"🌙",c:26,d:"Clear",now:false},{t:"1AM",e:"🌙",c:24,d:"Clear",now:false},{t:"2AM",e:"🌙",c:24,d:"Clear",now:false},{t:"3AM",e:"🌙",c:23,d:"Clear",now:false},{t:"4AM",e:"🌙",c:23,d:"Clear",now:false},{t:"5AM",e:"🌙",c:22,d:"Clear",now:false},{t:"6AM",e:"☀️",c:22,d:"Clear",now:false},{t:"7AM",e:"☀️",c:22,d:"Clear",now:false},{t:"8AM",e:"☀️",c:24,d:"Clear",now:false},{t:"9AM",e:"🌤️",c:26,d:"Mainly clear",now:false},{t:"10AM",e:"🌤️",c:28,d:"Mainly clear",now:false},{t:"11AM",e:"🌤️",c:30,d:"Mainly clear",now:false},{t:"12PM",e:"🌤️",c:32,d:"Mainly clear",now:false},{t:"1PM",e:"🌤️",c:34,d:"Mainly clear",now:false},{t:"2PM",e:"☀️",c:35,d:"Clear",now:false},{t:"3PM",e:"☀️",c:36,d:"Clear",now:false},{t:"4PM",e:"🌤️",c:36,d:"Mainly clear",now:false},{t:"5PM",e:"🌤️",c:36,d:"Mainly clear",now:false},{t:"6PM",e:"🌤️",c:35,d:"Mainly clear",now:false},{t:"7PM",e:"🌙",c:35,d:"Mainly clear",now:false},{t:"8PM",e:"🌙",c:34,d:"Mainly clear",now:false},{t:"9PM",e:"🌙",c:31,d:"Clear",now:false},{t:"10PM",e:"🌙",c:29,d:"Clear",now:false},{t:"11PM",e:"🌙",c:28,d:"Clear",now:true}];
+const WX_DATA   = [{t:"12AM",e:"🌙",c:27,d:"Clear",now:true},{t:"1AM",e:"🌙",c:25,d:"Clear",now:false},{t:"2AM",e:"🌙",c:24,d:"Clear",now:false},{t:"3AM",e:"🌙",c:24,d:"Clear",now:false},{t:"4AM",e:"🌙",c:23,d:"Clear",now:false},{t:"5AM",e:"🌙",c:23,d:"Clear",now:false},{t:"6AM",e:"☀️",c:23,d:"Clear",now:false},{t:"7AM",e:"☀️",c:23,d:"Clear",now:false},{t:"8AM",e:"☀️",c:24,d:"Clear",now:false},{t:"9AM",e:"🌤️",c:26,d:"Mainly clear",now:false},{t:"10AM",e:"🌤️",c:28,d:"Mainly clear",now:false},{t:"11AM",e:"🌤️",c:29,d:"Mainly clear",now:false},{t:"12PM",e:"🌤️",c:31,d:"Mainly clear",now:false},{t:"1PM",e:"🌤️",c:33,d:"Mainly clear",now:false},{t:"2PM",e:"☀️",c:35,d:"Clear",now:false},{t:"3PM",e:"🌤️",c:36,d:"Mainly clear",now:false},{t:"4PM",e:"🌤️",c:37,d:"Mainly clear",now:false},{t:"5PM",e:"⛅",c:37,d:"Partly cloudy",now:false},{t:"6PM",e:"⛅",c:37,d:"Partly cloudy",now:false},{t:"7PM",e:"🌙",c:36,d:"Clear",now:false},{t:"8PM",e:"🌙",c:33,d:"Clear",now:false},{t:"9PM",e:"🌙",c:31,d:"Clear",now:false},{t:"10PM",e:"🌙",c:29,d:"Clear",now:false},{t:"11PM",e:"🌙",c:27,d:"Clear",now:false}];
 let   wxCenter_idx = 0;  // index of the slot shown in the CENTER position
 
 function wxPage(dir) {
