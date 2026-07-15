@@ -310,7 +310,7 @@
     <div class="hero-eyebrow">Daily Market Briefing</div>
     <h1 class="hero-title">Redcon Properties<br><strong>Intelligence Feed</strong></h1>
     <p class="hero-sub">Daily News analyzed for Egypt's construction, infrastructure, and real estate market.</p>
-    <div class="hero-meta">Last updated: 15 July 2026, 23:55</div>
+    <div class="hero-meta">Last updated: 16 July 2026, 00:00</div>
   </div>
   
 <div class="wx-widget" id="wxWidget">
@@ -318,10 +318,10 @@
     <div class="wx-location">Cairo <span class="wx-flag">🇪🇬</span></div>
     <div class="wx-big-row">
       <span class="wx-big-icon">🌙</span>
-      <span class="wx-big-temp">27°</span>
+      <span class="wx-big-temp">26°</span>
     </div>
     <div class="wx-condition">Clear</div>
-    <div class="wx-range">H 36° &nbsp;·&nbsp; L 23°</div>
+    <div class="wx-range">H 34° &nbsp;·&nbsp; L 24°</div>
   </div>
   <div class="wx-hourly">
     <button class="wx-nav wx-prev" onclick="wxPage(-1)" aria-label="Previous hours">&#x2039;</button>
@@ -335,7 +335,7 @@
 
 <!-- INDICES -->
 <div class="indices-bar">
-  <span class="indices-as-of">As of 23:55</span>
+  <span class="indices-as-of">As of 00:00</span>
   
   <div class="indices-group">
     <span class="indices-eyebrow">Market Indices &amp; FX</span>
@@ -400,7 +400,7 @@
       Crude Oil
       <button class="idx-info-btn" data-tip="WTI Crude Oil futures price per barrel in USD, sourced from Yahoo Finance." onclick="showTip(this)" title="About Crude Oil">i</button>
     </span>
-    <span class="idx-value">$80.30</span>
+    <span class="idx-value">$80.42</span>
   </div>
       
   <div class="idx-item">
@@ -456,11 +456,11 @@
 <div class="tabs-bar">
   <button class="tab-btn active" id="tab-today" onclick="switchTab('today')">
     Today's Briefing
-    <span class="tab-badge">10</span>
+    <span class="tab-badge">0</span>
   </button>
   <button class="tab-btn" id="tab-archive" onclick="switchTab('archive')">
     Archive
-    <span class="tab-badge">137</span>
+    <span class="tab-badge">147</span>
   </button>
 </div>
 
@@ -475,11 +475,32 @@
     </div>
     <div id="feed-today">
       
+      
+  <div class="empty">
+    <div class="empty-icon">&#x1F4F0;</div>
+    <h2>No articles today yet</h2>
+    <p>Run the news engine script to populate today's articles.</p>
+  </div>
+    </div>
+  </div>
+
+  <!-- ARCHIVE -->
+  <div class="tab-panel" id="panel-archive">
+    <div class="archive-note">
+      <span class="archive-note-icon">📁</span>
+      Previous days' intelligence briefings. Each day's articles are appended here automatically when the next day's run completes.
+    </div>
+    <div class="search-wrap">
+      <input type="text" id="q-archive" placeholder="Search archived headlines and summaries…" oninput="filter('archive')"/>
+      <span id="filter-count-archive"></span>
+    </div>
+    <div id="feed-archive">
+      
   <section class="day-group">
     <div class="day-header">
-      <span class="day-label">Top Stories Today</span>
+      <span class="day-label">2026-07-15</span>
       <div class="day-rule"></div>
-      <span class="day-count">4 articles</span>
+      <span class="day-count">10 articles</span>
     </div>
     
     <div class="card card-high" id="c0" onclick="toggle('c0')">
@@ -529,7 +550,69 @@
         <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/hardhats/egypts-investment-plan-shifts-the-state-from-builder-to-enabler/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
       </div>
     </div>
-    <div class="card card-high" id="c1" onclick="toggle('c1')">
+    <div class="card card-mid" id="c1" onclick="toggle('c1')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Asia-Pacific Markets Rise 6.3%</span>
+          <span class="title-ar" dir="rtl">أسواق آسيا والمحيط الهادئ ترتفع 6.3%</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Asia-Pacific markets opened higher, led by South Korea&#x27;s Kospi gaining 6.3%, and Japan&#x27;s Nikkei up 0.7%. The rally was driven by an unexpected drop in US inflation, which cooled interest rate hike fears. Oil prices stabilized after Washington dropped a shipping levy in Hormuz. The EGX30 index was down 0.6% at 52,299, while the USD exchange rate was 50.65 for buy and 50.79 for sell. Interest rates remained at 19.00% for deposit and 20.00% for lending. Other regional markets, including Tadawul, ADX, and DFM, also saw declines, while the S&amp;P 500, FTSE 100, and Euro Stoxx 50 saw gains. Brent crude was up 1.0% at USD 85.60, and natural gas was up 0.4% at USD 2.92.</div>
+        </div>
+          
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">افتتحت أسواق آسيا والمحيط الهادئ على ارتفاع، بقيادة سوق كوريا الجنوبية الذي حقق مكاسب بنسبة 6.3٪، وسوق اليابان بنسبة 0.7٪. وكان السبب في الارتفاع هو انخفاض غير متوقع في التضخم الأمريكي، مما أدى إلى تهدئة مخاوف رفع أسعار الفائدة. واستقر سعر النفط بعد أن ألقت واشنطن بالlevy على الشحن في مضيق هرمز. وكان مؤشر EGX30 منخفضاً بنسبة 0.6٪ عند 52,299، في حين كان سعر صرف الدولار الأمريكي 50.65 للشراء و 50.79 للبيع. وظلت أسعار الفائدة عند 19.00٪ للودائع و 20.00٪ للقروض. وشهدت الأسواق الإقليمية الأخرى، بما في ذلك تداول وADX وDFM، انخفاضات، في حين شهدت سوق S&amp;P 500 وFTSE 100 وEuro Stoxx 50 مكاسب. وكان سعر النفط Brent أعلى بنسبة 1.0٪ عند 85.60 دولارًا، وسعر الغاز الطبيعي أعلى بنسبة 0.4٪ عند 2.92 دولارًا.</div>
+        </div>
+          
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/15/rate-hike-wagers-rebuild-across-the-fed-boe-and-ecb/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card card-mid" id="c2" onclick="toggle('c2')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Fed Hike Odds Rise</span>
+          <span class="title-ar" dir="rtl">ترتفع فرص رفع أسعار الفائدة</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Western central banks, including the Federal Reserve, are moving towards tighter policy due to rising oil prices and inflation concerns. The market now puts the odds of a July Fed hike at roughly even, with the two-year Treasury yield above 4.25%. Fed Governor Christopher Waller suggested considering a rate hike if core inflation delivers another hot reading. Economists expect June CPI to ease, with annual inflation slowing to 3.8% from 4.2%. Despite this, traders expect tightening, with rate futures pricing one Fed hike by year-end and a second by mid-2027. The Bank of England and European Central Bank also face pressure, with markets pricing a quarter-point hike by September and another before year-end. Europe&#x27;s exposure to energy imports has increased due to the oil run-up, leaving the UK and Euro area vulnerable to oil-driven inflation.</div>
+        </div>
+          
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">تتجه البنوك المركزية الغربية، بما في ذلك البنك الفيدرالي، نحو سياسة أكثر تشددا بسبب ارتفاع أسعار النفط ومخاوف التضخم. يضع السوق الآن فرص رفع أسعار الفائدة في يوليو عند حوالي الخمسين في المئة، مع ارتفاع عائد السندات الخمسية إلى أكثر من 4.25%. اقترح حاكم البنك الفيدرالي كريستوفر والر النظر في رفع أسعار الفائدة إذا سجل التضخم الأساسي قراءة ساخنة أخرى. يتوقع الاقتصاديون أن يخفف معدل التضخم السنوي في يونيو، مع تباطؤ التضخم السنوي إلى 3.8% من 4.2%. على الرغم من ذلك، يتوقع المتداولون تشديد السياسة، مع تسعير مستقبلات أسعار الفائدة لرفع أسعار الفائدة مرة واحدة في نهاية العام ومرة أخرى في منتصف عام 2027. تواجه بنك إنجلترا والبنك المركزي الأوروبي أيضاً ضغوطاً، مع تسعير السوق لرفع نقطة ربعية في سبتمبر وآخر قبل نهاية العام. زادت تعرض أوروبا للاستيراد النفطي بسبب ارتفاع أسعار النفط، مما ترك المملكة المتحدة ومنطقة اليورو عرضة للتضخم النفطي.</div>
+        </div>
+          
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/15/rate-hike-wagers-rebuild-across-the-fed-boe-and-ecb/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card card-high" id="c3" onclick="toggle('c3')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Al Ahly Invests EGP 1.5bn in New Mansoura Sports Complex</span>
@@ -576,7 +659,38 @@
         <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/15/turkeys-ukinox-to-set-up-usd-14-mn-egypt-plant/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c2" onclick="toggle('c2')">
+    <div class="card card-mid" id="c4" onclick="toggle('c4')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">AfDB Backs Dandara Solar with $66mn</span>
+          <span class="title-ar" dir="rtl">البنك الأفريقي للتنمية يدعم مشروع دندرة للطاقة الشمسية بـ 66 مليون دولار</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">The African Development Bank (AfDB) has approved up to $66 million to finance a 500-MW phase of the Dandara solar project in Naga Hammadi, Egypt. The project, which includes a 100-MWh battery storage system, is part of Scatec&#x27;s 1.1-GW plan. The AfDB package consists of $46 million from the bank&#x27;s resources and $20 million in concessional funding from the Climate Investment Funds&#x27; Clean Technology Fund. The project is backed by a 25-year power purchase agreement with the Aluminium Company of Egypt (EgyptAlum) as the sole offtaker. The plant is expected to come online in early 2028, generating approximately 1.4 billion kWh per year and reducing EgyptAlum&#x27;s greenhouse gas emissions by up to 30%. The project is part of Egypt&#x27;s Nexus of Water, Food and Energy program, which has mobilized around $4 billion in concessional financing for private renewable projects totaling 4.2 GW.</div>
+        </div>
+          
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">وافق مجلس إدارة البنك الأفريقي للتنمية على توفير تمويل يصل إلى 66 مليون دولار لتمويل مرحلة من مشروع دندرة للطاقة الشمسية في نجع حمادي، مصر. يضم المشروع نظام تخزين بطاريات سعة 100 ميغاواط ساعي، ويعتبر جزءًا من خطة سكيتك لتحقيق 1.1 جيجاوات. يتكون حزمة البنك الأفريقي للتنمية من 46 مليون دولار من موارد البنك و20 مليون دولار من التمويل الميسر من صندوق التكنولوجيا النظيفة في صندوق الاستثمارات المناخية. يُUPPORTED المشروع من خلال اتفاقية شراء الطاقة لمدة 25 عامًا مع شركة مصر للألومنيوم (مصر ألوم) كمتلقي وحيد. من المتوقع أن يبدأ المشروع في التشغيل في بداية عام 2028، مولداً حوالي 1.4 مليار كيلووات ساعي في السنة، وتقليل انبعاثات غازات الاحتباس الحراري لشركة مصر ألوم بنسبة تصل إلى 30%. يعتبر المشروع جزءًا من برنامج مصر للتنسيق بين المياه والغذاء والطاقة، الذي حشد حوالي 4 مليارات دولار من التمويل الميسر لمشاريع الطاقة المتجددة الخاصة البالغة 4.2 جيجاوات.</div>
+        </div>
+          
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/15/afdbs-usd-66-mn-solar-play-keeps-egyptalum-green/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card card-mid" id="c5" onclick="toggle('c5')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Mylerz Raises Funds for Egypt Expansion</span>
@@ -607,7 +721,100 @@
         <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/15/mylerz-raises-over-egp-100-mn-to-fund-domestic-expansion/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c3" onclick="toggle('c3')">
+    <div class="card card-mid" id="c6" onclick="toggle('c6')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egypt Pays $240M Monthly to Foreign Oil Firms</span>
+          <span class="title-ar" dir="rtl">مصر تدفع 240 مليون دولار شهرياً لشركات النفط الأجنبية</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">The Egyptian government has established a new payment mechanism to pay foreign oil firms nearly $240 million monthly to prevent arrears buildup. The Oil Ministry&#x27;s &#x27;full payment&#x27; system will cover monthly purchases of foreign partners&#x27; shares of locally produced crude and gas. A dedicated committee will prepare monthly payment schedules for companies across concessions. The government has cleared its outstanding arrears to foreign oil companies, down from $6.1 billion two years earlier. Eni, Shell, and Apache have agreed to regular monthly settlements, accounting for 50-60% of monthly payments. The government aims to secure $6.2 billion in FDI for the oil sector this fiscal year. Additionally, the government has reduced arrears owed to foreign independent power producers by roughly $500 million and is now paying around $60 million monthly.</div>
+        </div>
+          
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">أقامت الحكومة المصرية آلية新的 للوفاء بالتزاماتها المالية تجاه شركات النفط الأجنبية، حيث ستدفع ما يقرب من 240 مليون دولار شهرياً لمنع تراكم الديون. نظام &#x27;الوفاء الكامل&#x27; الذي أقرته وزارة البترول سيتولى تغطية مشتريات الحكومة الشهرية من حصة الشركاء الأجانب في الإنتاج المحلي من النفط والغاز. وسيتم تشكيل لجنة مخصصة لتحضير جداول مدفوعات شهرية للشركات عبر الامتيازات. وقد وفأت الحكومة ديونها المتأخرة لشركات النفط الأجنبية، حيث انخفضت من 6.1 مليار دولار قبل عامين. وافق كل من إيني وシェل وأباتشي على التسويات الشهرية المنتظمة، ويمثلون حوالي 50-60% من المدفوعات الشهرية. تهدف الحكومة إلى تأمين 6.2 مليار دولار من الاستثمارات الأجنبية المباشرة للقطاع النفطي في السنة المالية الحالية. بالإضافة إلى ذلك، خفضت الحكومة من الديون المتأخرة المترتبة عليها تجاه منتجي الطاقة المستقلين الأجانب بنحو 500 مليون دولار، وتدفع الآن حوالي 60 مليون دولار شهرياً.</div>
+        </div>
+          
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/15/govt-sets-up-regular-payouts-for-oil-and-power-companies-after-clearing-arrears/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card card-mid" id="c7" onclick="toggle('c7')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Excelerate Acadia FSRU Arrives at Aqaba Port</span>
+          <span class="title-ar" dir="rtl">وحدة التخزين والاعادة الغازية Excelerate Acadia تصل إلى ميناء العقبة</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">A new floating storage and regasification unit, the Excelerate Acadia, has arrived at Jordan&#x27;s Aqaba port. The unit, owned by US-based Excelerate Energy, has a capacity of 750 mmcf/d and will be shared by Egypt and Jordan until December. Egypt can draw up to 450 mmcf/d through the Arab Gas Pipeline, while Jordan will take around 300 mmcf/d. The Excelerate Acadia&#x27;s arrival has freed up the Energos Force, which has moved to Ain Sokhna and will stay there until its charter expires in August. Excelerate signed a charter with Jordan&#x27;s National Electric Power Company in May to deploy the vessel at Aqaba. The FSRU was originally built for Excelerate&#x27;s planned Iraq import terminal but was reassigned temporarily after the Iraqi project slipped. Egypt now has access to six FSRUs, including the shared Excelerate Acadia at Aqaba and five stationed at its own ports.</div>
+        </div>
+          
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">وصلت وحدة التخزين والاعادة الغازية العائمة الجديدة، إكسيليريت أكاديا، إلى ميناء العقبة في الأردن. الوحدة، التي تملكها شركة إكسيليريت إنرجي الأمريكية، تتمتع بسعة 750 مليون قدم مكعب في اليوم وستتم مشاركتها بين مصر والأردن حتى نهاية ديسمبر. يمكن لمصر سحب ما يصل إلى 450 مليون قدم مكعب في اليوم من خلال خط أنابيب الغاز العربي، في حين سيأخذ الأردن حوالي 300 مليون قدم مكعب في اليوم. أدت وصول إكسيليريت أكاديا إلى إطلاق سراح إينرجوس فورس، التي انتقلت إلى عين سخنة وستبقى هناك حتى انتهاء عقد إيجارها في أغسطس. وقعت إكسيليريت اتفاقية تأجير مع شركة الكهرباء الوطنية الأردنية في مايو لنشر السفينة في ميناء العقبة. تم بناء الوحدة الأصلية لمحطة استيراد الغاز العراقية التابعة لشركة إكسيليريت، ولكن تم إعادة توجيهها مؤقتًا بعد تأخير المشروع العراقي. تتمتع مصر الآن بوسائل الوصول إلى ست وحدات تخزين واعادة غازية، بما في ذلك إكسيليريت أكاديا المشتركة في ميناء العقبة وخمسة في موانئها الخاصة.</div>
+        </div>
+          
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/15/house-passes-bill-reorganizing-mostakbal-misr/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card card-mid" id="c8" onclick="toggle('c8')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Fujairah International Oil and Gas Corporation Eyes Egypt Storage</span>
+          <span class="title-ar" dir="rtl">فوجيره للنفط والغاز تهدف إلى تخزين في مصر</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Fujairah International Oil and Gas Corporation is in talks with the Egyptian General Petroleum Corporation to lease crude and petroleum-product storage on Egypt&#x27;s Red Sea coast. This move follows a similar pitch by AD Ports in April. Egypt has around 29 million barrels of spare storage across its main ports and 79 petroleum storage facilities built or upgraded in recent years. In March, Egypt put up 10 storage facilities at Ain Sokhna and Ras Badran for lease. Fujairah is also partnering with Wepco on a $457 million expansion of Al Hamra Port, which will double crude storage to 5.3 million barrels and add a 130,000-ton petroleum-products complex.</div>
+        </div>
+          
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">تجرى فوجيره للنفط والغاز محادثات مع الشركة العامة المصرية للبترول لتأجير تخزين للنفط والمواد البترولية على ساحل البحر الأحمر في مصر. هذا التحرك يأتي بعد عرض مماثل من قبل ميناء أبوظبي في أبريل. تتمتع مصر بحوالي 29 مليون برميل من السعة التخزينية الفائضة عبر موانئها الرئيسية و 79 منشأة تخزين بترولية تم بناؤها أو تحديثها في السنوات الأخيرة. في مارس، وضعت مصر 10 منشآت تخزين في عين سوخنة ورس بدران للتأجير. كما تشارك فوجيره مع ويبكو في توسعة ميناء الحمراء بقيمة 457 مليون دولار، والتي ستضاعف سعة تخزين النفط إلى 5.3 مليون برميل وستضيف معقدًا لمنتجات البترول يبلغ وزنه 130 ألف طن.</div>
+        </div>
+          
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/15/house-passes-bill-reorganizing-mostakbal-misr/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card card-mid" id="c9" onclick="toggle('c9')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Egypt Parliament Passes Mostakbal Misr Reorganization Bill</span>
@@ -639,216 +846,6 @@
       </div>
     </div>
   </section>
-  <section class="day-group">
-    <div class="day-header">
-      <span class="day-label">Also in the News</span>
-      <div class="day-rule"></div>
-      <span class="day-count">6 articles</span>
-    </div>
-    
-    <div class="card card-mid" id="c4" onclick="toggle('c4')">
-      <div class="card-head">
-        <div class="card-title">
-          <span class="title-en">Asia-Pacific Markets Rise 6.3%</span>
-          <span class="title-ar" dir="rtl">أسواق آسيا والمحيط الهادئ ترتفع 6.3%</span>
-        </div>
-        <div class="card-head-right">
-          <span class="tier-badge tier-mid">Summary</span>
-          <div class="card-chevron">&#x203A;</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="card-grid">
-          
-        <div class="field full en-content">
-          <div class="field-label">Executive Summary</div>
-          <div class="field-text">Asia-Pacific markets opened higher, led by South Korea&#x27;s Kospi gaining 6.3%, and Japan&#x27;s Nikkei up 0.7%. The rally was driven by an unexpected drop in US inflation, which cooled interest rate hike fears. Oil prices stabilized after Washington dropped a shipping levy in Hormuz. The EGX30 index was down 0.6% at 52,299, while the USD exchange rate was 50.65 for buy and 50.79 for sell. Interest rates remained at 19.00% for deposit and 20.00% for lending. Other regional markets, including Tadawul, ADX, and DFM, also saw declines, while the S&amp;P 500, FTSE 100, and Euro Stoxx 50 saw gains. Brent crude was up 1.0% at USD 85.60, and natural gas was up 0.4% at USD 2.92.</div>
-        </div>
-          
-          
-          
-        <div class="field full ar-content" dir="rtl">
-          <div class="field-label">الملخص التنفيذي</div>
-          <div class="field-text">افتتحت أسواق آسيا والمحيط الهادئ على ارتفاع، بقيادة سوق كوريا الجنوبية الذي حقق مكاسب بنسبة 6.3٪، وسوق اليابان بنسبة 0.7٪. وكان السبب في الارتفاع هو انخفاض غير متوقع في التضخم الأمريكي، مما أدى إلى تهدئة مخاوف رفع أسعار الفائدة. واستقر سعر النفط بعد أن ألقت واشنطن بالlevy على الشحن في مضيق هرمز. وكان مؤشر EGX30 منخفضاً بنسبة 0.6٪ عند 52,299، في حين كان سعر صرف الدولار الأمريكي 50.65 للشراء و 50.79 للبيع. وظلت أسعار الفائدة عند 19.00٪ للودائع و 20.00٪ للقروض. وشهدت الأسواق الإقليمية الأخرى، بما في ذلك تداول وADX وDFM، انخفاضات، في حين شهدت سوق S&amp;P 500 وFTSE 100 وEuro Stoxx 50 مكاسب. وكان سعر النفط Brent أعلى بنسبة 1.0٪ عند 85.60 دولارًا، وسعر الغاز الطبيعي أعلى بنسبة 0.4٪ عند 2.92 دولارًا.</div>
-        </div>
-          
-          
-        </div>
-        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/15/rate-hike-wagers-rebuild-across-the-fed-boe-and-ecb/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
-      </div>
-    </div>
-    <div class="card card-mid" id="c5" onclick="toggle('c5')">
-      <div class="card-head">
-        <div class="card-title">
-          <span class="title-en">Fed Hike Odds Rise</span>
-          <span class="title-ar" dir="rtl">ترتفع فرص رفع أسعار الفائدة</span>
-        </div>
-        <div class="card-head-right">
-          <span class="tier-badge tier-mid">Summary</span>
-          <div class="card-chevron">&#x203A;</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="card-grid">
-          
-        <div class="field full en-content">
-          <div class="field-label">Executive Summary</div>
-          <div class="field-text">Western central banks, including the Federal Reserve, are moving towards tighter policy due to rising oil prices and inflation concerns. The market now puts the odds of a July Fed hike at roughly even, with the two-year Treasury yield above 4.25%. Fed Governor Christopher Waller suggested considering a rate hike if core inflation delivers another hot reading. Economists expect June CPI to ease, with annual inflation slowing to 3.8% from 4.2%. Despite this, traders expect tightening, with rate futures pricing one Fed hike by year-end and a second by mid-2027. The Bank of England and European Central Bank also face pressure, with markets pricing a quarter-point hike by September and another before year-end. Europe&#x27;s exposure to energy imports has increased due to the oil run-up, leaving the UK and Euro area vulnerable to oil-driven inflation.</div>
-        </div>
-          
-          
-          
-        <div class="field full ar-content" dir="rtl">
-          <div class="field-label">الملخص التنفيذي</div>
-          <div class="field-text">تتجه البنوك المركزية الغربية، بما في ذلك البنك الفيدرالي، نحو سياسة أكثر تشددا بسبب ارتفاع أسعار النفط ومخاوف التضخم. يضع السوق الآن فرص رفع أسعار الفائدة في يوليو عند حوالي الخمسين في المئة، مع ارتفاع عائد السندات الخمسية إلى أكثر من 4.25%. اقترح حاكم البنك الفيدرالي كريستوفر والر النظر في رفع أسعار الفائدة إذا سجل التضخم الأساسي قراءة ساخنة أخرى. يتوقع الاقتصاديون أن يخفف معدل التضخم السنوي في يونيو، مع تباطؤ التضخم السنوي إلى 3.8% من 4.2%. على الرغم من ذلك، يتوقع المتداولون تشديد السياسة، مع تسعير مستقبلات أسعار الفائدة لرفع أسعار الفائدة مرة واحدة في نهاية العام ومرة أخرى في منتصف عام 2027. تواجه بنك إنجلترا والبنك المركزي الأوروبي أيضاً ضغوطاً، مع تسعير السوق لرفع نقطة ربعية في سبتمبر وآخر قبل نهاية العام. زادت تعرض أوروبا للاستيراد النفطي بسبب ارتفاع أسعار النفط، مما ترك المملكة المتحدة ومنطقة اليورو عرضة للتضخم النفطي.</div>
-        </div>
-          
-          
-        </div>
-        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/15/rate-hike-wagers-rebuild-across-the-fed-boe-and-ecb/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
-      </div>
-    </div>
-    <div class="card card-mid" id="c6" onclick="toggle('c6')">
-      <div class="card-head">
-        <div class="card-title">
-          <span class="title-en">AfDB Backs Dandara Solar with $66mn</span>
-          <span class="title-ar" dir="rtl">البنك الأفريقي للتنمية يدعم مشروع دندرة للطاقة الشمسية بـ 66 مليون دولار</span>
-        </div>
-        <div class="card-head-right">
-          <span class="tier-badge tier-mid">Summary</span>
-          <div class="card-chevron">&#x203A;</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="card-grid">
-          
-        <div class="field full en-content">
-          <div class="field-label">Executive Summary</div>
-          <div class="field-text">The African Development Bank (AfDB) has approved up to $66 million to finance a 500-MW phase of the Dandara solar project in Naga Hammadi, Egypt. The project, which includes a 100-MWh battery storage system, is part of Scatec&#x27;s 1.1-GW plan. The AfDB package consists of $46 million from the bank&#x27;s resources and $20 million in concessional funding from the Climate Investment Funds&#x27; Clean Technology Fund. The project is backed by a 25-year power purchase agreement with the Aluminium Company of Egypt (EgyptAlum) as the sole offtaker. The plant is expected to come online in early 2028, generating approximately 1.4 billion kWh per year and reducing EgyptAlum&#x27;s greenhouse gas emissions by up to 30%. The project is part of Egypt&#x27;s Nexus of Water, Food and Energy program, which has mobilized around $4 billion in concessional financing for private renewable projects totaling 4.2 GW.</div>
-        </div>
-          
-          
-          
-        <div class="field full ar-content" dir="rtl">
-          <div class="field-label">الملخص التنفيذي</div>
-          <div class="field-text">وافق مجلس إدارة البنك الأفريقي للتنمية على توفير تمويل يصل إلى 66 مليون دولار لتمويل مرحلة من مشروع دندرة للطاقة الشمسية في نجع حمادي، مصر. يضم المشروع نظام تخزين بطاريات سعة 100 ميغاواط ساعي، ويعتبر جزءًا من خطة سكيتك لتحقيق 1.1 جيجاوات. يتكون حزمة البنك الأفريقي للتنمية من 46 مليون دولار من موارد البنك و20 مليون دولار من التمويل الميسر من صندوق التكنولوجيا النظيفة في صندوق الاستثمارات المناخية. يُUPPORTED المشروع من خلال اتفاقية شراء الطاقة لمدة 25 عامًا مع شركة مصر للألومنيوم (مصر ألوم) كمتلقي وحيد. من المتوقع أن يبدأ المشروع في التشغيل في بداية عام 2028، مولداً حوالي 1.4 مليار كيلووات ساعي في السنة، وتقليل انبعاثات غازات الاحتباس الحراري لشركة مصر ألوم بنسبة تصل إلى 30%. يعتبر المشروع جزءًا من برنامج مصر للتنسيق بين المياه والغذاء والطاقة، الذي حشد حوالي 4 مليارات دولار من التمويل الميسر لمشاريع الطاقة المتجددة الخاصة البالغة 4.2 جيجاوات.</div>
-        </div>
-          
-          
-        </div>
-        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/15/afdbs-usd-66-mn-solar-play-keeps-egyptalum-green/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
-      </div>
-    </div>
-    <div class="card card-mid" id="c7" onclick="toggle('c7')">
-      <div class="card-head">
-        <div class="card-title">
-          <span class="title-en">Egypt Pays $240M Monthly to Foreign Oil Firms</span>
-          <span class="title-ar" dir="rtl">مصر تدفع 240 مليون دولار شهرياً لشركات النفط الأجنبية</span>
-        </div>
-        <div class="card-head-right">
-          <span class="tier-badge tier-mid">Summary</span>
-          <div class="card-chevron">&#x203A;</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="card-grid">
-          
-        <div class="field full en-content">
-          <div class="field-label">Executive Summary</div>
-          <div class="field-text">The Egyptian government has established a new payment mechanism to pay foreign oil firms nearly $240 million monthly to prevent arrears buildup. The Oil Ministry&#x27;s &#x27;full payment&#x27; system will cover monthly purchases of foreign partners&#x27; shares of locally produced crude and gas. A dedicated committee will prepare monthly payment schedules for companies across concessions. The government has cleared its outstanding arrears to foreign oil companies, down from $6.1 billion two years earlier. Eni, Shell, and Apache have agreed to regular monthly settlements, accounting for 50-60% of monthly payments. The government aims to secure $6.2 billion in FDI for the oil sector this fiscal year. Additionally, the government has reduced arrears owed to foreign independent power producers by roughly $500 million and is now paying around $60 million monthly.</div>
-        </div>
-          
-          
-          
-        <div class="field full ar-content" dir="rtl">
-          <div class="field-label">الملخص التنفيذي</div>
-          <div class="field-text">أقامت الحكومة المصرية آلية新的 للوفاء بالتزاماتها المالية تجاه شركات النفط الأجنبية، حيث ستدفع ما يقرب من 240 مليون دولار شهرياً لمنع تراكم الديون. نظام &#x27;الوفاء الكامل&#x27; الذي أقرته وزارة البترول سيتولى تغطية مشتريات الحكومة الشهرية من حصة الشركاء الأجانب في الإنتاج المحلي من النفط والغاز. وسيتم تشكيل لجنة مخصصة لتحضير جداول مدفوعات شهرية للشركات عبر الامتيازات. وقد وفأت الحكومة ديونها المتأخرة لشركات النفط الأجنبية، حيث انخفضت من 6.1 مليار دولار قبل عامين. وافق كل من إيني وシェل وأباتشي على التسويات الشهرية المنتظمة، ويمثلون حوالي 50-60% من المدفوعات الشهرية. تهدف الحكومة إلى تأمين 6.2 مليار دولار من الاستثمارات الأجنبية المباشرة للقطاع النفطي في السنة المالية الحالية. بالإضافة إلى ذلك، خفضت الحكومة من الديون المتأخرة المترتبة عليها تجاه منتجي الطاقة المستقلين الأجانب بنحو 500 مليون دولار، وتدفع الآن حوالي 60 مليون دولار شهرياً.</div>
-        </div>
-          
-          
-        </div>
-        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/15/govt-sets-up-regular-payouts-for-oil-and-power-companies-after-clearing-arrears/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
-      </div>
-    </div>
-    <div class="card card-mid" id="c8" onclick="toggle('c8')">
-      <div class="card-head">
-        <div class="card-title">
-          <span class="title-en">Excelerate Acadia FSRU Arrives at Aqaba Port</span>
-          <span class="title-ar" dir="rtl">وحدة التخزين والاعادة الغازية Excelerate Acadia تصل إلى ميناء العقبة</span>
-        </div>
-        <div class="card-head-right">
-          <span class="tier-badge tier-mid">Summary</span>
-          <div class="card-chevron">&#x203A;</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="card-grid">
-          
-        <div class="field full en-content">
-          <div class="field-label">Executive Summary</div>
-          <div class="field-text">A new floating storage and regasification unit, the Excelerate Acadia, has arrived at Jordan&#x27;s Aqaba port. The unit, owned by US-based Excelerate Energy, has a capacity of 750 mmcf/d and will be shared by Egypt and Jordan until December. Egypt can draw up to 450 mmcf/d through the Arab Gas Pipeline, while Jordan will take around 300 mmcf/d. The Excelerate Acadia&#x27;s arrival has freed up the Energos Force, which has moved to Ain Sokhna and will stay there until its charter expires in August. Excelerate signed a charter with Jordan&#x27;s National Electric Power Company in May to deploy the vessel at Aqaba. The FSRU was originally built for Excelerate&#x27;s planned Iraq import terminal but was reassigned temporarily after the Iraqi project slipped. Egypt now has access to six FSRUs, including the shared Excelerate Acadia at Aqaba and five stationed at its own ports.</div>
-        </div>
-          
-          
-          
-        <div class="field full ar-content" dir="rtl">
-          <div class="field-label">الملخص التنفيذي</div>
-          <div class="field-text">وصلت وحدة التخزين والاعادة الغازية العائمة الجديدة، إكسيليريت أكاديا، إلى ميناء العقبة في الأردن. الوحدة، التي تملكها شركة إكسيليريت إنرجي الأمريكية، تتمتع بسعة 750 مليون قدم مكعب في اليوم وستتم مشاركتها بين مصر والأردن حتى نهاية ديسمبر. يمكن لمصر سحب ما يصل إلى 450 مليون قدم مكعب في اليوم من خلال خط أنابيب الغاز العربي، في حين سيأخذ الأردن حوالي 300 مليون قدم مكعب في اليوم. أدت وصول إكسيليريت أكاديا إلى إطلاق سراح إينرجوس فورس، التي انتقلت إلى عين سخنة وستبقى هناك حتى انتهاء عقد إيجارها في أغسطس. وقعت إكسيليريت اتفاقية تأجير مع شركة الكهرباء الوطنية الأردنية في مايو لنشر السفينة في ميناء العقبة. تم بناء الوحدة الأصلية لمحطة استيراد الغاز العراقية التابعة لشركة إكسيليريت، ولكن تم إعادة توجيهها مؤقتًا بعد تأخير المشروع العراقي. تتمتع مصر الآن بوسائل الوصول إلى ست وحدات تخزين واعادة غازية، بما في ذلك إكسيليريت أكاديا المشتركة في ميناء العقبة وخمسة في موانئها الخاصة.</div>
-        </div>
-          
-          
-        </div>
-        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/15/house-passes-bill-reorganizing-mostakbal-misr/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
-      </div>
-    </div>
-    <div class="card card-mid" id="c9" onclick="toggle('c9')">
-      <div class="card-head">
-        <div class="card-title">
-          <span class="title-en">Fujairah International Oil and Gas Corporation Eyes Egypt Storage</span>
-          <span class="title-ar" dir="rtl">فوجيره للنفط والغاز تهدف إلى تخزين في مصر</span>
-        </div>
-        <div class="card-head-right">
-          <span class="tier-badge tier-mid">Summary</span>
-          <div class="card-chevron">&#x203A;</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="card-grid">
-          
-        <div class="field full en-content">
-          <div class="field-label">Executive Summary</div>
-          <div class="field-text">Fujairah International Oil and Gas Corporation is in talks with the Egyptian General Petroleum Corporation to lease crude and petroleum-product storage on Egypt&#x27;s Red Sea coast. This move follows a similar pitch by AD Ports in April. Egypt has around 29 million barrels of spare storage across its main ports and 79 petroleum storage facilities built or upgraded in recent years. In March, Egypt put up 10 storage facilities at Ain Sokhna and Ras Badran for lease. Fujairah is also partnering with Wepco on a $457 million expansion of Al Hamra Port, which will double crude storage to 5.3 million barrels and add a 130,000-ton petroleum-products complex.</div>
-        </div>
-          
-          
-          
-        <div class="field full ar-content" dir="rtl">
-          <div class="field-label">الملخص التنفيذي</div>
-          <div class="field-text">تجرى فوجيره للنفط والغاز محادثات مع الشركة العامة المصرية للبترول لتأجير تخزين للنفط والمواد البترولية على ساحل البحر الأحمر في مصر. هذا التحرك يأتي بعد عرض مماثل من قبل ميناء أبوظبي في أبريل. تتمتع مصر بحوالي 29 مليون برميل من السعة التخزينية الفائضة عبر موانئها الرئيسية و 79 منشأة تخزين بترولية تم بناؤها أو تحديثها في السنوات الأخيرة. في مارس، وضعت مصر 10 منشآت تخزين في عين سوخنة ورس بدران للتأجير. كما تشارك فوجيره مع ويبكو في توسعة ميناء الحمراء بقيمة 457 مليون دولار، والتي ستضاعف سعة تخزين النفط إلى 5.3 مليون برميل وستضيف معقدًا لمنتجات البترول يبلغ وزنه 130 ألف طن.</div>
-        </div>
-          
-          
-        </div>
-        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/15/house-passes-bill-reorganizing-mostakbal-misr/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
-      </div>
-    </div>
-  </section>
-      
-    </div>
-  </div>
-
-  <!-- ARCHIVE -->
-  <div class="tab-panel" id="panel-archive">
-    <div class="archive-note">
-      <span class="archive-note-icon">📁</span>
-      Previous days' intelligence briefings. Each day's articles are appended here automatically when the next day's run completes.
-    </div>
-    <div class="search-wrap">
-      <input type="text" id="q-archive" placeholder="Search archived headlines and summaries…" oninput="filter('archive')"/>
-      <span id="filter-count-archive"></span>
-    </div>
-    <div id="feed-archive">
-      
   <section class="day-group">
     <div class="day-header">
       <span class="day-label">2026-07-14</span>
@@ -5848,7 +5845,7 @@
 
 <script>
 // ── WEATHER PAGINATOR ──────────────────────────────────────────────────────────
-const WX_DATA   = [{t:"12AM",e:"🌙",c:26,d:"Clear",now:false},{t:"1AM",e:"🌙",c:25,d:"Clear",now:false},{t:"2AM",e:"🌙",c:24,d:"Mainly clear",now:false},{t:"3AM",e:"🌙",c:24,d:"Mainly clear",now:false},{t:"4AM",e:"🌙",c:24,d:"Mainly clear",now:false},{t:"5AM",e:"🌙",c:23,d:"Clear",now:false},{t:"6AM",e:"☀️",c:23,d:"Clear",now:false},{t:"7AM",e:"☀️",c:23,d:"Clear",now:false},{t:"8AM",e:"☀️",c:24,d:"Clear",now:false},{t:"9AM",e:"🌤️",c:26,d:"Mainly clear",now:false},{t:"10AM",e:"🌤️",c:28,d:"Mainly clear",now:false},{t:"11AM",e:"🌤️",c:30,d:"Mainly clear",now:false},{t:"12PM",e:"☀️",c:32,d:"Clear",now:false},{t:"1PM",e:"☀️",c:33,d:"Clear",now:false},{t:"2PM",e:"🌤️",c:34,d:"Mainly clear",now:false},{t:"3PM",e:"🌤️",c:35,d:"Mainly clear",now:false},{t:"4PM",e:"🌤️",c:36,d:"Mainly clear",now:false},{t:"5PM",e:"🌤️",c:36,d:"Mainly clear",now:false},{t:"6PM",e:"⛅",c:34,d:"Partly cloudy",now:false},{t:"7PM",e:"☁️",c:33,d:"Partly cloudy",now:false},{t:"8PM",e:"🌙",c:32,d:"Mainly clear",now:false},{t:"9PM",e:"🌙",c:30,d:"Clear",now:false},{t:"10PM",e:"🌙",c:28,d:"Clear",now:false},{t:"11PM",e:"🌙",c:27,d:"Clear",now:true}];
+const WX_DATA   = [{t:"12AM",e:"🌙",c:26,d:"Clear",now:true},{t:"1AM",e:"🌙",c:25,d:"Clear",now:false},{t:"2AM",e:"🌙",c:24,d:"Mainly clear",now:false},{t:"3AM",e:"🌙",c:24,d:"Mainly clear",now:false},{t:"4AM",e:"☁️",c:24,d:"Partly cloudy",now:false},{t:"5AM",e:"☁️",c:24,d:"Partly cloudy",now:false},{t:"6AM",e:"⛅",c:24,d:"Partly cloudy",now:false},{t:"7AM",e:"⛅",c:24,d:"Partly cloudy",now:false},{t:"8AM",e:"⛅",c:25,d:"Partly cloudy",now:false},{t:"9AM",e:"⛅",c:26,d:"Partly cloudy",now:false},{t:"10AM",e:"⛅",c:27,d:"Partly cloudy",now:false},{t:"11AM",e:"🌤️",c:29,d:"Mainly clear",now:false},{t:"12PM",e:"🌤️",c:30,d:"Mainly clear",now:false},{t:"1PM",e:"🌤️",c:32,d:"Mainly clear",now:false},{t:"2PM",e:"🌤️",c:33,d:"Mainly clear",now:false},{t:"3PM",e:"🌤️",c:34,d:"Mainly clear",now:false},{t:"4PM",e:"🌤️",c:34,d:"Mainly clear",now:false},{t:"5PM",e:"🌤️",c:34,d:"Mainly clear",now:false},{t:"6PM",e:"⛅",c:34,d:"Partly cloudy",now:false},{t:"7PM",e:"☁️",c:34,d:"Partly cloudy",now:false},{t:"8PM",e:"☁️",c:33,d:"Partly cloudy",now:false},{t:"9PM",e:"☁️",c:31,d:"Partly cloudy",now:false},{t:"10PM",e:"🌙",c:30,d:"Mainly clear",now:false},{t:"11PM",e:"🌙",c:28,d:"Mainly clear",now:false}];
 let   wxCenter_idx = 0;  // index of the slot shown in the CENTER position
 
 function wxPage(dir) {
