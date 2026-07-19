@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WSDF3BV5WS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-WSDF3BV5WS');
+</script>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>redcon — Intelligence Feed</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Arabic:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* ── REDCON Brand Colors ──
+         Pantone 2034 C (coated) / Pantone 2347 U (uncoated)
+         CMYK: ef412a  |  RGB: #F9423A
+      */
+      --brand:       #F9423A;
+      --brand-dark:  #e03530;
+      --brand-deep:  #c42d27;
+      --grad-start:  #F9423A;
+      --grad-end:    #e03530;
+      --red:         #F9423A;
+      --red-light:   rgba(249,66,58,0.12);
+      --bg:          #F7F5F4;
+      --surface:     #FFFFFF;
+      --surface-2:   #F2F0EF;
+      --border:      rgba(0,0,0,0.07);
+      --border-red:  rgba(249,66,58,0.25);
+      --text-1:      #1A1A1A;
+      --text-2:      #555;
+      --text-3:      #999;
+      --radius:      10px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin:0; padding:0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text-1);
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 14.5px;
+      line-height: 1.65;
+    }
+
+    /* ── TOPBAR ── */
+    .topbar {
+      background: var(--brand);
+      padding: 0 32px; height: 58px;
+      display: flex; align-items: center; justify-content: space-between;
+      position: sticky; top: 0; z-index: 100;
+      box-shadow: 0 2px 16px rgba(249,66,58,0.35);
+    }
+    .logo { display: flex; align-items: baseline; gap: 6px; }
+    .logo-word { font-weight: 300; font-size: 22px; letter-spacing: -0.02em; color: rgba(255,255,255,0.95); }
+    .logo-word strong { font-weight: 600; }
+    .logo-sub { font-size: 10px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.6); }
+    .topbar-right { font-size: 11px; color: rgba(255,255,255,0.65); letter-spacing: 0.04em; }
+    .global-lang-toggle {
+      display: flex; background: rgba(255,255,255,0.15);
+      border-radius: 20px; padding: 3px; gap: 2px;
+    }
+    .global-lang-btn {
+      padding: 5px 18px; border-radius: 16px; border: none;
+      background: transparent;
+      font-family: 'Inter', 'Noto Sans Arabic', sans-serif;
+      font-size: 12px; font-weight: 500;
+      color: rgba(255,255,255,0.7); cursor: pointer; transition: all 0.2s;
+    }
+    .global-lang-btn.active { background: rgba(255,255,255,0.95); color: var(--brand); font-weight: 600; }
+    .global-lang-btn:hover:not(.active) { color: #fff; background: rgba(255,255,255,0.1); }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--brand);
+      padding: 44px 32px 44px;
+      position: relative; overflow: hidden;
+      display: flex; align-items: center; justify-content: space-between; gap: 32px;
+    }
+    .hero::after {
+      content: 'redcon'; position: absolute; left: 50%; top: 50%; transform: translateX(-50%) translateY(-50%);
+      font-size: clamp(100px, 16vw, 160px); font-weight: 700;
+      letter-spacing: -0.05em; color: rgba(255,255,255,0.055);
+      pointer-events: none; line-height: 1; white-space: nowrap;
+      z-index: 0;
+    }
+    .hero-inner { max-width: 480px; position: relative; z-index: 1; flex-shrink: 0; }
+    .hero-eyebrow { font-size: 10px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-bottom: 10px; }
+    .hero-title { font-size: clamp(24px, 3.8vw, 40px); font-weight: 300; color: #fff; line-height: 1.15; letter-spacing: -0.02em; }
+    .hero-title strong { font-weight: 600; }
+    .hero-sub { margin-top: 10px; font-size: 13px; color: rgba(255,255,255,0.65); font-weight: 300; max-width: 400px; }
+    .hero-meta { margin-top: 18px; font-size: 11px; color: rgba(255,255,255,0.45); letter-spacing: 0.04em; }
+
+    /* ── WEATHER WIDGET ── */
+    .wx-widget {
+      position: relative; z-index: 1;
+      background: rgba(0,0,0,0.12);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.22);
+      border-radius: 20px;
+      padding: 18px 16px 14px;
+      min-width: 220px; max-width: 260px;
+      flex-shrink: 0;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    }
+    .wx-current { margin-bottom: 14px; }
+    .wx-location { font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 6px; }
+    .wx-flag { letter-spacing: 0; }
+    .wx-big-row { display: flex; align-items: center; gap: 6px; margin-bottom: 2px; }
+    .wx-big-icon { font-size: 36px; line-height: 1; }
+    .wx-big-temp { font-size: 48px; font-weight: 200; color: #fff; letter-spacing: -0.04em; line-height: 1; font-variant-numeric: tabular-nums; }
+    .wx-condition { font-size: 13px; font-weight: 400; color: rgba(255,255,255,0.8); margin-bottom: 2px; }
+    .wx-range { font-size: 11px; color: rgba(255,255,255,0.45); letter-spacing: 0.03em; }
+    .wx-hourly { display: flex; align-items: center; gap: 4px; border-top: 1px solid rgba(255,255,255,0.15); padding-top: 12px; }
+    .wx-slots { display: flex; gap: 2px; flex: 1; overflow: hidden; }
+    .wx-slot { display: flex; flex-direction: column; align-items: center; gap: 3px; flex: 1; padding: 6px 4px; border-radius: 10px; background: rgba(255,255,255,0.07); transition: background 0.2s; min-width: 0; }
+    .wx-slot.wx-now { background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.35); }
+    .wx-slot-time { font-size: 8.5px; font-weight: 600; letter-spacing: 0.06em; color: rgba(255,255,255,0.45); white-space: nowrap; }
+    .wx-slot.wx-now .wx-slot-time { color: rgba(255,255,255,0.9); }
+    .wx-slot-icon { font-size: 14px; line-height: 1; }
+    .wx-slot-temp { font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.85); font-variant-numeric: tabular-nums; }
+    .wx-slot.wx-now .wx-slot-temp { color: #fff; }
+    .wx-nav { background: rgba(255,255,255,0.12); border: none; color: rgba(255,255,255,0.7); width: 22px; height: 22px; border-radius: 50%; font-size: 16px; line-height: 1; cursor: pointer; flex-shrink: 0; display: flex; align-items: center; justify-content: center; transition: background 0.2s, color 0.2s; }
+    .wx-nav:hover { background: rgba(255,255,255,0.25); color: #fff; }
+    .wx-nav:disabled { opacity: 0.25; cursor: default; }
+    .wx-dots { display: flex; justify-content: center; gap: 4px; margin-top: 8px; }
+    .wx-dot { width: 5px; height: 5px; border-radius: 50%; background: rgba(255,255,255,0.25); transition: background 0.2s; }
+    .wx-dot.active { background: rgba(255,255,255,0.85); }
+
+    @media (max-width: 700px) {
+      .hero { flex-direction: column; align-items: flex-start; }
+      .wx-widget { min-width: 100%; max-width: 100%; }
+    }
+
+    /* ── INDICES BAR ── */
+    .indices-bar { background: var(--surface); border-bottom: 1px solid var(--border); padding: 11px 32px; display: flex; align-items: center; gap: 0; position: relative; flex-wrap: wrap; row-gap: 8px; }
+    .indices-as-of { font-size: 10px; color: var(--text-3); white-space: nowrap; flex-shrink: 0; padding-right: 28px; margin-right: 28px; border-right: 1px solid var(--border); }
+    .indices-group { display: flex; align-items: center; gap: 20px; padding-right: 28px; margin-right: 28px; border-right: 1px solid var(--border); }
+    .indices-group:last-child { border-right: none; padding-right: 0; margin-right: 0; }
+    .indices-eyebrow { font-size: 9px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-3); white-space: nowrap; flex-shrink: 0; }
+    .indices-items { display: flex; gap: 28px; flex-wrap: wrap; align-items: center; }
+    .idx-item { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .idx-label { display: flex; align-items: center; gap: 5px; font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-3); }
+    .idx-value { font-size: 15px; font-weight: 600; color: var(--brand); letter-spacing: -0.01em; font-variant-numeric: tabular-nums; }
+    .idx-value-pos { color: #16a34a; }
+    .idx-value-neg { color: #dc2626; }
+    .idx-time { font-size: 10px; color: var(--text-3); }
+    .idx-pct { font-size: 11px; font-weight: 600; font-variant-numeric: tabular-nums; padding: 1px 5px; border-radius: 4px; letter-spacing: 0.01em; }
+    .idx-pct-pos { color: #16a34a; background: rgba(22,163,74,0.10); }
+    .idx-pct-neg { color: #dc2626; background: rgba(220,38,38,0.10); }
+    .idx-pct-neu { color: var(--text-3); background: var(--surface-2); }
+    .idx-info-btn { display: inline-flex; align-items: center; justify-content: center; width: 14px; height: 14px; border-radius: 50%; border: 1.5px solid var(--text-3); background: transparent; cursor: pointer; font-size: 8.5px; font-weight: 700; font-style: italic; font-family: Georgia, serif; color: var(--text-3); line-height: 1; transition: border-color 0.15s, color 0.15s, background 0.15s; vertical-align: middle; flex-shrink: 0; }
+    .idx-info-btn:hover { border-color: var(--brand); color: var(--brand); background: var(--red-light); }
+    .tip-bubble { display: none; position: fixed; z-index: 999; background: var(--text-1); color: #fff; border-radius: 10px; padding: 12px 28px 12px 14px; max-width: 280px; box-shadow: 0 8px 24px rgba(0,0,0,0.28); font-size: 12.5px; line-height: 1.6; font-weight: 300; }
+    .tip-bubble.show { display: block; }
+    .tip-bubble::before { content: ''; position: absolute; top: -6px; left: 14px; width: 12px; height: 6px; background: var(--text-1); clip-path: polygon(50% 0%, 0% 100%, 100% 100%); }
+    .tip-close { position: absolute; top: 8px; right: 10px; background: none; border: none; color: rgba(255,255,255,0.4); font-size: 11px; cursor: pointer; line-height: 1; }
+    .tip-close:hover { color: #fff; }
+
+    /* ── TABS ── */
+    .tabs-bar {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 0 32px;
+      display: flex;
+      gap: 0;
+      position: sticky;
+      top: 58px;
+      z-index: 90;
+    }
+    .tab-btn {
+      padding: 14px 24px;
+      border: none;
+      background: none;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-3);
+      cursor: pointer;
+      border-bottom: 2.5px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: -1px;
+    }
+    .tab-btn:hover { color: var(--text-1); }
+    .tab-btn.active { color: var(--brand); border-bottom-color: var(--brand); font-weight: 600; }
+    .tab-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--surface-2);
+      color: var(--text-3);
+      font-size: 10px;
+      font-weight: 600;
+      border-radius: 20px;
+      padding: 1px 7px;
+      min-width: 20px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .tab-btn.active .tab-badge {
+      background: var(--red-light);
+      color: var(--brand);
+    }
+
+    /* ── MAIN ── */
+    .page-wrap { max-width: 900px; margin: 0 auto; padding: 12px 24px 80px; }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+    .search-wrap { padding: 20px 0 4px; display: flex; gap: 12px; align-items: center; }
+    .search-wrap input { flex: 1; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 10px 16px; font-family: 'Inter', sans-serif; font-size: 13.5px; color: var(--text-1); outline: none; transition: border-color 0.2s, box-shadow 0.2s; }
+    .search-wrap input:focus { border-color: var(--border-red); box-shadow: 0 0 0 3px rgba(249,66,58,0.08); }
+    .search-wrap input::placeholder { color: var(--text-3); }
+    #filter-count { font-size: 12px; color: var(--text-3); white-space: nowrap; }
+
+    /* ── DAY GROUP ── */
+    .day-group { margin-top: 36px; }
+    .day-header { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+    .day-label { font-size: 12px; font-weight: 600; color: var(--brand); letter-spacing: 0.06em; white-space: nowrap; }
+    .day-rule { flex: 1; height: 1px; background: var(--border); }
+    .day-count { font-size: 11px; color: var(--text-3); white-space: nowrap; letter-spacing: 0.04em; }
+
+    /* ── CARD ── */
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); margin-bottom: 8px; overflow: hidden; cursor: pointer; transition: box-shadow 0.2s, border-color 0.2s; }
+    .card:hover { box-shadow: 0 4px 20px rgba(249,66,58,0.1); border-color: var(--border-red); }
+    .card-head { padding: 16px 20px; display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
+    .card-title { font-size: 15px; font-weight: 500; color: var(--text-1); line-height: 1.4; flex: 1; }
+    .card-head-right { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+    .card-chevron { color: var(--text-3); font-size: 22px; line-height: 1; transition: transform 0.3s, color 0.2s; flex-shrink: 0; margin-top: -1px; }
+
+    /* ── TIER BADGES ── */
+    .tier-badge { display: inline-flex; align-items: center; font-size: 9px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 3px 8px; border-radius: 20px; white-space: nowrap; flex-shrink: 0; }
+    .tier-high { background: var(--red-light); color: var(--brand); border: 1px solid rgba(249,66,58,0.25); }
+    .tier-mid  { background: var(--surface-2); color: var(--text-3); border: 1px solid var(--border); }
+
+    /* ── CARD TIERS ── */
+    .card-mid { border-left: 3px solid var(--border); }
+    .card-high { border-left: 3px solid var(--brand); }
+    .card.open .card-chevron { transform: rotate(90deg); color: var(--brand); }
+    .card-body { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1); }
+    .card.open .card-body { max-height: 10000px; }
+    .card-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 16px 16px 6px; border-top: 1px solid var(--border); }
+    @media (max-width: 600px) { .card-grid { grid-template-columns: 1fr; } }
+    .field { background: var(--surface-2); border-radius: 7px; padding: 13px 15px; }
+    .field.full { grid-column: 1 / -1; }
+    .field-label { font-size: 9.5px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--brand); margin-bottom: 7px; }
+    .field-text { font-size: 13px; color: var(--text-2); line-height: 1.7; font-weight: 300; }
+    .ar-content { text-align: right; }
+    .ar-content .field-label { font-family: 'Noto Sans Arabic', sans-serif; letter-spacing: 0; font-size: 11px; }
+    .ar-content .field-text { font-family: 'Noto Sans Arabic', sans-serif; font-size: 13.5px; line-height: 1.9; }
+    .title-ar { font-family: 'Noto Sans Arabic', sans-serif; }
+    body.lang-en .ar-content, body.lang-en .title-ar { display: none; }
+    body.lang-en .en-content, body.lang-en .title-en { display: block; }
+    body.lang-ar .en-content, body.lang-ar .title-en { display: none; }
+    body.lang-ar .ar-content { display: block; }
+    body.lang-ar .title-ar  { display: block; }
+    .card-title .title-en, .card-title .title-ar { display: inline; }
+    body.lang-en .card-title .ar-content, body.lang-en .card-title .title-ar { display: none; }
+    body.lang-ar .card-title .en-content, body.lang-ar .card-title .title-en { display: none; }
+    .card-foot { padding: 10px 16px 14px; display: flex; justify-content: flex-end; gap: 18px; }
+    .source-link { font-size: 11px; color: var(--text-3); text-decoration: none; transition: color 0.2s; letter-spacing: 0.04em; }
+    .source-link:hover { color: var(--brand); }
+
+    .empty { text-align: center; padding: 80px 20px; color: var(--text-3); }
+    .empty-icon { font-size: 48px; margin-bottom: 16px; }
+    .empty h2 { font-size: 20px; font-weight: 500; margin-bottom: 8px; color: var(--text-2); }
+    .empty p { font-size: 14px; }
+
+    /* Archive note */
+    .archive-note {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 14px 20px;
+      margin-top: 20px;
+      font-size: 12.5px;
+      color: var(--text-3);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .archive-note-icon { font-size: 18px; flex-shrink: 0; }
+  </style>
+</head>
+<body class="lang-en">
+
+<!-- TOPBAR -->
+<header class="topbar">
+  <div class="logo">
+    <img src="https://raw.githubusercontent.com/rpinteleg-lab/RP-intel-intelligence/main/logo%20white.png"
+         alt="REDCON Properties" style="height:28px; width:auto; display:block;"/>
+  </div>
+  <div class="global-lang-toggle">
+    <button class="global-lang-btn active" onclick="setLang('en')">English</button>
+    <button class="global-lang-btn" onclick="setLang('ar')">العربية</button>
+  </div>
+  <span class="topbar-right">Intelligence Feed</span>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Daily Market Briefing</div>
+    <h1 class="hero-title">Redcon Properties<br><strong>Intelligence Feed</strong></h1>
+    <p class="hero-sub">Daily News analyzed for Egypt's construction, infrastructure, and real estate market.</p>
+    <div class="hero-meta">Last updated: 19 July 2026, 11:38</div>
+  </div>
+  
+<div class="wx-widget" id="wxWidget">
+  <div class="wx-current">
+    <div class="wx-location">Cairo <span class="wx-flag">🇪🇬</span></div>
+    <div class="wx-big-row">
+      <span class="wx-big-icon">☀️</span>
+      <span class="wx-big-temp">33°</span>
+    </div>
+    <div class="wx-condition">Clear</div>
+    <div class="wx-range">H 39° &nbsp;·&nbsp; L 24°</div>
+  </div>
+  <div class="wx-hourly">
+    <button class="wx-nav wx-prev" onclick="wxPage(-1)" aria-label="Previous hours">&#x2039;</button>
+    <div class="wx-slots" id="wxSlots"></div>
+    <button class="wx-nav wx-next" onclick="wxPage(1)"  aria-label="Next hours">&#x203A;</button>
+  </div>
+  <div class="wx-dots" id="wxDots"></div>
+</div>
+</div>
+
+
+<!-- INDICES -->
+<div class="indices-bar">
+  <span class="indices-as-of">As of 11:35</span>
+  
+  <div class="indices-group">
+    <span class="indices-eyebrow">Market Indices &amp; FX</span>
+    <div class="indices-items">
+      
+  <div class="idx-item">
+    <span class="idx-label">
+      EGX 30
+      <button class="idx-info-btn" data-tip="Benchmark index representing the 30 most liquid and actively traded stocks on the Egyptian Exchange." onclick="showTip(this)" title="About EGX 30">i</button>
+    </span>
+    <span class="idx-value idx-value-neg">52,539.97</span> <span class="idx-pct idx-pct-neg">▼ -0.73%</span>
+  </div>
+      
+  <div class="idx-item">
+    <span class="idx-label">
+      Construction Index
+      <button class="idx-info-btn" data-tip="Sector index representing Egyptian companies operating in construction, cement, steel, and building materials." onclick="showTip(this)" title="About Construction Index">i</button>
+    </span>
+    <span class="idx-value idx-value-pos">9,874.36</span> <span class="idx-pct idx-pct-pos">▲ +0.44%</span>
+  </div>
+      
+  <div class="idx-item">
+    <span class="idx-label">
+      NASDAQ
+      <button class="idx-info-btn" data-tip="NASDAQ Composite Index, a broad-based index of over 3,000 stocks listed on the NASDAQ stock exchange, sourced from Investing.com." onclick="showTip(this)" title="About NASDAQ">i</button>
+    </span>
+    <span class="idx-value idx-value-neg">25,520.24</span> <span class="idx-pct idx-pct-neg">▼ -1.40%</span>
+  </div>
+      
+  <div class="idx-item">
+    <span class="idx-label">
+      Dow Jones
+      <button class="idx-info-btn" data-tip="Dow Jones Industrial Average, a price-weighted index of 30 major U.S. blue-chip companies, sourced from Investing.com." onclick="showTip(this)" title="About Dow Jones">i</button>
+    </span>
+    <span class="idx-value idx-value-neg">52,146.42</span> <span class="idx-pct idx-pct-neg">▼ -0.77%</span>
+  </div>
+      
+  <div class="idx-item">
+    <span class="idx-label">
+      S&amp;P 500
+      <button class="idx-info-btn" data-tip="S&amp;P 500 Index, a market-cap-weighted index of 500 leading U.S. publicly traded companies, sourced from Investing.com." onclick="showTip(this)" title="About S&amp;P 500">i</button>
+    </span>
+    <span class="idx-value idx-value-neg">7,457.69</span> <span class="idx-pct idx-pct-neg">▼ -1.01%</span>
+  </div>
+      
+  <div class="idx-item">
+    <span class="idx-label">
+      USD / EGP
+      <button class="idx-info-btn" data-tip="US Dollar to Egyptian Pound exchange rate, sourced from Investing.com." onclick="showTip(this)" title="About USD / EGP">i</button>
+    </span>
+    <span class="idx-value idx-value-pos">50.55</span> <span class="idx-pct idx-pct-pos">▲ +0.20%</span>
+  </div>
+    </div>
+  </div>
+  
+  <div class="indices-group">
+    <span class="indices-eyebrow">Commodities</span>
+    <div class="indices-items">
+      
+  <div class="idx-item">
+    <span class="idx-label">
+      Crude Oil
+      <button class="idx-info-btn" data-tip="WTI Crude Oil futures price per barrel in USD, sourced from Yahoo Finance." onclick="showTip(this)" title="About Crude Oil">i</button>
+    </span>
+    <span class="idx-value">$81.78</span>
+  </div>
+      
+  <div class="idx-item">
+    <span class="idx-label">
+      Copper (t)
+      <button class="idx-info-btn" data-tip="Copper price per metric ton in USD, sourced from MetalCharts." onclick="showTip(this)" title="About Copper (t)">i</button>
+    </span>
+    <span class="idx-value">$13,708.70</span>
+  </div>
+      
+  <div class="idx-item">
+    <span class="idx-label">
+      Aluminum (t)
+      <button class="idx-info-btn" data-tip="Aluminium price per metric ton in USD, sourced from Investing.com." onclick="showTip(this)" title="About Aluminum (t)">i</button>
+    </span>
+    <span class="idx-value">$3,164.65</span>
+  </div>
+      
+  <div class="idx-item">
+    <span class="idx-label">
+      Steel Rebar (t)
+      <button class="idx-info-btn" data-tip="Ezz Steel rebar price per tonne in Egyptian Pounds, scraped daily from Al-Masry Al-Youm building materials article." onclick="showTip(this)" title="About Steel Rebar (t)">i</button>
+    </span>
+    <span class="idx-value">EGP 40,000</span>
+  </div>
+      
+  <div class="idx-item">
+    <span class="idx-label">
+      Cement (t)
+      <button class="idx-info-btn" data-tip="Grey cement price per tonne in Egyptian Pounds, scraped daily from Al-Masry Al-Youm building materials article." onclick="showTip(this)" title="About Cement (t)">i</button>
+    </span>
+    <span class="idx-value">EGP 3,950</span>
+  </div>
+      
+  <div class="idx-item">
+    <span class="idx-label">
+      Gold (g)
+      <button class="idx-info-btn" data-tip="24K Gold price per gram in Egyptian Pounds, sourced from Gold Price Live." onclick="showTip(this)" title="About Gold (g)">i</button>
+    </span>
+    <span class="idx-value">EGP 6,646.00</span>
+  </div>
+    </div>
+  </div>
+</div>
+<!-- TOOLTIP BUBBLE -->
+<div class="tip-bubble" id="tipBubble">
+  <button class="tip-close" onclick="closeTip()">✕</button>
+  <p class="tip-text" id="tipText"></p>
+</div>
+
+
+<!-- TABS -->
+<div class="tabs-bar">
+  <button class="tab-btn active" id="tab-today" onclick="switchTab('today')">
+    Today's Briefing
+    <span class="tab-badge">6</span>
+  </button>
+  <button class="tab-btn" id="tab-archive" onclick="switchTab('archive')">
+    Archive
+    <span class="tab-badge">0</span>
+  </button>
+</div>
+
+<!-- MAIN -->
+<main class="page-wrap">
+
+  <!-- TODAY -->
+  <div class="tab-panel active" id="panel-today">
+    <div class="search-wrap">
+      <input type="text" id="q-today" placeholder="Search today's headlines and summaries…" oninput="filter('today')"/>
+      <span id="filter-count-today"></span>
+    </div>
+    <div id="feed-today">
+      
+  <section class="day-group">
+    <div class="day-header">
+      <span class="day-label">Top Stories Today</span>
+      <div class="day-rule"></div>
+      <span class="day-count">2 articles</span>
+    </div>
+    
+    <div class="card card-high" id="c0" onclick="toggle('c0')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Modon Holding Launches Nammos Ras El Hekma in Egypt</span>
+          <span class="title-ar" dir="rtl">مودون هولدينج تطلق ناموس راس الحكمة في مصر</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-high">Full Analysis</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Modon Holding and Nammos Hotels &amp; Resorts have launched Nammos Ras El Hekma, a fully integrated destination in Egypt&#x27;s Wadi Yemm precinct. The project includes a 79-key resort and a retail-and-wellness hub. This is the second global hospitality brand Modon has brought to Ras El Hekma, following a deal with Montage Hotels &amp; Resorts in May. Since being named master developer of the $35 billion project in 2024, Modon has been building out Ras El Hekma, signing recognizable brand names to build consumer trust. The project aims to attract $110 billion in investment by 2045. With a $316 million contract with Orascom Construction in January, Modon is constructing the project while securing brand names like Montage and Nammos to drive growth. The launch of Nammos Ras El Hekma marks a significant step in the development of Ras El Hekma, which is expected to become a major destination in Egypt. The project&#x27;s progress is a testament to Modon&#x27;s efforts to create a world-class destination, with a focus on luxury hospitality and lifestyle experiences. As the project moves forward, it is likely to attract more investment and attention from international brands, further solidifying Ras El Hekma&#x27;s position as a premier destination in the region.</div>
+        </div>
+          
+        <div class="field  en-content">
+          <div class="field-label">Future Implications</div>
+          <div class="field-text">The launch of Nammos Ras El Hekma has significant implications for Egypt&#x27;s hospitality and real estate markets. The project&#x27;s focus on luxury hospitality and lifestyle experiences is likely to drive growth in the sector, attracting high-end tourists and investors. The project&#x27;s success could also lead to increased investment in other destinations in Egypt, driving economic growth and development. Additionally, the project&#x27;s emphasis on recognizable brand names could lead to increased competition in the market, driving innovation and quality in the hospitality sector. As the project progresses, it is likely to have a positive impact on the local economy, creating jobs and stimulating economic activity. The project&#x27;s success could also lead to increased interest in Egypt&#x27;s real estate market, driving growth and investment in the sector.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">أطلقت مودون هولدينج وناموس هوتيلز آند ريزورتس مشروع ناموس راس الحكمة، وهو وجهة متكاملة في منطقة وادي يم في مصر. يتضمن المشروع فندقًا يضم 79 غرفة ومركزًا تجاريًا وصحويًا. هذا هو العلامة التجارية الثانية للفنادق العالمية التي جلبتها مودون إلى راس الحكمة، بعد اتفاقية مع مونتيج هوتيلز آند ريزورتس في مايو. منذ تعيينها كمطور رئيسي للمشروع البالغ قيمته 35 مليار دولار في 2024، بدأت مودون في بناء راس الحكمة على مسارين في نفس الوقت: توظيف مقاولين لبناء المشروع - بما في ذلك عقد بقيمة 316 مليون دولار مع أوراسكوم للإنشاءات في يناير - وتوقيع اتفاقيات مع علامات تجارية معترف بها لبناء الثقة لدى المستهلكين. تأتي اتفاقية ناموس في إطار هذا المسار الثاني، حيث يسعى المشروع لجذب استثمارات بقيمة 110 مليار دولار بحلول 2045. مع تقدم المشروع، من المتوقع أن يصبح راس الحكمة وجهة رئيسية في مصر، وستكون إطلاق ناموس راس الحكمة خطوة مهمة في تطوير المشروع.</div>
+        </div>
+          
+        <div class="field  ar-content" dir="rtl">
+          <div class="field-label">التداعيات المستقبلية</div>
+          <div class="field-text">لإطلاق ناموس راس الحكمة عواقب مهمة على سوق الفنادق والอสكان في مصر. من المحتمل أن يدفع تركيز المشروع على الفنادق والأنشطة الترفيهية الفاخرة النمو في القطاع، وجذب السياح والاستثمارات الراقية. قد يؤدي نجاح المشروع إلى زيادة الاستثمارات في وجهات أخرى في مصر، مما يدفع النمو الاقتصادي والتنمية. بالإضافة إلى ذلك، قد يؤدي التركيز على العلامات التجارية المعروفة إلى زيادة المنافسة في السوق، مما يدفع الابتكار والجودة في قطاع الفنادق. مع تقدم المشروع، من المحتمل أن يكون له تأثير إيجابي على الاقتصاد المحلي، مما يخلق فرص عمل وينشط النشاط الاقتصادي. قد يؤدي نجاح المشروع إلى زيادة الاهتمام بسوق الأوسان في مصر، مما يدفع النمو والاستثمار في القطاع.</div>
+        </div>
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/19/hiltons-egypt-expansion-reaches-ras-el-bar-with-a-new-doray-bay-hotel-deal/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card card-mid" id="c1" onclick="toggle('c1')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">MBG Developments Partners with Hilton</span>
+          <span class="title-ar" dir="rtl">مجموعة إم بي جي للتنمية تشترك مع هيلتون</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">MBG Developments has partnered with Hilton to manage and operate the 160-room Hilton Garden Inn Doray Bay Ras El Bar, located within MBG&#x27;s mixed-use Doray Bay project. The project is being developed in partnership with the New and Urban Communities Authority, with unit handovers expected in 2027. This move brings branded hospitality to Ras El Bar, a less conventional tourism corridor. Hilton plans to triple its presence in Egypt with 25 new hotels, supporting the country&#x27;s tourism targets of 30 million tourists per year and 500,000 hotel rooms by 2030.</div>
+        </div>
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">أعلنت مجموعة إم بي جي للتنمية عن شراكة مع هيلتون لإدارة وتشغيل فندق هيلتون جاردن إن دوراي باي رأس البر، الذي يقع داخل مشروع دوراي باي المختلط التابع لمجموعة إم بي جي. يتم تطوير المشروع بالشراكة مع الهيئة العامة لل cộngunities الجديدة والمجتمعات الحضرية، مع توقع تسليم الوحدات في عام 2027. هذه الخطوة تجلب الفنادق التابعة للعلامات التجارية إلى رأس البر، وهو ممر سياحي غير تقليدي. تخطط هيلتون لتحقيق ثلاثة أضعاف وجودها في مصر مع 25 فندقًا جديدًا، مما يدعم أهداف السياحة في البلاد البالغة 30 مليون سائح في السنة و500 ألف غرفة فندقية بحلول عام 2030.</div>
+        </div>
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/19/hiltons-egypt-expansion-reaches-ras-el-bar-with-a-new-doray-bay-hotel-deal/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+  </section>
+  <section class="day-group">
+    <div class="day-header">
+      <span class="day-label">Also in the News</span>
+      <div class="day-rule"></div>
+      <span class="day-count">4 articles</span>
+    </div>
+    
+    <div class="card card-mid" id="c2" onclick="toggle('c2')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egypt Bourse: Real Estate Sector Leads Trading</span>
+          <span class="title-ar" dir="rtl">بورصة مصر: قطاع العقارات يتصدر التداولات</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">The real estate sector led trading on the Egyptian Stock Exchange during the week ended, with a trading value of 16.718 billion EGP through the trading of 7.006 billion securities in 261,459 transactions. The non-banking financial services sector came in second with a trading value of 9.366 billion EGP, followed by the healthcare and pharmaceuticals sector with a trading value of 4.993 billion EGP. The engineering and construction sector recorded a trading value of 3.889 billion EGP, while the basic resources sector saw a trading value of 3.669 billion EGP. Other sectors, including food and beverages, banking, industrial products, and communications, also recorded significant trading values.</div>
+        </div>
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">تصدر قطاع العقارات تداولات البورصة المصرية خلال الأسبوع المنتهي، بقيمة تداول بلغت 16.718 مليار جنيه من خلال تداول 7.006 مليار ورقة مالية تم تنفيذها عبر 261.459 ألف عملية. وجاءت قطاعات الخدمات المالية غير المصرفية، والرعاية الصحية والأدوية، والمقاولات والإنشاءات الهندسية في المراكز التالية، حيث سجلت قيم تداول بلغت 9.366 مليار جنيه، و4.993 مليار جنيه، و3.889 مليار جنيه على التوالي. كما سجل قطاع الموارد الأساسية قيمة تداول بلغت 3.669 مليار جنيه، فيما بلغت قيمة التداول بقطاع الأغذية والمشروبات والتبغ نحو 3.509 مليار جنيه.</div>
+        </div>
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://almalnews.com/2125133/قطاع-العقارات-يقود-حركة-تداولات-البورصة-وسط/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
+      </div>
+    </div>
+    <div class="card card-mid" id="c3" onclick="toggle('c3')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egypt Central Bank Offers EGP 18.5 Billion Bonds</span>
+          <span class="title-ar" dir="rtl">البنك المركزي المصري يطرح سندات خزانة بقيمة 18.5 مليار جنيه</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">The Central Bank of Egypt will offer EGP 18.5 billion in treasury bonds on Monday, consisting of EGP 2 billion and EGP 15 billion in fixed-rate bonds with 2 and 3-year terms, respectively, and semi-annual interest payments. Additionally, EGP 1.5 billion in variable-rate bonds with a 5-year term and quarterly interest payments will be offered. The Ministry of Finance has authorized the Central Bank to manage the issuance of treasury bonds and bills in Egyptian pounds to finance the state&#x27;s general budget for the current fiscal year. The Central Bank&#x27;s Monetary Policy Committee decided to maintain the basic interest rates unchanged in its meeting on July 9, 2026, with the deposit and lending rates set at 19.00% and 20.00%, and the main operation rate at 19.50%.</div>
+        </div>
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">سيطرح البنك المركزي المصري، الإثنين المقبل، سندات خزانة بقيمة 18.5 مليار جنيه، تتكون من 2 مليار جنيه و15 مليار جنيه سندات خزانة ثابتة العائد لأجل 2 و3 أعوام على التوالي، وبدورية عائد نصف سنوية. كما سيطرح سندات أخرى متغيرة العائد بقيمة 1.5 مليار جنيه لأجل 5 سنوات، وبدورية صرف عائد ربع سنوية. تفوض وزارة المالية البنك المركزي على مدار العام المالي في إدارة طروحاتها الخاصة من أذون وسندات الخزانة بالجنيه المصري، على أن تمول وتنفق الحصيلة على بنود الموازنة العامة للدولة للعام المالي الحالي. قررت لجنة السياسة النقدية للبنك المركزي المصري في اجتماعها يوم الخميس 9 يوليو 2026 الإبقاء على أسعار العائد الأساسية دون تغيير، حيث تم تثبيت سعري عائد الإيداع والإقراض لليلة واحدة وسعر العملية الرئيسية للبنك المركزي عند 19.00% و20.00% و19.50%، على الترتيب.</div>
+        </div>
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://almalnews.com/2125154/البنك-المركزي-يطرح-سندات-خزانة-بقيمة-18/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
+      </div>
+    </div>
+    <div class="card card-mid" id="c4" onclick="toggle('c4')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egypt Central Bank Offers EGP 105 Billion Treasury Bills</span>
+          <span class="title-ar" dir="rtl">البنك المركزي المصري يطرح أذون خزانة بقيمة 105 مليار جنيه</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">The Central Bank of Egypt will offer treasury bills worth EGP 105 billion on Sunday, with two tranches: EGP 35 billion for 91 days and EGP 70 billion for 273 days. This is part of the bank&#x27;s coordination with the Ministry of Finance to finance the budget deficit. The Ministry of Finance has authorized the Central Bank to manage its treasury bill and bond offerings in Egyptian pounds throughout the fiscal year. The proceeds will be used to fund the general budget for the current fiscal year. The Central Bank&#x27;s Monetary Policy Committee decided to keep the basic interest rates unchanged in its meeting on July 9, 2026, with the deposit and lending rates set at 19.00% and 20.00%, and the main operation rate at 19.50%. The credit and discount rates were also kept at 19.50%.</div>
+        </div>
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">سيطرح البنك المركزي المصري، غدًا الأحد، أذون خزانة بقيمة 105 مليار جنيه، بفترتين: 35 مليار جنيه لمدة 91 يوما، و70 مليار جنيه لمدة 273 يوما. هذا جزء من تنسيق البنك مع وزارة المالية لتمويل عجز الموازنة. فوضت وزارة المالية البنك المركزي في إدارة طروحاتها الخاصة من أذون وسندات الخزانة بالجنيه المصري على مدار العام المالي، على أن تمول وتنفق الحصيلة على بنود الموازنة العامة للدولة للعام المالي الحالي. قررت لجنة السياسة النقدية للبنك المركزي المصري في اجتماعها يوم الخميس الموافق 9 يوليو 2026 الإبقاء على أسعار العائد الأساسية دون تغيير، حيث تم تثبيت سعري عائد الإيداع والإقراض لليلة واحدة وسعر العملية الرئيسية للبنك المركزي عند 19.00% و20.00% و19.50%، على الترتيب. كما تم الإبقاء على سعر الائتمان والخصم عند 19.50%.</div>
+        </div>
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://almalnews.com/2125150/البنك-المركزي-يطرح-أذون-خزانة-بقيمة-105/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
+      </div>
+    </div>
+    <div class="card card-mid" id="c5" onclick="toggle('c5')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">CMA CGM Seeks Dry Port Clearance</span>
+          <span class="title-ar" dir="rtl">مجموعة سي إم إيه سي جي إم تطلب تصريح لموانئ جافة</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">French shipping group CMA CGM has requested the Egyptian Investment Ministry to allow dry ports to clear cargo as final customs destinations. This would benefit CMA CGM&#x27;s investments in dry ports and sea terminals, including the USD 60 mn October Dry Port project, where it has a 35% stake. The group also has partnerships in Alexandria&#x27;s Tahya Misr multipurpose terminal and the Red Sea Container Terminal at Sokhna. The request aligns with the government&#x27;s efforts to loosen transit rules and capture Gulf and East Africa cargo. The government has dropped advance ACI registration for transit cargo and activated the UN-backed International Road Transport system. Transit trade has increased by 40% since March, with the Europe-Egypt-GCC route gaining traction. CMA CGM&#x27;s request would cut a step for goods moving inland, making its dry port investments more useful nodes in the chain.</div>
+        </div>
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">طلبت المجموعة البحرية الفرنسية سي إم إيه سي جي إم من وزارة الاستثمار المصرية السماح لموانئ جافة بالتصريح على البضائع كوجهات τελائية للجمارك. هذا سوف يفيد استثمارات سي إم إيه سي جي إم في الموانئ الجافة ومحطات البحر، بما في ذلك مشروع ميناء أكتوبر الجاف الذي تملك فيه 35٪، بقيمة 60 مليون دولار. المجموعة لها أيضًا شراكات في محطة طهي مصر متعددة الأغراض في الإسكندرية ومحطة حاويات البحر الأحمر في السخنة. يتوافق الطلب مع جهود الحكومة للتحكم في قواعد العبور واكتساب حمولة الخليج وأفريقيا. سقطت الحكومة التسجيل المسبق لجمارك النقل الجوي للبضائع العابرة وactivated نظام النقل الدولي للطرق التابع للأمم المتحدة. ارتفعت貿易 العبور بنسبة 40٪ منذ مارس، مع اكتساب خط أوروبا-مصر-دول الخليج الجاذبية. سوف يقلل طلب سي إم إيه سي جي إم خطوة واحدة للبضائع المتحركة في الداخل، مما يجعل استثماراتها في الموانئ الجافة عقدة أكثر فائدة في السلسلة.</div>
+        </div>
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/19/telecom-egypt-pulled-the-plug-on-its-planned-sale-of-a-majority-stake-in-its-regional-data-center-hub/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+  </section>
+      
+    </div>
+  </div>
+
+  <!-- ARCHIVE -->
+  <div class="tab-panel" id="panel-archive">
+    <div class="archive-note">
+      <span class="archive-note-icon">📁</span>
+      Previous days' intelligence briefings. Each day's articles are appended here automatically when the next day's run completes.
+    </div>
+    <div class="search-wrap">
+      <input type="text" id="q-archive" placeholder="Search archived headlines and summaries…" oninput="filter('archive')"/>
+      <span id="filter-count-archive"></span>
+    </div>
+    <div id="feed-archive">
+      
+      
+  <div class="empty">
+    <div class="empty-icon">&#x1F4DA;</div>
+    <h2>No archived articles yet</h2>
+    <p>Previous days' articles will appear here automatically.</p>
+  </div>
+    </div>
+  </div>
+
+</main>
+
+<script>
+// ── WEATHER PAGINATOR ──────────────────────────────────────────────────────────
+const WX_DATA   = [{t:"12AM",e:"🌙",c:28,d:"Clear",now:false},{t:"1AM",e:"🌙",c:27,d:"Clear",now:false},{t:"2AM",e:"🌙",c:27,d:"Clear",now:false},{t:"3AM",e:"🌙",c:26,d:"Clear",now:false},{t:"4AM",e:"🌙",c:25,d:"Clear",now:false},{t:"5AM",e:"🌙",c:25,d:"Clear",now:false},{t:"6AM",e:"☀️",c:24,d:"Clear",now:false},{t:"7AM",e:"☀️",c:24,d:"Clear",now:false},{t:"8AM",e:"☀️",c:25,d:"Clear",now:false},{t:"9AM",e:"☀️",c:27,d:"Clear",now:false},{t:"10AM",e:"☀️",c:30,d:"Clear",now:false},{t:"11AM",e:"☀️",c:33,d:"Clear",now:true},{t:"12PM",e:"☀️",c:35,d:"Clear",now:false},{t:"1PM",e:"☀️",c:37,d:"Clear",now:false},{t:"2PM",e:"☀️",c:38,d:"Clear",now:false},{t:"3PM",e:"🌤️",c:39,d:"Mainly clear",now:false},{t:"4PM",e:"🌤️",c:39,d:"Mainly clear",now:false},{t:"5PM",e:"☀️",c:38,d:"Clear",now:false},{t:"6PM",e:"☀️",c:38,d:"Clear",now:false},{t:"7PM",e:"🌙",c:37,d:"Clear",now:false},{t:"8PM",e:"🌙",c:36,d:"Clear",now:false},{t:"9PM",e:"🌙",c:34,d:"Clear",now:false},{t:"10PM",e:"🌙",c:31,d:"Clear",now:false},{t:"11PM",e:"🌙",c:30,d:"Clear",now:false}];
+let   wxCenter_idx = 0;  // index of the slot shown in the CENTER position
+
+function wxPage(dir) {
+  wxCenter_idx = Math.max(0, Math.min(wxCenter_idx + dir, WX_DATA.length - 1));
+  wxRender();
+}
+
+function wxRender() {
+  if (!WX_DATA.length) return;
+  // Always show 3 slots: center-1, center, center+1 (clamped to array bounds)
+  const indices = [wxCenter_idx - 1, wxCenter_idx, wxCenter_idx + 1];
+  const visible = indices.map(i => (i >= 0 && i < WX_DATA.length) ? WX_DATA[i] : null);
+  const slotEl  = document.getElementById('wxSlots');
+  if (!slotEl) return;
+  slotEl.innerHTML = visible.map(s => s ? `
+    <div class="wx-slot ${s.now ? 'wx-now' : ''}">
+      <span class="wx-slot-time">${s.t}</span>
+      <span class="wx-slot-icon">${s.e}</span>
+      <span class="wx-slot-temp">${s.c}°</span>
+    </div>` : `<div class="wx-slot wx-slot-empty"></div>`).join('');
+  const prev = document.querySelector('.wx-prev');
+  const next = document.querySelector('.wx-next');
+  if (prev) prev.disabled = wxCenter_idx <= 0;
+  if (next) next.disabled = wxCenter_idx >= WX_DATA.length - 1;
+  const dotsEl = document.getElementById('wxDots');
+  if (dotsEl) {
+    dotsEl.innerHTML = WX_DATA.map((_, i) =>
+      `<div class="wx-dot ${i === wxCenter_idx ? 'active' : ''}"></div>`
+    ).join('');
+  }
+}
+
+(function() {
+  const nowIdx = WX_DATA.findIndex(s => s.now);
+  wxCenter_idx = nowIdx >= 0 ? nowIdx : 0;
+  wxRender();
+})();
+
+// ── TABS ───────────────────────────────────────────────────────────────────────
+function switchTab(name) {
+  ['today', 'archive'].forEach(t => {
+    document.getElementById('panel-' + t).classList.toggle('active', t === name);
+    document.getElementById('tab-'   + t).classList.toggle('active', t === name);
+  });
+}
+
+// ── INDEX TOOLTIPS ─────────────────────────────────────────────────────────────
+function showTip(btn) {
+  const bubble = document.getElementById('tipBubble');
+  const text   = document.getElementById('tipText');
+  if (!bubble || !text) return;
+  text.textContent = btn.dataset.tip;
+  bubble.style.visibility = 'hidden';
+  bubble.classList.add('show');
+  const r = btn.getBoundingClientRect();
+  const bw = bubble.offsetWidth;
+  let left = r.left;
+  if (left + bw > window.innerWidth - 8) left = window.innerWidth - bw - 8;
+  bubble.style.left = left + 'px';
+  bubble.style.top  = (r.bottom + 8) + 'px';
+  bubble.style.visibility = '';
+}
+
+function closeTip() {
+  const bubble = document.getElementById('tipBubble');
+  if (bubble) bubble.classList.remove('show');
+}
+
+document.addEventListener('click', function(e) {
+  const bubble = document.getElementById('tipBubble');
+  if (!bubble) return;
+  if (!bubble.contains(e.target) && !e.target.classList.contains('idx-info-btn')) {
+    bubble.classList.remove('show');
+  }
+});
+
+// ── LANGUAGE SWITCH ────────────────────────────────────────────────────────────
+function setLang(lang) {
+  document.body.className = 'lang-' + lang;
+  document.querySelectorAll('.global-lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.textContent.trim() === (lang === 'en' ? 'English' : 'العربية'));
+  });
+}
+
+// ── CARD EXPAND ───────────────────────────────────────────────────────────────
+function toggle(id) {
+  document.getElementById(id).classList.toggle('open');
+}
+
+// ── SEARCH (per tab) ──────────────────────────────────────────────────────────
+function filter(tab) {
+  const q      = document.getElementById('q-' + tab).value.toLowerCase().trim();
+  const feed   = document.getElementById('feed-' + tab);
+  const cards  = Array.from(feed.querySelectorAll('.card'));
+  const groups = Array.from(feed.querySelectorAll('.day-group'));
+  let visible  = 0;
+  cards.forEach(card => {
+    const show = !q || card.textContent.toLowerCase().includes(q);
+    card.style.display = show ? '' : 'none';
+    if (show) visible++;
+  });
+  groups.forEach(group => {
+    const hasVisible = Array.from(group.querySelectorAll('.card')).some(c => c.style.display !== 'none');
+    group.style.display = hasVisible ? '' : 'none';
+  });
+  document.getElementById('filter-count-' + tab).textContent =
+    q ? `${visible} result${visible !== 1 ? 's' : ''}` : '';
+}
+</script>
+</body>
+</html>
