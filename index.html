@@ -310,7 +310,7 @@
     <div class="hero-eyebrow">Daily Market Briefing</div>
     <h1 class="hero-title">Redcon Properties<br><strong>Intelligence Feed</strong></h1>
     <p class="hero-sub">Daily News analyzed for Egypt's construction, infrastructure, and real estate market.</p>
-    <div class="hero-meta">Last updated: 19 July 2026, 23:55</div>
+    <div class="hero-meta">Last updated: 20 July 2026, 00:00</div>
   </div>
   
 <div class="wx-widget" id="wxWidget">
@@ -318,10 +318,10 @@
     <div class="wx-location">Cairo <span class="wx-flag">🇪🇬</span></div>
     <div class="wx-big-row">
       <span class="wx-big-icon">🌙</span>
-      <span class="wx-big-temp">30°</span>
+      <span class="wx-big-temp">28°</span>
     </div>
     <div class="wx-condition">Clear</div>
-    <div class="wx-range">H 39° &nbsp;·&nbsp; L 24°</div>
+    <div class="wx-range">H 38° &nbsp;·&nbsp; L 24°</div>
   </div>
   <div class="wx-hourly">
     <button class="wx-nav wx-prev" onclick="wxPage(-1)" aria-label="Previous hours">&#x2039;</button>
@@ -335,7 +335,7 @@
 
 <!-- INDICES -->
 <div class="indices-bar">
-  <span class="indices-as-of">As of 23:55</span>
+  <span class="indices-as-of">As of 00:00</span>
   
   <div class="indices-group">
     <span class="indices-eyebrow">Market Indices &amp; FX</span>
@@ -456,11 +456,11 @@
 <div class="tabs-bar">
   <button class="tab-btn active" id="tab-today" onclick="switchTab('today')">
     Today's Briefing
-    <span class="tab-badge">3</span>
+    <span class="tab-badge">0</span>
   </button>
   <button class="tab-btn" id="tab-archive" onclick="switchTab('archive')">
     Archive
-    <span class="tab-badge">160</span>
+    <span class="tab-badge">163</span>
   </button>
 </div>
 
@@ -475,11 +475,32 @@
     </div>
     <div id="feed-today">
       
+      
+  <div class="empty">
+    <div class="empty-icon">&#x1F4F0;</div>
+    <h2>No articles today yet</h2>
+    <p>Run the news engine script to populate today's articles.</p>
+  </div>
+    </div>
+  </div>
+
+  <!-- ARCHIVE -->
+  <div class="tab-panel" id="panel-archive">
+    <div class="archive-note">
+      <span class="archive-note-icon">📁</span>
+      Previous days' intelligence briefings. Each day's articles are appended here automatically when the next day's run completes.
+    </div>
+    <div class="search-wrap">
+      <input type="text" id="q-archive" placeholder="Search archived headlines and summaries…" oninput="filter('archive')"/>
+      <span id="filter-count-archive"></span>
+    </div>
+    <div id="feed-archive">
+      
   <section class="day-group">
     <div class="day-header">
-      <span class="day-label">Top Stories Today</span>
+      <span class="day-label">2026-07-19</span>
       <div class="day-rule"></div>
-      <span class="day-count">2 articles</span>
+      <span class="day-count">3 articles</span>
     </div>
     
     <div class="card card-high" id="c0" onclick="toggle('c0')">
@@ -560,14 +581,6 @@
         <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/19/hiltons-egypt-expansion-reaches-ras-el-bar-with-a-new-doray-bay-hotel-deal/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
       </div>
     </div>
-  </section>
-  <section class="day-group">
-    <div class="day-header">
-      <span class="day-label">Also in the News</span>
-      <div class="day-rule"></div>
-      <span class="day-count">1 article</span>
-    </div>
-    
     <div class="card card-mid" id="c2" onclick="toggle('c2')">
       <div class="card-head">
         <div class="card-title">
@@ -600,22 +613,6 @@
       </div>
     </div>
   </section>
-      
-    </div>
-  </div>
-
-  <!-- ARCHIVE -->
-  <div class="tab-panel" id="panel-archive">
-    <div class="archive-note">
-      <span class="archive-note-icon">📁</span>
-      Previous days' intelligence briefings. Each day's articles are appended here automatically when the next day's run completes.
-    </div>
-    <div class="search-wrap">
-      <input type="text" id="q-archive" placeholder="Search archived headlines and summaries…" oninput="filter('archive')"/>
-      <span id="filter-count-archive"></span>
-    </div>
-    <div id="feed-archive">
-      
   <section class="day-group">
     <div class="day-header">
       <span class="day-label">2026-07-16</span>
@@ -6472,7 +6469,7 @@
 
 <script>
 // ── WEATHER PAGINATOR ──────────────────────────────────────────────────────────
-const WX_DATA   = [{t:"12AM",e:"🌙",c:28,d:"Clear",now:false},{t:"1AM",e:"🌙",c:27,d:"Clear",now:false},{t:"2AM",e:"🌙",c:27,d:"Clear",now:false},{t:"3AM",e:"🌙",c:26,d:"Clear",now:false},{t:"4AM",e:"🌙",c:25,d:"Clear",now:false},{t:"5AM",e:"🌙",c:25,d:"Clear",now:false},{t:"6AM",e:"☀️",c:24,d:"Clear",now:false},{t:"7AM",e:"☀️",c:24,d:"Clear",now:false},{t:"8AM",e:"☀️",c:25,d:"Clear",now:false},{t:"9AM",e:"☀️",c:28,d:"Clear",now:false},{t:"10AM",e:"☀️",c:31,d:"Clear",now:false},{t:"11AM",e:"☀️",c:34,d:"Clear",now:false},{t:"12PM",e:"☀️",c:36,d:"Clear",now:false},{t:"1PM",e:"☀️",c:38,d:"Clear",now:false},{t:"2PM",e:"☀️",c:39,d:"Clear",now:false},{t:"3PM",e:"🌤️",c:39,d:"Mainly clear",now:false},{t:"4PM",e:"🌤️",c:39,d:"Mainly clear",now:false},{t:"5PM",e:"☀️",c:39,d:"Clear",now:false},{t:"6PM",e:"☀️",c:38,d:"Clear",now:false},{t:"7PM",e:"🌙",c:37,d:"Clear",now:false},{t:"8PM",e:"🌙",c:36,d:"Clear",now:false},{t:"9PM",e:"🌙",c:34,d:"Clear",now:false},{t:"10PM",e:"🌙",c:31,d:"Clear",now:false},{t:"11PM",e:"🌙",c:30,d:"Clear",now:true}];
+const WX_DATA   = [{t:"12AM",e:"🌙",c:28,d:"Clear",now:true},{t:"1AM",e:"🌙",c:28,d:"Clear",now:false},{t:"2AM",e:"🌙",c:27,d:"Mainly clear",now:false},{t:"3AM",e:"🌙",c:26,d:"Mainly clear",now:false},{t:"4AM",e:"☁️",c:25,d:"Partly cloudy",now:false},{t:"5AM",e:"☁️",c:25,d:"Partly cloudy",now:false},{t:"6AM",e:"⛅",c:25,d:"Partly cloudy",now:false},{t:"7AM",e:"⛅",c:24,d:"Partly cloudy",now:false},{t:"8AM",e:"⛅",c:25,d:"Partly cloudy",now:false},{t:"9AM",e:"🌤️",c:26,d:"Mainly clear",now:false},{t:"10AM",e:"🌤️",c:28,d:"Mainly clear",now:false},{t:"11AM",e:"☀️",c:31,d:"Clear",now:false},{t:"12PM",e:"☀️",c:34,d:"Clear",now:false},{t:"1PM",e:"☀️",c:36,d:"Clear",now:false},{t:"2PM",e:"☀️",c:37,d:"Clear",now:false},{t:"3PM",e:"☀️",c:38,d:"Clear",now:false},{t:"4PM",e:"☀️",c:38,d:"Clear",now:false},{t:"5PM",e:"☀️",c:38,d:"Clear",now:false},{t:"6PM",e:"☀️",c:38,d:"Clear",now:false},{t:"7PM",e:"🌙",c:37,d:"Clear",now:false},{t:"8PM",e:"🌙",c:35,d:"Clear",now:false},{t:"9PM",e:"🌙",c:33,d:"Clear",now:false},{t:"10PM",e:"🌙",c:31,d:"Clear",now:false},{t:"11PM",e:"🌙",c:29,d:"Clear",now:false}];
 let   wxCenter_idx = 0;  // index of the slot shown in the CENTER position
 
 function wxPage(dir) {
