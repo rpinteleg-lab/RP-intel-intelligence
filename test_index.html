@@ -310,32 +310,15 @@
     <div class="hero-eyebrow">Daily Market Briefing</div>
     <h1 class="hero-title">Redcon Properties<br><strong>Intelligence Feed</strong></h1>
     <p class="hero-sub">Daily News analyzed for Egypt's construction, infrastructure, and real estate market.</p>
-    <div class="hero-meta">Last updated: 27 July 2026, 09:31</div>
+    <div class="hero-meta">Last updated: 28 July 2026, 10:39</div>
   </div>
   
-<div class="wx-widget" id="wxWidget">
-  <div class="wx-current">
-    <div class="wx-location">Cairo <span class="wx-flag">🇪🇬</span></div>
-    <div class="wx-big-row">
-      <span class="wx-big-icon">⛅</span>
-      <span class="wx-big-temp">26°</span>
-    </div>
-    <div class="wx-condition">Partly cloudy</div>
-    <div class="wx-range">H 35° &nbsp;·&nbsp; L 22°</div>
-  </div>
-  <div class="wx-hourly">
-    <button class="wx-nav wx-prev" onclick="wxPage(-1)" aria-label="Previous hours">&#x2039;</button>
-    <div class="wx-slots" id="wxSlots"></div>
-    <button class="wx-nav wx-next" onclick="wxPage(1)"  aria-label="Next hours">&#x203A;</button>
-  </div>
-  <div class="wx-dots" id="wxDots"></div>
-</div>
 </div>
 
 
 <!-- INDICES -->
 <div class="indices-bar">
-  <span class="indices-as-of">As of 09:30</span>
+  <span class="indices-as-of">As of 10:25</span>
   
   <div class="indices-group">
     <span class="indices-eyebrow">Market Indices &amp; FX</span>
@@ -346,7 +329,7 @@
       EGX 30
       <button class="idx-info-btn" data-tip="Benchmark index representing the 30 most liquid and actively traded stocks on the Egyptian Exchange." onclick="showTip(this)" title="About EGX 30">i</button>
     </span>
-    <span class="idx-value idx-value-neg">53,417.59</span> <span class="idx-pct idx-pct-neg">▼ -0.95%</span>
+    <span class="idx-value idx-value-pos">53,532.26</span> <span class="idx-pct idx-pct-pos">▲ +0.21%</span>
   </div>
       
   <div class="idx-item">
@@ -354,7 +337,7 @@
       Construction Index
       <button class="idx-info-btn" data-tip="Sector index representing Egyptian companies operating in construction, cement, steel, and building materials." onclick="showTip(this)" title="About Construction Index">i</button>
     </span>
-    <span class="idx-value idx-value-neg">10,415.73</span> <span class="idx-pct idx-pct-neg">▼ -0.37%</span>
+    <span class="idx-value idx-value-pos">10,459.42</span> <span class="idx-pct idx-pct-pos">▲ +0.42%</span>
   </div>
       
   <div class="idx-item">
@@ -386,7 +369,7 @@
       USD / EGP
       <button class="idx-info-btn" data-tip="US Dollar to Egyptian Pound exchange rate, sourced from Investing.com." onclick="showTip(this)" title="About USD / EGP">i</button>
     </span>
-    <span class="idx-value idx-value-pos">51.32</span> <span class="idx-pct idx-pct-pos">▲ +0.12%</span>
+    <span class="idx-value idx-value-neg">50.69</span> <span class="idx-pct idx-pct-neg">▼ -1.11%</span>
   </div>
     </div>
   </div>
@@ -400,7 +383,7 @@
       Crude Oil
       <button class="idx-info-btn" data-tip="WTI Crude Oil futures price per barrel in USD, sourced from Yahoo Finance." onclick="showTip(this)" title="About Crude Oil">i</button>
     </span>
-    <span class="idx-value">$83.54</span>
+    <span class="idx-value">$83.74</span>
   </div>
       
   <div class="idx-item">
@@ -408,7 +391,7 @@
       Copper (t)
       <button class="idx-info-btn" data-tip="Copper price per metric ton in USD, sourced from MetalCharts." onclick="showTip(this)" title="About Copper (t)">i</button>
     </span>
-    <span class="idx-value">$13,943.85</span>
+    <span class="idx-value">$13,974.16</span>
   </div>
       
   <div class="idx-item">
@@ -416,7 +399,7 @@
       Aluminum (t)
       <button class="idx-info-btn" data-tip="Aluminium price per metric ton in USD, sourced from Investing.com." onclick="showTip(this)" title="About Aluminum (t)">i</button>
     </span>
-    <span class="idx-value">$3,158.50</span>
+    <span class="idx-value">$3,163.30</span>
   </div>
       
   <div class="idx-item">
@@ -424,7 +407,7 @@
       Steel Rebar (t)
       <button class="idx-info-btn" data-tip="Ezz Steel rebar price per tonne in Egyptian Pounds, scraped daily from Al-Masry Al-Youm building materials article." onclick="showTip(this)" title="About Steel Rebar (t)">i</button>
     </span>
-    <span class="idx-value">EGP 39,954</span>
+    <span class="idx-value">EGP 39,322</span>
   </div>
       
   <div class="idx-item">
@@ -432,7 +415,7 @@
       Cement (t)
       <button class="idx-info-btn" data-tip="Grey cement price per tonne in Egyptian Pounds, scraped daily from Al-Masry Al-Youm building materials article." onclick="showTip(this)" title="About Cement (t)">i</button>
     </span>
-    <span class="idx-value">EGP 3,788</span>
+    <span class="idx-value">EGP 4,120</span>
   </div>
       
   <div class="idx-item">
@@ -456,11 +439,11 @@
 <div class="tabs-bar">
   <button class="tab-btn active" id="tab-today" onclick="switchTab('today')">
     Today's Briefing
-    <span class="tab-badge">13</span>
+    <span class="tab-badge">26</span>
   </button>
   <button class="tab-btn" id="tab-archive" onclick="switchTab('archive')">
     Archive
-    <span class="tab-badge">81</span>
+    <span class="tab-badge">94</span>
   </button>
 </div>
 
@@ -479,10 +462,963 @@
     <div class="day-header">
       <span class="day-label">Top Stories Today</span>
       <div class="day-rule"></div>
-      <span class="day-count">4 articles</span>
+      <span class="day-count">11 articles</span>
     </div>
     
     <div class="card card-high" id="c0" onclick="toggle('c0')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egypt Treasury Bond Yields Rise</span>
+          <span class="title-ar" dir="rtl">ارتفاع عوائد سندات الخزانة المصرية</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-high">Full Analysis</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">The average yield on treasury bonds in Egypt has seen consecutive increases over the past month. The yield reached 25.305% during the last week&#x27;s transactions, compared to 25.033% during the week before. The article does not provide further details on the reasons behind this increase or its potential impact on the economy. The information is based on the performance of treasury bonds over a one-month period, with a focus on the yields during the last two weeks.</div>
+        </div>
+          
+        <div class="field full en-content">
+          <div class="field-label">Future Implications</div>
+          <div class="field-text">The increase in treasury bond yields may have implications for real estate developers and investors in Egypt, potentially affecting borrowing costs and financing options. This could impact the affordability of housing and the attractiveness of investment opportunities in the country. As a developer, it may be necessary to consider these changes when evaluating project financing and investment strategies.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">شهد متوسط عوائد سندات الخزانة في مصر ارتفاعات متتالية خلال الشهر الماضي. بلغت العوائد 25.305% خلال تعاملات الأسبوع الماضي، مقارنة مع 25.033% خلال تعاملات الأسبوع السابق. لا تقدم المقالة تفاصيل إضافية حول الأسباب وراء هذا الارتفاع أو تأثيره المحتمل على الاقتصاد. تعتمد المعلومات على أداء سندات الخزانة خلال فترة شهر، مع التركيز على العوائد خلال الأسبوعين الماضيين.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">التداعيات المستقبلية</div>
+          <div class="field-text">قد يكون لارتفاع عوائد سندات الخزانة تأثير على مطوري العقارات والمستثمرين في مصر، مما قد يؤثر على تكلفة القروض وخيارات التمويل. قد يؤثر هذا على إمكانية شراء المساكن وجاذبية الفرص الاستثمارية في البلاد. كما مطور، قد يكون من الضروري النظر في هذه التغييرات عند تقييم استراتيجيات التمويل والاستثمار للمشاريع.</div>
+        </div>
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://almalnews.com/2126485/متوسط-الفائدة-على-أدوات-الدين-قصيرة-الأجل/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
+      </div>
+    </div>
+    <div class="card card-high" id="c1" onclick="toggle('c1')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egypt Attracts $15.5 Billion in FDI in 2025</span>
+          <span class="title-ar" dir="rtl">مصر تنجز 15.5 مليار دولار من الاستثمار الأجنبي المباشر في 2025</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-high">Full Analysis</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Egypt&#x27;s Minister of Investment and International Cooperation, Dr. Mohamed Farid Saleh, announced that Egypt ranked first in Africa and second in the Arab world in attracting foreign direct investment (FDI) in 2025, with $15.5 billion in inflows. The minister attributed this to the country&#x27;s improved economic attractiveness and ability to attract investments despite global economic and geopolitical challenges. The government aims to maintain this performance by implementing legislative and regulatory reforms, developing the business environment, and simplifying investment procedures. The ministry is also preparing to announce new decisions and measures to facilitate capital increases for companies, including the development of an electronic system for digital and rapid execution of capital increases, mergers, and acquisitions.</div>
+        </div>
+          
+        <div class="field full en-content">
+          <div class="field-label">Future Implications</div>
+          <div class="field-text">The increased FDI inflows and planned reforms may enhance Egypt&#x27;s competitiveness and attractiveness to investors, potentially benefiting developers and investors in the real estate sector. The electronic system for capital increases and other transactions could also streamline processes and reduce timelines, making it easier for companies to access financing and execute investment plans. This could have a positive impact on the growth and expansion of businesses in Egypt, including those in the real estate and construction sectors.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">أكد الدكتور محمد فريد صالح، وزير الاستثمار والتجارة الخارجية، أن مصر احتلت المركز الأول على مستوى القارة الأفريقية والثاني عربيًا في جذب الاستثمار الأجنبي المباشر خلال عام 2025، بتدفقات استثمارية بلغت 15.5 مليار دولار. وأرجع الوزير ذلك إلى تحسن جاذبية الاقتصاد المصري وقدرته على استقطاب الاستثمارات رغم التحديات الاقتصادية والجيوسياسية العالمية. وتستهدف الحكومة الحفاظ على هذا الأداء من خلال تنفيذ إصلاحات تشريعية وتنظيمية، وتطوير بيئة الأعمال، وتسهيل إجراءات الاستثمار. كما تستعد الوزارة للإعلان عن قرارات جديدة لتيسير زيادات رؤوس الأموال إلكترونيًا، بما في ذلك تطوير المنظومة الإلكترونية لتنفيذ إجراءات زيادات رؤوس الأموال والاندماجات والاستحواذات بصورة رقمية وسريعة.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">التداعيات المستقبلية</div>
+          <div class="field-text">يمكن أن يعزز التدفقات المتزايدة من الاستثمار الأجنبي المباشر والإصلاحات المخطط لها من تنافسية مصر وجاذبيتها للمستثمرين، مما قد يفيد المطورين والمستثمرين في قطاع العقارات. يمكن أن يسهل النظام الإلكتروني لزيادات رؤوس الأموال والمعاملات الأخرى العمليات ويتقلص الأطر الزمنية، مما يسهل على الشركات الوصول إلى التمويل وتنفيذ خطط الاستثمار. ويمكن أن يكون لهذا تأثير إيجابي على نمو وتوسع الأعمال في مصر، بما في ذلك تلك في قطاع العقارات والبناء.</div>
+        </div>
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://almalnews.com/2126532/محمد-فريد-مصر-الأولى-أفريقيًا-في-جذب/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
+      </div>
+    </div>
+    <div class="card card-high" id="c2" onclick="toggle('c2')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egypt&#x27;s New Investment Strategy</span>
+          <span class="title-ar" dir="rtl">استراتيجية الاستثمار الجديدة في مصر</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-high">Full Analysis</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Egypt&#x27;s Minister of Investment and International Trade, Dr. Mohamed Farid Saleh, announced that the government has prepared a new investment strategy to guide promotional efforts towards sectors with high potential for attracting investments. The strategy identifies 12 priority sectors, with 8 ready to receive investments immediately and 4 requiring further legislative and regulatory reforms. The strategy focuses on smart targeting of investments in competitive sectors that can add value to the Egyptian economy, increase exports, and provide job opportunities. The government is continuing to implement structural and institutional reforms to enhance the competitiveness of the investment environment and attract productive and sustainable investments. According to the Global Investment Report 2026, global investments are concentrated in digital infrastructure, despite a 4% increase in foreign direct investment flows.</div>
+        </div>
+          
+        <div class="field full en-content">
+          <div class="field-label">Future Implications</div>
+          <div class="field-text">The new investment strategy may impact competing developers by increasing competition for investments in priority sectors. The focus on digital infrastructure may also create opportunities for investments in related sectors, such as data centers. Additionally, the government&#x27;s efforts to enhance the competitiveness of the investment environment may attract more foreign direct investments, potentially benefiting real estate developers and investors. The strategy&#x27;s emphasis on sustainable and productive investments may also influence the type of projects that are developed in the future, with a focus on those that can add value to the Egyptian economy and provide job opportunities.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">أعلن الدكتور محمد فريد صالح، وزير الاستثمار والتجارة الخارجية، أن الحكومة انتهت من إعداد استراتيجية جديدة للاستثمار والاستثمار الأجنبي المباشر، بهدف توجيه جهود الترويج نحو القطاعات الأكثر قدرة على جذب الاستثمارات. حددت الاستراتيجية 12 قطاعًا تمثل الأولوية خلال المرحلة المقبلة، مع 8 قطاعات جاهزة لاستقبال الاستثمارات بشكل فوري، و4 قطاعات تحتاج إلى استكمال بعض الإصلاحات التشريعية والتنظيمية. تركز الاستراتيجية على الاستهداف الذكي للاستثمارات في القطاعات التنافسية التي يمكن أن تضيف قيمة إلى الاقتصاد المصري، وزيادة الصادرات، وتوفير فرص العمل. تستمر الحكومة في تنفيذ الإصلاحات الهيكلية والمؤسسية لتعزيز تنافسية بيئة الاستثمار، وجذب استثمارات إنتاجية ومستدامة تدعم النمو الاقتصادي. وفقًا لتقرير الاستثمار العالمي لعام 2026، تركز الاستثمارات العالمية في البنية التحتية الرقمية، رغم ارتفاع التدفقات الاستثمارية الأجنبية المباشرة بنسبة 4%.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">التداعيات المستقبلية</div>
+          <div class="field-text">يمكن أن تؤثر استراتيجية الاستثمار الجديدة على المطورين المنافسين بزيادة المنافسة على الاستثمارات في القطاعات ذات الأولوية. يمكن أن تخلق تركيز الاستثمارات في البنية التحتية الرقمية فرصًا للاستثمار في القطاعات ذات الصلة، مثل مراكز البيانات. بالإضافة إلى ذلك، يمكن أن تجذب جهود الحكومة لتعزيز تنافسية بيئة الاستثمار استثمارات أجنبية مباشرة أكثر، مما قد يفيد المطورين العقاريين والمستثمرين. يمكن أن تؤثر استراتيجية الاستثمار على نوعية المشاريع التي سيتم تطويرها في المستقبل، مع التركيز على تلك التي يمكن أن تضيف قيمة إلى الاقتصاد المصري وتوفر فرص عمل.</div>
+        </div>
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://almalnews.com/2126535/فريد-الإعلان-قريبًا-عن-استراتيجية-تستهدف-12/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
+      </div>
+    </div>
+    <div class="card card-high" id="c3" onclick="toggle('c3')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Misr Al Jadidah Achieves Sustainability in Gadinia Project</span>
+          <span class="title-ar" dir="rtl">مصر الجديدة تحقق الاستدامة في مشروع جادينيا</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-high">Full Analysis</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Dr. Samih El-Sayed, CEO of Misr Al Jadidah for Housing and Development, stated that applying sustainability standards in real estate projects may increase some execution costs initially, but these costs are compensated in the long run through reduced operating costs. The company achieved a balance between environmental and economic considerations in its Gadinia project. Some views consider green building and sustainability standards to impose additional costs, but these costs should be seen as long-term investments. The company is discussing financing options with several banks, including the National Bank of Egypt and Banque Misr, and has benefited from green financing tools to support sustainable projects. The Gadinia project has undergone several stages to meet sustainability standards, and the company aims to ensure its continuity and that of its projects in the long term.</div>
+        </div>
+          
+        <div class="field full en-content">
+          <div class="field-label">Future Implications</div>
+          <div class="field-text">The adoption of sustainability standards in real estate projects may lead to increased competition among developers to incorporate green building and sustainability features, potentially driving up land prices and construction costs. However, this could also lead to increased demand for sustainable housing and tourism development, benefiting developers who prioritize sustainability. The use of green financing tools may also become more prevalent, providing developers with alternative funding options for sustainable projects.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">أشار الدكتور سامح السيد، العضو المنتدب والرئيس التنفيذي لشركة مصر الجديدة للإسكان والتعمير، إلى أن تطبيق معايير الاستدامة في المشروعات العقارية قد يؤدي إلى ارتفاع بعض تكاليف التنفيذ خلال المراحل الأولى، إلا أن هذه الزيادة يتم تعويضها على المدى الطويل من خلال خفض تكاليف التشغيل والاستهلاك. وحرصت الشركة على تحقيق التوازن بين الاعتبارات البيئية والاقتصادية في مشروع جادينيا. وتجري الشركة مباحثات مع عدد من البنوك، من بينها البنك الأهلي المصري وبنك مصر، لبحث توفير آليات تمويلية للمشروع، ومما يدعم الجانب الاقتصادي للمشروع ويعزز قدرة الشركة على تنفيذ رؤيتها الخاصة بالتنمية المستدامة.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">التداعيات المستقبلية</div>
+          <div class="field-text">قد تؤدي تبني معايير الاستدامة في المشروعات العقارية إلى زيادة التنافس بين المطورين لدمج ميزات البناء الأخضر والاستدامة، مما قد يؤدي إلى ارتفاع أسعار الأراضي وتكلفة البناء. ومع ذلك، قد يؤدي ذلك أيضًا إلى زيادة الطلب على السكن المستدام والتنمية السياحية، مما يفيد المطورين الذين يใหون الأولوية للاستدامة. وقد تصبح أدوات التمويل الأخضر أكثر شيوعًا، مما يوفر للمطورين خيارات تمويلية بديلة للمشروعات المستدامة.</div>
+        </div>
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://almalnews.com/2126538/«مصر-الجديدة-للإسكان»-ارتفاع-تكلفة-مشروعات-البناء/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
+      </div>
+    </div>
+    <div class="card card-high" id="c4" onclick="toggle('c4')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Arkas Line Enters Safaga Port with Saskia A</span>
+          <span class="title-ar" dir="rtl">دخول خط أركس إلى ميناء سفاجا مع السفينة ساسكيا أ</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-high">Full Analysis</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">The Safaga Port received its first container ship, the Saskia A, operated by Arkas Line, marking a significant milestone in the development of Egyptian ports and enhancing trade movement through the Red Sea. This is the first container shipping line to operate at the port, opening new opportunities for maritime transport and enhancing Safaga&#x27;s position as a promising logistics hub for regional and international trade. Arkas Egypt provided full agency services for the ship, managing all procedures for its entry, tracking, and departure. The company aims to expand its operations in strategic Egyptian ports, supporting supply chains and increasing the competitiveness of Egyptian ports.</div>
+        </div>
+          
+        <div class="field full en-content">
+          <div class="field-label">Future Implications</div>
+          <div class="field-text">The entry of Arkas Line into Safaga Port may attract more global shipping lines, increasing competition among developers and investors in the region. This could lead to increased investment in logistics and infrastructure, potentially benefiting real estate developers with projects in the Suez Canal Economic Zone and major logistics corridors. As a result, housing demand and tourism development in the Red Sea area may also be positively impacted, with potential opportunities for REDCON Properties to capitalize on these trends.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">استقبلت ميناء سفاجا أول سفينة حاويات في تاريخها، وهي السفينة ساسكيا أ التابعة لخط أركس، مما يُعد نقطة تحول مهمة في تطوير الموانئ المصرية وتعزيز حركة التجارة عبر البحر الأحمر. هذا هو أول تشغيل لخط ملاحي للحاويات في الميناء، مما يفتح آفاقًا جديدة أمام حركة النقل البحري ويعزز مكانة سفاجا كبوابة لوجستية واعدة لخدمة التجارة الإقليمية والدولية. قدمت شركة أركس مصر خدمات الوكالة الملاحية الكاملة للسفينة، حيث تولى فريق العمليات إدارة وتنسيق جميع إجراءات دخول السفينة وتراكيها ومغادرتها.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">التداعيات المستقبلية</div>
+          <div class="field-text">قد يؤدي دخول خط أركس إلى ميناء سفاجا إلى جذب المزيد من الخطوط الملاحية العالمية، مما يزيد من التنافس بين المطورين والمستثمرين في المنطقة. هذا قد يؤدي إلى زيادة الاستثمار في مجالات اللوجستيات والبنية التحتية، مما قد يفيد المطورين العقاريين الذين لديهم مشاريع في منطقة قناة السويس والمناطق اللوجستية الرئيسية. وبالتالي، قد تتأثر الطلب على السكن وتطوير السياحة في منطقة البحر الأحمر بشكل إيجابي، مع فرص محتملة لشركة ريدكون العقارية للاستفادة من هذه الاتجاهات.</div>
+        </div>
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://almalnews.com/2126564/خط-«أركاس»-يبدأ-تشغل-خدمة-تربط-«سفاجا»/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
+      </div>
+    </div>
+    <div class="card card-high" id="c5" onclick="toggle('c5')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egypt&#x27;s Suez Canal Economic Zone Receives First Container Ships</span>
+          <span class="title-ar" dir="rtl">ميناء سفاجا يستقبل أول سفينتي حاويات في تاريخه</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-high">Full Analysis</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">The Suez Canal Economic Zone&#x27;s multi-purpose terminal, &#x27;Safaga 2&#x27;, has received its first two container ships, MV Contanner Ship Saskiaa and MV Contanner Ship AN HAI. This milestone comes less than two months after the terminal began its commercial trial operation. The Minister of Transport, Engineer Kamel Al-Wazir, stated that this achievement reflects the significant development of the port and its readiness to accommodate the increasing maritime trade, particularly transit trade. The minister also highlighted the terminal&#x27;s role in the integrated logistics corridor (Safaga – Qena – Abu Tartour), one of eight international logistics corridors being implemented by the state. The project aims to transform Egypt into a regional center for transport, logistics, and transit trade. The minister praised the cooperation with the Ministry of Interior, which facilitated the completion of procedures for the two ships. The terminal is expected to contribute to the development of the Upper Egypt region, support mining activities in the Golden Triangle, and enhance export and import operations.</div>
+        </div>
+          
+        <div class="field full en-content">
+          <div class="field-label">Future Implications</div>
+          <div class="field-text">The successful reception of the first container ships at the Safaga 2 terminal may attract more investment in the Suez Canal Economic Zone, particularly in the logistics and industrial sectors. This could lead to increased competition among developers and investors in the region. Additionally, the terminal&#x27;s role in the integrated logistics corridor may enhance the zone&#x27;s attractiveness for international trade and transit, potentially increasing demand for housing and commercial properties in the surrounding areas. The Egyptian government&#x27;s efforts to develop the country&#x27;s ports and logistics infrastructure may also lead to increased economic activity and job creation in the region.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">استقبلت محطة سفاجا 2 متعددة الأغراض أول سفينتي حاويات في تاريخ ميناء سفاجا، وهما MV Contanner Ship Saskiaa وMV Contanner Ship AN HAI. جاء ذلك بعد أقل من شهرين من بدء التشغيل التجريبي التجاري للمحطة. وأكد الوزير أن هذا الإنجاز يعكس التطور الكبير الذي شهده الميناء وجاهزيته لاستيعاب الزيادة المطردة في حركة التجارة البحرية، وخاصة تجارة الترانزيت. وأشار الوزير إلى أن المحطة تمثل جزءًا رئيسيًا من الممر اللوجستي المتكامل (سفاجا – قنا – أبو طرطور)، أحد الممرات اللوجستية الدولية الثمانية التي تنفذها الدولة. وتهدف المشروع إلى تحويل مصر إلى مركز إقليمي للنقل واللوجستيات وتجارة الترانزيت. وأثنى الوزير على التعاون مع وزارة الداخلية، الذي ساهم في إنهاء إجراءات السفينتين.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">التداعيات المستقبلية</div>
+          <div class="field-text">يمكن أن يؤدي استقبال أول سفينتي حاويات في ميناء سفاجا إلى جذب المزيد من الاستثمارات في منطقة قناة السويس الاقتصادية، خاصة في قطاعي اللوجستيات والصناعة. ويمكن أن يؤدي ذلك إلى زيادة التنافس بين المطورين والمستثمرين في المنطقة. بالإضافة إلى ذلك، يمكن أن يزيد دور المحطة في الممر اللوجستي المتكامل من جاذبية المنطقة للتبادل التجاري الدولي وتجارة الترانزيت، مما قد يزيد الطلب على الوحدات السكنية والتجارية في المناطق المحيطة. ويمكن أن تؤدي جهود الحكومة المصرية لتطوير البنية التحتية للموانئ واللوجستيات إلى زيادة النشاط الاقتصادي و خلق فرص عمل في المنطقة.</div>
+        </div>
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://almalnews.com/2126596/لأول-مرة-في-تاريخ-الميناء-محطة-«سفاجا/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
+      </div>
+    </div>
+    <div class="card card-high" id="c6" onclick="toggle('c6')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Diarr Companies Expand in Egyptian Market</span>
+          <span class="title-ar" dir="rtl">شركات ديار تتوسع في السوق العقارية المصرية</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-high">Full Analysis</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Hani Farag, Chairman of Diar Companies, announced that his companies will continue to implement their expansion plan in the Egyptian real estate market. The plan is based on a portfolio of projects focused in West Cairo and a track record of over 125 diverse real estate projects and the delivery of more than 3,000 different housing units. Farag emphasized the importance of human resources in achieving sustainable growth, stating that it is not just about the size of investments or projects, but also about having qualified personnel who can efficiently execute plans. He also highlighted the company&#x27;s strategy to enhance performance, integrate different sectors, and provide projects that meet the needs of the real estate market. During the first half of 2026, the companies achieved more than 120% of their target, and Farag honored several distinguished employees for their contributions to the operational performance and implementation of the companies&#x27; plans.</div>
+        </div>
+          
+        <div class="field full en-content">
+          <div class="field-label">Future Implications</div>
+          <div class="field-text">The expansion of Diar Companies in the Egyptian market may lead to increased competition for other developers, particularly in West Cairo. The focus on human resources and employee development may also lead to a more skilled and efficient workforce, potentially driving growth and innovation in the real estate sector. Additionally, the company&#x27;s strategy to provide projects that meet the needs of the market may lead to increased demand for housing and commercial units, potentially driving up property values and rental yields.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">أعلن هاني فراج، رئيس مجلس إدارة شركات ديار للبناء والتطوير، أن شركاته ستواصل تنفيذ خطتها التوسعية في السوق العقارية المصرية. وتستند الخطة إلى محفظة مشروعات تتركز في غرب القاهرة، وسابقة أعمال تضم أكثر من 125 مشروعًا عقاريًّا متنوعًا، وتسليم أكثر من 3000 وحدة سكنية مختلفة. وشدد فراج على أهمية العنصر البشري في تحقيق النمو المستدام، مشيرًا إلى أن الأمر لا يتعلق فقط بحجم الاستثمارات أو المشروعات، وإنما يرتبط بامتلاك كوادر مؤهَّلة قادرة على تنفيذ الخطط بكفاءة. كما أشار إلى استراتيجية الشركات لتعزيز الأداء وتكامل القطاعات وتقديم مشروعات تلبي احتياجات السوق العقارية. خلال النصف الأول من عام 2026، حققت الشركات أكثر من 120% من مستهدفاتها، وكرّم فراج عددًا من الموظفين المتميزين لمساهمتهم في الأداء التشغيلي وتنفيذ خطط الشركات.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">التداعيات المستقبلية</div>
+          <div class="field-text">قد تؤدي توسعة شركات ديار في السوق العقارية المصرية إلى زيادة المنافسة على المطورين الآخرين، خاصة في غرب القاهرة. كما قد يؤدي التركيز على الموارد البشرية وتطوير الموظفين إلى قوة عمل أكثر مهارة وكفاءة، مما قد يدفع النمو والابتكار في قطاع العقارات. بالإضافة إلى ذلك، قد تؤدي استراتيجية الشركة لتقديم مشروعات تلبي احتياجات السوق إلى زيادة الطلب على الوحدات السكنية والتجارية، مما قد يؤدي إلى ارتفاع قيمة العقارات والإيجارات.</div>
+        </div>
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://almalnews.com/2126641/شركات-ديار-و«Westway»-و«Harva»-العقارية-تخطط-للتوسع/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
+      </div>
+    </div>
+    <div class="card card-high" id="c7" onclick="toggle('c7')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egypt Proposes Unified Contract for Real Estate Developers</span>
+          <span class="title-ar" dir="rtl">مصر تقترح عقدًا موحدًا للمطورين العقاريين</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-high">Full Analysis</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Egyptian MP Helmy El-Gawish has proposed a new law to regulate real estate development and protect buyers&#x27; rights. The proposed law includes a unified contract that balances the rights of both parties and prevents unfair clauses. The contract will have a clear mechanism for dealing with inflation, limits on price increases, and requires developers to pay compensation for delayed delivery. The proposal also sets a cap on loading rates for residential and commercial units at 20% and 45%, respectively, and requires full disclosure of project data before contracting. El-Gawish believes this will reduce disputes in the real estate market and promote transparency, which is essential for stable investment. The proposed law aims to create a more stable and just real estate market, balancing citizens&#x27; rights and investment requirements, and supporting the national economy.</div>
+        </div>
+          
+        <div class="field full en-content">
+          <div class="field-label">Future Implications</div>
+          <div class="field-text">The proposed law may impact competing developers by introducing stricter regulations and transparency requirements. This could lead to increased costs for developers, potentially affecting land opportunities and real estate investment. The law may also influence government policy and infrastructure development, as it aims to create a more stable and attractive market for investors. Additionally, the unified contract and disclosure requirements may reduce construction costs and increase housing demand, ultimately benefiting the Egyptian economy.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">أكد النائب حلمي جاويش أن مقترحه بشأن تنظيم نشاط التطوير العقاري وحماية حقوق المشترين يتضمن لأول مرة إلزام جميع المطورين باستخدام عقد موحد يحقق التوازن بين حقوق الطرفين. العقد المقترح يتضمن آلية واضحة للتعامل مع التضخم وحدودًا للزيادات في الأسعار، فضلاً عن إلزام المطور بسداد تعويضات في حالة التأخير عن مواعيد التسليم. المقترح يضع سقفًا لنسب التحميل داخل المشروعات بحد أقصى 20% للوحدات السكنية و45% للوحدات التجارية، مع إلزام المطور بالإفصاح الكامل عن جميع البيانات الخاصة بالمشروع قبل التعاقد. جاويش يرى أن هذه الضوابط ستنهي كثيرًا من الخلافات التي يشهدها السوق العقاري وسترسخ مبدأ الشفافية باعتباره أحد أهم عوامل استقرار الاستثمار العقاري.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">التداعيات المستقبلية</div>
+          <div class="field-text">قد يؤثر القانون المقترح على المطورين المنافسين من خلال إدخال لوائح أكثر صرامة ومتطلبات شفافية. هذا قد يؤدي إلى زيادة التكاليف للمطورين، مما قد يؤثر على فرص الأراضي والاستثمار العقاري. قد يؤثر القانون أيضًا على السياسة الحكومية وتطوير البنية التحتية، حيث يهدف إلى خلق سوق أكثر استقرارًا وجاذبية للمستثمرين. بالإضافة إلى ذلك، قد يؤدي العقد الموحد ومتطلبات الإفصاح إلى خفض التكاليف الإنشائية وزيادة الطلب على السكن، مما يفيد في النهاية الاقتصاد المصري.</div>
+        </div>
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://almalnews.com/2126681/حلمي-جاويش-عقد-موحد-وحد-أقصى-لنسب/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
+      </div>
+    </div>
+    <div class="card card-high" id="c8" onclick="toggle('c8')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Bonyan Distributes 10% Stock Dividend</span>
+          <span class="title-ar" dir="rtl">بونيان لتسويق الاستثمارات العقارية تقدم أرباحاً أسهمية بنسبة 10%</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-high">Full Analysis</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Bonyan For Real Estate Investments has announced a 10% stock dividend, issuing one bonus share for every ten held, to be funded by the company&#x27;s retained earnings of EGP 170.4 million. The bonus shares will be distributed and start trading on August 6. Meanwhile, B Investments has denied plans to sell its 49% stake in El Ezaby, a pharmacy chain. Additionally, Alexandria for Investment and Urban Development, a subsidiary of the state-owned Holding Company for Construction and Development, has filed to list on the EGX&#x27;s main market with an issued capital of EGP 1.47 billion. This development may impact the real estate and investment landscape in Egypt, with potential implications for market demand, property values, and development pipelines.</div>
+        </div>
+          
+        <div class="field full en-content">
+          <div class="field-label">Future Implications</div>
+          <div class="field-text">The stock dividend distribution by Bonyan may lead to increased investor confidence and potentially boost the company&#x27;s stock price. The denial of B Investments&#x27; plans to sell its stake in El Ezaby may stabilize the pharmacy chain&#x27;s operations. Alexandria for Investment and Urban Development&#x27;s listing on the EGX may attract new investors and enhance the company&#x27;s credibility. These developments may influence market demand, property values, and development pipelines in Egypt, particularly in the real estate and investment sectors.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">أعلنت شركة بونيان لتسويق الاستثمارات العقارية عن توزيع أرباح أسهمية بنسبة 10٪، حيث سيتم إصدار سهم إضافي مقابل كل عشرة أسهم، وستتم تمويلها من خلال الأرباح المحتجزة للشركة بقيمة 170.4 مليون جنيه مصري. ومن المتوقع أن تبدأ تداول الأسهم الإضافية في 6 أغسطس. وفي غضون ذلك، نفى صندوق بى للاستثمارات خطة بيعه لحصته البالغة 49٪ في شركة الإزبي، سلسلة الصيدليات. بالإضافة إلى ذلك، تقدمت شركة الإسكندرية للاستثمار والتطوير الحضري، وهي شركة فرعية مملوكة للدولة لشركة холдинг للبناء والتطوير، بطلب للاستحواذ على سوق الإسكندرية للأوراق المالية بقيمة رأس مال issued من 1.47 مليار جنيه مصري. قد يؤثر هذا التطور على مشهد الاستثمار العقاري في مصر، مع احتمال أن يؤثر على الطلب السوقي والقيمة العقارية والمخططات التطويرية.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">التداعيات المستقبلية</div>
+          <div class="field-text">قد يؤدي توزيع أرباح الأسهم بواسطة بونيان إلى زيادة ثقة المستثمرين وربما يؤدي إلى تعزيز سعر سهم الشركة. قد يؤدي نفي خطط بى للاستثمارات لبيع حصتها في شركة الإزبي إلى استقرار عمليات سلسلة الصيدليات. قد يؤدي استحواذ شركة الإسكندرية للاستثمار والتطوير الحضري على سوق الإسكندرية للأوراق المالية إلى جذب مستثمرين جدد وتعزيز مصداقية الشركة. قد يؤثر هذه التطورات على الطلب السوقي والقيمة العقارية والمخططات التطويرية في مصر، خاصة في قطاع الاستثمار العقاري.</div>
+        </div>
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/28/government-set-to-finalize-its-post-imf-economic-program-before-the-end-of-september/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card card-high" id="c9" onclick="toggle('c9')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egypt&#x27;s $520.38mn Infrastructure Guarantee Facility</span>
+          <span class="title-ar" dir="rtl">تسهيلات ضمان البنية التحتية لمصر بقيمة 520.38 مليون دولار</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-high">Full Analysis</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">The World Bank has revealed details of a $520.38 million infrastructure guarantee facility for Egypt, aimed at attracting private investment in infrastructure projects. The facility, known as the Infrastructure Financing Guarantee Facility of Egypt (IFGFE), will provide payment, termination, and debt service guarantees to cover off-taker payment and debt-servicing risk. The Egyptian government will hold a minority stake in the facility, with development finance institutions and private-sector investors also participating. The project will focus on renewable energy, transmission, desalination, wastewater, waste-to-energy, battery storage, and logistics sectors. The World Bank will track the facility&#x27;s success through the volume of private capital mobilized and the number of direct and indirect jobs created. The facility is part of a broader shift away from blanket sovereign guarantees for Egyptian infrastructure projects, with the Finance Ministry reducing its sovereign guarantee ceiling to EGP 560 billion for FY 2026/27.</div>
+        </div>
+          
+        <div class="field full en-content">
+          <div class="field-label">Future Implications</div>
+          <div class="field-text">The establishment of the IFGFE is expected to have significant implications for Egypt&#x27;s infrastructure development, particularly in the renewable energy and logistics sectors. The facility&#x27;s ability to attract private investment will help reduce Egypt&#x27;s reliance on sovereign guarantees, which have been a major concern for the International Monetary Fund (IMF). The project&#x27;s focus on bankable infrastructure projects will also help create jobs and stimulate economic growth. However, the facility&#x27;s success will depend on its ability to manage environmental and social risks, which will be a key consideration for the World Bank and other stakeholders.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">كشفت البنك الدولي عن تفاصيل تسهيلات ضمان البنية التحتية لمصر بقيمة 520.38 مليون دولار، nhằm جذب الاستثمار الخاص في مشاريع البنية التحتية. سيقدم التسهيل، المعروف باسم تسهيلات ضمان البنية التحتية لمصر (IFGFE)، ضمانات الدفع وضمانات الإنهاء وضمانات خدمة الدين لتغطية مخاطر الدفع ومخاطر خدمة الدين للمشاريع التي يدعمها. سيحمل الحكومة المصرية حصة أقلية في التسهيل، مع مشاركة مؤسسات التمويل التنموي والمستثمرين من القطاع الخاص. سيتركز المشروع على قطاعات الطاقة المتجددة والنقل والمياه والصرف الصحي وتحويل النفايات إلى طاقة وتخزين البطاريات واللوجستيات. سيقوم البنك الدولي بتعقب نجاح التسهيل من خلال حجم رأس المال الخاص الذي تم جمعه وعدد الوظائف المباشرة والغير مباشرة التي تم إنشاؤها.</div>
+        </div>
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">التداعيات المستقبلية</div>
+          <div class="field-text">من المتوقع أن يكون إنشاء تسهيلات ضمان البنية التحتية لمصر له آثار كبيرة على تطور البنية التحتية في مصر، خاصة في قطاعات الطاقة المتجددة واللوجستيات. ستساهم قدرة التسهيل على جذب الاستثمار الخاص في تقليل اعتماد مصر على الضمانات السيادية، التي كانت مصدر قلق كبير للصندوق.Monetary الدولي (IMF). ستساهم تركيز المشروع على مشاريع البنية التحتية القابلة للتمويل في خلق فرص عمل وتنمية اقتصادية. ومع ذلك، سيتوقف نجاح التسهيل على قدرته على إدارة المخاطر البيئية والاجتماعية، التي سيكون لها أهمية كبيرة للبنك الدولي والجهات الفاعلة الأخرى.</div>
+        </div>
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/28/usd-520-mn-guarantee-facility-heads-to-the-world-bank-board-in-december/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card card-mid" id="c10" onclick="toggle('c10')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egypt Law 147/2026 Reorganizes Mostakbal Misr Authority</span>
+          <span class="title-ar" dir="rtl">مصر قانون 147/2026 لإعادة تنظيم هيئة مصر المستقبل للتنمية المستدامة</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">President Abdel Fattah El Sisi has ratified Law 147/2026, reorganizing the Future of Egypt Authority for Sustainable Development (Mostakbal Misr). The law transfers the authority&#x27;s supervision from the Defense Ministry to the presidency. It also establishes two new entities: a sovereign wealth fund, Nile Pyramids, and a service fund, Da’em. The House passed the bill after a joint committee revised the government&#x27;s original draft, restoring the Central Auditing Organization&#x27;s oversight and limiting the authority&#x27;s real-estate reach to land it owns. The law preserves the right to sue by property rights holders and drops the Treasury-funded tax-cover provision. The changes aim to restructure the authority&#x27;s role and oversight, with the law being issued in the Official Gazette.</div>
+        </div>
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">أقر الرئيس عبد الفتاح السيسي قانون 147/2026، لإعادة تنظيم هيئة مصر المستقبل للتنمية المستدامة. ينقل القانون الإشراف على الهيئة من وزارة الدفاع إلى الرئاسة. كما يؤسس两个 كيانات جديدتين: صندوق ثروة سيادية باسم الأهرامات النيلية، وصندوق خدمات باسم دعم. مرر مجلس النواب المشروع هذا الشهر، بعد أن قام لجنة مشتركة بتعديل مشروع الحكومة الأصلي، وإعادة تأسيس إشراف المنظمة المركزية للتدقيق، وإسقاط بند تغطية الضريبة المموّلة من الخزانة، وlimiting نطاق السلطة العقارية إلى الأراضي التي تمتلكها، والحفاظ على حق المالكين في رفع الدعاوى. تم نشر القانون في الجريدة الرسمية.</div>
+        </div>
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/28/egytrans-noscos-board-cleared-agl-to-begin-due-diligence-on-its-buyout-bid/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+  </section>
+  <section class="day-group">
+    <div class="day-header">
+      <span class="day-label">Also in the News</span>
+      <div class="day-rule"></div>
+      <span class="day-count">15 articles</span>
+    </div>
+    
+    <div class="card card-mid" id="c11" onclick="toggle('c11')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egypt Exceeds 100,000 Land Regulation Contracts</span>
+          <span class="title-ar" dir="rtl">مصر تتجاوز 100 ألف عقد تقنين أراضي</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">According to informed sources at the Ministry of Agriculture and Land Reclamation, the number of contracts for regulating state-owned lands released and handed over to citizens has exceeded 100,000 nationwide since the beginning of this year. This is part of the state&#x27;s plan to accelerate the completion of regularization files and facilitate the transfer of ownership. The sources provided this information, which reflects the progress made in this area.</div>
+        </div>
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">كشفت مصادر مطلعة بوزارة الزراعة واستصلاح الأراضي، عن تجاوز عدد عقود تقنين أراضي أملاك الدولة المحررة والمسلمة للمواطنين حاجز 100 ألف على مستوى الجمهورية منذ بداية العام الحالي وحتى الآن، في إطار خطة الدولة للإسراع بإنهاء ملفات التقنين وتوفيق وضع اليد.</div>
+        </div>
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://almalnews.com/2126522/«الزراعة»-تحرير-أكثر-من-100-ألف-عقد/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
+      </div>
+    </div>
+    <div class="card card-mid" id="c12" onclick="toggle('c12')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egypt&#x27;s Investment Policy Document</span>
+          <span class="title-ar" dir="rtl">وثيقة سياسة ملكية الدولة المصرية</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Dr. Badr Abdel Atti, Minister of Foreign Affairs, stated that the State Ownership Policy Document is one of the most important economic reforms implemented by the government. The document sets principles for the gradual exit of the state from certain economic activities, with a cap on government investments of around 1.2 trillion Egyptian pounds, equivalent to $20 billion. This has contributed to an increase in private sector participation, with private investment reaching 63% of total investments. Egypt has also become the top destination for foreign direct investment in Africa for the second consecutive year, according to the 2026 Global Investment Report. The minister emphasized the importance of international cooperation and flexible economic policies to address global economic challenges.</div>
+        </div>
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">أكد الدكتور بدر عبد العاطي، وزير الخارجية، أن وثيقة سياسة ملكية الدولة تمثل أحد أهم الإصلاحات الاقتصادية التي نفذتها الحكومة. وحددت الوثيقة سقفًا للاستثمارات الحكومية بنحو 1.2 تريليون جنيه، ما ساهم في ارتفاع مساهمة القطاع الخاص إلى 63% من إجمالي الاستثمارات. وأضاف أن مصر أصبحت الوجهة الأولى للاستثمار الأجنبي المباشر في أفريقيا للعام الثاني على التوالي، وفق تقرير الاستثمار العالمي 2026. وشدد الوزير على أهمية التعاون الدولي والسياسات الاقتصادية المرنة لمواجهة التحديات الاقتصادية العالمية.</div>
+        </div>
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://almalnews.com/2126534/وزير-الخارجية-وثيقة-سياسة-ملكية-الدولة-رفعت/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
+      </div>
+    </div>
+    <div class="card card-mid" id="c13" onclick="toggle('c13')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egypt Reviews International Investment Agreements</span>
+          <span class="title-ar" dir="rtl">مصر تعيد النظر في اتفاقيات الاستثمار الدولية</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Dr. Mohamed Farid Saleh, Minister of Investment and International Trade, announced that Egypt is reviewing and updating its international investment agreements to align with global best practices and enhance investment protection. The move aims to balance investor protection with state rights and boost investor confidence in Egypt&#x27;s investment environment. The government is also implementing structural and institutional reforms to create a more competitive and transparent investment environment, and to increase private sector participation in economic activity. The reforms include developing services for investors, simplifying company establishment and licensing procedures, and digitizing government services. These efforts are part of a broader strategy to attract productive and sustainable investments in priority sectors, which will contribute to increasing economic growth rates, creating job opportunities, and enhancing Egypt&#x27;s economic competitiveness.</div>
+        </div>
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">أكد الدكتور محمد فريد صالح، وزير الاستثمار والتجارة الخارجية، أن مصر تتجه إلى مراجعة وتحديث اتفاقيات الاستثمار الدولية لجعلها تتوافق مع أفضل الممارسات العالمية ويعزز حماية الاستثمارات. يهدف هذا الإجراء إلى تحقيق التوازن بين حماية المستثمرين وحفظ حقوق الدولة، ويعزز ثقة المستثمرين في بيئة الاستثمار المصرية. وتعمل الحكومة أيضًا على تنفيذ إصلاحات هيكلية ومؤسسية لcreating بيئة استثمار أكثر تنافسية ووضوحًا، وزيادة دور القطاع الخاص في النشاط الاقتصادي. وتشمل هذه الإصلاحات تطوير الخدمات المقدمة للمستثمرين، وتبسيط إجراءات تأسيس الشركات والحصول على التراخيص، ورقمنة الخدمات الحكومية. وتأتي هذه الجهود في إطار استراتيجية لجذب الاستثمارات الإنتاجية والمستدامة في القطاعات ذات الأولوية، مما يسهم في زيادة معدلات النمو الاقتصادي، وتوفير فرص العمل، ورفع تنافسية الاقتصاد المصري على المستويين الإقليمي والدولي.</div>
+        </div>
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://almalnews.com/2126542/محمد-فريد-تحديث-اتفاقيات-الاستثمار-الدولية-أصبح/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
+      </div>
+    </div>
+    <div class="card card-mid" id="c14" onclick="toggle('c14')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egypt Attracts $15.5 Billion in FDI in 2025</span>
+          <span class="title-ar" dir="rtl">مصر تجذب 15.5 مليار دولار من الاستثمارات الأجنبية المباشرة في 2025</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Nan Li Collins, director of the Investment and Enterprises Division at UNCTAD, stated that Egypt continued to enhance its position as a major investment destination in Africa. In 2025, Egypt attracted approximately $15.5 billion in foreign direct investment, accounting for around 20% of total inflows to Africa. This performance reinforces Egypt&#x27;s position as a key investment hub in the continent, supported by economic reforms, infrastructure development, and increased productivity. Collins noted that global foreign direct investment is undergoing a structural shift, becoming more strategic and selective. Investment decisions now focus on the destination, targeted sectors, and the creation of new productive assets, job opportunities, and supply chain enhancement. This shift requires countries to develop their business environment and competitiveness to attract high-value-added investments.</div>
+        </div>
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">أكدت نان لي كولينز، مدير شعبة الاستثمار والمؤسسات بالأونكتاد، أن مصر واصلت تعزيز مكانتها كإحدى أبرز الوجهات الاستثمارية في أفريقيا. جذبت مصر نحو 15.5 مليار دولار من الاستثمارات الأجنبية المباشرة خلال عام 2025، بما يمثل نحو 20% من إجمالي التدفقات الواردة إلى أفريقيا. يعزز هذا الأداء مكانة مصر كمركز رئيسي للاستثمار في القارة، مدعومًا بالإصلاحات الاقتصادية وتطوير البنية التحتية وزيادة الطاقة الإنتاجية. وأضافت كولينز أن الاستثمار الأجنبي المباشر العالمي يشهد تحولًا هيكليًا، حيث أصبح أكثر إستراتيجية وانتقائية وتركيزًا مقارنة بالسنوات السابقة. أصبحت قرارات الاستثمار تركز على وجهة الاستثمارات والقطاعات المستهدفة ومدى مساهمتها في إنشاء أصول إنتاجية جديدة، وخلق فرص عمل، وتعزيز سلاسل الإمداد ونقل التكنولوجيا. يفرض هذا التحول على الدول تطوير بيئة الأعمال وتعزيز تنافسيتها لجذب الاستثمارات ذات القيمة المضافة.</div>
+        </div>
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://almalnews.com/2126551/الأونكتاد-مصر-استحوذت-على-20-من-الاستثمارات/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
+      </div>
+    </div>
+    <div class="card card-mid" id="c15" onclick="toggle('c15')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">UNCTAD Supports Egypt and Africa</span>
+          <span class="title-ar" dir="rtl">الأونكتاد تدعم مصر وأفريقيا</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Nan Li Collins, Director of the Investment and Enterprise Division at UNCTAD, stated that the organization will continue to support Egypt and African countries in developing their investment climate and institutional capacity. This support is provided through the World Investment Report, investment policy reviews, technical assistance, investment facilitation programs, and support for investment promotion agencies. Collins noted that global competition for investments has become more intense, but Africa has great opportunities in sectors that will drive the future economy. The main challenge is to convert these opportunities into productive and sustainable investments. Collins emphasized that regional integration is a key factor in attracting investments to Africa. The African Continental Free Trade Area is creating a larger and more integrated market, increasing the continent&#x27;s attractiveness to international investors and providing companies with more opportunities to expand across borders.</div>
+        </div>
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">أكدت نان لي كولينز، مدير شعبة الاستثمار والمؤسسات بالأونكتاد، أن المنظمة ستواصل دعم مصر والدول الأفريقية في تطوير مناخ الاستثمار وتعزيز القدرات المؤسسية. يتم تقديم هذا الدعم من خلال تقرير الاستثمار العالمي ومراجعات سياسات الاستثمار والمساعدات الفنية وبرامج تيسير الاستثمار ودعم هيئات تشجيع الاستثمار. وأضافت كولينز أن المنافسة العالمية على جذب الاستثمارات أصبحت أكثر حدة، إلا أن أفريقيا تمتلك فرصًا كبيرة في القطاعات التي ستقود اقتصاد المستقبل. وأكدت أن التحدي الرئيسي يتمثل في تحويل هذه الفرص إلى استثمارات إنتاجية مستدامة. وشددت على أن التكامل الإقليمي يمثل أحد أهم عوامل جذب الاستثمارات إلى أفريقيا. منطقة التجارة الحرة القارية الأفريقية تسهم في إنشاء سوق أكبر وأكثر تكاملًا، بما يزيد من جاذبية القارة أمام المستثمرين الدوليين، ويمنح الشركات فرصًا أوسع للتوسع عبر الحدود.</div>
+        </div>
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://almalnews.com/2126558/الأونكتاد-تؤكد-استمرار-دعم-مصر-وأفريقيا-في/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
+      </div>
+    </div>
+    <div class="card card-mid" id="c16" onclick="toggle('c16')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Palm Hills Obtains Approval for Company Purpose Amendment</span>
+          <span class="title-ar" dir="rtl">الموافقة على تعديل غرض شركة بالم هيلز</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">The Egyptian Financial Regulatory Authority approved the disclosure report of Palm Hills for Real Estate Development to amend the company&#x27;s purpose. The amendment includes adding hotel and tourist establishment activities to the company&#x27;s articles of association. The company cited its activities in and outside Egypt, as well as its expansion plans to increase investment opportunities, as reasons for the amendment. The authority did not object to the publication of the disclosure report, provided that there is no objection from the General Authority for Investment and the approval of the company&#x27;s Extraordinary General Assembly on the required amendments.</div>
+        </div>
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">وافقت الهيئة العامة للرقابة المالية على نشر تقرير الإفصاح الخاص بشركة بالم هيلز للتعمير لتعديل غرض الشركة. يأتي التعديل ليشمل إضافة نشاط الفنادق والمنشآت السياحية إلى نظام الشركة الأساسي. وأسباب التعديل تماشياً مع نشاط الشركة داخل مصر وخارجها، بالإضافة إلى خطط الشركة التوسعية لزيادة الفرص الاستثمارية. وأفادت الهيئة بعدم ممانعتها على نشر تقرير الإفصاح المرفق، بشرط عدم الممانعة من الجهة الإدارية وموافقة الجمعية العامة غير العادية للشركة على التعديلات المطلوبة.</div>
+        </div>
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://almalnews.com/2126502/«الرقابة-المالية»-تقر-إجراءات-«بالم-هيلز-للتعمير»/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
+      </div>
+    </div>
+    <div class="card card-mid" id="c17" onclick="toggle('c17')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Misr Al Jadida&#x27;s Gadenia Project</span>
+          <span class="title-ar" dir="rtl">مشروع جادينيا لشركة مصر الجديدة</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Dr. Samih El-Sayed, CEO of Misr Al Jadida for Housing and Construction, announced that the Gadenia project is part of the company&#x27;s shift towards applying sustainability standards. The project spans 25 acres, comprising 541 residential units, with 55% of the area allocated for green spaces. The company, with 121 years of experience, aims to continue working as a national, state-owned company. The project is the first phase of a larger 600-acre plan, with the company cooperating with specialized entities to apply necessary sustainability standards. The company considered several sustainability factors, including preserving resources, and began applying sustainability standards from the design phase, with the goal of achieving an integrated urban project that considers environmental, economic, and human factors.</div>
+        </div>
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">أعلن الدكتور سامح السيد، العضو المنتدب والرئيس التنفيذي لشركة مصر الجديدة للإسكان والتعمير، أن مشروع جادينيا يأتي في إطار توجه الشركة نحو تطبيق معايير الاستدامة في مشروعاتها. يمتد المشروع على مساحة 25 فدانًا، ويضم 541 وحدة سكنية، مع تخصيص 55% من مساحة المشروع للمساحات الخضراء. وتستهدف الشركة، التي تتمتع بخبرة 121 عامًا، مواصلة العمل كشركة وطنية مملوكة للدولة. يمثل المشروع المرحلة الأولى من مخطط أكبر تبلغ مساحته 600 فدان، وتتعاون الشركة مع جهات متخصصة لتطبيق المعايير اللازمة للحصول على شهادات الاستدامة. راعت الشركة في المشروع عددًا من الاعتبارات المرتبطة بالاستدامة، بما في ذلك الحفاظ على الموارد المتاحة، وبدأت تطبيق معايير الاستدامة منذ مرحلة التصميم، بهدف تحقيق مشروع عمراني متكامل يراعي الاعتبارات البيئية والاقتصادية والإنسانية.</div>
+        </div>
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://almalnews.com/2126537/«مصر-الجديدة-للإسكان»-مشروع-«جادينا»-يضم-541/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
+      </div>
+    </div>
+    <div class="card card-mid" id="c18" onclick="toggle('c18')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">A Capital Holding Approves Delmare Exit</span>
+          <span class="title-ar" dir="rtl">موافقة إيه كابيتال على خروج دلمار</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">A Capital Holding Company has approved in principle the exit of its 99.9% subsidiary, Delmare Tourism Development Company, from the provisions of Law No. 8 of 1997 and its executive regulations, to come under the provisions of Law No. 95 of 1992 regarding the Capital Market Law and its executive regulations. The decision aims to practice real estate investment fund activity according to Law No. 95 of 1992 and its executive regulations, as well as the decision of the Financial Regulatory Authority&#x27;s board of directors No. 179 of 2025. The company will proceed to the Financial Regulatory Authority to obtain its non-objection to the exit procedures, and if approved, the matter will be presented again to the board of directors and the ordinary and extraordinary general assembly will be convened to take the necessary decisions.</div>
+        </div>
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">وافقت شركة إيه كابيتال القابضة من حيث المبدأ على خروج شركة دلمار للتنمية السياحية التابعة لها بنسبة 99.9% من مظلة أحكام القانون رقم 8 لسنة 1997 ولائحته التنفيذية، والدخول تحت مظلة أحكام القانون رقم 95 لسنة 1992 بإصدار قانون سوق رأس المال ولائحته التنفيذية. يأتي القرار بغرض مزاولة نشاط صندوق استثمار عقاري، وفقاً لأحكام القانون رقم 95 لسنة 1992 ولائحته التنفيذية، وقرار مجلس إدارة الهيئة العامة للرقابة المالية رقم 179 لسنة 2025. ستتقدم الشركة إلى الهيئة العامة للرقابة المالية بطلب الحصول على عدم ممانعتها على إجراءات خروج الشركة، وفي حال صدور موافقة الهيئة يعرض الأمر مجدداً على مجلس الإدارة، ودعوة الجمعية العامة العادية وغير العادية للانعقاد لاتخاذ ما يلزم من قرارات في هذا الشأن.</div>
+        </div>
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://almalnews.com/2126591/«إيه-كابيتال»-تبدأ-إجراءات-ممارسة-نشاط-الصناديق/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
+      </div>
+    </div>
+    <div class="card card-mid" id="c19" onclick="toggle('c19')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egyptian Export Development Bank Capital Increase</span>
+          <span class="title-ar" dir="rtl">زيادة رأس مال بنك تنمية الصادرات المصري</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">The Egyptian Export Development Bank&#x27;s extraordinary general assembly, headed by Chairman Mohamed Taha Mohamed Mustafa, unanimously approved an increase in the bank&#x27;s authorized capital from 20 billion Egyptian pounds to 40 billion Egyptian pounds. The assembly also approved amendments to articles 6 and 7 of the bank&#x27;s bylaws to increase the issued and paid-up capital to 18 billion Egyptian pounds, representing an increase of 4.4 billion Egyptian pounds. This increase is achieved through the distribution of free shares funded from the profits of the year and retained earnings, in accordance with the decision of the ordinary general assembly issued on March 30, 2026, which adopted the financial statements for the fiscal year ended December 31, 2025, at a rate of 0.3235294 free shares per share, with fractional shares rounded up in favor of small shareholders.</div>
+        </div>
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">وافقت الجمعية العامة غير العادية للبنك المصري لتنمية الصادرات، برئاسة الرئيس محمد طه محمد مصطفى، بالإجماع على زيادة رأس المال المرخص به للبنك من 20 مليار جنيه إلى 40 مليار جنيه. كما وافقت الجمعية العامة على تعديل المادتين (6) و(7) من النظام الأساسي للبنك، لزيادة رأس المال المصدر والمدفوع إلى 18 مليار جنيه، بزيادة قدرها 4.4 مليار جنيه. وتتم هذه الزيادة من خلال توزيع أسهم مجانية ممولة من أرباح العام والأرباح المرحلة، تنفيذًا لقرار الجمعية العامة العادية الصادر في 30 مارس 2026، التي اعتمدت القوائم المالية عن السنة المالية المنتهية في 31 ديسمبر 2025، بواقع 0.3235294 سهم مجاني لكل سهم، مع جبر الكسور لصالح صغار المساهمين.</div>
+        </div>
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://almalnews.com/2126603/عمومية-البنك-المصري-لتنمية-الصادرات-توافق-على/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
+      </div>
+    </div>
+    <div class="card card-mid" id="c20" onclick="toggle('c20')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egypt Launches 2026 Global Investment Report</span>
+          <span class="title-ar" dir="rtl">مصر تطلق التقرير العالمي للاستثمار 2026</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Egypt&#x27;s Minister of Foreign Affairs and Emigration, Dr. Badr Abdel Atti, and Minister of Investment and International Trade, Dr. Mohamed Fayed, launched the 2026 Global Investment Report by the United Nations Conference on Trade and Development (UNCTAD) in Cairo. The report highlights a 6% increase in global foreign direct investment (FDI) in 2025, reaching $1.6 trillion. Egypt achieved $15.5 billion in FDI, ranking first in Africa and second in the Arab region. The report also notes a significant expansion in digital infrastructure investments, with a focus on data centers and modern technologies. The ministers emphasized the importance of improving the investment environment, promoting economic growth, and enhancing international cooperation to address global challenges.</div>
+        </div>
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">أطلق الدكتور بدر عبد العاطي، وزير الخارجية والهجرة وشؤون المصريين بالخارج، والدكتور محمد فريد، وزير الاستثمار والتجارة الخارجية، التقرير العالمي للاستثمار 2026 الصادر عن مؤتمر الأمم المتحدة للتجارة والتنمية (الأونكتاد) في القاهرة. وأشار التقرير إلى زيادة بنسبة 6% في الاستثمار الأجنبي المباشر على مستوى العالم في عام 2025، ليصل إلى 1.6 تريليون دولار.حققت مصر 15.5 مليار دولار من الاستثمار الأجنبي المباشر، محتلة المركز الأول في أفريقيا والثاني في المنطقة العربية. وأشار التقرير أيضًا إلى توسع كبير في استثمارات البنية التحتية الرقمية، مع التركيز على مراكز البيانات والتكنولوجيا الحديثة. وشدد الوزيران على أهمية تحسين بيئة الاستثمار، وتعزيز النمو الاقتصادي، وتعزيز التعاون الدولي لمواجهة التحديات العالمية.</div>
+        </div>
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://almalnews.com/2126608/خلال-إطلاق-تقرير-الاستثمار-العالمي-2026-مصر/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
+      </div>
+    </div>
+    <div class="card card-mid" id="c21" onclick="toggle('c21')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">US Federal Reserve to Keep Interest Rates Unchanged</span>
+          <span class="title-ar" dir="rtl">البنك الفيدرالي الأمريكي يُبقي أسعار الفائدة دون تغيير</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">The US Federal Reserve is expected to keep interest rates unchanged during its meeting in July due to a complex economic landscape caused by rising energy prices and renewed tensions in the Middle East, despite a decline in inflation rates. According to CNBC, the consumer price index, a key measure of inflation, unexpectedly fell last month, with the annual inflation rate dropping to 3.5% in June. However, oil prices have since risen due to escalating geopolitical tensions in the Middle East, increasing pressure on policymakers regarding the timing of interest rate cuts. The Federal Reserve&#x27;s decision will impact various aspects of the economy, including consumer loans, credit card rates, and savings accounts. Experts, such as Brett House, a professor of economics at Columbia Business School, note that maintaining price stability remains a challenge for the Federal Reserve, despite political pressure to lower interest rates.</div>
+        </div>
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">من المتوقع أن يُبقي مجلس الاحتياطي الفيدرالي الأمريكي أسعار الفائدة دون تغيير خلال اجتماعه المرتقب في يوليو الجاري، في ظل تعقّد المشهد الاقتصادي نتيجة ارتفاع أسعار الطاقة وتجدد التوترات في منطقة الشرق الأوسط، رغم تراجع معدلات التضخم. وفقًا لشبكة «سي إن بي سي»، سجل مؤشر أسعار المستهلك انخفاضًا غير متوقع الشهر الماضي، ليتراجع معدل التضخم السنوي إلى 3.5% في يونيو.然而، عادت أسعار النفط إلى الارتفاع مع تصاعد التوترات الجيوسياسية في الشرق الأوسط، ما زاد من الضغوط أمام صانعي السياسة النقدية بشأن توقيت خفض أسعار الفائدة. قرار الفيدرالي سيتأثر على مختلف جوانب الاقتصاد، بما في ذلك قروض المستهلكين وأسعار بطاقات الائتمان وحسابات التوفير. يُشير الخبراء، مثل بريت هاوس، أستاذ الاقتصاد بكلية كولومبيا للأعمال، إلى أن الحفاظ على استقرار الأسعار لا يزال يمثل تحديًا أمام رئيس الاحتياطي الفيدرالي، رغم الضغوط السياسية الرامية إلى خفض سعر الفائدة على الأموال الفيدرالية.</div>
+        </div>
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://almalnews.com/2126648/وسط-ارتفاع-تكاليف-الطاقة-الاحتياطي-الفيدرالي-يتجه/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
+      </div>
+    </div>
+    <div class="card card-mid" id="c22" onclick="toggle('c22')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Misr Al Jadidah&#x27;s Jadinah Project</span>
+          <span class="title-ar" dir="rtl">مشروع جاديناه لشركة مصر الجديدة</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Misr Al Jadidah&#x27;s Jadinah project has received the Golden Certificate for the Egyptian Green Pyramid Rating System (GPRS), becoming the first sustainable residential compound in Egypt to achieve this certification. The project is a 300-acre integrated residential community being implemented in three phases, aligning with the company&#x27;s vision of developing sustainable urban communities based on the latest green design and building standards. The certification was announced during the &#x27;Harvesting Success Stories of Sustainable Urban Development in Egypt&#x27; event, organized by the National Center for Housing and Building Research under the auspices of the Ministry of Housing, Utilities, and Urban Communities. According to Dr. Samih El-Sayed, Managing Director and CEO of Misr Al Jadidah, this achievement reflects the company&#x27;s commitment to applying the highest standards of sustainability and innovation in its projects, and represents a starting point for implementing its vision to develop approximately 1,400 acres based on sustainable urban development principles, supporting the state&#x27;s green building trends and Egypt&#x27;s 2030 vision.</div>
+        </div>
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">حصل مشروع جاديناه التابع لشركة مصر الجديدة على الشهادة الذهبية لنظام الهرم الأخضر المصري (GPRS)، ليصبح أول كمبوند سكني مستدام في مصر يحصل على هذا الاعتماد. يُعد المشروع مجتمعًا سكنيًا متكامل الخدمات يتم تنفيذه على مساحة 300 فدان على ثلاث مراحل، ويتوافق مع رؤية الشركة في تطوير مجتمعات عمرانية مستدامة تعتمد على أحدث معايير التصميم والبناء الأخضر. وأُعلن عن هذا الاعتماد خلال فعاليات &#x27;حصاد قصص نجاح العمران المستدام في مصر&#x27; التي نظمها المركز القومي لبحوث الإسكان والبناء تحت رعاية وزارة الإسكان والمرافق والمجتمعات العمرانية. وقال الدكتور سامح السيد، العضو المنتدب والرئيس التنفيذي لشركة مصر الجديدة، إن هذا الإنجاز يعكس التزام الشركة بتطبيق أعلى معايير الاستدامة والابتكار في مشروعاتها، ويمثل نقطة انطلاق لتنفيذ رؤيتها في تطوير نحو 1,400 فدان وفق مبادئ التنمية العمرانية المستدامة، بما يدعم توجهات الدولة نحو البناء الأخضر ويواكب مستهدفات رؤية مصر 2030.</div>
+        </div>
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://almalnews.com/2126691/مشروع-Jadinah-أول-كمبوند-في-مصر-يحصل/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
+      </div>
+    </div>
+    <div class="card card-mid" id="c23" onclick="toggle('c23')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egypt Sets 25% Renewable Energy Target</span>
+          <span class="title-ar" dir="rtl">مصر تحدد هدفًا من 25% لطاقة المتجددة</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">The Egyptian government has set concrete renewable energy targets for industry, with energy-intensive factories required to source 25% of their energy needs from solar power and other industrial facilities required to source 15%. However, no decree, regulation, or Supreme Energy Council decision has been published to enforce these targets. The government is currently building out financing mechanisms, documentation requirements, and technical support to help manufacturers comply with the solar measures. The cost of building solar projects has risen to around EGP 20 million per megawatt, up from EGP 14.5 million, due to higher import costs and a stronger US dollar. The government is working on financing solutions, including discussions with local and international development partners and Egyptian banks to provide concessional financing for solar installations. The Industry Ministry is also studying amendments to the Finance Ministry-backed 15% subsidized lending initiative for industry to allow financing for solar plants.</div>
+        </div>
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">حددت الحكومة المصرية أهدافًا محددة لطاقة المتجددة في الصناعة، حيث يتطلب من المصانع الكثيفة في استهلاك الطاقة أن تستمد 25% من احتياجاتها من الطاقة من الطاقة الشمسية، في حين يتطلب من المصانع الصناعية الأخرى أن تستمد 15%. ومع ذلك، لم تنشر أي مرسوم أو لوائح أو قرار من المجلس الأعلى للطاقة لفرض هذه الأهداف. تعمل الحكومة حاليًا على بناء آليات تمويل ومتطلبات توثيق ودعم فني لمساعدة المصنعين على الامتثال لتدابير الطاقة الشمسية. ارتفع成本 بناء مشاريع الطاقة الشمسية إلى حوالي 20 مليون جنيه مصري لكل ميجاوات، من 14.5 مليون جنيه مصري، بسبب زيادة تكاليف الاستيراد وزيادة قيمة الدولار الأمريكي. تعمل الحكومة على حلول تمويلية، بما في ذلك مناقشات مع الشركاء المحليين والدوليين والبنوك المصرية لتوفير تمويل ميسر لتركيبات الطاقة الشمسية. كما تقوم وزارة الصناعة بدراسة تعديلات على مبادرة التمويل المدعومة بنسبة 15% من وزارة المالية للصناعة لتمكين التمويل لمشاريع محطات الطاقة الشمسية.</div>
+        </div>
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/goinggreens/egypt-has-industrial-solar-targets-but-no-decree-or-rulebook-to-enforce-them/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card card-mid" id="c24" onclick="toggle('c24')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egypt Finalizes Post-IMF Program by September</span>
+          <span class="title-ar" dir="rtl">مصر تختتم برنامجها الاقتصادي بعد صندوق النقد الدولي قبل نهاية سبتمبر</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Egypt will finalize its post-IMF economic program before the end of September, with the government aiming to avoid fresh loans from the Fund once the current $8 billion program expires in December. Deputy Prime Minister for Economic Affairs Hussein Eissa stated that the government is waiting for a suitable market window to proceed with Banque du Caire&#x27;s IPO, which has been delayed from its initial June target to year-end. The government is also close to transferring six public-sector holding companies to line ministries or other state entities, and the second phase of restructuring 65 subsidiaries will begin at the end of 2026. The listing is part of the government&#x27;s wider divestment pipeline, which includes the IPO of Banque du Caire.</div>
+        </div>
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">ستختتم مصر برنامجها الاقتصادي بعد صندوق النقد الدولي قبل نهاية سبتمبر، حيث تهدف الحكومة إلى تجنب القروض الجديدة من الصندوق عند انتهاء البرنامج الحالي البالغ 8 مليارات دولار في ديسمبر. وأفاد النائب الأول للرئيس للشؤون الاقتصادية حسين عيسى أن الحكومة تنتظر نافذة سوق مناسبة للانتقال إلى طرح أسهم بنك القاهرة، الذي تم تأجيله من يونيو إلى نهاية العام. وتقترب الحكومة من نقل ست شركات قابضة قطاعية إلى وزارات أو كيانات حكومية أخرى، وستبدأ المرحلة الثانية لإعادة هيكلة 65 شركة فرعية في نهاية 2026. ويشمل البرنامج طرح أسهم بنك القاهرة، وهو جزء من خطط الحكومة لتنويع استثماراتها.</div>
+        </div>
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/28/government-set-to-finalize-its-post-imf-economic-program-before-the-end-of-september/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card card-mid" id="c25" onclick="toggle('c25')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Karm Holding Invests $8.5-10M in Abu Zenima Solar Microgrid</span>
+          <span class="title-ar" dir="rtl">كرم هولدينج تستثمر 8.5-10 ملايين دولار في محطة طاقة شمسية في أبو زنيمة</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Karm Holding will invest an initial $8.5-10 million to build and operate a solar microgrid in South Sinai&#x27;s Abu Zenima industrial zone. The company expects to begin construction within four months, subject to regulatory approvals. The 3.9k feddans industrial zone has stalled due to a lack of affordable and reliable power. The microgrid will provide electricity to two factories currently operating in the zone, with plans to expand as demand increases. The system is expected to cut energy costs by 30% from day one, with potential savings of up to 60% as demand climbs. Karm will finance, build, own, and operate the system without capital contributions from the governorate or tenants. The company will act as both the power producer and licensed distributor, with tenants subscribing directly to the local network under utility-style distribution agreements.</div>
+        </div>
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">ستستثمر كرم هولدينج مبلغاً 初يًا يتراوح بين 8.5 و10 ملايين دولار لإنشاء وتشغيل محطة طاقة شمسية في منطقة أبو زنيمة الصناعية في سيناء الجنوبية. تتوقع الشركة بدء الأشغال في غضون أربعة أشهر، خاضعة للموافقات التنظيمية. كانت منطقة أبو زنيمة الصناعية، التي تبلغ مساحتها 3.9 ألف فدان، قد остановت عن العمل بسبب نقص الطاقة الكهربائية بأسعار معقولة وموثوقة. ستوفر المحطة الطاقة الكهربائية لمصنعين يعملان حاليًا في المنطقة، مع خطط لتوسيعها مع زيادة الطلب. من المتوقع أن تخفض النظام التكاليف الطاقوية بنسبة 30% من اليوم الأول، مع إمكانية تحقيق وفورات تصل إلى 60% مع زيادة الطلب. ستتمثل كرم هولدينج في تمويل وإنشاء وتشغيل النظام دون مساهمة رأسمالية من المحافظة أو المستأجرين، وستعمل الشركة كمنتج للطاقة وموزع مرخص، مع اشتراك المستأجرين مباشرة في الشبكة المحلية بموجب اتفاقيات توزيع على نمط المرافق.</div>
+        </div>
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/28/karm-holding-is-planning-to-build-a-solar-microgrid-to-unlock-south-sinais-stalled-industrial-zone/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+  </section>
+      
+    </div>
+  </div>
+
+  <!-- ARCHIVE -->
+  <div class="tab-panel" id="panel-archive">
+    <div class="archive-note">
+      <span class="archive-note-icon">📁</span>
+      Previous days' intelligence briefings. Each day's articles are appended here automatically when the next day's run completes.
+    </div>
+    <div class="search-wrap">
+      <input type="text" id="q-archive" placeholder="Search archived headlines and summaries…" oninput="filter('archive')"/>
+      <span id="filter-count-archive"></span>
+    </div>
+    <div id="feed-archive">
+      
+  <section class="day-group">
+    <div class="day-header">
+      <span class="day-label">2026-07-27</span>
+      <div class="day-rule"></div>
+      <span class="day-count">13 articles</span>
+    </div>
+    
+    <div class="card card-mid" id="c26" onclick="toggle('c26')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egypt&#x27;s Sustainable Development Agency Studies Port Investment</span>
+          <span class="title-ar" dir="rtl">جهاز مستقبل مصر يدرس فرص الاستثمار بقطاع الموانئ</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">According to informed sources, the Egyptian Agency for Sustainable Development is currently studying investment opportunities in the port sector. This includes the establishment of a one million square meter logistics area within the Abu Qir Port. The move is part of the agency&#x27;s plan to support food security projects and supply chains. The agency is exploring ways to develop the port sector, with a focus on creating a logistics hub at Abu Qir Port.</div>
+        </div>
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">أفادت مصادر مطلعة أن جهاز مستقبل مصر للتنمية المستدامة يدرس حالياً فرص الاستثمار بقطاع الموانئ، من خلال إنشاء منطقة لوجستية على مساحة مليون متر مربع داخل ميناء أبو قير البحري، وذلك في إطار خطته لدعم مشروعات الأمن الغذائي وسلاسل الإمداد. يهدف الجهاز إلى دعم تطوير قطاع الموانئ، من خلال إنشاء مركز لوجستي في ميناء أبو قير.</div>
+        </div>
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://almalnews.com/2126326/«مستقبل-مصر»-يدرس-إنشاء-منطقة-لوجستية-في/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
+      </div>
+    </div>
+    <div class="card card-mid" id="c27" onclick="toggle('c27')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egypt Leads North Africa Private Investment</span>
+          <span class="title-ar" dir="rtl">مصر تتصدر الاستثمار الخاص في شمال أفريقيا</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">A recent report by Steers, a company specializing in economic data, research, and African market analysis, revealed that Egypt continued to strengthen its position as one of the most active private investment markets in the continent. During the second quarter of 2026, Egypt accounted for approximately 73% of private investment deals in North Africa. The report highlights Egypt&#x27;s prominence in the region&#x27;s investment landscape.</div>
+        </div>
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">كشف تقرير حديث صادر عن شركة &quot;ستيرز&quot;، المتخصصة في البيانات والأبحاث الاقتصادية وتحليلات الأسواق الأفريقية، أن مصر واصلت تعزيز مكانتها كواحدة من أكثر أسواق الاستثمار الخاص نشاطًا في القارة، بعدما استحوذت على نحو 73% من صفقات الاستثمار الخاص في شمال أفريقيا خلال الربع الثاني من عام 2026.</div>
+        </div>
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://almalnews.com/2126338/مصر-تستحوذ-على-73-من-صفقات-الاستثمار/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
+      </div>
+    </div>
+    <div class="card card-mid" id="c28" onclick="toggle('c28')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egypt Central Bank Issues EGP 110 Billion Treasury Bills</span>
+          <span class="title-ar" dir="rtl">البنك المركزي المصري يطرح أذون خزانة بقيمة 110 مليار جنيه</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">The Central Bank of Egypt issued treasury bills worth EGP 110 billion on Monday, with two tranches: EGP 40 billion for 91 days and EGP 70 billion for 273 days. The issuance is part of the bank&#x27;s coordination with the Ministry of Finance to finance the budget deficit. The Ministry of Finance has authorized the Central Bank to manage its treasury bill and bond auctions in Egyptian pounds throughout the fiscal year. The proceeds will be used to fund the state&#x27;s general budget for the current fiscal year. The Central Bank&#x27;s Monetary Policy Committee decided to keep the basic interest rates unchanged in its meeting on July 9, 2026, with the deposit and lending rates set at 19.00% and 20.00%, and the main operation rate at 19.50%.</div>
+        </div>
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">طرح البنك المركزي المصري، اليوم الاثنين، أذون خزانة بقيمة 110 مليار جنيه، بفترتين: 40 مليار جنيه لمدة 91 يوما و70 مليار جنيه لمدة 273 يوما.这是 جزءا من تنسيق البنك مع وزارة المالية لتمويل عجز الموازنة. فوض البنك المركزي من وزارة المالية لإدارة طروحات أذون وسندات الخزانة بالجنيه المصري على مدار العام المالي، وستتم تغطية حصيلة الطرح على بنود الموازنة العامة للدولة للعام المالي الحالي. قررت لجنة السياسة النقدية للبنك المركزي المصري في اجتماعها يوم الخميس الموافق 9 يوليو 2026 الإبقاء على أسعار العائد الأساسية دون تغيير، حيث تم تثبيت سعري عائد الإيداع والإقراض لليلة واحدة وسعر العملية الرئيسية للبنك المركزي عند 19.00% و20.00% و19.50%، على الترتيب.</div>
+        </div>
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://almalnews.com/2126386/البنك-المركزي-يطرح-أذون-خزانة-بقيمة-110/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
+      </div>
+    </div>
+    <div class="card card-high" id="c29" onclick="toggle('c29')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Egypt&#x27;s Housing Ministry Offers 2898 Residential Plots</span>
@@ -519,7 +1455,7 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2126381/غدًا-بدء-حجز-2898-قطعة-أرض-سكنية/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-high" id="c1" onclick="toggle('c1')">
+    <div class="card card-high" id="c30" onclick="toggle('c30')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Egypt Enforces Real Estate Brokerage Law</span>
@@ -556,7 +1492,36 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2126423/«صناعة-الشيوخ»-تطبيق-قانون-السمسرة-العقارية-يعزز/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-high" id="c2" onclick="toggle('c2')">
+    <div class="card card-mid" id="c31" onclick="toggle('c31')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Trans Cargo Terminal at Sokhna Port</span>
+          <span class="title-ar" dir="rtl">محطة ترانس كارجو بميناء السخنة</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">The Trans Cargo terminal at Sokhna Port has received its first two ships, the CHIPOLBROK SUN and the CENTURY EAGLE, following the start of commercial operations. The CHIPOLBROK SUN transported the terminal&#x27;s main crane, with a lifting capacity of 150 tons, as well as other operational equipment. The CENTURY EAGLE, a bulk carrier, arrived from China with a cargo of 52,483 tons. The terminal also received the TRANSMAR LEGACY from Jeddah Islamic Port in Saudi Arabia. The regular reception of ships since the start of commercial operations confirms the success of the Trans Cargo system and its ability to provide integrated services for general cargo handling. This is part of the Ministry of Transport&#x27;s plan to develop Sokhna Port into a major hub on the Red Sea, by establishing specialized terminals, developing berths and basins, and enhancing connections with the rail and road network.</div>
+        </div>
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">استقبلت محطة ترانس كارجو بميناء السخنة أول سفينتين بعد بدء التشغيل التجاري، وهما السفينة CHIPOLBROK SUN والسفينة CENTURY EAGLE. نقلت السفينة CHIPOLBROK SUN الونش الرئيسي للمحطة بقدرة رفع تبلغ 150 طن، بالإضافة إلى عدد من المعدات التشغيلية الأخرى. وصلت السفينة CENTURY EAGLE، وهي سفينة بضائع صب جاف، من الصين بحمولة تبلغ 52,483 طن. كما استقبلت المحطة السفينة TRANSMAR LEGACY قادمة من ميناء جدة الإسلامي بالمملكة العربية السعودية. يؤكد استقبال السفن بانتظام منذ بدء التشغيل التجاري نجاح منظومة العمل بمحطة ترانس كارجو وقدرتها على تقديم خدمات متكاملة لتداول البضائع العامة. هذا جزء من خطة وزارة النقل لتطوير ميناء السخنة ليصبح أحد أهم الموانئ المحورية على البحر الأحمر، من خلال إنشاء محطات متخصصة وتطوير الأرصفة والأحواض وتعزيز الربط مع شبكة السكك الحديدية والطرق والمحاور اللوجستية.</div>
+        </div>
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://almalnews.com/2126438/استمرار-النشاط-التشغيلي-بمحطة-ترانس-كارجو-بميناء/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
+      </div>
+    </div>
+    <div class="card card-high" id="c32" onclick="toggle('c32')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Egypt&#x27;s Housing Ministry Targets EGP 5 Billion</span>
@@ -593,160 +1558,7 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2126480/«الإسكان»-تخطط-لتحصيل-5-مليارات-جنيه-من/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c3" onclick="toggle('c3')">
-      <div class="card-head">
-        <div class="card-title">
-          <span class="title-en">Tamar Gas Field Partners Sign $20bn MoU with Egyptian Buyer</span>
-          <span class="title-ar" dir="rtl">شركاء حقل تامار الغازي يوقعون على مذكرة تفاهم بقيمة 20 مليار دولار مع مشترِ إسرائيلي</span>
-        </div>
-        <div class="card-head-right">
-          <span class="tier-badge tier-mid">Summary</span>
-          <div class="card-chevron">&#x203A;</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="card-grid">
-          
-        <div class="field full en-content">
-          <div class="field-label">Executive Summary</div>
-          <div class="field-text">Isramco and Mubadala Energy, partners in Israel&#x27;s Tamar gas field, have signed a non-binding MoU with an unnamed Egyptian buyer for a potential $20bn contract to supply up to 80bcm of gas between 2031 and 2038. The agreement, which would mark Tamar&#x27;s third long-term supply deal with Egypt, is contingent on all partners joining. The MoU implies an average realized price of around $7 per mn Btu over its life, with pricing tracking Brent crude and a price floor. The deal would layer on top of existing contracts, starting with modest annual volumes in 2031 and ramping up as earlier agreements approach expiry. Other partners, including Chevron, Tamar Petroleum, Union Energy, and Dor Gas, have not confirmed their participation. The proposed agreement follows a $35bn deal between Egypt and the Leviathan consortium to secure an additional 130bcm of gas through 2040.</div>
-        </div>
-          
-          
-        <div class="field full ar-content" dir="rtl">
-          <div class="field-label">الملخص التنفيذي</div>
-          <div class="field-text">وقعت شركتي إسرامكو وشركة مبادلة للطاقة، شركاء في حقل تامار الغازي الإسرائيلي، مذكرة تفاهم غير ملزمة مع مشترِ إسرائيلي مجهول للحصول على عقد محتمل بقيمة 20 مليار دولار لتزويد ما يصل إلى 80 مليار متر مكعب من الغاز بين 2031 و2038. وتعد هذه الاتفاقية الثالثة للتعاقدات الطويلة الأجل لحقل تامار مع مصر، ويتوقف ذلك على انضمام جميع الشركاء. وتفيد المذكرة بمتوسط سعر تحقق يبلغ حوالي 7 دولارات لكل مليون وحدة حرارية بريطانية على مدى حياتها، مع تتبع أسعار ب倫ت ووجود حد أدنى للسعر. وستكون هذه الصفقة طبقة فوق العقود الحالية، مع بدء كميات سنوية متواضعة في 2031 وزيادة تدريجية مع اقتراب العقود السابقة من انتهاء صلاحيتها. ولم يؤكد الشركاء الآخرون، بمن فيهم تشيفرون وبترو تامار وشركة يونيون للطاقة وشركة دور غاز، مشاركتهم. وتأتي هذه الاتفاقية المقترحة بعد صفقة بقيمة 35 مليار دولار بين مصر ومجتمع ليفياثان لتأمين 130 مليار متر مكعب إضافي من الغاز حتى 2040.</div>
-        </div>
-          
-        </div>
-        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/27/two-tamar-partners-sign-non-binding-mou-for-up-to-usd-20-bn-to-send-egypt-more-gas-from-2031/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
-      </div>
-    </div>
-  </section>
-  <section class="day-group">
-    <div class="day-header">
-      <span class="day-label">Also in the News</span>
-      <div class="day-rule"></div>
-      <span class="day-count">9 articles</span>
-    </div>
-    
-    <div class="card card-mid" id="c4" onclick="toggle('c4')">
-      <div class="card-head">
-        <div class="card-title">
-          <span class="title-en">Egypt&#x27;s Sustainable Development Agency Studies Port Investment</span>
-          <span class="title-ar" dir="rtl">جهاز مستقبل مصر يدرس فرص الاستثمار بقطاع الموانئ</span>
-        </div>
-        <div class="card-head-right">
-          <span class="tier-badge tier-mid">Summary</span>
-          <div class="card-chevron">&#x203A;</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="card-grid">
-          
-        <div class="field full en-content">
-          <div class="field-label">Executive Summary</div>
-          <div class="field-text">According to informed sources, the Egyptian Agency for Sustainable Development is currently studying investment opportunities in the port sector. This includes the establishment of a one million square meter logistics area within the Abu Qir Port. The move is part of the agency&#x27;s plan to support food security projects and supply chains. The agency is exploring ways to develop the port sector, with a focus on creating a logistics hub at Abu Qir Port.</div>
-        </div>
-          
-          
-        <div class="field full ar-content" dir="rtl">
-          <div class="field-label">الملخص التنفيذي</div>
-          <div class="field-text">أفادت مصادر مطلعة أن جهاز مستقبل مصر للتنمية المستدامة يدرس حالياً فرص الاستثمار بقطاع الموانئ، من خلال إنشاء منطقة لوجستية على مساحة مليون متر مربع داخل ميناء أبو قير البحري، وذلك في إطار خطته لدعم مشروعات الأمن الغذائي وسلاسل الإمداد. يهدف الجهاز إلى دعم تطوير قطاع الموانئ، من خلال إنشاء مركز لوجستي في ميناء أبو قير.</div>
-        </div>
-          
-        </div>
-        <div class="card-foot"><a class="source-link" href="https://almalnews.com/2126326/«مستقبل-مصر»-يدرس-إنشاء-منطقة-لوجستية-في/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
-      </div>
-    </div>
-    <div class="card card-mid" id="c5" onclick="toggle('c5')">
-      <div class="card-head">
-        <div class="card-title">
-          <span class="title-en">Egypt Leads North Africa Private Investment</span>
-          <span class="title-ar" dir="rtl">مصر تتصدر الاستثمار الخاص في شمال أفريقيا</span>
-        </div>
-        <div class="card-head-right">
-          <span class="tier-badge tier-mid">Summary</span>
-          <div class="card-chevron">&#x203A;</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="card-grid">
-          
-        <div class="field full en-content">
-          <div class="field-label">Executive Summary</div>
-          <div class="field-text">A recent report by Steers, a company specializing in economic data, research, and African market analysis, revealed that Egypt continued to strengthen its position as one of the most active private investment markets in the continent. During the second quarter of 2026, Egypt accounted for approximately 73% of private investment deals in North Africa. The report highlights Egypt&#x27;s prominence in the region&#x27;s investment landscape.</div>
-        </div>
-          
-          
-        <div class="field full ar-content" dir="rtl">
-          <div class="field-label">الملخص التنفيذي</div>
-          <div class="field-text">كشف تقرير حديث صادر عن شركة &quot;ستيرز&quot;، المتخصصة في البيانات والأبحاث الاقتصادية وتحليلات الأسواق الأفريقية، أن مصر واصلت تعزيز مكانتها كواحدة من أكثر أسواق الاستثمار الخاص نشاطًا في القارة، بعدما استحوذت على نحو 73% من صفقات الاستثمار الخاص في شمال أفريقيا خلال الربع الثاني من عام 2026.</div>
-        </div>
-          
-        </div>
-        <div class="card-foot"><a class="source-link" href="https://almalnews.com/2126338/مصر-تستحوذ-على-73-من-صفقات-الاستثمار/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
-      </div>
-    </div>
-    <div class="card card-mid" id="c6" onclick="toggle('c6')">
-      <div class="card-head">
-        <div class="card-title">
-          <span class="title-en">Egypt Central Bank Issues EGP 110 Billion Treasury Bills</span>
-          <span class="title-ar" dir="rtl">البنك المركزي المصري يطرح أذون خزانة بقيمة 110 مليار جنيه</span>
-        </div>
-        <div class="card-head-right">
-          <span class="tier-badge tier-mid">Summary</span>
-          <div class="card-chevron">&#x203A;</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="card-grid">
-          
-        <div class="field full en-content">
-          <div class="field-label">Executive Summary</div>
-          <div class="field-text">The Central Bank of Egypt issued treasury bills worth EGP 110 billion on Monday, with two tranches: EGP 40 billion for 91 days and EGP 70 billion for 273 days. The issuance is part of the bank&#x27;s coordination with the Ministry of Finance to finance the budget deficit. The Ministry of Finance has authorized the Central Bank to manage its treasury bill and bond auctions in Egyptian pounds throughout the fiscal year. The proceeds will be used to fund the state&#x27;s general budget for the current fiscal year. The Central Bank&#x27;s Monetary Policy Committee decided to keep the basic interest rates unchanged in its meeting on July 9, 2026, with the deposit and lending rates set at 19.00% and 20.00%, and the main operation rate at 19.50%.</div>
-        </div>
-          
-          
-        <div class="field full ar-content" dir="rtl">
-          <div class="field-label">الملخص التنفيذي</div>
-          <div class="field-text">طرح البنك المركزي المصري، اليوم الاثنين، أذون خزانة بقيمة 110 مليار جنيه، بفترتين: 40 مليار جنيه لمدة 91 يوما و70 مليار جنيه لمدة 273 يوما.这是 جزءا من تنسيق البنك مع وزارة المالية لتمويل عجز الموازنة. فوض البنك المركزي من وزارة المالية لإدارة طروحات أذون وسندات الخزانة بالجنيه المصري على مدار العام المالي، وستتم تغطية حصيلة الطرح على بنود الموازنة العامة للدولة للعام المالي الحالي. قررت لجنة السياسة النقدية للبنك المركزي المصري في اجتماعها يوم الخميس الموافق 9 يوليو 2026 الإبقاء على أسعار العائد الأساسية دون تغيير، حيث تم تثبيت سعري عائد الإيداع والإقراض لليلة واحدة وسعر العملية الرئيسية للبنك المركزي عند 19.00% و20.00% و19.50%، على الترتيب.</div>
-        </div>
-          
-        </div>
-        <div class="card-foot"><a class="source-link" href="https://almalnews.com/2126386/البنك-المركزي-يطرح-أذون-خزانة-بقيمة-110/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
-      </div>
-    </div>
-    <div class="card card-mid" id="c7" onclick="toggle('c7')">
-      <div class="card-head">
-        <div class="card-title">
-          <span class="title-en">Trans Cargo Terminal at Sokhna Port</span>
-          <span class="title-ar" dir="rtl">محطة ترانس كارجو بميناء السخنة</span>
-        </div>
-        <div class="card-head-right">
-          <span class="tier-badge tier-mid">Summary</span>
-          <div class="card-chevron">&#x203A;</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="card-grid">
-          
-        <div class="field full en-content">
-          <div class="field-label">Executive Summary</div>
-          <div class="field-text">The Trans Cargo terminal at Sokhna Port has received its first two ships, the CHIPOLBROK SUN and the CENTURY EAGLE, following the start of commercial operations. The CHIPOLBROK SUN transported the terminal&#x27;s main crane, with a lifting capacity of 150 tons, as well as other operational equipment. The CENTURY EAGLE, a bulk carrier, arrived from China with a cargo of 52,483 tons. The terminal also received the TRANSMAR LEGACY from Jeddah Islamic Port in Saudi Arabia. The regular reception of ships since the start of commercial operations confirms the success of the Trans Cargo system and its ability to provide integrated services for general cargo handling. This is part of the Ministry of Transport&#x27;s plan to develop Sokhna Port into a major hub on the Red Sea, by establishing specialized terminals, developing berths and basins, and enhancing connections with the rail and road network.</div>
-        </div>
-          
-          
-        <div class="field full ar-content" dir="rtl">
-          <div class="field-label">الملخص التنفيذي</div>
-          <div class="field-text">استقبلت محطة ترانس كارجو بميناء السخنة أول سفينتين بعد بدء التشغيل التجاري، وهما السفينة CHIPOLBROK SUN والسفينة CENTURY EAGLE. نقلت السفينة CHIPOLBROK SUN الونش الرئيسي للمحطة بقدرة رفع تبلغ 150 طن، بالإضافة إلى عدد من المعدات التشغيلية الأخرى. وصلت السفينة CENTURY EAGLE، وهي سفينة بضائع صب جاف، من الصين بحمولة تبلغ 52,483 طن. كما استقبلت المحطة السفينة TRANSMAR LEGACY قادمة من ميناء جدة الإسلامي بالمملكة العربية السعودية. يؤكد استقبال السفن بانتظام منذ بدء التشغيل التجاري نجاح منظومة العمل بمحطة ترانس كارجو وقدرتها على تقديم خدمات متكاملة لتداول البضائع العامة. هذا جزء من خطة وزارة النقل لتطوير ميناء السخنة ليصبح أحد أهم الموانئ المحورية على البحر الأحمر، من خلال إنشاء محطات متخصصة وتطوير الأرصفة والأحواض وتعزيز الربط مع شبكة السكك الحديدية والطرق والمحاور اللوجستية.</div>
-        </div>
-          
-        </div>
-        <div class="card-foot"><a class="source-link" href="https://almalnews.com/2126438/استمرار-النشاط-التشغيلي-بمحطة-ترانس-كارجو-بميناء/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
-      </div>
-    </div>
-    <div class="card card-mid" id="c8" onclick="toggle('c8')">
+    <div class="card card-mid" id="c33" onclick="toggle('c33')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">REDCON Properties: Global Markets Await Interest Rate Decisions</span>
@@ -775,7 +1587,7 @@
         <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/27/deepseek-halts-its-usd-74-bn-round-weeks-after-a-record-raise/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c9" onclick="toggle('c9')">
+    <div class="card card-mid" id="c34" onclick="toggle('c34')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Egypt Launches $36 QR-Code E-Visa</span>
@@ -804,7 +1616,7 @@
         <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/27/last-nights-talk-shows-on-the-qr-code-e-visa-system/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c10" onclick="toggle('c10')">
+    <div class="card card-mid" id="c35" onclick="toggle('c35')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Egypt, Israel Discuss $10bn Gas Deal</span>
@@ -833,7 +1645,36 @@
         <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/27/two-tamar-partners-sign-non-binding-mou-for-up-to-usd-20-bn-to-send-egypt-more-gas-from-2031/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c11" onclick="toggle('c11')">
+    <div class="card card-mid" id="c36" onclick="toggle('c36')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Tamar Gas Field Partners Sign $20bn MoU with Egyptian Buyer</span>
+          <span class="title-ar" dir="rtl">شركاء حقل تامار الغازي يوقعون على مذكرة تفاهم بقيمة 20 مليار دولار مع مشترِ إسرائيلي</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Isramco and Mubadala Energy, partners in Israel&#x27;s Tamar gas field, have signed a non-binding MoU with an unnamed Egyptian buyer for a potential $20bn contract to supply up to 80bcm of gas between 2031 and 2038. The agreement, which would mark Tamar&#x27;s third long-term supply deal with Egypt, is contingent on all partners joining. The MoU implies an average realized price of around $7 per mn Btu over its life, with pricing tracking Brent crude and a price floor. The deal would layer on top of existing contracts, starting with modest annual volumes in 2031 and ramping up as earlier agreements approach expiry. Other partners, including Chevron, Tamar Petroleum, Union Energy, and Dor Gas, have not confirmed their participation. The proposed agreement follows a $35bn deal between Egypt and the Leviathan consortium to secure an additional 130bcm of gas through 2040.</div>
+        </div>
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">وقعت شركتي إسرامكو وشركة مبادلة للطاقة، شركاء في حقل تامار الغازي الإسرائيلي، مذكرة تفاهم غير ملزمة مع مشترِ إسرائيلي مجهول للحصول على عقد محتمل بقيمة 20 مليار دولار لتزويد ما يصل إلى 80 مليار متر مكعب من الغاز بين 2031 و2038. وتعد هذه الاتفاقية الثالثة للتعاقدات الطويلة الأجل لحقل تامار مع مصر، ويتوقف ذلك على انضمام جميع الشركاء. وتفيد المذكرة بمتوسط سعر تحقق يبلغ حوالي 7 دولارات لكل مليون وحدة حرارية بريطانية على مدى حياتها، مع تتبع أسعار ب倫ت ووجود حد أدنى للسعر. وستكون هذه الصفقة طبقة فوق العقود الحالية، مع بدء كميات سنوية متواضعة في 2031 وزيادة تدريجية مع اقتراب العقود السابقة من انتهاء صلاحيتها. ولم يؤكد الشركاء الآخرون، بمن فيهم تشيفرون وبترو تامار وشركة يونيون للطاقة وشركة دور غاز، مشاركتهم. وتأتي هذه الاتفاقية المقترحة بعد صفقة بقيمة 35 مليار دولار بين مصر ومجتمع ليفياثان لتأمين 130 مليار متر مكعب إضافي من الغاز حتى 2040.</div>
+        </div>
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/27/two-tamar-partners-sign-non-binding-mou-for-up-to-usd-20-bn-to-send-egypt-more-gas-from-2031/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card card-mid" id="c37" onclick="toggle('c37')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">FRA to Launch Short-Selling, Market-Making</span>
@@ -862,7 +1703,7 @@
         <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/27/shells-velox-1x-well-confirmed-presence-of-crude-in-the-western-mediterranean/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c12" onclick="toggle('c12')">
+    <div class="card card-mid" id="c38" onclick="toggle('c38')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Shell&#x27;s Velox-1X Well Confirms Crude Oil in Egypt</span>
@@ -892,22 +1733,6 @@
       </div>
     </div>
   </section>
-      
-    </div>
-  </div>
-
-  <!-- ARCHIVE -->
-  <div class="tab-panel" id="panel-archive">
-    <div class="archive-note">
-      <span class="archive-note-icon">📁</span>
-      Previous days' intelligence briefings. Each day's articles are appended here automatically when the next day's run completes.
-    </div>
-    <div class="search-wrap">
-      <input type="text" id="q-archive" placeholder="Search archived headlines and summaries…" oninput="filter('archive')"/>
-      <span id="filter-count-archive"></span>
-    </div>
-    <div id="feed-archive">
-      
   <section class="day-group">
     <div class="day-header">
       <span class="day-label">2026-07-26</span>
@@ -915,7 +1740,7 @@
       <span class="day-count">15 articles</span>
     </div>
     
-    <div class="card card-mid" id="c13" onclick="toggle('c13')">
+    <div class="card card-mid" id="c39" onclick="toggle('c39')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Egyptian Stock Exchange Weekly Activity</span>
@@ -944,7 +1769,7 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2126241/قطاع-العقارات-يواصل-هيمنته-على-التداولات-الأسبوعية/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-high" id="c14" onclick="toggle('c14')">
+    <div class="card card-high" id="c40" onclick="toggle('c40')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Egypt Parliament Housing Committee Recommendations</span>
@@ -981,7 +1806,7 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2126252/«إسكان-النواب»-تدعو-لدخول-القطاع-الخاص-في/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c15" onclick="toggle('c15')">
+    <div class="card card-mid" id="c41" onclick="toggle('c41')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Egypt Central Bank Offers EGP 17.5 Billion Bonds</span>
@@ -1010,7 +1835,7 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2126256/البنك-المركزي-يطرح-سندات-خزانة-بـ-17/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c16" onclick="toggle('c16')">
+    <div class="card card-mid" id="c42" onclick="toggle('c42')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Egypt Central Bank Offers EGP 120 Billion Treasury Bills</span>
@@ -1039,7 +1864,7 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2126255/البنك-المركزي-يطرح-أذون-خزانة-بقيمة-120/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-high" id="c17" onclick="toggle('c17')">
+    <div class="card card-high" id="c43" onclick="toggle('c43')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Egypt&#x27;s Housing Ministry Announces Land Allocation Results</span>
@@ -1076,7 +1901,7 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2126260/«الإسكان»-تعلن-نتائج-قرعة-أراضي-الشراكة-مع/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c18" onclick="toggle('c18')">
+    <div class="card card-mid" id="c44" onclick="toggle('c44')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">JORA Developments Starts iXORA Residence Project</span>
@@ -1105,7 +1930,7 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2126268/شركة-«JORA-Developments»-تبدأ-الإنشاءات-بمشروع-«iXORA/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-high" id="c19" onclick="toggle('c19')">
+    <div class="card card-high" id="c45" onclick="toggle('c45')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Chidi Developments on Egyptian Real Estate Market</span>
@@ -1142,7 +1967,7 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2126280/محمود-أبو-الخير-استدامة-التمويل-لشركات-التطوير/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-high" id="c20" onclick="toggle('c20')">
+    <div class="card card-high" id="c46" onclick="toggle('c46')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Banque Misr Offers Ramtan Units in New Administrative Capital</span>
@@ -1179,7 +2004,7 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2126290/قطاع-أمناء-الاستثمار-بالبنك-الأهلي-يتعاون-مع/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c21" onclick="toggle('c21')">
+    <div class="card card-mid" id="c47" onclick="toggle('c47')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Egypt Clears 4 State-Linked Companies</span>
@@ -1208,7 +2033,7 @@
         <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/26/cairo-damascus-flights-could-resume-within-two-months-ending-a-15-year-suspension/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
       </div>
     </div>
-    <div class="card card-high" id="c22" onclick="toggle('c22')">
+    <div class="card card-high" id="c48" onclick="toggle('c48')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Marriott Signs 11 Hotels Deal with Misr Italia</span>
@@ -1245,7 +2070,7 @@
         <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/26/marriott-signed-a-deal-for-11-new-hotels-across-five-mixed-use-projects/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c23" onclick="toggle('c23')">
+    <div class="card card-mid" id="c49" onclick="toggle('c49')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">EBRD Approves EGP 465mn Loan to GB Logistics</span>
@@ -1274,7 +2099,7 @@
         <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/26/egypt-received-its-second-eu-tranche-with-one-eur-1-5-bn-payment-left-on-the-eur-5-bn-package/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c24" onclick="toggle('c24')">
+    <div class="card card-mid" id="c50" onclick="toggle('c50')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">EU Disburses EUR 1.5 Bn to Egypt</span>
@@ -1303,7 +2128,7 @@
         <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/26/egypt-received-its-second-eu-tranche-with-one-eur-1-5-bn-payment-left-on-the-eur-5-bn-package/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c25" onclick="toggle('c25')">
+    <div class="card card-mid" id="c51" onclick="toggle('c51')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Aramco Offers Crude Via Egypt</span>
@@ -1332,7 +2157,7 @@
         <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/26/aramco-is-routing-extra-crude-through-egypt-as-houthi-threats-hit-red-sea-exports/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c26" onclick="toggle('c26')">
+    <div class="card card-mid" id="c52" onclick="toggle('c52')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">US Imposes 12.5% Tariff on Egyptian Goods</span>
@@ -1361,7 +2186,7 @@
         <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/26/the-us-raised-egypts-tariff-to-12-5-while-cairo-opened-its-market-wider-to-us-cars/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c27" onclick="toggle('c27')">
+    <div class="card card-mid" id="c53" onclick="toggle('c53')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Egypt Exports 2.3Mn Tons Petroleum Products</span>
@@ -1398,7 +2223,7 @@
       <span class="day-count">31 articles</span>
     </div>
     
-    <div class="card card-mid" id="c28" onclick="toggle('c28')">
+    <div class="card card-mid" id="c54" onclick="toggle('c54')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Egypt Central Bank Issues Treasury Documents</span>
@@ -1427,7 +2252,7 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2125658/مصرفيان-«وثائق-الخزانة»-تستهدف-تنويع-أدوات-التمويل/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-high" id="c29" onclick="toggle('c29')">
+    <div class="card card-high" id="c55" onclick="toggle('c55')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Egypt Launches 8 International Logistics Corridors</span>
@@ -1464,7 +2289,7 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2125672/شعبة-النقل-الدولي-الربط-بين-الخليج-وأوروبا/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c30" onclick="toggle('c30')">
+    <div class="card card-mid" id="c56" onclick="toggle('c56')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Eurozone Banks Tighten Lending Standards</span>
@@ -1493,7 +2318,7 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2125689/بنوك-أوروبا-تشدد-معايير-الإقراض-وسط-تصاعد/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c31" onclick="toggle('c31')">
+    <div class="card card-mid" id="c57" onclick="toggle('c57')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Al Obour Investment Increase Capital</span>
@@ -1522,7 +2347,7 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2125688/الرقابة-المالية-تقر-زيادة-رأس-المال-المصدر/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-high" id="c32" onclick="toggle('c32')">
+    <div class="card card-high" id="c58" onclick="toggle('c58')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Nations of Sky Launches PERLA Project in North Coast</span>
@@ -1559,7 +2384,7 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2125722/«نيشنز-أوف-سكاي»-تطلق-مشروع-PERLA-على/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c33" onclick="toggle('c33')">
+    <div class="card card-mid" id="c59" onclick="toggle('c59')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Egypt Central Bank Withdraws EGP 22 Billion</span>
@@ -1588,7 +2413,7 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2125745/البنك-المركزي-يسحب-سيولة-بقيمة-22-مليار/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c34" onclick="toggle('c34')">
+    <div class="card card-mid" id="c60" onclick="toggle('c60')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Egypt Tops Africa in FDI for 4th Consecutive Year</span>
@@ -1617,7 +2442,7 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2125749/مصر-تتصدر-أفريقيا-في-جذب-الاستثمارات-الأجنبية/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-high" id="c35" onclick="toggle('c35')">
+    <div class="card card-high" id="c61" onclick="toggle('c61')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Egypt&#x27;s Al-Diyar Qatari Develops &#x27;Alam Al-Rum&#x27; Project</span>
@@ -1654,7 +2479,7 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2125799/وزيرة-الإسكان-تتفقد-مشروع-تطوير-«علم-الروم»/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-high" id="c36" onclick="toggle('c36')">
+    <div class="card card-high" id="c62" onclick="toggle('c62')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">New Tayba City Offers 15 Mixed-Use Land Plots</span>
@@ -1691,7 +2516,7 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2125797/جهاز-مدينة-طيبة-الجديدة-يطرح-15-قطعة/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-high" id="c37" onclick="toggle('c37')">
+    <div class="card card-high" id="c63" onclick="toggle('c63')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">تطوير مصر تطلق مارينا سولت بالساحل الشمالي</span>
@@ -1728,7 +2553,7 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2125795/أحمد-شلبي-خلال-لقائه-مع-عمرو-أديب/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c38" onclick="toggle('c38')">
+    <div class="card card-mid" id="c64" onclick="toggle('c64')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Suez Canal Economic Zone Meets Indian Ambassador</span>
@@ -1757,7 +2582,7 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2125766/رئيس-اقتصادية-قناة-السويس-جولة-ترويجية-مرتقبة/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-high" id="c39" onclick="toggle('c39')">
+    <div class="card card-high" id="c65" onclick="toggle('c65')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Egyptian Businessmen Association Proposes Real Estate Regulatory System</span>
@@ -1794,7 +2619,7 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2125820/جمعية-رجال-الأعمال-تقترح-إنشاء-هيئة-مستقلة/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-high" id="c40" onclick="toggle('c40')">
+    <div class="card card-high" id="c66" onclick="toggle('c66')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Egypt Proposes Infrastructure Finance Guarantee Facility</span>
@@ -1831,7 +2656,7 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2125829/مدبولي-يوجه-بسرعة-الانتهاء-من-إعداد-آلية/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c41" onclick="toggle('c41')">
+    <div class="card card-mid" id="c67" onclick="toggle('c67')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">AfCFTA Workshop in Port Said</span>
@@ -1860,7 +2685,7 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2125811/الأكاديمية-العربية-تعقد-حوارًا-لصياغة-مستقبل-النقل/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-high" id="c42" onclick="toggle('c42')">
+    <div class="card card-high" id="c68" onclick="toggle('c68')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Ahlly Sabbour Signs EGP 4.4 Billion Financing Deal</span>
@@ -1897,7 +2722,7 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2125839/«الأهلي-صبور»-تحصل-على-تمويل-مشترك-بقيمة/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-high" id="c43" onclick="toggle('c43')">
+    <div class="card card-high" id="c69" onclick="toggle('c69')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Egypt&#x27;s Mortgage Finance Reaches EGP 2.737 Billion in April 2026</span>
@@ -1934,7 +2759,7 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2125845/القاهرة-تستحوذ-على-81-من-قيمة-التمويل/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-high" id="c44" onclick="toggle('c44')">
+    <div class="card card-high" id="c70" onclick="toggle('c70')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Egypt Mortgage Financing Rises 16.8% in Q1 2026</span>
@@ -1971,7 +2796,7 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2125844/بزيادة-16-8-التمويل-العقاري-يقفز-إلى/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-high" id="c45" onclick="toggle('c45')">
+    <div class="card card-high" id="c71" onclick="toggle('c71')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Egypt Mortgage Finance Rises 47.5% in April 2026</span>
@@ -2008,7 +2833,7 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2125843/2-7-مليار-جنيه-قيمة-التمويل-العقاري/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c46" onclick="toggle('c46')">
+    <div class="card card-mid" id="c72" onclick="toggle('c72')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Suez Canal Economic Zone Meets US Trade Delegation</span>
@@ -2037,7 +2862,7 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2125862/اقتصادية-قناة-السويس-تستقبل-مساعد-وزير-التجارة/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-high" id="c47" onclick="toggle('c47')">
+    <div class="card card-high" id="c73" onclick="toggle('c73')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">New Urban Communities Authority Amends Land Allocation Controls</span>
@@ -2074,7 +2899,7 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2125906/«الإسكان»-تقرر-إلغاء-طرح-وتخصيص-أراض-بالمدن/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-high" id="c48" onclick="toggle('c48')">
+    <div class="card card-high" id="c74" onclick="toggle('c74')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Egyptian Real Estate Developers Welcome New Regulations</span>
@@ -2111,7 +2936,7 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2125913/مطورون-عقاريون-يرحبون-بتيسيرات-«المجتمعات-العمرانية»/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-high" id="c49" onclick="toggle('c49')">
+    <div class="card card-high" id="c75" onclick="toggle('c75')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Bonyan, MAD Adopt Own-to-Lease Model</span>
@@ -2148,7 +2973,7 @@
         <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/hardhats/real-estate-price-gains-are-masking-a-liquidity-crunch-for-developers/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
       </div>
     </div>
-    <div class="card card-high" id="c50" onclick="toggle('c50')">
+    <div class="card card-high" id="c76" onclick="toggle('c76')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Egypt&#x27;s North Coast Sees EGP 1.2 Trillion Sales</span>
@@ -2185,7 +3010,7 @@
         <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/hardhats/real-estate-price-gains-are-masking-a-liquidity-crunch-for-developers/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
       </div>
     </div>
-    <div class="card card-high" id="c51" onclick="toggle('c51')">
+    <div class="card card-high" id="c77" onclick="toggle('c77')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Egypt Real Estate Market Faces Repricing Amid 60% USD Increase</span>
@@ -2222,7 +3047,7 @@
         <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/hardhats/real-estate-price-gains-are-masking-a-liquidity-crunch-for-developers/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c52" onclick="toggle('c52')">
+    <div class="card card-mid" id="c78" onclick="toggle('c78')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">REDCON Properties: Asian Markets Rebound</span>
@@ -2251,7 +3076,7 @@
         <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/22/chinas-quant-funds-post-their-worst-week-in-more-than-two-years-on-ai-stock-reversal/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
       </div>
     </div>
-    <div class="card card-high" id="c53" onclick="toggle('c53')">
+    <div class="card card-high" id="c79" onclick="toggle('c79')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">CIB Reports 29% YoY Increase in Net Income to EGP 21.5bn</span>
@@ -2288,7 +3113,7 @@
         <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/22/cibs-net-income-rose-29-y-o-y-in-2q-2026-and-posted-its-strongest-ever-quarterly-local-currency-deposit-haul/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c54" onclick="toggle('c54')">
+    <div class="card card-mid" id="c80" onclick="toggle('c80')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Egypt Issues $750mn Green Bond</span>
@@ -2317,7 +3142,7 @@
         <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/22/egypts-first-climate-fiscal-risk-statement-puts-a-number-on-tns-in-state-assets-under-review/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c55" onclick="toggle('c55')">
+    <div class="card card-mid" id="c81" onclick="toggle('c81')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Egypt Assesses EGP 27bn Projects</span>
@@ -2346,7 +3171,7 @@
         <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/22/egypts-first-climate-fiscal-risk-statement-puts-a-number-on-tns-in-state-assets-under-review/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c56" onclick="toggle('c56')">
+    <div class="card card-mid" id="c82" onclick="toggle('c82')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Egypt Issues $1.3B Fiscal Risk Statement</span>
@@ -2375,7 +3200,7 @@
         <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/22/egypts-first-climate-fiscal-risk-statement-puts-a-number-on-tns-in-state-assets-under-review/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
       </div>
     </div>
-    <div class="card card-high" id="c57" onclick="toggle('c57')">
+    <div class="card card-high" id="c83" onclick="toggle('c83')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">REDCON Properties: Lebanon Truce, SpaceX Stock Unlock, LSE 24/7</span>
@@ -2412,7 +3237,7 @@
         <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/22/egypts-single-stock-futures-market-trading-value-remains-thin-a-month-after-launch/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c58" onclick="toggle('c58')">
+    <div class="card card-mid" id="c84" onclick="toggle('c84')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Egypt Negotiates $8-11bn LNG Deal</span>
@@ -2449,7 +3274,7 @@
       <span class="day-count">15 articles</span>
     </div>
     
-    <div class="card card-mid" id="c59" onclick="toggle('c59')">
+    <div class="card card-mid" id="c85" onclick="toggle('c85')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Egypt Treasury Bond Yields Rise</span>
@@ -2478,7 +3303,7 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2125440/متوسط-الفائدة-على-أدوات-الدين-قصيرة-الأجل/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c60" onclick="toggle('c60')">
+    <div class="card card-mid" id="c86" onclick="toggle('c86')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Magnet: MENA Venture Capital Funding</span>
@@ -2507,7 +3332,7 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2125561/تقرير-تراجع-تمويلات-رأس-المال-الجريء-في/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-high" id="c61" onclick="toggle('c61')">
+    <div class="card card-high" id="c87" onclick="toggle('c87')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Egypt Faces $230 Billion Infrastructure Funding Gap</span>
@@ -2544,7 +3369,7 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2125591/منظمة-التعاون-الاقتصادي-مصر-تحتاج-230-مليار/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c62" onclick="toggle('c62')">
+    <div class="card card-mid" id="c88" onclick="toggle('c88')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Egypt&#x27;s Economic National Program</span>
@@ -2573,7 +3398,7 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2125594/«تمهيدًا-لإعلانه-رسميًّا»-الحكومة-تنسق-مع-البنك/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c63" onclick="toggle('c63')">
+    <div class="card card-mid" id="c89" onclick="toggle('c89')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">October 6 City Development Works Begin</span>
@@ -2602,7 +3427,7 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2125620/وزارة-الإسكان-تبدأ-تنفيذ-المرافق-بمنطقة-بيت/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c64" onclick="toggle('c64')">
+    <div class="card card-mid" id="c90" onclick="toggle('c90')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Egypt Recovers 4.3 Billion EGP Worth of Land</span>
@@ -2631,7 +3456,7 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2125643/«التنمية-المحلية»-تنتهي-من-حصر-64-قطعة/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c65" onclick="toggle('c65')">
+    <div class="card card-mid" id="c91" onclick="toggle('c91')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">EGX30 Rises 1.1%</span>
@@ -2660,7 +3485,7 @@
         <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/21/morgan-stanley-turned-the-ai-buildout-into-a-bond-market/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
       </div>
     </div>
-    <div class="card card-high" id="c66" onclick="toggle('c66')">
+    <div class="card card-high" id="c92" onclick="toggle('c92')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Egypt Issues EGP 150bn 63-Day Floating-Rate Treasury Notes</span>
@@ -2697,7 +3522,7 @@
         <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/21/treasury-issues-first-ever-floating-rate-treasury-notes/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
       </div>
     </div>
-    <div class="card card-high" id="c67" onclick="toggle('c67')">
+    <div class="card card-high" id="c93" onclick="toggle('c93')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Egypt Central Bank May Trim Reserve Ratio</span>
@@ -2734,7 +3559,7 @@
         <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/21/banks-compete-for-deposits-as-cbe-holds-rates-steady/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
       </div>
     </div>
-    <div class="card card-high" id="c68" onclick="toggle('c68')">
+    <div class="card card-high" id="c94" onclick="toggle('c94')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">CBE Rate Cut Expectations</span>
@@ -2771,7 +3596,7 @@
         <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/21/banks-compete-for-deposits-as-cbe-holds-rates-steady/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
       </div>
     </div>
-    <div class="card card-high" id="c69" onclick="toggle('c69')">
+    <div class="card card-high" id="c95" onclick="toggle('c95')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Egypt&#x27;s Banking Sector Sees 19.5% Liquidity Increase</span>
@@ -2808,7 +3633,7 @@
         <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/21/banks-compete-for-deposits-as-cbe-holds-rates-steady/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
       </div>
     </div>
-    <div class="card card-high" id="c70" onclick="toggle('c70')">
+    <div class="card card-high" id="c96" onclick="toggle('c96')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Egyptian Banks Lift Certificate-of-Deposit Yields to 20%</span>
@@ -2845,7 +3670,7 @@
         <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/21/banks-compete-for-deposits-as-cbe-holds-rates-steady/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c71" onclick="toggle('c71')">
+    <div class="card card-mid" id="c97" onclick="toggle('c97')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Egypt Pilots QR-Code E-Visa System</span>
@@ -2874,7 +3699,7 @@
         <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/21/egypt-world-bank-build-a-usd-520-mn-private-infrastructure-financing-vehicle/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c72" onclick="toggle('c72')">
+    <div class="card card-mid" id="c98" onclick="toggle('c98')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Egypt, World Bank Launch $520mn Infrastructure Guarantee Facility</span>
@@ -2903,7 +3728,7 @@
         <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/21/egypt-world-bank-build-a-usd-520-mn-private-infrastructure-financing-vehicle/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
       </div>
     </div>
-    <div class="card card-high" id="c73" onclick="toggle('c73')">
+    <div class="card card-high" id="c99" onclick="toggle('c99')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">IGI and Kulture Developments partner on $5 bn (EGP) mixed-use project</span>
@@ -2948,7 +3773,7 @@
       <span class="day-count">14 articles</span>
     </div>
     
-    <div class="card card-high" id="c74" onclick="toggle('c74')">
+    <div class="card card-high" id="c100" onclick="toggle('c100')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Suez Canal Sees Notable Recovery in 2025/2026</span>
@@ -2985,7 +3810,7 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2125264/سياسات-التسويق-المرنة-ترفع-إيرادات-قناة-السويس/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c75" onclick="toggle('c75')">
+    <div class="card card-mid" id="c101" onclick="toggle('c101')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Alexandria Container Handling Company Studies New Logistics Zone</span>
@@ -3014,7 +3839,7 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2125282/«الإسكندرية-لتداول-الحاويات»-تُكلِّف-لجنة-فنية-بوضع/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c76" onclick="toggle('c76')">
+    <div class="card card-mid" id="c102" onclick="toggle('c102')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Taba Port Revitalization</span>
@@ -3043,7 +3868,7 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2125283/«البحر-الأحمر»-تراهن-على-ميناء-طابا-الجديد/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-high" id="c77" onclick="toggle('c77')">
+    <div class="card card-high" id="c103" onclick="toggle('c103')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Talaat Moustafa&#x27;s City of Oroun Project</span>
@@ -3080,7 +3905,7 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2125290/مجموعة-«طلعت-مصطفى»-تستعد-لبدء-تسليم-وحدات/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c78" onclick="toggle('c78')">
+    <div class="card card-mid" id="c104" onclick="toggle('c104')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Misr New Urban Communities Signs Partnership</span>
@@ -3109,7 +3934,7 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2125335/«مصر-الجديدة-للإسكان»-تعلن-شراكة-«موداد»-لتطوير/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-high" id="c79" onclick="toggle('c79')">
+    <div class="card card-high" id="c105" onclick="toggle('c105')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Cretemarx Sells North Coast Project Stake to Ayoubco</span>
@@ -3146,7 +3971,7 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2125332/«كرستمارك»-تتخارج-من-حصتها-في-مشروع-الساحل/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-high" id="c80" onclick="toggle('c80')">
+    <div class="card card-high" id="c106" onclick="toggle('c106')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Diyar Al Khair&#x27;s $29.7B &#x27;Alam Al Roum&#x27; Project in Egypt&#x27;s North Coast</span>
@@ -3183,7 +4008,7 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2125372/«الديار-القطرية-مصر»-تستعرض-المخطط-العام-لمشروع/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c81" onclick="toggle('c81')">
+    <div class="card card-mid" id="c107" onclick="toggle('c107')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Egypt Cement Prices Remain Stable</span>
@@ -3212,7 +4037,7 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2125401/الطن-بـ-4200-أسعار-الأسمنت-في-مصر/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c82" onclick="toggle('c82')">
+    <div class="card card-mid" id="c108" onclick="toggle('c108')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Egypt&#x27;s 2027/2026 Budget Law</span>
@@ -3241,7 +4066,7 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2125432/السيسي-يصدق-على-قانون-الموازنة-ويمنح-وزير/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c83" onclick="toggle('c83')">
+    <div class="card card-mid" id="c109" onclick="toggle('c109')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">EGX30 Falls 0.7%</span>
@@ -3270,7 +4095,7 @@
         <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/20/mena-economy-to-shrink-in-2026-before-6-5-rebound-bmi/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c84" onclick="toggle('c84')">
+    <div class="card card-mid" id="c110" onclick="toggle('c110')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">BMI Downgrades MENA Economic Recovery to 2027</span>
@@ -3299,7 +4124,7 @@
         <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/20/mena-economy-to-shrink-in-2026-before-6-5-rebound-bmi/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c85" onclick="toggle('c85')">
+    <div class="card card-mid" id="c111" onclick="toggle('c111')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">EGP 20bn Gulf of Suez Grid Connection</span>
@@ -3328,7 +4153,7 @@
         <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/20/solar-and-wind-projects-in-the-gulf-of-suez-are-getting-a-new-egp-20-bn-link-to-the-national-grid/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c86" onclick="toggle('c86')">
+    <div class="card card-mid" id="c112" onclick="toggle('c112')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">FRA Forms Committee with EGX and Tax Authority</span>
@@ -3357,7 +4182,7 @@
         <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/20/the-fra-carved-out-an-auditor-rotation-exception-to-smooth-companies-path-to-listing/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
       </div>
     </div>
-    <div class="card card-high" id="c87" onclick="toggle('c87')">
+    <div class="card card-high" id="c113" onclick="toggle('c113')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Emirates NBD Egypt Offers 19% Variable-Rate CD</span>
@@ -3402,7 +4227,7 @@
       <span class="day-count">6 articles</span>
     </div>
     
-    <div class="card card-mid" id="c88" onclick="toggle('c88')">
+    <div class="card card-mid" id="c114" onclick="toggle('c114')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Egypt Bourse: Real Estate Sector Leads Trading</span>
@@ -3431,7 +4256,7 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2125133/قطاع-العقارات-يقود-حركة-تداولات-البورصة-وسط/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c89" onclick="toggle('c89')">
+    <div class="card card-mid" id="c115" onclick="toggle('c115')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Egypt Central Bank Offers EGP 18.5 Billion Bonds</span>
@@ -3460,7 +4285,7 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2125154/البنك-المركزي-يطرح-سندات-خزانة-بقيمة-18/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c90" onclick="toggle('c90')">
+    <div class="card card-mid" id="c116" onclick="toggle('c116')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Egypt Central Bank Offers EGP 105 Billion Treasury Bills</span>
@@ -3489,7 +4314,7 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2125150/البنك-المركزي-يطرح-أذون-خزانة-بقيمة-105/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-high" id="c91" onclick="toggle('c91')">
+    <div class="card card-high" id="c117" onclick="toggle('c117')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Modon Holding Launches Nammos Ras El Hekma in Egypt</span>
@@ -3526,7 +4351,7 @@
         <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/19/hiltons-egypt-expansion-reaches-ras-el-bar-with-a-new-doray-bay-hotel-deal/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c92" onclick="toggle('c92')">
+    <div class="card card-mid" id="c118" onclick="toggle('c118')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">MBG Developments Partners with Hilton</span>
@@ -3555,7 +4380,7 @@
         <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/07/19/hiltons-egypt-expansion-reaches-ras-el-bar-with-a-new-doray-bay-hotel-deal/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c93" onclick="toggle('c93')">
+    <div class="card card-mid" id="c119" onclick="toggle('c119')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">CMA CGM Seeks Dry Port Clearance</span>
@@ -3593,7 +4418,7 @@
 
 <script>
 // ── WEATHER PAGINATOR ──────────────────────────────────────────────────────────
-const WX_DATA   = [{t:"12AM",e:"🌙",c:26,d:"Clear",now:false},{t:"1AM",e:"🌙",c:25,d:"Clear",now:false},{t:"2AM",e:"🌙",c:24,d:"Mainly clear",now:false},{t:"3AM",e:"🌙",c:24,d:"Clear",now:false},{t:"4AM",e:"🌙",c:23,d:"Mainly clear",now:false},{t:"5AM",e:"🌙",c:22,d:"Mainly clear",now:false},{t:"6AM",e:"⛅",c:22,d:"Partly cloudy",now:false},{t:"7AM",e:"⛅",c:23,d:"Partly cloudy",now:false},{t:"8AM",e:"⛅",c:24,d:"Partly cloudy",now:false},{t:"9AM",e:"⛅",c:26,d:"Partly cloudy",now:true},{t:"10AM",e:"🌤️",c:28,d:"Mainly clear",now:false},{t:"11AM",e:"🌤️",c:30,d:"Mainly clear",now:false},{t:"12PM",e:"🌤️",c:31,d:"Mainly clear",now:false},{t:"1PM",e:"⛅",c:33,d:"Partly cloudy",now:false},{t:"2PM",e:"⛅",c:34,d:"Partly cloudy",now:false},{t:"3PM",e:"⛅",c:35,d:"Partly cloudy",now:false},{t:"4PM",e:"🌤️",c:35,d:"Mainly clear",now:false},{t:"5PM",e:"🌤️",c:35,d:"Mainly clear",now:false},{t:"6PM",e:"🌤️",c:34,d:"Mainly clear",now:false},{t:"7PM",e:"🌙",c:33,d:"Mainly clear",now:false},{t:"8PM",e:"🌙",c:31,d:"Clear",now:false},{t:"9PM",e:"🌙",c:29,d:"Clear",now:false},{t:"10PM",e:"🌙",c:28,d:"Clear",now:false},{t:"11PM",e:"🌙",c:26,d:"Clear",now:false}];
+const WX_DATA   = [];
 let   wxCenter_idx = 0;  // index of the slot shown in the CENTER position
 
 function wxPage(dir) {
