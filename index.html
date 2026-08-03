@@ -310,7 +310,7 @@
     <div class="hero-eyebrow">Daily Market Briefing</div>
     <h1 class="hero-title">Redcon Properties<br><strong>Intelligence Feed</strong></h1>
     <p class="hero-sub">Daily News analyzed for Egypt's construction, infrastructure, and real estate market.</p>
-    <div class="hero-meta">Last updated: 3 August 2026, 23:55</div>
+    <div class="hero-meta">Last updated: 4 August 2026, 00:00</div>
   </div>
   
 <div class="wx-widget" id="wxWidget">
@@ -318,10 +318,10 @@
     <div class="wx-location">Cairo <span class="wx-flag">🇪🇬</span></div>
     <div class="wx-big-row">
       <span class="wx-big-icon">🌙</span>
-      <span class="wx-big-temp">28°</span>
+      <span class="wx-big-temp">27°</span>
     </div>
     <div class="wx-condition">Clear</div>
-    <div class="wx-range">H 39° &nbsp;·&nbsp; L 24°</div>
+    <div class="wx-range">H 38° &nbsp;·&nbsp; L 24°</div>
   </div>
   <div class="wx-hourly">
     <button class="wx-nav wx-prev" onclick="wxPage(-1)" aria-label="Previous hours">&#x2039;</button>
@@ -335,7 +335,7 @@
 
 <!-- INDICES -->
 <div class="indices-bar">
-  <span class="indices-as-of">As of 23:55</span>
+  <span class="indices-as-of">As of 00:00</span>
   
   <div class="indices-group">
     <span class="indices-eyebrow">Market Indices &amp; FX</span>
@@ -400,7 +400,7 @@
       Crude Oil
       <button class="idx-info-btn" data-tip="WTI Crude Oil futures price per barrel in USD, sourced from Yahoo Finance." onclick="showTip(this)" title="About Crude Oil">i</button>
     </span>
-    <span class="idx-value">$80.37</span>
+    <span class="idx-value">$80.02</span>
   </div>
       
   <div class="idx-item">
@@ -408,7 +408,7 @@
       Copper (t)
       <button class="idx-info-btn" data-tip="Copper price per metric ton in USD, sourced from MetalCharts." onclick="showTip(this)" title="About Copper (t)">i</button>
     </span>
-    <span class="idx-value">$14,377.58</span>
+    <span class="idx-value">$14,375.58</span>
   </div>
       
   <div class="idx-item">
@@ -456,11 +456,11 @@
 <div class="tabs-bar">
   <button class="tab-btn active" id="tab-today" onclick="switchTab('today')">
     Today's Briefing
-    <span class="tab-badge">9</span>
+    <span class="tab-badge">0</span>
   </button>
   <button class="tab-btn" id="tab-archive" onclick="switchTab('archive')">
     Archive
-    <span class="tab-badge">233</span>
+    <span class="tab-badge">242</span>
   </button>
 </div>
 
@@ -475,14 +475,97 @@
     </div>
     <div id="feed-today">
       
+      
+  <div class="empty">
+    <div class="empty-icon">&#x1F4F0;</div>
+    <h2>No articles today yet</h2>
+    <p>Run the news engine script to populate today's articles.</p>
+  </div>
+    </div>
+  </div>
+
+  <!-- ARCHIVE -->
+  <div class="tab-panel" id="panel-archive">
+    <div class="archive-note">
+      <span class="archive-note-icon">📁</span>
+      Previous days' intelligence briefings. Each day's articles are appended here automatically when the next day's run completes.
+    </div>
+    <div class="search-wrap">
+      <input type="text" id="q-archive" placeholder="Search archived headlines and summaries…" oninput="filter('archive')"/>
+      <span id="filter-count-archive"></span>
+    </div>
+    <div id="feed-archive">
+      
   <section class="day-group">
     <div class="day-header">
-      <span class="day-label">Top Stories Today</span>
+      <span class="day-label">2026-08-03</span>
       <div class="day-rule"></div>
-      <span class="day-count">1 article</span>
+      <span class="day-count">9 articles</span>
     </div>
     
-    <div class="card card-high" id="c0" onclick="toggle('c0')">
+    <div class="card card-mid" id="c0" onclick="toggle('c0')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Elsewedy Signs $6mn Industrial Zone Contract</span>
+          <span class="title-ar" dir="rtl">إلسويدي توقع عقد تطوير منطقة صناعية ولوستية</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Elsewedy Industrial Development has signed a contract with the Golden Triangle Economic Zone Authority to develop a 6 million sqm industrial and logistics zone in Safaga. The zone will focus on mining and mineral-based manufacturing, warehousing, logistics, and export services. The project will be developed in three phases and will include a branch of Elsewedy Technical Academy to train workers. The signing of the contract delivers on a memorandum of understanding signed last August and follows the planned USD 2 billion phosphate and specialty-chemicals complex by Xingfa and the USD 200 million Safaga 2 multipurpose terminal, which began trial operations in June. The zone is expected to provide a backbone to the wider Golden Triangle pipeline. The contract marks a significant step forward for the project, which is expected to support the growth of the local economy.</div>
+        </div>
+          
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">وقعت إلسويدي للتنمية الصناعية عقدا مع هيئة منطقة المثلث الذهبي الاقتصادية لتطوير منطقة صناعية ولوستية على مساحة 6 ملايين متر مربع في سفاجا. وستركز المنطقة على الصناعات التعدينية والمناجم، وتخزين البضائع والخدمات اللوجستية والتصدير. وسيتم تطوير المشروع على ثلاث مراحل وسيشمل فرعا لأكاديمية إلسويدي الفنية لتدريب العمال. يأتي توقيع العقد تنفيذا لاتفاقية تعاون تم التوقيع عليها في أغسطس الماضي ويأتي في إطار خطط مشروع phức من مشاريع منطقة المثلث الذهبي، بما في ذلك مشروع شركة شينغφα لصناعة الفوسفات والكيماويات المتخصصة بقيمة 2 مليار دولار أمريكي ومشروع ميناء سفاجا 2 المتعدد الأغراض بقيمة 200 مليون دولار أمريكي، الذي بدأ عملياته التجريبية في يونيو. ومن المتوقع أن توفر المنطقة دعامة لخط أنابيب منطقة المثلث الذهبي الأوسع نطاقا.</div>
+        </div>
+          
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/08/03/capital-limited-is-seeking-nine-gold-blocks-after-years-of-drilling-for-others/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card card-mid" id="c1" onclick="toggle('c1')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egypt Approves $245M Oil Exploration Deals</span>
+          <span class="title-ar" dir="rtl">مصر توافق على صفقات استكشاف نفط بقيمة 245 مليون دولار</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">The House of Representatives has given final approval to four draft laws authorizing the Oil Minister to sign contracts with Egyptian Natural Gas Holding Company (Egas) and Egyptian General Petroleum Corporation (EGPC) for oil exploration in North Sinai, the Nile Delta, the Mediterranean, and the Eastern Desert. Egas and Perenco North Sinai Petroleum will explore the Al Fayrouz onshore block in North Sinai, with a 3D seismic survey and one exploratory well committed. The latest batch of agreements locks in three blocks: Perenco’s Al Fayrouz block, IPR South Desouk’s North Tanta onshore area, and Cheiron Egypt Delta’s East Alexandria offshore block. Cheiron is committing at least $42.2 million and three exploratory wells in the East Alexandria block. The government has also launched a tender for a seismic survey in the Western Desert, with Saudi Arabia’s Ardiseis, China’s BGP, and US-based WesternGeco competing. The survey will cover over 50,000 square kilometers near the Libyan border, and the resulting data will be used to divide the territory into exploration blocks. The government is targeting 101 oil and gas exploration wells this year, including 67 in the Western Desert. Egas had awarded these blocks in June 2025, with Chevron, Shell, Eni, Cheiron, IPR, and Perenco committing a combined $245 million across six blocks and at least 13 exploratory wells.</div>
+        </div>
+          
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">أعطت مجلس النواب الموافقة النهائية على四 مشاريع قوانين ت授权 وزير البترول بالتوقيع على عقود مع شركة الغاز الطبيعي المصرية (إيجاس) وشركة البترول العامة المصرية (إيجبك) لاستكشاف النفط في سيناء الشمالية وdelta النيل والبحر الأبيض المتوسط والصحراء الشرقية. ستقوم إيجاس وشركة بيرينكو شمال سيناء للبترول باستكشاف حقل الفيروز البري في سيناء الشمالية، مع إجراء مسح سيزمي ثلاثي الأبعاد و حفر بئر استكشافي واحد. تقرر هذه المجموعة من الاتفاقيات ثلاثة كتل: كتلة الفيروز لشركة بيرينكو، و منطقة تанта الشمالية لشركة آي بي آر ساوث دسوق، و كتلة الإسكندرية الشرقية لشركة شيرون إيجيبت دلتا. تتعهد شيرون بحد أدنى 42.2 مليون دولار و ثلاثة آبار استكشافية في كتلة الإسكندرية الشرقية. كما أطلقت الحكومة مناقصة لاستكشاف سيزمي في الصحراء الغربية، ويتنافس عليها شركة أرديسيس السعودية وشركة بي جي بي الصينية وشركة وستيرن جيكو الأمريكية. سيغطي الاستكشاف أكثر من 50 ألف كيلومتر مربع بالقرب من الحدود الليبية، وسيتم استخدام البيانات الناتجة عنها لتقسيم المنطقة إلى كتل استكشافية. تهدف الحكومة إلى حفر 101 بئراً لاستكشاف النفط والغاز هذا العام، بما في ذلك 67 بئراً في الصحراء الغربية. كان إيجاس قد منح هذه الكتل في يونيو 2025، مع التزام شيفرون و شيل و إيني و شيرون و آي بي آر و بيرينكو بحد أدنى 245 مليون دولار عبر ست كتل و 13 بئراً استكشافية على الأقل.</div>
+        </div>
+          
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/08/03/capital-limited-is-seeking-nine-gold-blocks-after-years-of-drilling-for-others/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card card-high" id="c2" onclick="toggle('c2')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Sohag Industrial Land Prices Reach EGP 1.2k/sqm</span>
@@ -527,76 +610,6 @@
         </div>
         </div>
         <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/08/03/can-lease-to-own-unlock-egypts-industrial-land-market/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
-      </div>
-    </div>
-  </section>
-  <section class="day-group">
-    <div class="day-header">
-      <span class="day-label">Also in the News</span>
-      <div class="day-rule"></div>
-      <span class="day-count">8 articles</span>
-    </div>
-    
-    <div class="card card-mid" id="c1" onclick="toggle('c1')">
-      <div class="card-head">
-        <div class="card-title">
-          <span class="title-en">Elsewedy Signs $6mn Industrial Zone Contract</span>
-          <span class="title-ar" dir="rtl">إلسويدي توقع عقد تطوير منطقة صناعية ولوستية</span>
-        </div>
-        <div class="card-head-right">
-          <span class="tier-badge tier-mid">Summary</span>
-          <div class="card-chevron">&#x203A;</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="card-grid">
-          
-        <div class="field full en-content">
-          <div class="field-label">Executive Summary</div>
-          <div class="field-text">Elsewedy Industrial Development has signed a contract with the Golden Triangle Economic Zone Authority to develop a 6 million sqm industrial and logistics zone in Safaga. The zone will focus on mining and mineral-based manufacturing, warehousing, logistics, and export services. The project will be developed in three phases and will include a branch of Elsewedy Technical Academy to train workers. The signing of the contract delivers on a memorandum of understanding signed last August and follows the planned USD 2 billion phosphate and specialty-chemicals complex by Xingfa and the USD 200 million Safaga 2 multipurpose terminal, which began trial operations in June. The zone is expected to provide a backbone to the wider Golden Triangle pipeline. The contract marks a significant step forward for the project, which is expected to support the growth of the local economy.</div>
-        </div>
-          
-          
-          
-        <div class="field full ar-content" dir="rtl">
-          <div class="field-label">الملخص التنفيذي</div>
-          <div class="field-text">وقعت إلسويدي للتنمية الصناعية عقدا مع هيئة منطقة المثلث الذهبي الاقتصادية لتطوير منطقة صناعية ولوستية على مساحة 6 ملايين متر مربع في سفاجا. وستركز المنطقة على الصناعات التعدينية والمناجم، وتخزين البضائع والخدمات اللوجستية والتصدير. وسيتم تطوير المشروع على ثلاث مراحل وسيشمل فرعا لأكاديمية إلسويدي الفنية لتدريب العمال. يأتي توقيع العقد تنفيذا لاتفاقية تعاون تم التوقيع عليها في أغسطس الماضي ويأتي في إطار خطط مشروع phức من مشاريع منطقة المثلث الذهبي، بما في ذلك مشروع شركة شينغφα لصناعة الفوسفات والكيماويات المتخصصة بقيمة 2 مليار دولار أمريكي ومشروع ميناء سفاجا 2 المتعدد الأغراض بقيمة 200 مليون دولار أمريكي، الذي بدأ عملياته التجريبية في يونيو. ومن المتوقع أن توفر المنطقة دعامة لخط أنابيب منطقة المثلث الذهبي الأوسع نطاقا.</div>
-        </div>
-          
-          
-        </div>
-        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/08/03/capital-limited-is-seeking-nine-gold-blocks-after-years-of-drilling-for-others/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
-      </div>
-    </div>
-    <div class="card card-mid" id="c2" onclick="toggle('c2')">
-      <div class="card-head">
-        <div class="card-title">
-          <span class="title-en">Egypt Approves $245M Oil Exploration Deals</span>
-          <span class="title-ar" dir="rtl">مصر توافق على صفقات استكشاف نفط بقيمة 245 مليون دولار</span>
-        </div>
-        <div class="card-head-right">
-          <span class="tier-badge tier-mid">Summary</span>
-          <div class="card-chevron">&#x203A;</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="card-grid">
-          
-        <div class="field full en-content">
-          <div class="field-label">Executive Summary</div>
-          <div class="field-text">The House of Representatives has given final approval to four draft laws authorizing the Oil Minister to sign contracts with Egyptian Natural Gas Holding Company (Egas) and Egyptian General Petroleum Corporation (EGPC) for oil exploration in North Sinai, the Nile Delta, the Mediterranean, and the Eastern Desert. Egas and Perenco North Sinai Petroleum will explore the Al Fayrouz onshore block in North Sinai, with a 3D seismic survey and one exploratory well committed. The latest batch of agreements locks in three blocks: Perenco’s Al Fayrouz block, IPR South Desouk’s North Tanta onshore area, and Cheiron Egypt Delta’s East Alexandria offshore block. Cheiron is committing at least $42.2 million and three exploratory wells in the East Alexandria block. The government has also launched a tender for a seismic survey in the Western Desert, with Saudi Arabia’s Ardiseis, China’s BGP, and US-based WesternGeco competing. The survey will cover over 50,000 square kilometers near the Libyan border, and the resulting data will be used to divide the territory into exploration blocks. The government is targeting 101 oil and gas exploration wells this year, including 67 in the Western Desert. Egas had awarded these blocks in June 2025, with Chevron, Shell, Eni, Cheiron, IPR, and Perenco committing a combined $245 million across six blocks and at least 13 exploratory wells.</div>
-        </div>
-          
-          
-          
-        <div class="field full ar-content" dir="rtl">
-          <div class="field-label">الملخص التنفيذي</div>
-          <div class="field-text">أعطت مجلس النواب الموافقة النهائية على四 مشاريع قوانين ت授权 وزير البترول بالتوقيع على عقود مع شركة الغاز الطبيعي المصرية (إيجاس) وشركة البترول العامة المصرية (إيجبك) لاستكشاف النفط في سيناء الشمالية وdelta النيل والبحر الأبيض المتوسط والصحراء الشرقية. ستقوم إيجاس وشركة بيرينكو شمال سيناء للبترول باستكشاف حقل الفيروز البري في سيناء الشمالية، مع إجراء مسح سيزمي ثلاثي الأبعاد و حفر بئر استكشافي واحد. تقرر هذه المجموعة من الاتفاقيات ثلاثة كتل: كتلة الفيروز لشركة بيرينكو، و منطقة تанта الشمالية لشركة آي بي آر ساوث دسوق، و كتلة الإسكندرية الشرقية لشركة شيرون إيجيبت دلتا. تتعهد شيرون بحد أدنى 42.2 مليون دولار و ثلاثة آبار استكشافية في كتلة الإسكندرية الشرقية. كما أطلقت الحكومة مناقصة لاستكشاف سيزمي في الصحراء الغربية، ويتنافس عليها شركة أرديسيس السعودية وشركة بي جي بي الصينية وشركة وستيرن جيكو الأمريكية. سيغطي الاستكشاف أكثر من 50 ألف كيلومتر مربع بالقرب من الحدود الليبية، وسيتم استخدام البيانات الناتجة عنها لتقسيم المنطقة إلى كتل استكشافية. تهدف الحكومة إلى حفر 101 بئراً لاستكشاف النفط والغاز هذا العام، بما في ذلك 67 بئراً في الصحراء الغربية. كان إيجاس قد منح هذه الكتل في يونيو 2025، مع التزام شيفرون و شيل و إيني و شيرون و آي بي آر و بيرينكو بحد أدنى 245 مليون دولار عبر ست كتل و 13 بئراً استكشافية على الأقل.</div>
-        </div>
-          
-          
-        </div>
-        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/08/03/capital-limited-is-seeking-nine-gold-blocks-after-years-of-drilling-for-others/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
       </div>
     </div>
     <div class="card card-mid" id="c3" onclick="toggle('c3')">
@@ -786,22 +799,6 @@
       </div>
     </div>
   </section>
-      
-    </div>
-  </div>
-
-  <!-- ARCHIVE -->
-  <div class="tab-panel" id="panel-archive">
-    <div class="archive-note">
-      <span class="archive-note-icon">📁</span>
-      Previous days' intelligence briefings. Each day's articles are appended here automatically when the next day's run completes.
-    </div>
-    <div class="search-wrap">
-      <input type="text" id="q-archive" placeholder="Search archived headlines and summaries…" oninput="filter('archive')"/>
-      <span id="filter-count-archive"></span>
-    </div>
-    <div id="feed-archive">
-      
   <section class="day-group">
     <div class="day-header">
       <span class="day-label">2026-08-02</span>
@@ -9409,7 +9406,7 @@
 
 <script>
 // ── WEATHER PAGINATOR ──────────────────────────────────────────────────────────
-const WX_DATA   = [{t:"12AM",e:"🌙",c:28,d:"Clear",now:false},{t:"1AM",e:"🌙",c:27,d:"Clear",now:false},{t:"2AM",e:"🌙",c:26,d:"Clear",now:false},{t:"3AM",e:"🌙",c:26,d:"Clear",now:false},{t:"4AM",e:"🌙",c:25,d:"Mainly clear",now:false},{t:"5AM",e:"🌙",c:24,d:"Mainly clear",now:false},{t:"6AM",e:"🌤️",c:24,d:"Mainly clear",now:false},{t:"7AM",e:"⛅",c:24,d:"Partly cloudy",now:false},{t:"8AM",e:"⛅",c:24,d:"Partly cloudy",now:false},{t:"9AM",e:"🌤️",c:27,d:"Mainly clear",now:false},{t:"10AM",e:"🌤️",c:29,d:"Mainly clear",now:false},{t:"11AM",e:"☀️",c:31,d:"Clear",now:false},{t:"12PM",e:"☀️",c:34,d:"Clear",now:false},{t:"1PM",e:"☀️",c:37,d:"Clear",now:false},{t:"2PM",e:"☀️",c:38,d:"Clear",now:false},{t:"3PM",e:"☀️",c:38,d:"Clear",now:false},{t:"4PM",e:"☀️",c:39,d:"Clear",now:false},{t:"5PM",e:"☀️",c:39,d:"Clear",now:false},{t:"6PM",e:"☀️",c:38,d:"Clear",now:false},{t:"7PM",e:"🌙",c:37,d:"Mainly clear",now:false},{t:"8PM",e:"🌙",c:34,d:"Clear",now:false},{t:"9PM",e:"🌙",c:31,d:"Clear",now:false},{t:"10PM",e:"🌙",c:30,d:"Clear",now:false},{t:"11PM",e:"🌙",c:28,d:"Clear",now:true}];
+const WX_DATA   = [{t:"12AM",e:"🌙",c:27,d:"Clear",now:true},{t:"1AM",e:"🌙",c:26,d:"Mainly clear",now:false},{t:"2AM",e:"🌙",c:25,d:"Mainly clear",now:false},{t:"3AM",e:"☁️",c:24,d:"Partly cloudy",now:false},{t:"4AM",e:"☁️",c:24,d:"Partly cloudy",now:false},{t:"5AM",e:"☁️",c:24,d:"Partly cloudy",now:false},{t:"6AM",e:"⛅",c:24,d:"Partly cloudy",now:false},{t:"7AM",e:"⛅",c:24,d:"Partly cloudy",now:false},{t:"8AM",e:"⛅",c:24,d:"Partly cloudy",now:false},{t:"9AM",e:"⛅",c:26,d:"Partly cloudy",now:false},{t:"10AM",e:"⛅",c:28,d:"Partly cloudy",now:false},{t:"11AM",e:"🌤️",c:29,d:"Mainly clear",now:false},{t:"12PM",e:"☀️",c:32,d:"Clear",now:false},{t:"1PM",e:"☀️",c:34,d:"Clear",now:false},{t:"2PM",e:"☀️",c:35,d:"Clear",now:false},{t:"3PM",e:"☀️",c:36,d:"Clear",now:false},{t:"4PM",e:"☀️",c:37,d:"Clear",now:false},{t:"5PM",e:"☀️",c:38,d:"Clear",now:false},{t:"6PM",e:"☀️",c:37,d:"Clear",now:false},{t:"7PM",e:"🌙",c:36,d:"Clear",now:false},{t:"8PM",e:"☁️",c:34,d:"Partly cloudy",now:false},{t:"9PM",e:"🌙",c:32,d:"Mainly clear",now:false},{t:"10PM",e:"🌙",c:30,d:"Mainly clear",now:false},{t:"11PM",e:"🌙",c:28,d:"Clear",now:false}];
 let   wxCenter_idx = 0;  // index of the slot shown in the CENTER position
 
 function wxPage(dir) {
