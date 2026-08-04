@@ -310,7 +310,7 @@
     <div class="hero-eyebrow">Daily Market Briefing</div>
     <h1 class="hero-title">Redcon Properties<br><strong>Intelligence Feed</strong></h1>
     <p class="hero-sub">Daily News analyzed for Egypt's construction, infrastructure, and real estate market.</p>
-    <div class="hero-meta">Last updated: 4 August 2026, 23:55</div>
+    <div class="hero-meta">Last updated: 5 August 2026, 00:00</div>
   </div>
   
 <div class="wx-widget" id="wxWidget">
@@ -318,10 +318,10 @@
     <div class="wx-location">Cairo <span class="wx-flag">🇪🇬</span></div>
     <div class="wx-big-row">
       <span class="wx-big-icon">🌙</span>
-      <span class="wx-big-temp">28°</span>
+      <span class="wx-big-temp">27°</span>
     </div>
     <div class="wx-condition">Clear</div>
-    <div class="wx-range">H 38° &nbsp;·&nbsp; L 24°</div>
+    <div class="wx-range">H 37° &nbsp;·&nbsp; L 24°</div>
   </div>
   <div class="wx-hourly">
     <button class="wx-nav wx-prev" onclick="wxPage(-1)" aria-label="Previous hours">&#x2039;</button>
@@ -335,7 +335,7 @@
 
 <!-- INDICES -->
 <div class="indices-bar">
-  <span class="indices-as-of">As of 23:55</span>
+  <span class="indices-as-of">As of 00:00</span>
   
   <div class="indices-group">
     <span class="indices-eyebrow">Market Indices &amp; FX</span>
@@ -456,11 +456,11 @@
 <div class="tabs-bar">
   <button class="tab-btn active" id="tab-today" onclick="switchTab('today')">
     Today's Briefing
-    <span class="tab-badge">8</span>
+    <span class="tab-badge">0</span>
   </button>
   <button class="tab-btn" id="tab-archive" onclick="switchTab('archive')">
     Archive
-    <span class="tab-badge">242</span>
+    <span class="tab-badge">250</span>
   </button>
 </div>
 
@@ -475,14 +475,66 @@
     </div>
     <div id="feed-today">
       
+      
+  <div class="empty">
+    <div class="empty-icon">&#x1F4F0;</div>
+    <h2>No articles today yet</h2>
+    <p>Run the news engine script to populate today's articles.</p>
+  </div>
+    </div>
+  </div>
+
+  <!-- ARCHIVE -->
+  <div class="tab-panel" id="panel-archive">
+    <div class="archive-note">
+      <span class="archive-note-icon">📁</span>
+      Previous days' intelligence briefings. Each day's articles are appended here automatically when the next day's run completes.
+    </div>
+    <div class="search-wrap">
+      <input type="text" id="q-archive" placeholder="Search archived headlines and summaries…" oninput="filter('archive')"/>
+      <span id="filter-count-archive"></span>
+    </div>
+    <div id="feed-archive">
+      
   <section class="day-group">
     <div class="day-header">
-      <span class="day-label">Top Stories Today</span>
+      <span class="day-label">2026-08-04</span>
       <div class="day-rule"></div>
-      <span class="day-count">3 articles</span>
+      <span class="day-count">8 articles</span>
     </div>
     
-    <div class="card card-high" id="c0" onclick="toggle('c0')">
+    <div class="card card-mid" id="c0" onclick="toggle('c0')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">OPEC Cuts 2026 Oil Demand Forecast</span>
+          <span class="title-ar" dir="rtl">أوبك تقلل من تقديرات نمو الطلب على النفط لعام 2026</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">The US, the world&#x27;s largest oil consumer, is experiencing weaker manufacturing, leading to weaker demand for oil. OPEC has cut its 2026 global oil demand growth forecast to 1 million barrels a day, down from 1.2 million in its July report. Despite this, the group approved a fifth consecutive monthly output increase. However, actual production remains below pre-war levels, indicating a market that is absorbing more supply as demand growth cools. This softening demand signal is affecting Gulf producers, who are already dealing with record war-risk insurance costs. The US demand slowdown is occurring at a time when Gulf producers are relying on the market to buy their oil, exacerbating the confidence problem caused by their own war.</div>
+        </div>
+          
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">تعتبر الولايات المتحدة أكبر مستهلك للنفط في العالم، وتواجه انتاجًا صناعيًا أضعف، مما يؤدي إلى انخفاض الطلب على النفط. قامت أوبك بتقليص تقديرات نمو الطلب العالمي على النفط لعام 2026 إلى مليون برميل في اليوم، انخفاضًا من 1.2 مليون في تقرير يوليو.尽管 ذلك، وافقت المجموعة على زيادة إنتاجها الشهري الخامسة على التوالي. ومع ذلك، يبقى الإنتاج الفعلي أقل من مستويات ما قبل الحرب، مما يشير إلى سوق تمتص المزيد من العرض مع تبريد نمو الطلب. هذا الإشارة إلى الطلب المتضعف يؤثر على منتجي الخليج، الذين يتعاملون بالفعل مع تكاليف تأمين ضد مخاطر الحرب القياسية. يحدث هذا تباطؤ في الطلب في الولايات المتحدة في وقت يعتمد فيه منتجو الخليج على السوق لشراء نفطهم، مما يزيد من مشكلة الثقة الناجمة عن حربهم.</div>
+        </div>
+          
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/08/04/sp-warns-us-manufacturing-expansion-masks-deepening-supply-confidence-slump/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card card-high" id="c1" onclick="toggle('c1')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Banque Misr Launches EGP 3bn Office Fund</span>
@@ -529,7 +581,100 @@
         <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/08/04/banque-misrs-egp-3-bn-real-estate-fund-would-be-equivalent-to-nearly-one-quarter-of-the-segments-current-net-asset-value/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c1" onclick="toggle('c1')">
+    <div class="card card-mid" id="c2" onclick="toggle('c2')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Shell&#x27;s Khufu Gas Field to Launch in 2H 2027</span>
+          <span class="title-ar" dir="rtl">إطلاق حقل خوفو الغازي في النصف الثاني من 2027</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Shell and the Egyptian Natural Gas Holding Company (Egas) plan to bring the deepwater Khufu gas field online in 2H 2027 with an initial output of 45 mmcf/d. The field, located in the Mediterranean&#x27;s North East El Amriya concession, will connect to existing production facilities in West Burullus by the end of 2027. Rashid Petroleum is executing the development on behalf of the partners, with Shell operating the concession with a 60% interest and KUFPEC holding 40%. The field&#x27;s reserves are now estimated at less than 500 bcf, lower than initial estimates. Meanwhile, Shell expects to bring the West Mina field online by the end of 2026, adding around 160 mmcf/d to the country&#x27;s output. The West Mina field&#x27;s preliminary estimates are at 245 bcf, with the two fields holding less than 750 bcf combined.</div>
+        </div>
+          
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">تخطط شل وشركة الحاصلات الطبيعية المصرية (إيجاس) لإطلاق حقل خوفو الغازي في النصف الثاني من 2027 مع إنتاج أولي يبلغ 45 مليون قدم مكعب في اليوم. يقع الحقل في منطقة امريا الشمالية الشرقية في المتوسط، وسيتم ربطه بمحطات الإنتاج الحالية في بورولوس الغربية نهاية 2027. تقوم راشد بترول بتنفيذ التطوير باسم الشركاء، وتشغل شل المحطة بنسبة 60٪ في حين تملك كوفيك 40٪. وتُقدر احتياطيات الحقل الآن بأقل من 500 بليون قدم مكعب، أقل من التقديرات الأولية. وفي غضون ذلك، تتوقع شل إطلاق حقل ويست مينا في نهاية 2026، مما يضيف حوالي 160 مليون قدم مكعب في اليوم إلى إنتاج البلاد. وتُقدر التقديرات الأولية لحقل ويست مينا بحوالي 245 بليون قدم مكعب، مع احتياطيات تبلغ أقل من 750 بليون قدم مكعب للحيين معا.</div>
+        </div>
+          
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/08/04/egypt-accelerates-usd-128-mn-downstream-grid-expansion-targeting-early-2027/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card card-mid" id="c3" onclick="toggle('c3')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egypt Accelerates $128mn Pipeline Package</span>
+          <span class="title-ar" dir="rtl">مصر تعجل بتحديث خط أنابيب بقيمة 128 مليون دولار</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Egypt is accelerating a $128 million, six-pipeline infrastructure package to transport crude oil and petroleum products across the country. The 317 km network is expected to come online by early 2027. The package includes a $52 million, 135-km pipeline connecting the Midor refinery in Alexandria to the Al Hamra petroleum port in El Alamein, due in November. Other pipelines include a $21 million, 52 km pipeline from Khorshid to Damanhur, a $13 million, 75 km Tebbin-Assiut line, and several smaller lines around Cairo. Egypt&#x27;s petroleum exports are surging, with 2.3 million tons exported in the first half of 2026, generating $2.3 billion in revenue. Local refineries are operating at 80% capacity, driven by an increase in crude supply and domestic crude production. The pipeline expansion is part of a broader $4.5 billion state program to upgrade existing refineries and boost local fuel production.</div>
+        </div>
+          
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">تسرع مصر في تنفيذ حزمة بنية تحتية لخطوط أنابيب بقيمة 128 مليون دولار لنقل النفط الخام والمنتجات النفطية عبر البلاد. ومن المتوقع أن يكتمل المشروع البالغ طوله 317 كم في بداية عام 2027. وتشمل الحزمة خط أنابيب بقيمة 52 مليون دولار وطوله 135 كم يصل بين مصفاة ميدور في الإسكندرية وميناء الحمرا البترولي في العلمين، ومن المقرر انتهاءه في نوفمبر. وتشمل الخطوط الأخرى خط أنابيب بقيمة 21 مليون دولار وطوله 52 كم من خورشيد إلى دمنهور، وخط تبين-أسيوط البالغ طوله 75 كم بقيمة 13 مليون دولار، وخطوط أخرى أصغر حول القاهرة. وتشهد صادرات مصر النفطية طفرة، حيث صدرت 2.3 مليون طن في النصف الأول من عام 2026، مولدة 2.3 مليار دولار من الإيرادات. وتعمل المصفاة المحلية بcapacity 80٪، مدفوعة بزيادة في الإمدادات النفطية والانتاج المحلي للنفط الخام. وتعد هذه توسعة خطوط الأنابيب جزءا من برنامج حكومي أوسع بقيمة 4.5 مليار دولار لتحديث المصفاة الحالية وزيادة الإنتاج المحلي للوقود.</div>
+        </div>
+          
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/08/04/egypt-accelerates-usd-128-mn-downstream-grid-expansion-targeting-early-2027/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card card-mid" id="c4" onclick="toggle('c4')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egypt to Auction 8 Steel Licenses</span>
+          <span class="title-ar" dir="rtl">مصر تعتزم بيع 8 تراخيص إنتاج صلب</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">The Egyptian government will auction eight billet-production licenses in August, with a combined annual capacity of 2.8 million tons. The Industrial Development Authority is finalizing tender documents, which will outline technical and financial requirements for bidders. The move aims to increase local steel production, which rose 10.8% year-over-year to 2.89 million tons in the first quarter of 2026. Eight steel companies had previously applied for licenses before the government froze the process. Local steelmaker Ashry Steel Group has earmarked EGP 12 billion to compete for a 1 million ton-a-year license. The licensing decision is expected to bring relief to the market, which is experiencing a shortage of rolled steel. Downstream manufacturers are feeling the squeeze, with local billet prices rising after import duties restricted access to foreign alternatives. The government has promised to review the anti-dumping duties every three months.</div>
+        </div>
+          
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">ستعقد الحكومة المصرية مزادًا لثماني تراخيص إنتاج بليت في أغسطس، بإجمالي قدرة سنوية تبلغ 2.8 مليون طن. وتعمل الهيئة العامة لتنمية الصناعة على إنهاء وثائق المناقصة، التي ستحدد المتطلبات الفنية والمالية للمزايدين. ويهدف هذا الإجراء إلى زيادة الإنتاج المحلي للصلب، الذي ارتفع بنسبة 10.8% على أساس سنوي إلى 2.89 مليون طن في الربع الأول من 2026. وكان ثماني شركات صلب قد تقدمت بطلبات للحصول على تراخيص قبل تجميد الحكومة العملية. وقد خصصت شركة آشرى ستيل مجموعة 12 مليار جنيه للتنافس على ترخيص سنوي لتصنيع مليون طن. ومن المتوقع أن يrought القرار الخاص بالترخيص بعض الراحة إلى السوق، التي تعاني من نقص في الصلب الملفوف. وتشعر الشركات المصنعة بالضغط، مع ارتفاع أسعار البليت المحلية بعد أن قيدت الرسوم الجمركية الوصول إلى البديل الأجنبي. وقد وعدت الحكومة بمراجعة الرسوم الجمركية كل ثلاثة أشهر.</div>
+        </div>
+          
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/08/04/government-to-auction-eight-billet-licenses-this-august-with-2-8-mn-tons-of-new-capacity/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card card-mid" id="c5" onclick="toggle('c5')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Egypt Finance Ministry Shelves Income Tax Act</span>
@@ -560,7 +705,38 @@
         <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/08/04/egypt-shelves-its-new-income-tax-act-in-favor-of-a-third-tax-facilitation-package/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c2" onclick="toggle('c2')">
+    <div class="card card-mid" id="c6" onclick="toggle('c6')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">EGX Awaits S&amp;P DJI Decision</span>
+          <span class="title-ar" dir="rtl">البورصة المصرية في انتظار قرار إس أند بي</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Egyptian Exchange (EGX) Chairman Omar Radwan discussed the exchange&#x27;s current status, including the S&amp;P Dow Jones Indices (S&amp;P DJI) review and the short-selling system test. The S&amp;P DJI consultation closed on July 31, and Radwan stated that the EGX&#x27;s formal reply highlighted the country&#x27;s macro turnaround, with repatriation delays easing and net foreign assets and reserves at highs. The EGX hit a record EGP 15.6 billion in daily trading volume, which Radwan cited as proof the market is headed for an upgrade. Radwan also announced that up to six of the 20 temporarily listed state-owned companies could complete full IPOs within the next year. The final system test for short-selling is underway, and Radwan expects it to happen soon. The EGX is also working on derivatives, with futures on the EGX30 index already live, and plans to introduce EGX70 futures and options. Radwan met with the Finance and Investment Ministers to discuss new regulations, including a 15% tax discount for companies with over EGP 15 billion in market capitalization.</div>
+        </div>
+          
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">ناقش رئيس البورصة المصرية عمر رضوان الحالة الراهنة للبورصة، بما في ذلك استعراض إس أند بي داوي جونز ومحاكمة نظام البيع القصير. انتهت استشارة إس أند بي داوي جونز في 31 يوليو، وأشار رضوان إلى أن رد البورصة الرسمي أكد على تحول Макرو الاقتصادي في البلاد، مع تسهيلات في تأخيرات الاسترداد وارتفاع الاحتياطيات الأجنبية الصافية. سجلت البورصة رقمًا قياسيًا بلغ 15.6 مليار جنيه في حجم التداول اليومي، الذي أشار إليه رضوان كدليل على أن السوق متجه نحو الترقية. كذلك أعلن رضوان أن ما يصل إلى ستة من الشركات الحكومية الـ 20 المدرجة مؤقتًا قد تكتمل فيها العروض العامة الأولية في غضون العام المقبل. تجري محاكمة النظام النهائية للبيع القصير، وتوقع رضوان أن يحدث ذلك قريباً. تعمل البورصة أيضًا على مشتقات، مع وجود عقود آجلة على مؤشر إيجي إكس 30 بالفعل، وتخطط لإدخال عقود آجلة وخيارات إيجي إكس 70. اجتمع رضوان مع وزراء المالية والاستثمار لمناقشة اللوائح الجديدة، بما في ذلك خصم ضريبي بنسبة 15% للشركات التي تزيد قيمتها السوقية عن 15 مليار جنيه.</div>
+        </div>
+          
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/08/04/egx-executive-chairman-on-short-selling-ipo-pipeline-sp-review/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card card-mid" id="c7" onclick="toggle('c7')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Valu Issues EGP 1 bn Bond</span>
@@ -592,185 +768,6 @@
       </div>
     </div>
   </section>
-  <section class="day-group">
-    <div class="day-header">
-      <span class="day-label">Also in the News</span>
-      <div class="day-rule"></div>
-      <span class="day-count">5 articles</span>
-    </div>
-    
-    <div class="card card-mid" id="c3" onclick="toggle('c3')">
-      <div class="card-head">
-        <div class="card-title">
-          <span class="title-en">OPEC Cuts 2026 Oil Demand Forecast</span>
-          <span class="title-ar" dir="rtl">أوبك تقلل من تقديرات نمو الطلب على النفط لعام 2026</span>
-        </div>
-        <div class="card-head-right">
-          <span class="tier-badge tier-mid">Summary</span>
-          <div class="card-chevron">&#x203A;</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="card-grid">
-          
-        <div class="field full en-content">
-          <div class="field-label">Executive Summary</div>
-          <div class="field-text">The US, the world&#x27;s largest oil consumer, is experiencing weaker manufacturing, leading to weaker demand for oil. OPEC has cut its 2026 global oil demand growth forecast to 1 million barrels a day, down from 1.2 million in its July report. Despite this, the group approved a fifth consecutive monthly output increase. However, actual production remains below pre-war levels, indicating a market that is absorbing more supply as demand growth cools. This softening demand signal is affecting Gulf producers, who are already dealing with record war-risk insurance costs. The US demand slowdown is occurring at a time when Gulf producers are relying on the market to buy their oil, exacerbating the confidence problem caused by their own war.</div>
-        </div>
-          
-          
-          
-        <div class="field full ar-content" dir="rtl">
-          <div class="field-label">الملخص التنفيذي</div>
-          <div class="field-text">تعتبر الولايات المتحدة أكبر مستهلك للنفط في العالم، وتواجه انتاجًا صناعيًا أضعف، مما يؤدي إلى انخفاض الطلب على النفط. قامت أوبك بتقليص تقديرات نمو الطلب العالمي على النفط لعام 2026 إلى مليون برميل في اليوم، انخفاضًا من 1.2 مليون في تقرير يوليو.尽管 ذلك، وافقت المجموعة على زيادة إنتاجها الشهري الخامسة على التوالي. ومع ذلك، يبقى الإنتاج الفعلي أقل من مستويات ما قبل الحرب، مما يشير إلى سوق تمتص المزيد من العرض مع تبريد نمو الطلب. هذا الإشارة إلى الطلب المتضعف يؤثر على منتجي الخليج، الذين يتعاملون بالفعل مع تكاليف تأمين ضد مخاطر الحرب القياسية. يحدث هذا تباطؤ في الطلب في الولايات المتحدة في وقت يعتمد فيه منتجو الخليج على السوق لشراء نفطهم، مما يزيد من مشكلة الثقة الناجمة عن حربهم.</div>
-        </div>
-          
-          
-        </div>
-        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/08/04/sp-warns-us-manufacturing-expansion-masks-deepening-supply-confidence-slump/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
-      </div>
-    </div>
-    <div class="card card-mid" id="c4" onclick="toggle('c4')">
-      <div class="card-head">
-        <div class="card-title">
-          <span class="title-en">Shell&#x27;s Khufu Gas Field to Launch in 2H 2027</span>
-          <span class="title-ar" dir="rtl">إطلاق حقل خوفو الغازي في النصف الثاني من 2027</span>
-        </div>
-        <div class="card-head-right">
-          <span class="tier-badge tier-mid">Summary</span>
-          <div class="card-chevron">&#x203A;</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="card-grid">
-          
-        <div class="field full en-content">
-          <div class="field-label">Executive Summary</div>
-          <div class="field-text">Shell and the Egyptian Natural Gas Holding Company (Egas) plan to bring the deepwater Khufu gas field online in 2H 2027 with an initial output of 45 mmcf/d. The field, located in the Mediterranean&#x27;s North East El Amriya concession, will connect to existing production facilities in West Burullus by the end of 2027. Rashid Petroleum is executing the development on behalf of the partners, with Shell operating the concession with a 60% interest and KUFPEC holding 40%. The field&#x27;s reserves are now estimated at less than 500 bcf, lower than initial estimates. Meanwhile, Shell expects to bring the West Mina field online by the end of 2026, adding around 160 mmcf/d to the country&#x27;s output. The West Mina field&#x27;s preliminary estimates are at 245 bcf, with the two fields holding less than 750 bcf combined.</div>
-        </div>
-          
-          
-          
-        <div class="field full ar-content" dir="rtl">
-          <div class="field-label">الملخص التنفيذي</div>
-          <div class="field-text">تخطط شل وشركة الحاصلات الطبيعية المصرية (إيجاس) لإطلاق حقل خوفو الغازي في النصف الثاني من 2027 مع إنتاج أولي يبلغ 45 مليون قدم مكعب في اليوم. يقع الحقل في منطقة امريا الشمالية الشرقية في المتوسط، وسيتم ربطه بمحطات الإنتاج الحالية في بورولوس الغربية نهاية 2027. تقوم راشد بترول بتنفيذ التطوير باسم الشركاء، وتشغل شل المحطة بنسبة 60٪ في حين تملك كوفيك 40٪. وتُقدر احتياطيات الحقل الآن بأقل من 500 بليون قدم مكعب، أقل من التقديرات الأولية. وفي غضون ذلك، تتوقع شل إطلاق حقل ويست مينا في نهاية 2026، مما يضيف حوالي 160 مليون قدم مكعب في اليوم إلى إنتاج البلاد. وتُقدر التقديرات الأولية لحقل ويست مينا بحوالي 245 بليون قدم مكعب، مع احتياطيات تبلغ أقل من 750 بليون قدم مكعب للحيين معا.</div>
-        </div>
-          
-          
-        </div>
-        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/08/04/egypt-accelerates-usd-128-mn-downstream-grid-expansion-targeting-early-2027/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
-      </div>
-    </div>
-    <div class="card card-mid" id="c5" onclick="toggle('c5')">
-      <div class="card-head">
-        <div class="card-title">
-          <span class="title-en">Egypt Accelerates $128mn Pipeline Package</span>
-          <span class="title-ar" dir="rtl">مصر تعجل بتحديث خط أنابيب بقيمة 128 مليون دولار</span>
-        </div>
-        <div class="card-head-right">
-          <span class="tier-badge tier-mid">Summary</span>
-          <div class="card-chevron">&#x203A;</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="card-grid">
-          
-        <div class="field full en-content">
-          <div class="field-label">Executive Summary</div>
-          <div class="field-text">Egypt is accelerating a $128 million, six-pipeline infrastructure package to transport crude oil and petroleum products across the country. The 317 km network is expected to come online by early 2027. The package includes a $52 million, 135-km pipeline connecting the Midor refinery in Alexandria to the Al Hamra petroleum port in El Alamein, due in November. Other pipelines include a $21 million, 52 km pipeline from Khorshid to Damanhur, a $13 million, 75 km Tebbin-Assiut line, and several smaller lines around Cairo. Egypt&#x27;s petroleum exports are surging, with 2.3 million tons exported in the first half of 2026, generating $2.3 billion in revenue. Local refineries are operating at 80% capacity, driven by an increase in crude supply and domestic crude production. The pipeline expansion is part of a broader $4.5 billion state program to upgrade existing refineries and boost local fuel production.</div>
-        </div>
-          
-          
-          
-        <div class="field full ar-content" dir="rtl">
-          <div class="field-label">الملخص التنفيذي</div>
-          <div class="field-text">تسرع مصر في تنفيذ حزمة بنية تحتية لخطوط أنابيب بقيمة 128 مليون دولار لنقل النفط الخام والمنتجات النفطية عبر البلاد. ومن المتوقع أن يكتمل المشروع البالغ طوله 317 كم في بداية عام 2027. وتشمل الحزمة خط أنابيب بقيمة 52 مليون دولار وطوله 135 كم يصل بين مصفاة ميدور في الإسكندرية وميناء الحمرا البترولي في العلمين، ومن المقرر انتهاءه في نوفمبر. وتشمل الخطوط الأخرى خط أنابيب بقيمة 21 مليون دولار وطوله 52 كم من خورشيد إلى دمنهور، وخط تبين-أسيوط البالغ طوله 75 كم بقيمة 13 مليون دولار، وخطوط أخرى أصغر حول القاهرة. وتشهد صادرات مصر النفطية طفرة، حيث صدرت 2.3 مليون طن في النصف الأول من عام 2026، مولدة 2.3 مليار دولار من الإيرادات. وتعمل المصفاة المحلية بcapacity 80٪، مدفوعة بزيادة في الإمدادات النفطية والانتاج المحلي للنفط الخام. وتعد هذه توسعة خطوط الأنابيب جزءا من برنامج حكومي أوسع بقيمة 4.5 مليار دولار لتحديث المصفاة الحالية وزيادة الإنتاج المحلي للوقود.</div>
-        </div>
-          
-          
-        </div>
-        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/08/04/egypt-accelerates-usd-128-mn-downstream-grid-expansion-targeting-early-2027/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
-      </div>
-    </div>
-    <div class="card card-mid" id="c6" onclick="toggle('c6')">
-      <div class="card-head">
-        <div class="card-title">
-          <span class="title-en">Egypt to Auction 8 Steel Licenses</span>
-          <span class="title-ar" dir="rtl">مصر تعتزم بيع 8 تراخيص إنتاج صلب</span>
-        </div>
-        <div class="card-head-right">
-          <span class="tier-badge tier-mid">Summary</span>
-          <div class="card-chevron">&#x203A;</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="card-grid">
-          
-        <div class="field full en-content">
-          <div class="field-label">Executive Summary</div>
-          <div class="field-text">The Egyptian government will auction eight billet-production licenses in August, with a combined annual capacity of 2.8 million tons. The Industrial Development Authority is finalizing tender documents, which will outline technical and financial requirements for bidders. The move aims to increase local steel production, which rose 10.8% year-over-year to 2.89 million tons in the first quarter of 2026. Eight steel companies had previously applied for licenses before the government froze the process. Local steelmaker Ashry Steel Group has earmarked EGP 12 billion to compete for a 1 million ton-a-year license. The licensing decision is expected to bring relief to the market, which is experiencing a shortage of rolled steel. Downstream manufacturers are feeling the squeeze, with local billet prices rising after import duties restricted access to foreign alternatives. The government has promised to review the anti-dumping duties every three months.</div>
-        </div>
-          
-          
-          
-        <div class="field full ar-content" dir="rtl">
-          <div class="field-label">الملخص التنفيذي</div>
-          <div class="field-text">ستعقد الحكومة المصرية مزادًا لثماني تراخيص إنتاج بليت في أغسطس، بإجمالي قدرة سنوية تبلغ 2.8 مليون طن. وتعمل الهيئة العامة لتنمية الصناعة على إنهاء وثائق المناقصة، التي ستحدد المتطلبات الفنية والمالية للمزايدين. ويهدف هذا الإجراء إلى زيادة الإنتاج المحلي للصلب، الذي ارتفع بنسبة 10.8% على أساس سنوي إلى 2.89 مليون طن في الربع الأول من 2026. وكان ثماني شركات صلب قد تقدمت بطلبات للحصول على تراخيص قبل تجميد الحكومة العملية. وقد خصصت شركة آشرى ستيل مجموعة 12 مليار جنيه للتنافس على ترخيص سنوي لتصنيع مليون طن. ومن المتوقع أن يrought القرار الخاص بالترخيص بعض الراحة إلى السوق، التي تعاني من نقص في الصلب الملفوف. وتشعر الشركات المصنعة بالضغط، مع ارتفاع أسعار البليت المحلية بعد أن قيدت الرسوم الجمركية الوصول إلى البديل الأجنبي. وقد وعدت الحكومة بمراجعة الرسوم الجمركية كل ثلاثة أشهر.</div>
-        </div>
-          
-          
-        </div>
-        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/08/04/government-to-auction-eight-billet-licenses-this-august-with-2-8-mn-tons-of-new-capacity/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
-      </div>
-    </div>
-    <div class="card card-mid" id="c7" onclick="toggle('c7')">
-      <div class="card-head">
-        <div class="card-title">
-          <span class="title-en">EGX Awaits S&amp;P DJI Decision</span>
-          <span class="title-ar" dir="rtl">البورصة المصرية في انتظار قرار إس أند بي</span>
-        </div>
-        <div class="card-head-right">
-          <span class="tier-badge tier-mid">Summary</span>
-          <div class="card-chevron">&#x203A;</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="card-grid">
-          
-        <div class="field full en-content">
-          <div class="field-label">Executive Summary</div>
-          <div class="field-text">Egyptian Exchange (EGX) Chairman Omar Radwan discussed the exchange&#x27;s current status, including the S&amp;P Dow Jones Indices (S&amp;P DJI) review and the short-selling system test. The S&amp;P DJI consultation closed on July 31, and Radwan stated that the EGX&#x27;s formal reply highlighted the country&#x27;s macro turnaround, with repatriation delays easing and net foreign assets and reserves at highs. The EGX hit a record EGP 15.6 billion in daily trading volume, which Radwan cited as proof the market is headed for an upgrade. Radwan also announced that up to six of the 20 temporarily listed state-owned companies could complete full IPOs within the next year. The final system test for short-selling is underway, and Radwan expects it to happen soon. The EGX is also working on derivatives, with futures on the EGX30 index already live, and plans to introduce EGX70 futures and options. Radwan met with the Finance and Investment Ministers to discuss new regulations, including a 15% tax discount for companies with over EGP 15 billion in market capitalization.</div>
-        </div>
-          
-          
-          
-        <div class="field full ar-content" dir="rtl">
-          <div class="field-label">الملخص التنفيذي</div>
-          <div class="field-text">ناقش رئيس البورصة المصرية عمر رضوان الحالة الراهنة للبورصة، بما في ذلك استعراض إس أند بي داوي جونز ومحاكمة نظام البيع القصير. انتهت استشارة إس أند بي داوي جونز في 31 يوليو، وأشار رضوان إلى أن رد البورصة الرسمي أكد على تحول Макرو الاقتصادي في البلاد، مع تسهيلات في تأخيرات الاسترداد وارتفاع الاحتياطيات الأجنبية الصافية. سجلت البورصة رقمًا قياسيًا بلغ 15.6 مليار جنيه في حجم التداول اليومي، الذي أشار إليه رضوان كدليل على أن السوق متجه نحو الترقية. كذلك أعلن رضوان أن ما يصل إلى ستة من الشركات الحكومية الـ 20 المدرجة مؤقتًا قد تكتمل فيها العروض العامة الأولية في غضون العام المقبل. تجري محاكمة النظام النهائية للبيع القصير، وتوقع رضوان أن يحدث ذلك قريباً. تعمل البورصة أيضًا على مشتقات، مع وجود عقود آجلة على مؤشر إيجي إكس 30 بالفعل، وتخطط لإدخال عقود آجلة وخيارات إيجي إكس 70. اجتمع رضوان مع وزراء المالية والاستثمار لمناقشة اللوائح الجديدة، بما في ذلك خصم ضريبي بنسبة 15% للشركات التي تزيد قيمتها السوقية عن 15 مليار جنيه.</div>
-        </div>
-          
-          
-        </div>
-        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/08/04/egx-executive-chairman-on-short-selling-ipo-pipeline-sp-review/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
-      </div>
-    </div>
-  </section>
-      
-    </div>
-  </div>
-
-  <!-- ARCHIVE -->
-  <div class="tab-panel" id="panel-archive">
-    <div class="archive-note">
-      <span class="archive-note-icon">📁</span>
-      Previous days' intelligence briefings. Each day's articles are appended here automatically when the next day's run completes.
-    </div>
-    <div class="search-wrap">
-      <input type="text" id="q-archive" placeholder="Search archived headlines and summaries…" oninput="filter('archive')"/>
-      <span id="filter-count-archive"></span>
-    </div>
-    <div id="feed-archive">
-      
   <section class="day-group">
     <div class="day-header">
       <span class="day-label">2026-08-03</span>
@@ -9681,7 +9678,7 @@
 
 <script>
 // ── WEATHER PAGINATOR ──────────────────────────────────────────────────────────
-const WX_DATA   = [{t:"12AM",e:"🌙",c:27,d:"Clear",now:false},{t:"1AM",e:"🌙",c:26,d:"Mainly clear",now:false},{t:"2AM",e:"🌙",c:25,d:"Mainly clear",now:false},{t:"3AM",e:"☁️",c:25,d:"Partly cloudy",now:false},{t:"4AM",e:"☁️",c:24,d:"Partly cloudy",now:false},{t:"5AM",e:"☁️",c:24,d:"Partly cloudy",now:false},{t:"6AM",e:"⛅",c:24,d:"Partly cloudy",now:false},{t:"7AM",e:"⛅",c:24,d:"Partly cloudy",now:false},{t:"8AM",e:"⛅",c:24,d:"Partly cloudy",now:false},{t:"9AM",e:"⛅",c:26,d:"Partly cloudy",now:false},{t:"10AM",e:"🌤️",c:28,d:"Mainly clear",now:false},{t:"11AM",e:"🌤️",c:30,d:"Mainly clear",now:false},{t:"12PM",e:"☀️",c:32,d:"Clear",now:false},{t:"1PM",e:"☀️",c:34,d:"Clear",now:false},{t:"2PM",e:"☀️",c:36,d:"Clear",now:false},{t:"3PM",e:"☀️",c:36,d:"Clear",now:false},{t:"4PM",e:"☀️",c:37,d:"Clear",now:false},{t:"5PM",e:"☀️",c:38,d:"Clear",now:false},{t:"6PM",e:"☀️",c:37,d:"Clear",now:false},{t:"7PM",e:"🌙",c:36,d:"Clear",now:false},{t:"8PM",e:"🌙",c:35,d:"Clear",now:false},{t:"9PM",e:"🌙",c:32,d:"Clear",now:false},{t:"10PM",e:"🌙",c:30,d:"Clear",now:false},{t:"11PM",e:"🌙",c:28,d:"Clear",now:true}];
+const WX_DATA   = [{t:"12AM",e:"🌙",c:27,d:"Clear",now:true},{t:"1AM",e:"🌙",c:26,d:"Mainly clear",now:false},{t:"2AM",e:"☁️",c:26,d:"Partly cloudy",now:false},{t:"3AM",e:"☁️",c:25,d:"Partly cloudy",now:false},{t:"4AM",e:"☁️",c:25,d:"Partly cloudy",now:false},{t:"5AM",e:"☁️",c:25,d:"Partly cloudy",now:false},{t:"6AM",e:"⛅",c:24,d:"Partly cloudy",now:false},{t:"7AM",e:"⛅",c:24,d:"Partly cloudy",now:false},{t:"8AM",e:"⛅",c:25,d:"Partly cloudy",now:false},{t:"9AM",e:"⛅",c:26,d:"Partly cloudy",now:false},{t:"10AM",e:"🌤️",c:28,d:"Mainly clear",now:false},{t:"11AM",e:"🌤️",c:30,d:"Mainly clear",now:false},{t:"12PM",e:"🌤️",c:32,d:"Mainly clear",now:false},{t:"1PM",e:"☀️",c:34,d:"Clear",now:false},{t:"2PM",e:"☀️",c:35,d:"Clear",now:false},{t:"3PM",e:"☀️",c:36,d:"Clear",now:false},{t:"4PM",e:"☀️",c:37,d:"Clear",now:false},{t:"5PM",e:"☀️",c:37,d:"Clear",now:false},{t:"6PM",e:"🌤️",c:37,d:"Mainly clear",now:false},{t:"7PM",e:"🌙",c:36,d:"Mainly clear",now:false},{t:"8PM",e:"🌙",c:34,d:"Mainly clear",now:false},{t:"9PM",e:"🌙",c:32,d:"Mainly clear",now:false},{t:"10PM",e:"🌙",c:30,d:"Mainly clear",now:false},{t:"11PM",e:"🌙",c:28,d:"Clear",now:false}];
 let   wxCenter_idx = 0;  // index of the slot shown in the CENTER position
 
 function wxPage(dir) {
