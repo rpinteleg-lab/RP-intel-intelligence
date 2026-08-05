@@ -310,7 +310,7 @@
     <div class="hero-eyebrow">Daily Market Briefing</div>
     <h1 class="hero-title">Redcon Properties<br><strong>Intelligence Feed</strong></h1>
     <p class="hero-sub">Daily News analyzed for Egypt's construction, infrastructure, and real estate market.</p>
-    <div class="hero-meta">Last updated: 5 August 2026, 23:55</div>
+    <div class="hero-meta">Last updated: 6 August 2026, 00:00</div>
   </div>
   
 <div class="wx-widget" id="wxWidget">
@@ -318,9 +318,9 @@
     <div class="wx-location">Cairo <span class="wx-flag">🇪🇬</span></div>
     <div class="wx-big-row">
       <span class="wx-big-icon">🌙</span>
-      <span class="wx-big-temp">29°</span>
+      <span class="wx-big-temp">28°</span>
     </div>
-    <div class="wx-condition">Mainly clear</div>
+    <div class="wx-condition">Clear</div>
     <div class="wx-range">H 37° &nbsp;·&nbsp; L 24°</div>
   </div>
   <div class="wx-hourly">
@@ -335,7 +335,7 @@
 
 <!-- INDICES -->
 <div class="indices-bar">
-  <span class="indices-as-of">As of 23:55</span>
+  <span class="indices-as-of">As of 00:00</span>
   
   <div class="indices-group">
     <span class="indices-eyebrow">Market Indices &amp; FX</span>
@@ -408,7 +408,7 @@
       Copper (t)
       <button class="idx-info-btn" data-tip="Copper price per metric ton in USD, sourced from MetalCharts." onclick="showTip(this)" title="About Copper (t)">i</button>
     </span>
-    <span class="idx-value">$14,807.66</span>
+    <span class="idx-value">$14,829.05</span>
   </div>
       
   <div class="idx-item">
@@ -456,11 +456,11 @@
 <div class="tabs-bar">
   <button class="tab-btn active" id="tab-today" onclick="switchTab('today')">
     Today's Briefing
-    <span class="tab-badge">10</span>
+    <span class="tab-badge">0</span>
   </button>
   <button class="tab-btn" id="tab-archive" onclick="switchTab('archive')">
     Archive
-    <span class="tab-badge">250</span>
+    <span class="tab-badge">260</span>
   </button>
 </div>
 
@@ -475,11 +475,32 @@
     </div>
     <div id="feed-today">
       
+      
+  <div class="empty">
+    <div class="empty-icon">&#x1F4F0;</div>
+    <h2>No articles today yet</h2>
+    <p>Run the news engine script to populate today's articles.</p>
+  </div>
+    </div>
+  </div>
+
+  <!-- ARCHIVE -->
+  <div class="tab-panel" id="panel-archive">
+    <div class="archive-note">
+      <span class="archive-note-icon">📁</span>
+      Previous days' intelligence briefings. Each day's articles are appended here automatically when the next day's run completes.
+    </div>
+    <div class="search-wrap">
+      <input type="text" id="q-archive" placeholder="Search archived headlines and summaries…" oninput="filter('archive')"/>
+      <span id="filter-count-archive"></span>
+    </div>
+    <div id="feed-archive">
+      
   <section class="day-group">
     <div class="day-header">
-      <span class="day-label">Top Stories Today</span>
+      <span class="day-label">2026-08-05</span>
       <div class="day-rule"></div>
-      <span class="day-count">6 articles</span>
+      <span class="day-count">10 articles</span>
     </div>
     
     <div class="card card-high" id="c0" onclick="toggle('c0')">
@@ -623,7 +644,38 @@
         <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/hardhats/egypts-mandatory-green-building-rule-is-live-but-who-pays-for-it-isnt-settled/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
       </div>
     </div>
-    <div class="card card-high" id="c3" onclick="toggle('c3')">
+    <div class="card card-mid" id="c3" onclick="toggle('c3')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">RHI Magnesita Studies Refractories Project in Egypt</span>
+          <span class="title-ar" dir="rtl">RHI Magnesita تدرس مشروع مواد مقاومة للحرارة في مصر</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Austria&#x27;s RHI Magnesita is studying an integrated refractories project in Egypt to manufacture thermal-resistant materials for local steel, cement, aluminum, copper, and glass producers. The project is supported by Egypt&#x27;s high-purity raw materials. While talks are underway, no investment details, site, capacity, or project timeline have been disclosed. RHI Magnesita&#x27;s potential localization of production in Egypt could insulate the country&#x27;s heavy industries from foreign exchange shocks and reduce shipping lead times. Egypt already has an export market in refractories, with building-materials manufacturers looking to comply with EU environmental standards. Onshoring a specialized manufacturer like RHI Magnesita could help push the local industry up the value chain, transitioning to high-tech, high-margin inputs for domestic heavy manufacturing.</div>
+        </div>
+          
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">تدرس شركة RHI Magnesita النمساوية مشروعًا متكاملًا لمواد مقاومة للحرارة في مصر لتصنيع مواد مقاومة للحرارة لصانعي الصلب والأسمنت والألومنيوم والنحاس والزجاج المحليين. يدعم المشروع المواد الخام النقية العالية الجودة في مصر. في حين مستمرة المحادثات، لم يتم الكشف عن أي تفاصيل استثمارية أو موقع أو سعة أو جدول زمني للمشروع. يمكن أن يعزز دخول شركة RHI Magnesita المحتمل لتصنيع المواد في مصر صناعات مصر الثقيلة من صدمات الصرف الأجنبي وتقليل أوقات الشحن. تمتلك مصر بالفعل سوقًا تصديريًا لمواد مقاومة للحرارة، حيث تبحث شركات مواد البناء عن تحسين الامتثال للمعايير البيئية الأوروبية. يمكن أن يساهم دخول شركة متخصصة مثل RHI Magnesita في دفع الصناعة المحلية في مصر إلى أعلى سلسلة القيمة، بالانتقال من تصدير مواد البناء في مرحلة مبكرة إلى مدخلات عالية التقنية و 높은 الهامش للمصنعين الثقيلين المحليين.</div>
+        </div>
+          
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/08/05/the-fra-registered-a-third-collection-firm-as-the-legal-logjam-continues-to-clear/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card card-high" id="c4" onclick="toggle('c4')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Nevera Egypt Launches $1Bn Media City in West Cairo</span>
@@ -670,7 +722,100 @@
         <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/08/05/state-backed-nevera-egypt-to-reshape-west-cairo-with-new-megaproject/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c4" onclick="toggle('c4')">
+    <div class="card card-mid" id="c5" onclick="toggle('c5')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egypt Adds 100 mmcf/d Gas from 5 New Wells</span>
+          <span class="title-ar" dir="rtl">مصر تضيف 100 ملايين قدم مكعب من الغاز من 5 آبار جديدة</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Egypt plans to add 100 mmcf/d of gas in October from five new onshore and offshore wells at a cost of USD 95 mn. The new wells include Eni&#x27;s well at the Zohr field, which will produce 60 mmcf/d, and wells from Apache, Harbour Energy, and Cheiron Energy. The country&#x27;s natural decline rate is 120 mmcf/d per month, and domestic production has slipped below 4 bcf/d. Egypt relies heavily on imports, having received a record 21 US LNG cargoes in July. However, the country&#x27;s actual July imports fell to 0.63 mn tons. The Oil Ministry is targeting 160 new oil and gas wells this fiscal year, with at least USD 7.2 bn in planned investment from foreign partners.</div>
+        </div>
+          
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">تخطط مصر لإضافة 100 ملايين قدم مكعب من الغاز في أكتوبر من 5 آبار جديدة على الشاطئ والبحر عند تكلفة 95 مليون دولار. تشمل الآبار الجديدة بئر إيني في حقل زهر، الذي سينتج 60 ملايين قدم مكعب، وآبار من أباتشي وهاور إينرجي وشيرون إينرجي. معدل الانخفاض الطبيعي في مصر هو 120 ملايين قدم مكعب في الشهر، وانخفض الإنتاج المحلي إلى أقل من 4 مليارات قدم مكعب. تعتمد مصر بشكل كبير على الواردات، حيث تلقت 21 شحنة من الغاز الطبيعي المسال الأمريكي في يوليو. ومع ذلك، انخفض الواردات الفعلية في يوليو إلى 0.63 مليون طن. تستهدف وزارة البترول 160 بئرا جديدا للنفط والغاز في هذا العام المالي، مع استثمار مخطط له يقدر بأكثر من 7.2 مليار دولار من الشركاء الأجانب.</div>
+        </div>
+          
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/08/05/govt-has-five-new-gas-wells-planned-to-come-online-in-october-but-they-arent-enough-to-stop-the-costly-import-cycle/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card card-mid" id="c6" onclick="toggle('c6')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egyptian Equities Attract EGP 1.4 Billion</span>
+          <span class="title-ar" dir="rtl">الأسهم المصرية تجذب 1.4 مليار جنيه</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">In July, foreign investors purchased EGP 1.4 billion of Egyptian equities, driving the EGX30 up 5.85% to 53,400 points. This shift reversed the second-quarter trend, when foreign institutions sold EGP 4.8 billion and regional investors sold EGP 5.1 billion. Local individual investors were net sellers, off-loading EGP 2 billion. The broader market outperformed, with the EGX70 soaring 17.61% to 18,200 points, the EGX100 gaining 13.7% to 24,000 points, and the EGX33 Shariah rising 5.59%. Total market capitalization expanded 7.0% to EGP 3.9 trillion. Energy and support services led sector gains with a 21.7% increase, followed by education, healthcare, and pharma. CI Capital&#x27;s Monsef Morsy described the activity as a &#x27;risk-on&#x27; mode for Egyptian stocks.</div>
+        </div>
+          
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">في يوليو، اشترى المستثمرون الأجانب 1.4 مليار جنيه من الأسهم المصرية، مما دفع مؤشر EGX30 lên 5.85% إلى 53,400 نقطة. هذا التحول عكس الاتجاه في الربع الثاني، عندما باعت المؤسسات الأجنبية 4.8 مليار جنيه والمستثمرون الإقليميون 5.1 مليار جنيه. كان المستثمرون الأفراد المحليون بائعي صافي، حيث قاموا بتحويل 2 مليار جنيه. أدت السوق الأوسع إلى أداء أفضل، مع ارتفاع EGX70 بنسبة 17.61% إلى 18,200 نقطة، وزيادة EGX100 بنسبة 13.7% إلى 24,000 نقطة، وارتفاع EGX33 الشريعة بنسبة 5.59%. بلغ إجمالي رأس المال السوقي 3.9 تريليون جنيه، بزيادة 7.0%. قادت خدمات الطاقة والدعم مكاسب القطاع بزيادة 21.7%， يليها التعليم والرعاية الصحية والصيدلة. وصف مونسف مرسي من سي أي كابيتال النشاط بأنه &#x27;وضع مخاطرة&#x27; على الأسهم المصرية.</div>
+        </div>
+          
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/08/05/foreigners-pick-up-egp-1-4-bn-in-local-equities-as-egx30-gains-5-85-in-july/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card card-mid" id="c7" onclick="toggle('c7')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egypt&#x27;s Non-Oil Private Sector PMI Rises to 46.8</span>
+          <span class="title-ar" dir="rtl">مؤشر مديري المشتريات لمصر يصل إلى 46.8</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Egypt&#x27;s non-oil private sector saw its strongest business confidence since mid-2022 in July, with the headline seasonally adjusted PMI rising to 46.8 from June&#x27;s 41-month low of 46.0. Although business is still contracting, the reading translates to an annual GDP growth rate of about 4% at the start of 3Q 2026. New business orders fell for the seventh month in a row, and total factory output also dropped. However, input costs rose at their slowest pace in six months, and the prices companies charge their customers rose at their slowest rate in four months. The index tracking future output expectations climbed to its highest level since June 2022, signaling that businesses are growing more optimistic about the year ahead. S&amp;P Global Market Intelligence Principal Economist David Owen noted that the upshift in business confidence showed that firms saw some light at the end of the tunnel, but warned that this relief relied on a temporary dip in global oil prices early in July.</div>
+        </div>
+          
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">شهد قطاع مصر غير النفطي أقوى ثقة أعمال منذ منتصف عام 2022 في يوليو، حيث ارتفع مؤشر مديري المشتريات الموسمي المعدل إلى 46.8 من أدنى مستوى له في 41 شهرًا في يونيو البالغ 46.0. على الرغم من استمرار الانكماش في الأعمال، يترجم هذا القراءة إلى معدل نمو سنوي في الناتج المحلي الإجمالي يبلغ حوالي 4٪ في بداية الربع الثالث من عام 2026. انخفضت الطلبات الجديدة على الأعمال لشهر سابع على التوالي، وانخفض الإنتاج المصنعِي الكلي أيضًا. ومع ذلك، ارتفعت التكاليف الإنتاجية ببطء أكبر في ستة أشهر، وارتفعت الأسعار التي يفرضها الشركات على العملاء ببطء أكبر في أربعة أشهر. ارتفع مؤشر التوقعات الإنتاجية المستقبلية إلى أعلى مستوى له منذ يونيو 2022، مما يشير إلى أن الشركات تتطلع إلى نمو أكثر تفاؤمًا في العام المقبل. وأشار ديفيد أوين، الرئيس التنفيذي لشركة إس آند بي جلوبال ماركت إن텔يجنس، إلى أن ارتفاع ثقة الأعمال أظهر أن الشركات رأت بعض الضوء في نهاية النفق، لكن حذر من أن هذا الرفع يعتمد على انخفاض مؤقت في أسعار النفط العالمية في بداية يوليو.</div>
+        </div>
+          
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/08/05/business-confidence-hits-four-year-high-in-july-even-though-pmi-stays-in-contraction/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card card-mid" id="c8" onclick="toggle('c8')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Egypt&#x27;s Net Foreign Assets Rise 22% to $27.96bn</span>
@@ -701,7 +846,7 @@
         <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/08/05/maridive-oil-services-opens-books-to-the-arab-energy-fund-ahead-of-a-potential-acquisition/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
       </div>
     </div>
-    <div class="card card-high" id="c5" onclick="toggle('c5')">
+    <div class="card card-high" id="c9" onclick="toggle('c9')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">PRE Group Plans EGP 94bn Mixed-Use Project</span>
@@ -749,154 +894,6 @@
       </div>
     </div>
   </section>
-  <section class="day-group">
-    <div class="day-header">
-      <span class="day-label">Also in the News</span>
-      <div class="day-rule"></div>
-      <span class="day-count">4 articles</span>
-    </div>
-    
-    <div class="card card-mid" id="c6" onclick="toggle('c6')">
-      <div class="card-head">
-        <div class="card-title">
-          <span class="title-en">RHI Magnesita Studies Refractories Project in Egypt</span>
-          <span class="title-ar" dir="rtl">RHI Magnesita تدرس مشروع مواد مقاومة للحرارة في مصر</span>
-        </div>
-        <div class="card-head-right">
-          <span class="tier-badge tier-mid">Summary</span>
-          <div class="card-chevron">&#x203A;</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="card-grid">
-          
-        <div class="field full en-content">
-          <div class="field-label">Executive Summary</div>
-          <div class="field-text">Austria&#x27;s RHI Magnesita is studying an integrated refractories project in Egypt to manufacture thermal-resistant materials for local steel, cement, aluminum, copper, and glass producers. The project is supported by Egypt&#x27;s high-purity raw materials. While talks are underway, no investment details, site, capacity, or project timeline have been disclosed. RHI Magnesita&#x27;s potential localization of production in Egypt could insulate the country&#x27;s heavy industries from foreign exchange shocks and reduce shipping lead times. Egypt already has an export market in refractories, with building-materials manufacturers looking to comply with EU environmental standards. Onshoring a specialized manufacturer like RHI Magnesita could help push the local industry up the value chain, transitioning to high-tech, high-margin inputs for domestic heavy manufacturing.</div>
-        </div>
-          
-          
-          
-        <div class="field full ar-content" dir="rtl">
-          <div class="field-label">الملخص التنفيذي</div>
-          <div class="field-text">تدرس شركة RHI Magnesita النمساوية مشروعًا متكاملًا لمواد مقاومة للحرارة في مصر لتصنيع مواد مقاومة للحرارة لصانعي الصلب والأسمنت والألومنيوم والنحاس والزجاج المحليين. يدعم المشروع المواد الخام النقية العالية الجودة في مصر. في حين مستمرة المحادثات، لم يتم الكشف عن أي تفاصيل استثمارية أو موقع أو سعة أو جدول زمني للمشروع. يمكن أن يعزز دخول شركة RHI Magnesita المحتمل لتصنيع المواد في مصر صناعات مصر الثقيلة من صدمات الصرف الأجنبي وتقليل أوقات الشحن. تمتلك مصر بالفعل سوقًا تصديريًا لمواد مقاومة للحرارة، حيث تبحث شركات مواد البناء عن تحسين الامتثال للمعايير البيئية الأوروبية. يمكن أن يساهم دخول شركة متخصصة مثل RHI Magnesita في دفع الصناعة المحلية في مصر إلى أعلى سلسلة القيمة، بالانتقال من تصدير مواد البناء في مرحلة مبكرة إلى مدخلات عالية التقنية و 높은 الهامش للمصنعين الثقيلين المحليين.</div>
-        </div>
-          
-          
-        </div>
-        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/08/05/the-fra-registered-a-third-collection-firm-as-the-legal-logjam-continues-to-clear/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
-      </div>
-    </div>
-    <div class="card card-mid" id="c7" onclick="toggle('c7')">
-      <div class="card-head">
-        <div class="card-title">
-          <span class="title-en">Egypt Adds 100 mmcf/d Gas from 5 New Wells</span>
-          <span class="title-ar" dir="rtl">مصر تضيف 100 ملايين قدم مكعب من الغاز من 5 آبار جديدة</span>
-        </div>
-        <div class="card-head-right">
-          <span class="tier-badge tier-mid">Summary</span>
-          <div class="card-chevron">&#x203A;</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="card-grid">
-          
-        <div class="field full en-content">
-          <div class="field-label">Executive Summary</div>
-          <div class="field-text">Egypt plans to add 100 mmcf/d of gas in October from five new onshore and offshore wells at a cost of USD 95 mn. The new wells include Eni&#x27;s well at the Zohr field, which will produce 60 mmcf/d, and wells from Apache, Harbour Energy, and Cheiron Energy. The country&#x27;s natural decline rate is 120 mmcf/d per month, and domestic production has slipped below 4 bcf/d. Egypt relies heavily on imports, having received a record 21 US LNG cargoes in July. However, the country&#x27;s actual July imports fell to 0.63 mn tons. The Oil Ministry is targeting 160 new oil and gas wells this fiscal year, with at least USD 7.2 bn in planned investment from foreign partners.</div>
-        </div>
-          
-          
-          
-        <div class="field full ar-content" dir="rtl">
-          <div class="field-label">الملخص التنفيذي</div>
-          <div class="field-text">تخطط مصر لإضافة 100 ملايين قدم مكعب من الغاز في أكتوبر من 5 آبار جديدة على الشاطئ والبحر عند تكلفة 95 مليون دولار. تشمل الآبار الجديدة بئر إيني في حقل زهر، الذي سينتج 60 ملايين قدم مكعب، وآبار من أباتشي وهاور إينرجي وشيرون إينرجي. معدل الانخفاض الطبيعي في مصر هو 120 ملايين قدم مكعب في الشهر، وانخفض الإنتاج المحلي إلى أقل من 4 مليارات قدم مكعب. تعتمد مصر بشكل كبير على الواردات، حيث تلقت 21 شحنة من الغاز الطبيعي المسال الأمريكي في يوليو. ومع ذلك، انخفض الواردات الفعلية في يوليو إلى 0.63 مليون طن. تستهدف وزارة البترول 160 بئرا جديدا للنفط والغاز في هذا العام المالي، مع استثمار مخطط له يقدر بأكثر من 7.2 مليار دولار من الشركاء الأجانب.</div>
-        </div>
-          
-          
-        </div>
-        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/08/05/govt-has-five-new-gas-wells-planned-to-come-online-in-october-but-they-arent-enough-to-stop-the-costly-import-cycle/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
-      </div>
-    </div>
-    <div class="card card-mid" id="c8" onclick="toggle('c8')">
-      <div class="card-head">
-        <div class="card-title">
-          <span class="title-en">Egyptian Equities Attract EGP 1.4 Billion</span>
-          <span class="title-ar" dir="rtl">الأسهم المصرية تجذب 1.4 مليار جنيه</span>
-        </div>
-        <div class="card-head-right">
-          <span class="tier-badge tier-mid">Summary</span>
-          <div class="card-chevron">&#x203A;</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="card-grid">
-          
-        <div class="field full en-content">
-          <div class="field-label">Executive Summary</div>
-          <div class="field-text">In July, foreign investors purchased EGP 1.4 billion of Egyptian equities, driving the EGX30 up 5.85% to 53,400 points. This shift reversed the second-quarter trend, when foreign institutions sold EGP 4.8 billion and regional investors sold EGP 5.1 billion. Local individual investors were net sellers, off-loading EGP 2 billion. The broader market outperformed, with the EGX70 soaring 17.61% to 18,200 points, the EGX100 gaining 13.7% to 24,000 points, and the EGX33 Shariah rising 5.59%. Total market capitalization expanded 7.0% to EGP 3.9 trillion. Energy and support services led sector gains with a 21.7% increase, followed by education, healthcare, and pharma. CI Capital&#x27;s Monsef Morsy described the activity as a &#x27;risk-on&#x27; mode for Egyptian stocks.</div>
-        </div>
-          
-          
-          
-        <div class="field full ar-content" dir="rtl">
-          <div class="field-label">الملخص التنفيذي</div>
-          <div class="field-text">في يوليو، اشترى المستثمرون الأجانب 1.4 مليار جنيه من الأسهم المصرية، مما دفع مؤشر EGX30 lên 5.85% إلى 53,400 نقطة. هذا التحول عكس الاتجاه في الربع الثاني، عندما باعت المؤسسات الأجنبية 4.8 مليار جنيه والمستثمرون الإقليميون 5.1 مليار جنيه. كان المستثمرون الأفراد المحليون بائعي صافي، حيث قاموا بتحويل 2 مليار جنيه. أدت السوق الأوسع إلى أداء أفضل، مع ارتفاع EGX70 بنسبة 17.61% إلى 18,200 نقطة، وزيادة EGX100 بنسبة 13.7% إلى 24,000 نقطة، وارتفاع EGX33 الشريعة بنسبة 5.59%. بلغ إجمالي رأس المال السوقي 3.9 تريليون جنيه، بزيادة 7.0%. قادت خدمات الطاقة والدعم مكاسب القطاع بزيادة 21.7%， يليها التعليم والرعاية الصحية والصيدلة. وصف مونسف مرسي من سي أي كابيتال النشاط بأنه &#x27;وضع مخاطرة&#x27; على الأسهم المصرية.</div>
-        </div>
-          
-          
-        </div>
-        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/08/05/foreigners-pick-up-egp-1-4-bn-in-local-equities-as-egx30-gains-5-85-in-july/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
-      </div>
-    </div>
-    <div class="card card-mid" id="c9" onclick="toggle('c9')">
-      <div class="card-head">
-        <div class="card-title">
-          <span class="title-en">Egypt&#x27;s Non-Oil Private Sector PMI Rises to 46.8</span>
-          <span class="title-ar" dir="rtl">مؤشر مديري المشتريات لمصر يصل إلى 46.8</span>
-        </div>
-        <div class="card-head-right">
-          <span class="tier-badge tier-mid">Summary</span>
-          <div class="card-chevron">&#x203A;</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="card-grid">
-          
-        <div class="field full en-content">
-          <div class="field-label">Executive Summary</div>
-          <div class="field-text">Egypt&#x27;s non-oil private sector saw its strongest business confidence since mid-2022 in July, with the headline seasonally adjusted PMI rising to 46.8 from June&#x27;s 41-month low of 46.0. Although business is still contracting, the reading translates to an annual GDP growth rate of about 4% at the start of 3Q 2026. New business orders fell for the seventh month in a row, and total factory output also dropped. However, input costs rose at their slowest pace in six months, and the prices companies charge their customers rose at their slowest rate in four months. The index tracking future output expectations climbed to its highest level since June 2022, signaling that businesses are growing more optimistic about the year ahead. S&amp;P Global Market Intelligence Principal Economist David Owen noted that the upshift in business confidence showed that firms saw some light at the end of the tunnel, but warned that this relief relied on a temporary dip in global oil prices early in July.</div>
-        </div>
-          
-          
-          
-        <div class="field full ar-content" dir="rtl">
-          <div class="field-label">الملخص التنفيذي</div>
-          <div class="field-text">شهد قطاع مصر غير النفطي أقوى ثقة أعمال منذ منتصف عام 2022 في يوليو، حيث ارتفع مؤشر مديري المشتريات الموسمي المعدل إلى 46.8 من أدنى مستوى له في 41 شهرًا في يونيو البالغ 46.0. على الرغم من استمرار الانكماش في الأعمال، يترجم هذا القراءة إلى معدل نمو سنوي في الناتج المحلي الإجمالي يبلغ حوالي 4٪ في بداية الربع الثالث من عام 2026. انخفضت الطلبات الجديدة على الأعمال لشهر سابع على التوالي، وانخفض الإنتاج المصنعِي الكلي أيضًا. ومع ذلك، ارتفعت التكاليف الإنتاجية ببطء أكبر في ستة أشهر، وارتفعت الأسعار التي يفرضها الشركات على العملاء ببطء أكبر في أربعة أشهر. ارتفع مؤشر التوقعات الإنتاجية المستقبلية إلى أعلى مستوى له منذ يونيو 2022، مما يشير إلى أن الشركات تتطلع إلى نمو أكثر تفاؤمًا في العام المقبل. وأشار ديفيد أوين، الرئيس التنفيذي لشركة إس آند بي جلوبال ماركت إن텔يجنس، إلى أن ارتفاع ثقة الأعمال أظهر أن الشركات رأت بعض الضوء في نهاية النفق، لكن حذر من أن هذا الرفع يعتمد على انخفاض مؤقت في أسعار النفط العالمية في بداية يوليو.</div>
-        </div>
-          
-          
-        </div>
-        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/08/05/business-confidence-hits-four-year-high-in-july-even-though-pmi-stays-in-contraction/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
-      </div>
-    </div>
-  </section>
-      
-    </div>
-  </div>
-
-  <!-- ARCHIVE -->
-  <div class="tab-panel" id="panel-archive">
-    <div class="archive-note">
-      <span class="archive-note-icon">📁</span>
-      Previous days' intelligence briefings. Each day's articles are appended here automatically when the next day's run completes.
-    </div>
-    <div class="search-wrap">
-      <input type="text" id="q-archive" placeholder="Search archived headlines and summaries…" oninput="filter('archive')"/>
-      <span id="filter-count-archive"></span>
-    </div>
-    <div id="feed-archive">
-      
   <section class="day-group">
     <div class="day-header">
       <span class="day-label">2026-08-04</span>
@@ -10079,7 +10076,7 @@
 
 <script>
 // ── WEATHER PAGINATOR ──────────────────────────────────────────────────────────
-const WX_DATA   = [{t:"12AM",e:"🌙",c:28,d:"Clear",now:false},{t:"1AM",e:"🌙",c:26,d:"Mainly clear",now:false},{t:"2AM",e:"🌙",c:26,d:"Mainly clear",now:false},{t:"3AM",e:"☁️",c:25,d:"Partly cloudy",now:false},{t:"4AM",e:"☁️",c:25,d:"Partly cloudy",now:false},{t:"5AM",e:"☁️",c:24,d:"Partly cloudy",now:false},{t:"6AM",e:"⛅",c:24,d:"Partly cloudy",now:false},{t:"7AM",e:"⛅",c:24,d:"Partly cloudy",now:false},{t:"8AM",e:"⛅",c:25,d:"Partly cloudy",now:false},{t:"9AM",e:"⛅",c:26,d:"Partly cloudy",now:false},{t:"10AM",e:"⛅",c:28,d:"Partly cloudy",now:false},{t:"11AM",e:"🌤️",c:30,d:"Mainly clear",now:false},{t:"12PM",e:"☀️",c:32,d:"Clear",now:false},{t:"1PM",e:"☀️",c:34,d:"Clear",now:false},{t:"2PM",e:"☀️",c:36,d:"Clear",now:false},{t:"3PM",e:"☀️",c:36,d:"Clear",now:false},{t:"4PM",e:"🌤️",c:37,d:"Mainly clear",now:false},{t:"5PM",e:"🌤️",c:37,d:"Mainly clear",now:false},{t:"6PM",e:"🌤️",c:37,d:"Mainly clear",now:false},{t:"7PM",e:"🌙",c:36,d:"Mainly clear",now:false},{t:"8PM",e:"🌙",c:34,d:"Mainly clear",now:false},{t:"9PM",e:"🌙",c:32,d:"Clear",now:false},{t:"10PM",e:"🌙",c:30,d:"Clear",now:false},{t:"11PM",e:"🌙",c:29,d:"Mainly clear",now:true}];
+const WX_DATA   = [{t:"12AM",e:"🌙",c:28,d:"Clear",now:true},{t:"1AM",e:"🌙",c:27,d:"Mainly clear",now:false},{t:"2AM",e:"🌙",c:26,d:"Mainly clear",now:false},{t:"3AM",e:"🌙",c:25,d:"Clear",now:false},{t:"4AM",e:"🌙",c:24,d:"Clear",now:false},{t:"5AM",e:"🌙",c:24,d:"Mainly clear",now:false},{t:"6AM",e:"🌤️",c:24,d:"Mainly clear",now:false},{t:"7AM",e:"🌤️",c:24,d:"Mainly clear",now:false},{t:"8AM",e:"🌤️",c:25,d:"Mainly clear",now:false},{t:"9AM",e:"🌤️",c:26,d:"Mainly clear",now:false},{t:"10AM",e:"☀️",c:29,d:"Clear",now:false},{t:"11AM",e:"☀️",c:31,d:"Clear",now:false},{t:"12PM",e:"☀️",c:33,d:"Clear",now:false},{t:"1PM",e:"☀️",c:35,d:"Clear",now:false},{t:"2PM",e:"☀️",c:36,d:"Clear",now:false},{t:"3PM",e:"🌤️",c:37,d:"Mainly clear",now:false},{t:"4PM",e:"☀️",c:37,d:"Clear",now:false},{t:"5PM",e:"☀️",c:37,d:"Clear",now:false},{t:"6PM",e:"🌤️",c:36,d:"Mainly clear",now:false},{t:"7PM",e:"🌙",c:35,d:"Clear",now:false},{t:"8PM",e:"🌙",c:34,d:"Mainly clear",now:false},{t:"9PM",e:"🌙",c:32,d:"Mainly clear",now:false},{t:"10PM",e:"🌙",c:30,d:"Mainly clear",now:false},{t:"11PM",e:"🌙",c:28,d:"Clear",now:false}];
 let   wxCenter_idx = 0;  // index of the slot shown in the CENTER position
 
 function wxPage(dir) {
