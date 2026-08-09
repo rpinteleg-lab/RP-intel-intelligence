@@ -310,7 +310,7 @@
     <div class="hero-eyebrow">Daily Market Briefing</div>
     <h1 class="hero-title">Redcon Properties<br><strong>Intelligence Feed</strong></h1>
     <p class="hero-sub">Daily News analyzed for Egypt's construction, infrastructure, and real estate market.</p>
-    <div class="hero-meta">Last updated: 9 August 2026, 23:55</div>
+    <div class="hero-meta">Last updated: 10 August 2026, 00:00</div>
   </div>
   
 <div class="wx-widget" id="wxWidget">
@@ -318,10 +318,10 @@
     <div class="wx-location">Cairo <span class="wx-flag">🇪🇬</span></div>
     <div class="wx-big-row">
       <span class="wx-big-icon">🌙</span>
-      <span class="wx-big-temp">30°</span>
+      <span class="wx-big-temp">28°</span>
     </div>
     <div class="wx-condition">Clear</div>
-    <div class="wx-range">H 37° &nbsp;·&nbsp; L 25°</div>
+    <div class="wx-range">H 38° &nbsp;·&nbsp; L 24°</div>
   </div>
   <div class="wx-hourly">
     <button class="wx-nav wx-prev" onclick="wxPage(-1)" aria-label="Previous hours">&#x2039;</button>
@@ -335,7 +335,7 @@
 
 <!-- INDICES -->
 <div class="indices-bar">
-  <span class="indices-as-of">As of 23:55</span>
+  <span class="indices-as-of">As of 00:00</span>
   
   <div class="indices-group">
     <span class="indices-eyebrow">Market Indices &amp; FX</span>
@@ -456,11 +456,11 @@
 <div class="tabs-bar">
   <button class="tab-btn active" id="tab-today" onclick="switchTab('today')">
     Today's Briefing
-    <span class="tab-badge">12</span>
+    <span class="tab-badge">0</span>
   </button>
   <button class="tab-btn" id="tab-archive" onclick="switchTab('archive')">
     Archive
-    <span class="tab-badge">335</span>
+    <span class="tab-badge">347</span>
   </button>
 </div>
 
@@ -475,14 +475,56 @@
     </div>
     <div id="feed-today">
       
+      
+  <div class="empty">
+    <div class="empty-icon">&#x1F4F0;</div>
+    <h2>No articles today yet</h2>
+    <p>Run the news engine script to populate today's articles.</p>
+  </div>
+    </div>
+  </div>
+
+  <!-- ARCHIVE -->
+  <div class="tab-panel" id="panel-archive">
+    <div class="archive-note">
+      <span class="archive-note-icon">📁</span>
+      Previous days' intelligence briefings. Each day's articles are appended here automatically when the next day's run completes.
+    </div>
+    <div class="search-wrap">
+      <input type="text" id="q-archive" placeholder="Search archived headlines and summaries…" oninput="filter('archive')"/>
+      <span id="filter-count-archive"></span>
+    </div>
+    <div id="feed-archive">
+      
   <section class="day-group">
     <div class="day-header">
-      <span class="day-label">Top Stories Today</span>
+      <span class="day-label">2026-08-09</span>
       <div class="day-rule"></div>
-      <span class="day-count">4 articles</span>
+      <span class="day-count">12 articles</span>
     </div>
     
-    <div class="card card-high" id="c0" onclick="toggle('c0')">
+    <div class="card card-mid" id="c0" onclick="toggle('c0')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">How Balad connects global remittances to home</span>
+          <span class="title-ar" dir="rtl">How Balad connects global remittances to home</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+          
+          
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/08/09/how-balad-connects-global-remittances-to-home/" target="_blank" rel="noopener">&#x2197; Read on </a></div>
+      </div>
+    </div>
+    <div class="card card-high" id="c1" onclick="toggle('c1')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Egypt&#x27;s Ministry of Housing Offers Investment Opportunities</span>
@@ -519,7 +561,94 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2128522/الإسكان-تطرح-99-فرصة-استثمارية-بالمدن-الجديدة/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-high" id="c1" onclick="toggle('c1')">
+    <div class="card card-mid" id="c2" onclick="toggle('c2')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egypt Central Bank Offers EGP 110 Billion Treasury Bills</span>
+          <span class="title-ar" dir="rtl">البنك المركزي المصري يطرح أذون خزانة بقيمة 110 مليار جنيه</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">The Central Bank of Egypt will offer treasury bills worth EGP 110 billion on Sunday, with two tranches: EGP 40 billion for 91 days and EGP 70 billion for 273 days. The bills are part of the government&#x27;s efforts to finance the budget deficit, in coordination with the Ministry of Finance. The Ministry of Finance has authorized the Central Bank to manage its treasury bill and bond offerings in Egyptian pounds throughout the fiscal year. The proceeds will be used to fund the state&#x27;s general budget for the current fiscal year. The Central Bank&#x27;s Monetary Policy Committee decided to keep the basic interest rates unchanged in its meeting on July 9, 2026, with the deposit and lending rates set at 19.00% and 20.00%, and the main operation rate at 19.50%.</div>
+        </div>
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">سيطرح البنك المركزي المصري، غدًا الأحد، أذون خزانة بقيمة 110 مليار جنيه، بطرحين: 40 مليار جنيه لمدة 91 يوما، و70 مليار جنيه لمدة 273 يوما. وتأتي هذه الطروحات في إطار جهود الحكومة لتمويل عجز الموازنة، بالتنسيق مع وزارة المالية. وقد فوضت وزارة المالية البنك المركزي في إدارة طروحاتها الخاصة من أذون وسندات الخزانة بالجنيه المصري، على مدار العام المالي، لتمويل بنود الموازنة العامة للدولة للعام المالي الحالي. وقررت لجنة السياسة النقدية للبنك المركزي المصري في اجتماعها يوم الخميس الموافق 9 يوليو 2026 الإبقاء على أسعار العائد الأساسية دون تغيير، مع تثبيت سعري عائد الإيداع والإقراض لليلة واحدة وسعر العملية الرئيسية للبنك المركزي عند 19.00% و20.00% و19.50%، على الترتيب.</div>
+        </div>
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://almalnews.com/2128528/البنك-المركزي-يطرح-أذون-خزانة-بقيمة-110/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
+      </div>
+    </div>
+    <div class="card card-mid" id="c3" onclick="toggle('c3')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egypt Central Bank Offers 5 Billion EGP Sukuk</span>
+          <span class="title-ar" dir="rtl">البنك المركزي المصري يطرح صكوك بقيمة 5 مليارات جنيه</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">The Central Bank of Egypt will offer 5 billion EGP worth of 3-year fixed-yield sukuk on Monday, with semi-annual interest payments. The sukuk will mature on July 16, 2029. The Central Bank has been authorized by the Ministry of Finance to manage treasury bond and bill auctions in Egyptian pounds throughout the fiscal year. The proceeds will be used to finance the state&#x27;s general budget for the current fiscal year. The Monetary Policy Committee of the Central Bank of Egypt decided to keep the basic interest rates unchanged in its meeting on July 9, 2026. The deposit and lending rates were set at 19.00% and 20.00%, and the main operation rate at 19.50%. The credit and discount rates were also kept at 19.50%.</div>
+        </div>
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">سيطرح البنك المركزي المصري صكوكًا بقيمة 5 مليارات جنيه مصري لمدة 3 سنوات، مع دفعات فائدة نصف سنوية، يوم الإثنين. وستنتهي صلاحية الصكوك في 16 يوليو 2029. وقد أذن البنك المركزي، بترخيص من وزارة المالية، في إدارة مزادات أذون وسندات الخزانة بالجنيه المصري على مدار العام المالي. وستستخدم العائدات في تمويل الموازنة العامة للدولة للعام المالي الحالي. قررت لجنة السياسة النقدية للبنك المركزي المصري في اجتماعها يوم الخميس الموافق 9 يوليو 2026 الإبقاء على أسعار الفائدة الأساسية دون تغيير. وتم تثبيت أسعار الفائدة للإيداع والقرض والعملية الرئيسية عند 19.00% و20.00% و19.50%، على الترتيب. كما تم الإبقاء على سعر الائتمان والخصم عند 19.50%.</div>
+        </div>
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://almalnews.com/2128540/البنك-المركزي-يطرح-صكوكًا-بقيمة-5-مليارات/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
+      </div>
+    </div>
+    <div class="card card-mid" id="c4" onclick="toggle('c4')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egypt Central Bank Offers EGP 16.5 Billion Bonds</span>
+          <span class="title-ar" dir="rtl">البنك المركزي المصري يطرح سندات خزانة بقيمة 16.5 مليار جنيه</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">The Central Bank of Egypt will offer EGP 16.5 billion in fixed-yield treasury bonds on Monday. The bonds will have terms of 2 and 3 years, with semi-annual interest payments. The Ministry of Finance has authorized the Central Bank to manage its treasury bond and bill auctions in Egyptian pounds throughout the fiscal year. The auctions will fund the state&#x27;s general budget for the current fiscal year. The Central Bank&#x27;s Monetary Policy Committee decided to keep the primary interest rates unchanged in its meeting on July 9, 2026, with the deposit and lending rates at 19.00% and 20.00%, and the main operation rate at 19.50%. The credit and discount rates were also kept at 19.50%. The bonds are part of the government&#x27;s financing plan, with the Central Bank acting as the issuer and manager of the bonds.</div>
+        </div>
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">سيطرح البنك المركزي المصري، الاثنين القادم، سندات خزانة ثابتة العائد بقيمة 16.5 مليار جنيه. وتأتي الطروحات على النحو التالي: 1.5 و15 مليار جنيه سندات، لأجل 2 و3 أعوام على التوالي، وبدورية عائد نصف سنوية. وتفوض وزارة المالية البنك المركزي، على مدار العام المالي، في إدارة طروحاتها الخاصة من أذون وسندات الخزانة بالجنيه المصري، على أن تمول وتنفق الحصيلة على بنود الموازنة العامة للدولة للعام المالي الحالي. قررت لجنة السياسة النقدية للبنك المركزي المصري في اجتماعها يوم الخميس الموافق 9 يوليو 2026 الإبقاء على أسعار العائد الأساسية دون تغيير، حيث تم تثبيت سعري عائد الإيداع والإقراض لليلة واحدة وسعر العملية الرئيسية للبنك المركزي عند 19.00% و20.00% و19.50%، على الترتيب. كما تم الإبقاء على سعر الائتمان والخصم عند 19.50%.</div>
+        </div>
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://almalnews.com/2128536/البنك-المركزي-يطرح-سندات-خزانة-ثابتة-العائد/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
+      </div>
+    </div>
+    <div class="card card-high" id="c5" onclick="toggle('c5')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Egypt Launches Second Phase of Social Housing Initiative</span>
@@ -556,7 +685,7 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2128535/الإسكان-الاجتماعي-يطرح-المرحلة-الثانية-لبرنامج-سكن/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-high" id="c2" onclick="toggle('c2')">
+    <div class="card card-high" id="c6" onclick="toggle('c6')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Egypt Social Housing Fund Sets Rules for 15,000‑Unit Supported Rental Program</span>
@@ -593,152 +722,7 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2128539/«الإسكان-الاجتماعي»-يحدد-ضوابط-استرداد-مقدم-الحجز/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a><a class="source-link" href="https://almalnews.com/2128538/توزيع-15-ألف-وحدة-بنظام-الإيجار-المدعوم/" target="_blank" rel="noopener">&#x2197; Also covered by Almal News</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c3" onclick="toggle('c3')">
-      <div class="card-head">
-        <div class="card-title">
-          <span class="title-en">FRA Sets 30-Day Bond Subscription Deadline</span>
-          <span class="title-ar" dir="rtl">السلطة التنظيمية المالية تحدد موعدا نهائيا للاكتتاب في السندات</span>
-        </div>
-        <div class="card-head-right">
-          <span class="tier-badge tier-mid">Summary</span>
-          <div class="card-chevron">&#x203A;</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="card-grid">
-          
-        <div class="field full en-content">
-          <div class="field-label">Executive Summary</div>
-          <div class="field-text">The Financial Regulatory Authority (FRA) has introduced a 30-working-day subscription deadline for private bond issuers, effective immediately. This decision, outlined in Decision 136/2026, modifies the previous Decision 145/2021 and requires issuers to obtain direct approval from the FRA for any extension. Additionally, advisors on securitized offerings must now certify the quality of the underlying collateral before a transaction can close. The FRA has also narrowed the retail carve-out, restricting it to bonds listed on the Egyptian Exchange (EGX). These reforms are part of a series of structural changes in Egypt&#x27;s capital markets, including the licensing of the EGX to run a futures exchange and the introduction of FRA-licensing requirements for index-tracking fund managers.</div>
-        </div>
-          
-          
-        <div class="field full ar-content" dir="rtl">
-          <div class="field-label">الملخص التنفيذي</div>
-          <div class="field-text">أدخلت السلطة التنظيمية المالية (FRA) موعدا نهائيا للاكتتاب في السندات الخاصة يبلغ 30 يوما عمل، ساري المفعول على الفور. تنص هذه القرار، المحدد في القرار 136/2026، على تعديل القرار السابق 145/2021 ويطالب المصدرين بالحصول على موافقة مباشرة من FRA لأي تمديد. بالإضافة إلى ذلك، يجب على المستشارين في عروض التوثيق الآن أن يثبتوا جودة الضمانات الأساسية قبل إغلاق أي معاملة. كما قامت FRA بتقليص حصة التجزئة، وقيدها بالسندات المدرجة في بورصة مصر (EGX). هذه الإصلاحات هي جزء من سلسلة من التغييرات الهيكلية في أسواق رأس المال في مصر، بما في ذلك ترخيص EGX لتشغيل بورصة مستقبلية وادخال متطلبات ترخيص FRA للمديرين المتعاقبين مع مؤشرات التتبع.</div>
-        </div>
-          
-        </div>
-        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/08/09/fra-loosens-fx-financing-rules-for-nbfis-tightens-private-bond-offerings/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
-      </div>
-    </div>
-  </section>
-  <section class="day-group">
-    <div class="day-header">
-      <span class="day-label">Also in the News</span>
-      <div class="day-rule"></div>
-      <span class="day-count">8 articles</span>
-    </div>
-    
-    <div class="card card-mid" id="c4" onclick="toggle('c4')">
-      <div class="card-head">
-        <div class="card-title">
-          <span class="title-en">How Balad connects global remittances to home</span>
-          <span class="title-ar" dir="rtl">How Balad connects global remittances to home</span>
-        </div>
-        <div class="card-head-right">
-          <span class="tier-badge tier-mid">Summary</span>
-          <div class="card-chevron">&#x203A;</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="card-grid">
-          
-          
-          
-          
-        </div>
-        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/08/09/how-balad-connects-global-remittances-to-home/" target="_blank" rel="noopener">&#x2197; Read on </a></div>
-      </div>
-    </div>
-    <div class="card card-mid" id="c5" onclick="toggle('c5')">
-      <div class="card-head">
-        <div class="card-title">
-          <span class="title-en">Egypt Central Bank Offers EGP 110 Billion Treasury Bills</span>
-          <span class="title-ar" dir="rtl">البنك المركزي المصري يطرح أذون خزانة بقيمة 110 مليار جنيه</span>
-        </div>
-        <div class="card-head-right">
-          <span class="tier-badge tier-mid">Summary</span>
-          <div class="card-chevron">&#x203A;</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="card-grid">
-          
-        <div class="field full en-content">
-          <div class="field-label">Executive Summary</div>
-          <div class="field-text">The Central Bank of Egypt will offer treasury bills worth EGP 110 billion on Sunday, with two tranches: EGP 40 billion for 91 days and EGP 70 billion for 273 days. The bills are part of the government&#x27;s efforts to finance the budget deficit, in coordination with the Ministry of Finance. The Ministry of Finance has authorized the Central Bank to manage its treasury bill and bond offerings in Egyptian pounds throughout the fiscal year. The proceeds will be used to fund the state&#x27;s general budget for the current fiscal year. The Central Bank&#x27;s Monetary Policy Committee decided to keep the basic interest rates unchanged in its meeting on July 9, 2026, with the deposit and lending rates set at 19.00% and 20.00%, and the main operation rate at 19.50%.</div>
-        </div>
-          
-          
-        <div class="field full ar-content" dir="rtl">
-          <div class="field-label">الملخص التنفيذي</div>
-          <div class="field-text">سيطرح البنك المركزي المصري، غدًا الأحد، أذون خزانة بقيمة 110 مليار جنيه، بطرحين: 40 مليار جنيه لمدة 91 يوما، و70 مليار جنيه لمدة 273 يوما. وتأتي هذه الطروحات في إطار جهود الحكومة لتمويل عجز الموازنة، بالتنسيق مع وزارة المالية. وقد فوضت وزارة المالية البنك المركزي في إدارة طروحاتها الخاصة من أذون وسندات الخزانة بالجنيه المصري، على مدار العام المالي، لتمويل بنود الموازنة العامة للدولة للعام المالي الحالي. وقررت لجنة السياسة النقدية للبنك المركزي المصري في اجتماعها يوم الخميس الموافق 9 يوليو 2026 الإبقاء على أسعار العائد الأساسية دون تغيير، مع تثبيت سعري عائد الإيداع والإقراض لليلة واحدة وسعر العملية الرئيسية للبنك المركزي عند 19.00% و20.00% و19.50%، على الترتيب.</div>
-        </div>
-          
-        </div>
-        <div class="card-foot"><a class="source-link" href="https://almalnews.com/2128528/البنك-المركزي-يطرح-أذون-خزانة-بقيمة-110/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
-      </div>
-    </div>
-    <div class="card card-mid" id="c6" onclick="toggle('c6')">
-      <div class="card-head">
-        <div class="card-title">
-          <span class="title-en">Egypt Central Bank Offers 5 Billion EGP Sukuk</span>
-          <span class="title-ar" dir="rtl">البنك المركزي المصري يطرح صكوك بقيمة 5 مليارات جنيه</span>
-        </div>
-        <div class="card-head-right">
-          <span class="tier-badge tier-mid">Summary</span>
-          <div class="card-chevron">&#x203A;</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="card-grid">
-          
-        <div class="field full en-content">
-          <div class="field-label">Executive Summary</div>
-          <div class="field-text">The Central Bank of Egypt will offer 5 billion EGP worth of 3-year fixed-yield sukuk on Monday, with semi-annual interest payments. The sukuk will mature on July 16, 2029. The Central Bank has been authorized by the Ministry of Finance to manage treasury bond and bill auctions in Egyptian pounds throughout the fiscal year. The proceeds will be used to finance the state&#x27;s general budget for the current fiscal year. The Monetary Policy Committee of the Central Bank of Egypt decided to keep the basic interest rates unchanged in its meeting on July 9, 2026. The deposit and lending rates were set at 19.00% and 20.00%, and the main operation rate at 19.50%. The credit and discount rates were also kept at 19.50%.</div>
-        </div>
-          
-          
-        <div class="field full ar-content" dir="rtl">
-          <div class="field-label">الملخص التنفيذي</div>
-          <div class="field-text">سيطرح البنك المركزي المصري صكوكًا بقيمة 5 مليارات جنيه مصري لمدة 3 سنوات، مع دفعات فائدة نصف سنوية، يوم الإثنين. وستنتهي صلاحية الصكوك في 16 يوليو 2029. وقد أذن البنك المركزي، بترخيص من وزارة المالية، في إدارة مزادات أذون وسندات الخزانة بالجنيه المصري على مدار العام المالي. وستستخدم العائدات في تمويل الموازنة العامة للدولة للعام المالي الحالي. قررت لجنة السياسة النقدية للبنك المركزي المصري في اجتماعها يوم الخميس الموافق 9 يوليو 2026 الإبقاء على أسعار الفائدة الأساسية دون تغيير. وتم تثبيت أسعار الفائدة للإيداع والقرض والعملية الرئيسية عند 19.00% و20.00% و19.50%، على الترتيب. كما تم الإبقاء على سعر الائتمان والخصم عند 19.50%.</div>
-        </div>
-          
-        </div>
-        <div class="card-foot"><a class="source-link" href="https://almalnews.com/2128540/البنك-المركزي-يطرح-صكوكًا-بقيمة-5-مليارات/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
-      </div>
-    </div>
     <div class="card card-mid" id="c7" onclick="toggle('c7')">
-      <div class="card-head">
-        <div class="card-title">
-          <span class="title-en">Egypt Central Bank Offers EGP 16.5 Billion Bonds</span>
-          <span class="title-ar" dir="rtl">البنك المركزي المصري يطرح سندات خزانة بقيمة 16.5 مليار جنيه</span>
-        </div>
-        <div class="card-head-right">
-          <span class="tier-badge tier-mid">Summary</span>
-          <div class="card-chevron">&#x203A;</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="card-grid">
-          
-        <div class="field full en-content">
-          <div class="field-label">Executive Summary</div>
-          <div class="field-text">The Central Bank of Egypt will offer EGP 16.5 billion in fixed-yield treasury bonds on Monday. The bonds will have terms of 2 and 3 years, with semi-annual interest payments. The Ministry of Finance has authorized the Central Bank to manage its treasury bond and bill auctions in Egyptian pounds throughout the fiscal year. The auctions will fund the state&#x27;s general budget for the current fiscal year. The Central Bank&#x27;s Monetary Policy Committee decided to keep the primary interest rates unchanged in its meeting on July 9, 2026, with the deposit and lending rates at 19.00% and 20.00%, and the main operation rate at 19.50%. The credit and discount rates were also kept at 19.50%. The bonds are part of the government&#x27;s financing plan, with the Central Bank acting as the issuer and manager of the bonds.</div>
-        </div>
-          
-          
-        <div class="field full ar-content" dir="rtl">
-          <div class="field-label">الملخص التنفيذي</div>
-          <div class="field-text">سيطرح البنك المركزي المصري، الاثنين القادم، سندات خزانة ثابتة العائد بقيمة 16.5 مليار جنيه. وتأتي الطروحات على النحو التالي: 1.5 و15 مليار جنيه سندات، لأجل 2 و3 أعوام على التوالي، وبدورية عائد نصف سنوية. وتفوض وزارة المالية البنك المركزي، على مدار العام المالي، في إدارة طروحاتها الخاصة من أذون وسندات الخزانة بالجنيه المصري، على أن تمول وتنفق الحصيلة على بنود الموازنة العامة للدولة للعام المالي الحالي. قررت لجنة السياسة النقدية للبنك المركزي المصري في اجتماعها يوم الخميس الموافق 9 يوليو 2026 الإبقاء على أسعار العائد الأساسية دون تغيير، حيث تم تثبيت سعري عائد الإيداع والإقراض لليلة واحدة وسعر العملية الرئيسية للبنك المركزي عند 19.00% و20.00% و19.50%، على الترتيب. كما تم الإبقاء على سعر الائتمان والخصم عند 19.50%.</div>
-        </div>
-          
-        </div>
-        <div class="card-foot"><a class="source-link" href="https://almalnews.com/2128536/البنك-المركزي-يطرح-سندات-خزانة-ثابتة-العائد/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
-      </div>
-    </div>
-    <div class="card card-mid" id="c8" onclick="toggle('c8')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Egyptian Construction Committee Studies Crisis Impact</span>
@@ -767,7 +751,7 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2128556/«مقاولي-التشييد»-ترصد-تداعيات-أزمات-2022–2026-على/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c9" onclick="toggle('c9')">
+    <div class="card card-mid" id="c8" onclick="toggle('c8')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Egyptian Market Ranks Among Top 3 M&amp;A Markets</span>
@@ -796,7 +780,7 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2128594/رغم-العاصفة-الإقليمية-مصر-تتمسك-بموقعها-بين/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-mid" id="c10" onclick="toggle('c10')">
+    <div class="card card-mid" id="c9" onclick="toggle('c9')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">S&amp;P Dow Jones Indices Considers Demoting Egypt to Frontier Market</span>
@@ -823,6 +807,35 @@
           
         </div>
         <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/08/09/local-institutions-prop-up-egx-in-1h-as-foreign-selloff-tests-market-depth/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card card-mid" id="c10" onclick="toggle('c10')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">FRA Sets 30-Day Bond Subscription Deadline</span>
+          <span class="title-ar" dir="rtl">السلطة التنظيمية المالية تحدد موعدا نهائيا للاكتتاب في السندات</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">The Financial Regulatory Authority (FRA) has introduced a 30-working-day subscription deadline for private bond issuers, effective immediately. This decision, outlined in Decision 136/2026, modifies the previous Decision 145/2021 and requires issuers to obtain direct approval from the FRA for any extension. Additionally, advisors on securitized offerings must now certify the quality of the underlying collateral before a transaction can close. The FRA has also narrowed the retail carve-out, restricting it to bonds listed on the Egyptian Exchange (EGX). These reforms are part of a series of structural changes in Egypt&#x27;s capital markets, including the licensing of the EGX to run a futures exchange and the introduction of FRA-licensing requirements for index-tracking fund managers.</div>
+        </div>
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">أدخلت السلطة التنظيمية المالية (FRA) موعدا نهائيا للاكتتاب في السندات الخاصة يبلغ 30 يوما عمل، ساري المفعول على الفور. تنص هذه القرار، المحدد في القرار 136/2026، على تعديل القرار السابق 145/2021 ويطالب المصدرين بالحصول على موافقة مباشرة من FRA لأي تمديد. بالإضافة إلى ذلك، يجب على المستشارين في عروض التوثيق الآن أن يثبتوا جودة الضمانات الأساسية قبل إغلاق أي معاملة. كما قامت FRA بتقليص حصة التجزئة، وقيدها بالسندات المدرجة في بورصة مصر (EGX). هذه الإصلاحات هي جزء من سلسلة من التغييرات الهيكلية في أسواق رأس المال في مصر، بما في ذلك ترخيص EGX لتشغيل بورصة مستقبلية وادخال متطلبات ترخيص FRA للمديرين المتعاقبين مع مؤشرات التتبع.</div>
+        </div>
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/08/09/fra-loosens-fx-financing-rules-for-nbfis-tightens-private-bond-offerings/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
       </div>
     </div>
     <div class="card card-mid" id="c11" onclick="toggle('c11')">
@@ -855,22 +868,6 @@
       </div>
     </div>
   </section>
-      
-    </div>
-  </div>
-
-  <!-- ARCHIVE -->
-  <div class="tab-panel" id="panel-archive">
-    <div class="archive-note">
-      <span class="archive-note-icon">📁</span>
-      Previous days' intelligence briefings. Each day's articles are appended here automatically when the next day's run completes.
-    </div>
-    <div class="search-wrap">
-      <input type="text" id="q-archive" placeholder="Search archived headlines and summaries…" oninput="filter('archive')"/>
-      <span id="filter-count-archive"></span>
-    </div>
-    <div id="feed-archive">
-      
   <section class="day-group">
     <div class="day-header">
       <span class="day-label">2026-08-06</span>
@@ -11850,7 +11847,7 @@
 
 <script>
 // ── WEATHER PAGINATOR ──────────────────────────────────────────────────────────
-const WX_DATA   = [{t:"12AM",e:"🌙",c:28,d:"Mainly clear",now:false},{t:"1AM",e:"☁️",c:27,d:"Partly cloudy",now:false},{t:"2AM",e:"☁️",c:26,d:"Partly cloudy",now:false},{t:"3AM",e:"☁️",c:26,d:"Partly cloudy",now:false},{t:"4AM",e:"☁️",c:26,d:"Partly cloudy",now:false},{t:"5AM",e:"☁️",c:25,d:"Partly cloudy",now:false},{t:"6AM",e:"⛅",c:25,d:"Partly cloudy",now:false},{t:"7AM",e:"⛅",c:25,d:"Partly cloudy",now:false},{t:"8AM",e:"⛅",c:26,d:"Partly cloudy",now:false},{t:"9AM",e:"⛅",c:27,d:"Partly cloudy",now:false},{t:"10AM",e:"⛅",c:28,d:"Partly cloudy",now:false},{t:"11AM",e:"🌤️",c:30,d:"Mainly clear",now:false},{t:"12PM",e:"🌤️",c:32,d:"Mainly clear",now:false},{t:"1PM",e:"☀️",c:34,d:"Clear",now:false},{t:"2PM",e:"☀️",c:36,d:"Clear",now:false},{t:"3PM",e:"🌤️",c:36,d:"Mainly clear",now:false},{t:"4PM",e:"⛅",c:37,d:"Partly cloudy",now:false},{t:"5PM",e:"⛅",c:37,d:"Partly cloudy",now:false},{t:"6PM",e:"⛅",c:36,d:"Partly cloudy",now:false},{t:"7PM",e:"☁️",c:36,d:"Partly cloudy",now:false},{t:"8PM",e:"☁️",c:34,d:"Partly cloudy",now:false},{t:"9PM",e:"☁️",c:33,d:"Partly cloudy",now:false},{t:"10PM",e:"🌙",c:31,d:"Mainly clear",now:false},{t:"11PM",e:"🌙",c:30,d:"Clear",now:true}];
+const WX_DATA   = [{t:"12AM",e:"🌙",c:28,d:"Clear",now:true},{t:"1AM",e:"🌙",c:28,d:"Clear",now:false},{t:"2AM",e:"🌙",c:27,d:"Clear",now:false},{t:"3AM",e:"🌙",c:26,d:"Clear",now:false},{t:"4AM",e:"🌙",c:25,d:"Clear",now:false},{t:"5AM",e:"🌙",c:25,d:"Clear",now:false},{t:"6AM",e:"☀️",c:25,d:"Clear",now:false},{t:"7AM",e:"🌤️",c:24,d:"Mainly clear",now:false},{t:"8AM",e:"🌤️",c:25,d:"Mainly clear",now:false},{t:"9AM",e:"🌤️",c:27,d:"Mainly clear",now:false},{t:"10AM",e:"☀️",c:30,d:"Clear",now:false},{t:"11AM",e:"☀️",c:32,d:"Clear",now:false},{t:"12PM",e:"☀️",c:34,d:"Clear",now:false},{t:"1PM",e:"☀️",c:36,d:"Clear",now:false},{t:"2PM",e:"🌤️",c:37,d:"Mainly clear",now:false},{t:"3PM",e:"🌤️",c:38,d:"Mainly clear",now:false},{t:"4PM",e:"🌤️",c:38,d:"Mainly clear",now:false},{t:"5PM",e:"☀️",c:38,d:"Clear",now:false},{t:"6PM",e:"🌤️",c:37,d:"Mainly clear",now:false},{t:"7PM",e:"🌙",c:36,d:"Clear",now:false},{t:"8PM",e:"🌙",c:35,d:"Mainly clear",now:false},{t:"9PM",e:"🌙",c:33,d:"Mainly clear",now:false},{t:"10PM",e:"🌙",c:31,d:"Mainly clear",now:false},{t:"11PM",e:"🌙",c:29,d:"Mainly clear",now:false}];
 let   wxCenter_idx = 0;  // index of the slot shown in the CENTER position
 
 function wxPage(dir) {
