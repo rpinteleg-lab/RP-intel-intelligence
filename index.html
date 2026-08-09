@@ -310,15 +310,32 @@
     <div class="hero-eyebrow">Daily Market Briefing</div>
     <h1 class="hero-title">Redcon Properties<br><strong>Intelligence Feed</strong></h1>
     <p class="hero-sub">Daily News analyzed for Egypt's construction, infrastructure, and real estate market.</p>
-    <div class="hero-meta">Last updated: 6 August 2026, 18:05</div>
+    <div class="hero-meta">Last updated: 9 August 2026, 10:00</div>
   </div>
   
+<div class="wx-widget" id="wxWidget">
+  <div class="wx-current">
+    <div class="wx-location">Cairo <span class="wx-flag">🇪🇬</span></div>
+    <div class="wx-big-row">
+      <span class="wx-big-icon">⛅</span>
+      <span class="wx-big-temp">28°</span>
+    </div>
+    <div class="wx-condition">Partly cloudy</div>
+    <div class="wx-range">H 38° &nbsp;·&nbsp; L 25°</div>
+  </div>
+  <div class="wx-hourly">
+    <button class="wx-nav wx-prev" onclick="wxPage(-1)" aria-label="Previous hours">&#x2039;</button>
+    <div class="wx-slots" id="wxSlots"></div>
+    <button class="wx-nav wx-next" onclick="wxPage(1)"  aria-label="Next hours">&#x203A;</button>
+  </div>
+  <div class="wx-dots" id="wxDots"></div>
+</div>
 </div>
 
 
 <!-- INDICES -->
 <div class="indices-bar">
-  <span class="indices-as-of">As of 18:05</span>
+  <span class="indices-as-of">As of 10:00</span>
   
   <div class="indices-group">
     <span class="indices-eyebrow">Market Indices &amp; FX</span>
@@ -391,7 +408,7 @@
       Copper (t)
       <button class="idx-info-btn" data-tip="Copper price per metric ton in USD, sourced from MetalCharts." onclick="showTip(this)" title="About Copper (t)">i</button>
     </span>
-    <span class="idx-value">$14,484.86</span>
+    <span class="idx-value">$14,491.63</span>
   </div>
       
   <div class="idx-item">
@@ -439,11 +456,11 @@
 <div class="tabs-bar">
   <button class="tab-btn active" id="tab-today" onclick="switchTab('today')">
     Today's Briefing
-    <span class="tab-badge">23</span>
+    <span class="tab-badge">0</span>
   </button>
   <button class="tab-btn" id="tab-archive" onclick="switchTab('archive')">
     Archive
-    <span class="tab-badge">315</span>
+    <span class="tab-badge">338</span>
   </button>
 </div>
 
@@ -458,11 +475,32 @@
     </div>
     <div id="feed-today">
       
+      
+  <div class="empty">
+    <div class="empty-icon">&#x1F4F0;</div>
+    <h2>No articles today yet</h2>
+    <p>Run the news engine script to populate today's articles.</p>
+  </div>
+    </div>
+  </div>
+
+  <!-- ARCHIVE -->
+  <div class="tab-panel" id="panel-archive">
+    <div class="archive-note">
+      <span class="archive-note-icon">📁</span>
+      Previous days' intelligence briefings. Each day's articles are appended here automatically when the next day's run completes.
+    </div>
+    <div class="search-wrap">
+      <input type="text" id="q-archive" placeholder="Search archived headlines and summaries…" oninput="filter('archive')"/>
+      <span id="filter-count-archive"></span>
+    </div>
+    <div id="feed-archive">
+      
   <section class="day-group">
     <div class="day-header">
-      <span class="day-label">Top Stories Today</span>
+      <span class="day-label">2026-08-06</span>
       <div class="day-rule"></div>
-      <span class="day-count">8 articles</span>
+      <span class="day-count">23 articles</span>
     </div>
     
     <div class="card card-mid" id="c0" onclick="toggle('c0')">
@@ -497,6 +535,64 @@
     <div class="card card-mid" id="c1" onclick="toggle('c1')">
       <div class="card-head">
         <div class="card-title">
+          <span class="title-en">Egypt Launches $100M Memphis Fund</span>
+          <span class="title-ar" dir="rtl">مصر تطلق صندوق ميمفيس بقيمة 100 مليون دولار</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">The Egyptian government is set to launch the Memphis Fund, a USD-denominated investment fund targeting Egyptians abroad, with a goal of raising up to $100 million within a year. The fund will be managed by NI Capital Asset Management and will invest exclusively in Egyptian sovereign debt instruments. The launch is part of a broader package of financial services for the diaspora, announced during the seventh Egyptians Abroad Conference. The government is also studying a new car initiative for Egyptians abroad, offering locally manufactured vehicles at competitive prices, as part of its auto-localization strategy. Remittances from Egyptians abroad have reached a record $43.1 billion in the first 11 months of FY 2025/26, making them a crucial balance-of-payments anchor. The Memphis Fund is separate from the planned $1 billion Egyptians Abroad Investment Company, which aims to establish physical projects in agriculture, trade, and manufacturing.</div>
+        </div>
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">تعتزم الحكومة المصرية إطلاق صندوق ميمفيس، وهو صندوق استثماري بالدولار الأمريكي يستهدف المصريين في الخارج، مع هدف جمع ما يصل إلى 100 مليون دولار في غضون عام. سيتم إدارة الصندوق من قبل شركة إني كابيتال لإدارة الأصول وسيستثمر حصريًا في أدوات الدين السيادي المصرية. الإطلاق هو جزء من حزمة خدمات مالية أوسع نطاقًا للمغتربين، التي تم الإعلان عنها خلال المؤتمر السابع للمصريين في الخارج. تقوم الحكومة أيضًا بدراسة مبادرة جديدة للسيارات للمصريين في الخارج، تقدم سيارات مصنعة محليًا بأسعار تنافسية، كجزء من استراتيجية تحويل صناعة السيارات المحلية. بلغت الحوالات المالية من المصريين في الخارج رقمًا قياسيًا قدره 43.1 مليار دولار في أول 11 شهرًا من السنة المالية 2025/2026، مما يجعلها رافعة توازن مدفوعات حيوية. صندوق ميمفيس منفصل عن شركة الاستثمار المصرية للمغتربين، التي تهدف إلى إنشاء مشاريع مادية في الزراعة والتجارة والصناعة.</div>
+        </div>
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/08/09/govt-prepares-investment-fund-targeting-usd-100-mn-for-egyptians-abroad/" target="_blank" rel="noopener">&#x2197; Read on </a></div>
+      </div>
+    </div>
+    <div class="card card-mid" id="c2" onclick="toggle('c2')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">S&amp;P Considers Demoting Egypt to Frontier Market</span>
+          <span class="title-ar" dir="rtl">إس أند بي تدرس خفض تصنيف مصر إلى سوق حافة</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">S&amp;P Dow Jones Indices&#x27; consultation on demoting Egypt from Emerging to Frontier market status has closed, with a decision expected within months. The Egyptian Exchange (EGX) argued against the demotion, citing a macro turnaround, including easing repatriation delays, high net foreign assets, and record reserves. EGX Chairman Omar Radwan pointed to a record EGP 15.6 billion day of trading volume as evidence the market is headed for an upgrade. The demotion consideration comes amid concerns that the EGX is too small and foreign-hostile to justify Emerging Market weighting.</div>
+        </div>
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">أغلقت إس أند بي داوي جونز للفهارس استشارتها حول خفض تصنيف مصر من سوق ناشئ إلى سوق حافة، ومتوقع أن يتم الإعلان عن القرار في غضون أشهر. وطالب بورصة مصر (EGX) بعدم خفض التصنيف، مستدلاً بالتحول الكبير في الاقتصاد، بما في ذلك تسهيل إعادة تصدير الأموال، وارتفاع الاحتياطيات الأجنبية الصافية، والاحتياطيات القياسية. وأشار رئيس بورصة مصر عمر رضوان إلى يوم التداول القياسي بقيمة 15.6 مليار جنيه مصري كدليل على أن السوق متجه نحو الترقية، لا الخفض. جاءت هذه الخطوة في ظل المخاوف من أن بورصة مصر صغيرة جدًا وعدائية للأجانب لتحقيق وزن السوق الناشئة.</div>
+        </div>
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/08/09/local-institutions-prop-up-egx-in-1h-as-foreign-selloff-tests-market-depth/" target="_blank" rel="noopener">&#x2197; Read on </a></div>
+      </div>
+    </div>
+    <div class="card card-mid" id="c3" onclick="toggle('c3')">
+      <div class="card-head">
+        <div class="card-title">
           <span class="title-en">FRA Sets 30-Day Bond Subscription Deadline</span>
           <span class="title-ar" dir="rtl">السلطة الفنية تنشئ موعدًا نهائيًا للاكتتاب لمدة 30 يومًا عمل</span>
         </div>
@@ -523,7 +619,65 @@
         <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/08/09/fra-loosens-fx-financing-rules-for-nbfis-tightens-private-bond-offerings/" target="_blank" rel="noopener">&#x2197; Read on </a></div>
       </div>
     </div>
-    <div class="card card-high" id="c2" onclick="toggle('c2')">
+    <div class="card card-mid" id="c4" onclick="toggle('c4')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egypt Unemployment Rate Drops to 5.8%</span>
+          <span class="title-ar" dir="rtl">معدل البطالة في مصر ينخفض إلى 5.8%</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Egypt&#x27;s unemployment rate decreased to 5.8% in 2Q 2026, down from 6.0% in the previous quarter. The number of employed people rose to 33.56 million from 33.28 million, according to Capmas data. Male unemployment eased to 3.4% from 3.6%, while female unemployment edged up to 14.4% from 14.3%. Meanwhile, the North Coast is adapting to a changing market, with developers recalibrating as buyer behavior shifts and luxury retail expanding. The wellness and sports scene is also becoming a summer destination.</div>
+        </div>
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">انخفض معدل البطالة في مصر إلى 5.8% في الربع الثاني من 2026، xuống من 6.0% في الربع السابق. ارتفع عدد العاملين إلى 33.56 مليون من 33.28 مليون، وفقًا لبيانات الجهاز المركزي للتعبئة العامة والإحصاء. انخفض معدل البطالة بين الذكور إلى 3.4% من 3.6%، في حين ارتفع معدل البطالة بين الإناث إلى 14.4% من 14.3%. وفي غضون ذلك، تتكيف الساحل الشمالي مع تغييرات في السوق، حيث يعيد المطورون تحديد أهدافهم مع تغير سلوك المشترين وتوسع التجزئة الفاخرة. كما يصبح قطاع الرفاهية والرياضة وجهة صيفية</div>
+        </div>
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/08/09/cabinet-locks-in-fy-2026-27-industrial-land-rules-while-keeping-prices-under-wraps/" target="_blank" rel="noopener">&#x2197; Read on </a></div>
+      </div>
+    </div>
+    <div class="card card-mid" id="c5" onclick="toggle('c5')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Imkan Misr Signs New Contracts Worth EGP 3 Billion</span>
+          <span class="title-ar" dir="rtl">عقدت شركة إمكان مصر على مشاريع بقيمة 3 مليارات جنيه</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Imkan Misr, a real estate company, has signed new contracts worth EGP 3 billion to execute construction works, including residential and administrative buildings, and infrastructure development within the &#x27;Al-Borouj&#x27; project in New Heliopolis City. The company&#x27;s CEO, Ahmed Arif, stated that they prioritize accelerating the execution pace, emphasizing the importance of adhering to timelines. Arif noted that any delays in execution directly affect the final project cost. The &#x27;Al-Borouj&#x27; project has delivered 2,618 residential units so far, with 1,846 families currently residing in the project. The company aims to deliver 600 units this year and an additional 600 in 2027, totaling around 5,000 units in the next three years. The project spans 5 million square meters, comprising 16,000 residential units, with an investment plan of EGP 100 billion. Current project works are valued at EGP 12 billion, including a power station, landscaping, and a sports club. Since 2016, Imkan Misr has invested over $400 million in the project, which will be reinvested in construction, infrastructure, and services, ensuring the project&#x27;s completion by 2031.</div>
+        </div>
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">عقدت شركة إمكان مصر العقارية على مشاريع جديدة بقيمة 3 مليارات جنيه لتنفيذ أعمال مقاولات تشمل إنشاء مبانٍ سكنية وإدارية وتنفيذ أعمال البنية الأساسية داخل مشروع البروج بمدينة هليوبوليس الجديدة. وأكد أحمد عارف، الرئيس التنفيذي للشركة، على أهمية تسريع وتيرة التنفيذ، مشيرًا إلى أن التزام شركات المقاولات بالجداول الزمنية يمثل عنصرًا رئيسيًا في نجاح خطة التسليمات. وأشار عارف إلى أن أي تأخير في تنفيذ الأعمال ينعكس بصورة مباشرة على التكلفة النهائية للمشروعات. وقد سلم مشروع البروج حتى الآن 2618 وحدة سكنية، مع إقامة فعلية لنحو 1846 أسرة داخل المشروع. وتستهدف الشركة تسليم 600 وحدة خلال العام الجاري، و600 أخرى إضافية خلال 2027، ليصل الإجمالي إلى نحو 5 آلاف وحدة خلال السنوات الثلاث المقبلة. يمتد مشروع البروج على مساحة 5 ملايين متر مربع، ويضم نحو 16 ألف وحدة سكنية ضمن خطة استثمارية تبلغ 100 مليار جنيه. ويصل حجم الأعمال الجارية بالمشروع إلى 12 مليار جنيه، تشمل تنفيذ محطة كهرباء بالتعاون مع شركة مدكور، وأعمال اللاندسكيب، واستكمال النادي الرياضي، وإنشاء مسجد. وأكد عارف أن الشركة ضخت أكثر من 400 مليون دولار منذ عام 2016 في تطوير البروج، موضحًا أن هذه التدفقات الدولارية أُعيد استثمارها في أعمال الإنشاءات والبنية الأساسية والخدمات.</div>
+        </div>
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://almalnews.com/2128085/«إمكان-مصر»-تبرم-عقود-مقاولات-بـ3-مليارات/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
+      </div>
+    </div>
+    <div class="card card-high" id="c6" onclick="toggle('c6')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Tatweer Negotiates with New Urban Communities</span>
@@ -560,7 +714,65 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2128087/«الأولى-للتمويل-العقاري»-تفاوض-المجتمعات-العمرانية-لشراء/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-high" id="c3" onclick="toggle('c3')">
+    <div class="card card-mid" id="c7" onclick="toggle('c7')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egypt Central Bank Prepares Sustainable Finance Taxonomy</span>
+          <span class="title-ar" dir="rtl">البنك المركزي المصري يُعد لتصنيف التمويل المستدام</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">The Central Bank of Egypt has begun preparing to issue a &#x27;Sustainable Finance Taxonomy&#x27; to provide accurate and reliable data on sustainable economic activities. A technical working group has been formed, comprising the Ministry of Foreign Affairs, Ministry of Finance, Ministry of Local Development, Ministry of Environment, Ministry of Investment and International Cooperation, and the Financial Regulatory Authority. The group aims to coordinate efforts and participate in the preparation of the taxonomy. The first meeting of the working group was held at the Central Bank of Egypt, where the bank&#x27;s approach to the taxonomy was explained, and international experiences and standards were presented. The meeting agreed to start immediate implementation steps, emphasizing the importance of full coordination among working group members.</div>
+        </div>
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">بدأ البنك المركزي المصري في إعداد تصنيف التمويل المستدام لتوفير بيانات دقيقة ومعتمدة حول الأنشطة الاقتصادية المستدامة. تم تشكيل مجموعة عمل فنية تضم وزارات الخارجية والتعاون الدولي والمصريين بالخارج والمالية والتنمية المحلية والبيئة والاستثمار والتجارة الخارجية والهيئة العامة للرقابة المالية. اجتمعت المجموعة في مقر البنك المركزي المصري لشرح توجه البنك في التصنيف المزمع إصداره وعرض الخبرات الدولية والمعايير المتبعة. وافق الاجتماع على البدء في الخطوات التنفيذية مع التأكيد على أهمية التنسيق بين أعضاء المجموعة.</div>
+        </div>
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://almalnews.com/2128130/لتعزيز-الاستثمار-الأخضر-المركزي-المصري-يبدأ-خطوات/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
+      </div>
+    </div>
+    <div class="card card-mid" id="c8" onclick="toggle('c8')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egyptian Stock Exchange Announces New Shareholder</span>
+          <span class="title-ar" dir="rtl">البورصة المصرية تعلن عن مساهم جديد</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">The Egyptian Stock Exchange announced that a new shareholder, Rashid Abdou Abd El-Halim Hassan, has acquired an 8.656% stake in Egyptian Group Real Estate Company. Hassan purchased 34.63 million shares at an average price of 1.59 EGP per share, totaling approximately 55.05 million EGP. Prior to the transaction, Hassan did not own any shares in the company. The deal was executed through Taiyon Brokerage Company on August 4, 2026. According to the disclosure statement, there are no related parties to the buyer, either under the securities registration rules or the Capital Market Law.</div>
+        </div>
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">أعلنت البورصة المصرية عن شراء مساهم جديد، رشيد عبده عبد الحليم حسن، حصة تبلغ 8.656% من رأسمال شركة المجموعة المصرية العقارية. اشترى حسن 34.63 مليون سهم بمعدل سعر شراء 1.59 جنيه للسهم، بقيمة إجمالية تبلغ نحو 55.05 مليون جنيه. ولم يكن حسن يمتلك أي أسهم في الشركة قبل تنفيذ الصفقة. تم تنفيذ الصفقة من خلال شركة تايكون للوساطة في الأوراق المالية، بتاريخ 4 أغسطس 2026. وأظهرت بيانات الإفصاح عدم وجود مجموعات مرتبطة بالمشتري، سواء وفقًا لقواعد قيد الأوراق المالية أو لقانون سوق رأس المال.</div>
+        </div>
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://almalnews.com/2128134/مساهم-جديد-يستحوذ-على-8-66-من/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
+      </div>
+    </div>
+    <div class="card card-high" id="c9" onclick="toggle('c9')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Egypt&#x27;s Prime Minister Reviews Real Estate Developers Union Law</span>
@@ -597,7 +809,65 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2128158/رئيس-الوزراء-يوجه-بدراسة-مقترح-مشروع-قانون/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-high" id="c4" onclick="toggle('c4')">
+    <div class="card card-mid" id="c10" onclick="toggle('c10')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egypt&#x27;s Housing Minister Inspects Projects</span>
+          <span class="title-ar" dir="rtl">وزيرة الإسكان تفتش المشروعات السكنية</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Egypt&#x27;s Minister of Housing, Utilities, and Urban Communities, Randa Mansour, inspected the implementation of several housing projects in New Obour, Sadat, New Suez, New Mansoura, and October Gardens cities. The projects include the presidential initiative &#x27;Housing for All Egyptians&#x27;, &#x27;Diyarna&#x27;, and &#x27;Green Housing&#x27;. Mansour emphasized the importance of continuous field follow-up to ensure the implementation of projects according to the specified timelines and to address any obstacles. She also stressed the need to adhere to the highest quality standards and technical specifications. The minister inspected the sixth phase of the Green Housing project in New Obour, which includes 143 buildings and 3,432 housing units. She also inspected the &#x27;Diyarna&#x27; project, which includes 99 buildings and 2,574 housing units. Additionally, Mansour reviewed the progress of projects in other cities, including New Suez, New Mansoura, and October Gardens, and emphasized the need to accelerate the implementation of the projects and adhere to the technical specifications.</div>
+        </div>
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">تفقدت المهندسة راندة المنشاوي، وزيرة الإسكان والمرافق والمجتمعات العمرانية، تنفيذ عدد من المشروعات السكنية بمدن العبور الجديدة والسادات والسويس الجديدة والمنصورة الجديدة وحدائق أكتوبر. وشملت المشروعات مبادرة الرئيس &quot;سكن لكل المصريين&quot; و&quot;ديارنا&quot; والإسكان الأخضر. وأكدت المنشاوي على أهمية المتابعة الميدانية المستمرة لضمان تنفيذ المشروعات وفق البرامج الزمنية المحددة ومواجهة أي معوقات. كما أكدت على ضرورة الالتزام بأعلى معايير الجودة والمواصفات الفنية. وقامت المنشاوي بتفقد المرحلة السادسة من مشروع الإسكان الأخضر بالعبور الجديدة، الذي يضم 143 عمارة و3432 وحدة سكنية. كما تفقدت مشروع &quot;ديارنا&quot; الذي يضم 99 عمارة و2574 وحدة سكنية. بالإضافة إلى ذلك، قامت المنشاوي بمراجعة تقدم المشروعات في المدن الأخرى، بما في ذلك السويس الجديدة والمنصورة الجديدة وحدائق أكتوبر، وشددت على ضرورة تسريع تنفيذ المشروعات والالتزام بالمواصفات الفنية.</div>
+        </div>
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://almalnews.com/2128163/وزيرة-الإسكان-تتابع-تنفيذ-مشروعات-سكنية-بـ5/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
+      </div>
+    </div>
+    <div class="card card-mid" id="c11" onclick="toggle('c11')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egyptian Real Estate Stocks Performance</span>
+          <span class="title-ar" dir="rtl">أداء أسهم قطاع العقارات المصري</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">The Egyptian real estate sector&#x27;s stock performance varied on Wednesday, with some stocks gaining and others declining. Amer Group&#x27;s stock rose 9.34% to 6.09 EGP, followed by Al Naem Real Estate&#x27;s 6.71% increase to 17.50 EGP. Other stocks that gained include Emaar Misr, Sixth of October Development and Investment (SODIC), and Ismailia New Urban Communities. In contrast, United Housing and Development&#x27;s stock declined 2.16% to 18.12 EGP, followed by Egyptian Real Estate Group&#x27;s 1.84% decrease to 1.60 EGP. Some stocks remained stable, including Al Shams Housing and Development, which closed at 14.15 EGP.</div>
+        </div>
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">تباين أداء أسهم قطاع العقارات المصري في ختام تعاملات جلسة الأربعاء، حيث سجلت بعض الأسهم مكاسب قوية، فيما تراجعت أسهم أخرى. ارتفع سهم مجموعة عامر بنسبة 9.34% إلى 6.09 جنيه، تلاه سهم مجموعة النعيم العقارية بنسبة 6.71% إلى 17.50 جنيه. كما ارتفع سهم إعمار مصر، وسهم السادس من أكتوبر للتنمية والاستثمار، وسهم الإسماعيلية الجديدة للتطوير والتنمية العمرانية. في المقابل، تراجع سهم المتحدة للإسكان والتعمير بنسبة 2.16% إلى 18.12 جنيه، تلاه سهم المجموعة المصرية العقارية بنسبة 1.84% إلى 1.60 جنيه. استقر سهم الشمس للإسكان والتعمير عند 14.15 جنيه دون تغيير.</div>
+        </div>
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://almalnews.com/2128167/أسهم-العقارات-تتباين-«عامر-جروب»-و«إعمار-مصر»/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
+      </div>
+    </div>
+    <div class="card card-high" id="c12" onclick="toggle('c12')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Misr Italia Invests EGP 16 Billion in Solaris Project</span>
@@ -634,7 +904,94 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2128174/«مصر-إيطاليا»-16-مليار-جنيه-استثمارات-«الداون/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-high" id="c5" onclick="toggle('c5')">
+    <div class="card card-mid" id="c13" onclick="toggle('c13')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egypt, Diar Qatari Company Partner on North Coast Development</span>
+          <span class="title-ar" dir="rtl">مصر وشركة الديار القطرية تتعاونان في مشروع تنمية الساحل الشمالي</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Egypt&#x27;s Prime Minister, Dr. Mostafa Madbouly, held a meeting to follow up on the development project of Al-Alamein area on the North Coast. The meeting was attended by the Minister of Housing, Randa Al-Manshawi, and the CEO of Diar Qatari Company, Sheikh Hamad bin Talal Al Thani. The project aims to establish a new development point on the North Coast, with various projects, including educational, health, residential, hotel, and commercial components, as well as entertainment and services. The CEO of Diar Qatari Company praised the developmental boom in the North Coast and confirmed that the company aims to execute the project at the highest level through partnerships with major global companies.</div>
+        </div>
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">عقد رئيس الوزراء المصري، الدكتور مصطفى مدبولي، اجتماعًا لمتابعة مستجدات مشروع تنمية وتطوير منطقة علم الروم بالساحل الشمالي. وحضر الاجتماع وزيرة الإسكان، راندة المنشاوي، والشيخ حمد بن طلال آل ثاني، الرئيس التنفيذي لشركة الديار القطرية. يهدف المشروع إلى إنشاء نقطة جذب تنموية جديدة على ضفاف الساحل الشمالي، تشهد تنفيذ مشروعات متنوعة، في ضوء خطط الدولة للاستفادة المثلى من الأراضي الشاطئية. وأشاد الشيخ حمد بن طلال آل ثاني بالنهضة التنموية التي يشهدها الساحل الشمالي في مصر، مؤكدًا أن الشركة تستهدف تنفيذ المشروع على أعلى مستوى، من خلال شراكات مع كبرى الشركات العالمية.</div>
+        </div>
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://almalnews.com/2128213/باجتماع-مع-مدبولي-رئيس-«الديار»-القطرية-شراكات/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
+      </div>
+    </div>
+    <div class="card card-mid" id="c14" onclick="toggle('c14')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egypt Signs Cooperation Protocol</span>
+          <span class="title-ar" dir="rtl">مصر توقع بروتوكول تعاون</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Egypt&#x27;s Prime Minister, Dr. Mostafa Madbouly, witnessed the signing of a cooperation protocol between the Ministry of Housing, Utilities, and Urban Communities, represented by the New Urban Communities Authority, and the Egypt Future Development Sustainable Development Agency. The protocol aims to enhance joint cooperation in exploiting and developing owned lands, implementing developmental and investment projects, and achieving optimal use of assets. The signing ceremony was attended by Dr. Randa Al-Manshawi, Minister of Housing, Utilities, and Urban Communities, and Dr. Bahaa El-Ghanam, Executive Director of the Egypt Future Development Sustainable Development Agency. The protocol includes preparing technical and economic studies, coordinating marketing and promotion efforts, and forming joint technical and financial committees to follow up on project implementation.</div>
+        </div>
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">شهد الدكتور مصطفى مدبولي، رئيس الوزراء، توقيع بروتوكول تعاون بين وزارة الإسكان والمرافق والمجتمعات العمرانية ممثلة في هيئة المجتمعات العمرانية الجديدة، وجهاز مستقبل مصر للتنمية المستدامة. يهدف البروتوكول إلى تعزيز التعاون المشترك في استغلال وتطوير الأراضي المملوكة، وتنفيذ مشروعات تنموية واستثمارية تحقق الاستخدام الأمثل للأصول. حضر مراسم التوقيع المهندسة راندة المنشاوي، وزيرة الإسكان والمرافق والمجتمعات العمرانية، والدكتور بهاء الغنام، المدير التنفيذي لجهاز مستقبل مصر للتنمية المستدامة. يتضمن البروتوكول إعداد الدراسات الفنية والاقتصادية، والتنسيق في أعمال التسويق والترويج، وتشكيل لجان فنية ومالية مشتركة لمتابعة تنفيذ المشروعات.</div>
+        </div>
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://almalnews.com/2128215/رئيس-الوزراء-يشهد-توقيع-بروتوكول-بين-هيئة/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
+      </div>
+    </div>
+    <div class="card card-mid" id="c15" onclick="toggle('c15')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egypt Signs Agreement for New Urban Transport Company</span>
+          <span class="title-ar" dir="rtl">مصر توقع اتفاقية لشركة نقل مدن جديدة</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Egypt&#x27;s government has signed an investment agreement between &#x27;Madinat Masr for Asset and Facility Management&#x27; and &#x27;Masr Transportation&#x27; to establish &#x27;Madinat Masr Transportation&#x27;, which will operate and manage smart and sustainable transportation systems in new urban cities. The agreement was signed by Engineer Mohamed Mahmoud Abotaleb, CEO of &#x27;Madinat Masr for Asset and Facility Management&#x27;, and Hisham Ahmed Taha, CEO of &#x27;Masr Transportation&#x27;. The new company will operate a fleet of 200 new vehicles and establish an integrated system for fleet management, including central and sub-control rooms, electronic equipment for vehicles, stations, and garages, and an electronic payment system in cooperation with the National Bank of Egypt. The project aims to provide a smart, safe, and sustainable urban transportation service, with the possibility of gradual expansion to cover more new urban cities.</div>
+        </div>
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">أقامت الحكومة المصرية اتفاقية استثمار بين شركة &#x27;مدن مصر لإدارة الأصول والمرافق&#x27; وشركة &#x27;مواصلات مصر&#x27; لتأسيس شركة &#x27;مواصلات مدن مصر&#x27;، التي ستتولى تشغيل وإدارة منظومة النقل الذكي والمستدام داخل المدن العمرانية الجديدة. تم التوقيع على الاتفاقية من قبل المهندس محمد محمود أبوطالب، الرئيس التنفيذي لشركة &#x27;مدن مصر لإدارة الأصول والمرافق&#x27;، وهشام أحمد طه، الرئيس التنفيذي لشركة &#x27;مواصلات مصر&#x27;. ستشغل الشركة أسطولًا من 200 مركبة جديدة وتؤسس منظومة متكاملة لإدارة وتشغيل الأسطول، بما في ذلك غرف عمليات مركزية وفرعية، وتجهيزات إلكترونية للمركبات والمحطات والجراجات، ومنظومة للدفع الإلكتروني بالتعاون مع البنك الأهلي المصري. يهدف المشروع إلى توفير خدمة نقل حضري ذكية وآمنة ومستدامة، مع إمكانية التوسع التدريجي لتغطية المزيد من المدن العمرانية الجديدة.</div>
+        </div>
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://almalnews.com/2128217/مدبولي-يشهد-توقيع-اتفاقية-تأسيس-شركة-«مواصلات/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
+      </div>
+    </div>
+    <div class="card card-high" id="c16" onclick="toggle('c16')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Misr Italia Launches Amare Seafront Villas in Ras El Hekma</span>
@@ -671,7 +1028,7 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2128256/«مصر-إيطاليا»-العقارية-تطلق-مرحلة-«Amare»-بمشروع/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-high" id="c6" onclick="toggle('c6')">
+    <div class="card card-high" id="c17" onclick="toggle('c17')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Egypt&#x27;s Ministry of Housing Land Auction</span>
@@ -708,7 +1065,65 @@
         <div class="card-foot"><a class="source-link" href="https://almalnews.com/2128265/«الإسكان»-تستهدف-تحصيل-6-57-مليار-من/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
       </div>
     </div>
-    <div class="card card-high" id="c7" onclick="toggle('c7')">
+    <div class="card card-mid" id="c18" onclick="toggle('c18')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Global Credit Markets Appear Stable</span>
+          <span class="title-ar" dir="rtl">أسواق الائتمان العالمية تظهر استقرارًا</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">Global credit markets appear stable, with strong bond issuances, declining default cases, and controlled credit spreads, despite the Middle East war. However, this picture hides more concentrated pressures on lower-rated borrowers, especially with a large wave of debt maturities approaching. The current situation is characterized by a comfortable position for credit markets at first glance, but it conceals underlying issues for weaker borrowers.</div>
+        </div>
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">تظهر أسواق الائتمان العالمية استقرارًا، مع إصدارات سندات قوية، وحالات تعثر في الانخفاض، وفروق عائد ائتماني تحت السيطرة، على الرغم من الحرب في الشرق الأوسط. ومع ذلك، تخفي هذه الصورة ضغوطًا أكثر تركيزًا لدى المقترضين الأضعف تصنيفًا، خاصة مع اقتراب موجة كبيرة من استحقاقات الديون. يتميز الوضع الحالي بموقع مريح لأسواق الائتمان على الأول نظر، لكنه يخفي مشاكل خفية للمقترضين الأضعف.</div>
+        </div>
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://almalnews.com/2128268/أسواق-الائتمان-تتماسك-رغم-الحرب-ومخاطر-التعثر/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
+      </div>
+    </div>
+    <div class="card card-mid" id="c19" onclick="toggle('c19')">
+      <div class="card-head">
+        <div class="card-title">
+          <span class="title-en">Egypt Weighs $1 Bn Solar Panel Plant</span>
+          <span class="title-ar" dir="rtl">مصر تدرس مشروعا بقيمة 1 مليار دولار لتصنيع اللوحات الشمسية</span>
+        </div>
+        <div class="card-head-right">
+          <span class="tier-badge tier-mid">Summary</span>
+          <div class="card-chevron">&#x203A;</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-grid">
+          
+        <div class="field full en-content">
+          <div class="field-label">Executive Summary</div>
+          <div class="field-text">The Egyptian government is considering a USD 1 billion solar panel plant in Zafarana, which would cover the entire value chain from domestic quartz ore to finished panels. The plant, spanning 917 feddans, is planned as a public-private partnership to localize renewable-component manufacturing. This project joins a similar one in New Alamein, where Alamein for Silicon Products is working on a USD 140 million project to produce high-purity silicon from local silica sand. The Zafarana plant aims to address the significant bottleneck of imported panels and cells, which account for roughly 70% of solar project costs. Other solar projects in Egypt include a Chinese-led FDI wave in the Suez Canal Economic Zone, with companies like Elite Solar, Atum Solar, and Sunrev Solar investing in solar component factories. Additionally, the Arab Organization for Industrialization is working on a USD 200-300 million factory with Sweden&#x27;s Sunshine Pro to export 1 GW of panels to Europe annually.</div>
+        </div>
+          
+          
+        <div class="field full ar-content" dir="rtl">
+          <div class="field-label">الملخص التنفيذي</div>
+          <div class="field-text">تدرس الحكومة المصرية مشروعا بقيمة 1 مليار دولار لتصنيع اللوحات الشمسية في ظفرنة، والذي سيغطي سلاسل القيمة الكاملة من خام الكوارتز المحلي إلى اللوحات الجاهزة. سيتم تنفيذ المشروع على مساحة 917 فدانا كشراكة بين القطاعين العام والخاص لتحقيق تصنيع مكونات الطاقة المتجددة محليا. ينضم هذا المشروع إلى مشروع مماثل في العلمين الجديدة، حيث تعمل شركة العلمين لمنتجات السيليكون على مشروع بقيمة 140 مليون دولار لإنتاج سيليكون عالي النقاوة من الرمال السيليكا المحلية. يهدف مشروع ظفرنة إلى解决 العائق الكبير للوحات وخلية الشمس المستوردة، والتي تمثل حوالي 70٪ من تكاليف مشاريع الطاقة الشمسية. تشمل المشاريع الشمسية الأخرى في مصر موجة استثمارات أجنبية مباشرة بقيادة الصين في منطقة قناة السويس الاقتصادية، حيث تستثمر شركات مثل إليت سولار وآتوم سولار وسن ريف سولار في مصانع مكونات الطاقة الشمسية. بالإضافة إلى ذلك، تعمل المنظمة العربية للتنمية الصناعية على مشروع بقيمة 200-300 مليون دولار مع شركة صن شاين برو السويدية لتصدير 1 غيغاواط من اللوحات إلى أوروبا سنويا.</div>
+        </div>
+          
+        </div>
+        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/08/06/the-government-is-weighing-a-usd-1-bn-integrated-quartz-to-panel-solar-plant-in-zafarana/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
+      </div>
+    </div>
+    <div class="card card-high" id="c20" onclick="toggle('c20')">
       <div class="card-head">
         <div class="card-title">
           <span class="title-en">Egypt Targets EGP 17.3bn in North Coast Property Tax</span>
@@ -743,391 +1158,6 @@
         </div>
         </div>
         <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/08/06/finmin-widens-property-tax-net-with-north-coast-resort-inventory/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
-      </div>
-    </div>
-  </section>
-  <section class="day-group">
-    <div class="day-header">
-      <span class="day-label">Also in the News</span>
-      <div class="day-rule"></div>
-      <span class="day-count">15 articles</span>
-    </div>
-    
-    <div class="card card-mid" id="c8" onclick="toggle('c8')">
-      <div class="card-head">
-        <div class="card-title">
-          <span class="title-en">Egypt Launches $100M Memphis Fund</span>
-          <span class="title-ar" dir="rtl">مصر تطلق صندوق ميمفيس بقيمة 100 مليون دولار</span>
-        </div>
-        <div class="card-head-right">
-          <span class="tier-badge tier-mid">Summary</span>
-          <div class="card-chevron">&#x203A;</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="card-grid">
-          
-        <div class="field full en-content">
-          <div class="field-label">Executive Summary</div>
-          <div class="field-text">The Egyptian government is set to launch the Memphis Fund, a USD-denominated investment fund targeting Egyptians abroad, with a goal of raising up to $100 million within a year. The fund will be managed by NI Capital Asset Management and will invest exclusively in Egyptian sovereign debt instruments. The launch is part of a broader package of financial services for the diaspora, announced during the seventh Egyptians Abroad Conference. The government is also studying a new car initiative for Egyptians abroad, offering locally manufactured vehicles at competitive prices, as part of its auto-localization strategy. Remittances from Egyptians abroad have reached a record $43.1 billion in the first 11 months of FY 2025/26, making them a crucial balance-of-payments anchor. The Memphis Fund is separate from the planned $1 billion Egyptians Abroad Investment Company, which aims to establish physical projects in agriculture, trade, and manufacturing.</div>
-        </div>
-          
-          
-        <div class="field full ar-content" dir="rtl">
-          <div class="field-label">الملخص التنفيذي</div>
-          <div class="field-text">تعتزم الحكومة المصرية إطلاق صندوق ميمفيس، وهو صندوق استثماري بالدولار الأمريكي يستهدف المصريين في الخارج، مع هدف جمع ما يصل إلى 100 مليون دولار في غضون عام. سيتم إدارة الصندوق من قبل شركة إني كابيتال لإدارة الأصول وسيستثمر حصريًا في أدوات الدين السيادي المصرية. الإطلاق هو جزء من حزمة خدمات مالية أوسع نطاقًا للمغتربين، التي تم الإعلان عنها خلال المؤتمر السابع للمصريين في الخارج. تقوم الحكومة أيضًا بدراسة مبادرة جديدة للسيارات للمصريين في الخارج، تقدم سيارات مصنعة محليًا بأسعار تنافسية، كجزء من استراتيجية تحويل صناعة السيارات المحلية. بلغت الحوالات المالية من المصريين في الخارج رقمًا قياسيًا قدره 43.1 مليار دولار في أول 11 شهرًا من السنة المالية 2025/2026، مما يجعلها رافعة توازن مدفوعات حيوية. صندوق ميمفيس منفصل عن شركة الاستثمار المصرية للمغتربين، التي تهدف إلى إنشاء مشاريع مادية في الزراعة والتجارة والصناعة.</div>
-        </div>
-          
-        </div>
-        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/08/09/govt-prepares-investment-fund-targeting-usd-100-mn-for-egyptians-abroad/" target="_blank" rel="noopener">&#x2197; Read on </a></div>
-      </div>
-    </div>
-    <div class="card card-mid" id="c9" onclick="toggle('c9')">
-      <div class="card-head">
-        <div class="card-title">
-          <span class="title-en">S&amp;P Considers Demoting Egypt to Frontier Market</span>
-          <span class="title-ar" dir="rtl">إس أند بي تدرس خفض تصنيف مصر إلى سوق حافة</span>
-        </div>
-        <div class="card-head-right">
-          <span class="tier-badge tier-mid">Summary</span>
-          <div class="card-chevron">&#x203A;</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="card-grid">
-          
-        <div class="field full en-content">
-          <div class="field-label">Executive Summary</div>
-          <div class="field-text">S&amp;P Dow Jones Indices&#x27; consultation on demoting Egypt from Emerging to Frontier market status has closed, with a decision expected within months. The Egyptian Exchange (EGX) argued against the demotion, citing a macro turnaround, including easing repatriation delays, high net foreign assets, and record reserves. EGX Chairman Omar Radwan pointed to a record EGP 15.6 billion day of trading volume as evidence the market is headed for an upgrade. The demotion consideration comes amid concerns that the EGX is too small and foreign-hostile to justify Emerging Market weighting.</div>
-        </div>
-          
-          
-        <div class="field full ar-content" dir="rtl">
-          <div class="field-label">الملخص التنفيذي</div>
-          <div class="field-text">أغلقت إس أند بي داوي جونز للفهارس استشارتها حول خفض تصنيف مصر من سوق ناشئ إلى سوق حافة، ومتوقع أن يتم الإعلان عن القرار في غضون أشهر. وطالب بورصة مصر (EGX) بعدم خفض التصنيف، مستدلاً بالتحول الكبير في الاقتصاد، بما في ذلك تسهيل إعادة تصدير الأموال، وارتفاع الاحتياطيات الأجنبية الصافية، والاحتياطيات القياسية. وأشار رئيس بورصة مصر عمر رضوان إلى يوم التداول القياسي بقيمة 15.6 مليار جنيه مصري كدليل على أن السوق متجه نحو الترقية، لا الخفض. جاءت هذه الخطوة في ظل المخاوف من أن بورصة مصر صغيرة جدًا وعدائية للأجانب لتحقيق وزن السوق الناشئة.</div>
-        </div>
-          
-        </div>
-        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/08/09/local-institutions-prop-up-egx-in-1h-as-foreign-selloff-tests-market-depth/" target="_blank" rel="noopener">&#x2197; Read on </a></div>
-      </div>
-    </div>
-    <div class="card card-mid" id="c10" onclick="toggle('c10')">
-      <div class="card-head">
-        <div class="card-title">
-          <span class="title-en">Egypt Unemployment Rate Drops to 5.8%</span>
-          <span class="title-ar" dir="rtl">معدل البطالة في مصر ينخفض إلى 5.8%</span>
-        </div>
-        <div class="card-head-right">
-          <span class="tier-badge tier-mid">Summary</span>
-          <div class="card-chevron">&#x203A;</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="card-grid">
-          
-        <div class="field full en-content">
-          <div class="field-label">Executive Summary</div>
-          <div class="field-text">Egypt&#x27;s unemployment rate decreased to 5.8% in 2Q 2026, down from 6.0% in the previous quarter. The number of employed people rose to 33.56 million from 33.28 million, according to Capmas data. Male unemployment eased to 3.4% from 3.6%, while female unemployment edged up to 14.4% from 14.3%. Meanwhile, the North Coast is adapting to a changing market, with developers recalibrating as buyer behavior shifts and luxury retail expanding. The wellness and sports scene is also becoming a summer destination.</div>
-        </div>
-          
-          
-        <div class="field full ar-content" dir="rtl">
-          <div class="field-label">الملخص التنفيذي</div>
-          <div class="field-text">انخفض معدل البطالة في مصر إلى 5.8% في الربع الثاني من 2026، xuống من 6.0% في الربع السابق. ارتفع عدد العاملين إلى 33.56 مليون من 33.28 مليون، وفقًا لبيانات الجهاز المركزي للتعبئة العامة والإحصاء. انخفض معدل البطالة بين الذكور إلى 3.4% من 3.6%، في حين ارتفع معدل البطالة بين الإناث إلى 14.4% من 14.3%. وفي غضون ذلك، تتكيف الساحل الشمالي مع تغييرات في السوق، حيث يعيد المطورون تحديد أهدافهم مع تغير سلوك المشترين وتوسع التجزئة الفاخرة. كما يصبح قطاع الرفاهية والرياضة وجهة صيفية</div>
-        </div>
-          
-        </div>
-        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/08/09/cabinet-locks-in-fy-2026-27-industrial-land-rules-while-keeping-prices-under-wraps/" target="_blank" rel="noopener">&#x2197; Read on </a></div>
-      </div>
-    </div>
-    <div class="card card-mid" id="c11" onclick="toggle('c11')">
-      <div class="card-head">
-        <div class="card-title">
-          <span class="title-en">Imkan Misr Signs New Contracts Worth EGP 3 Billion</span>
-          <span class="title-ar" dir="rtl">عقدت شركة إمكان مصر على مشاريع بقيمة 3 مليارات جنيه</span>
-        </div>
-        <div class="card-head-right">
-          <span class="tier-badge tier-mid">Summary</span>
-          <div class="card-chevron">&#x203A;</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="card-grid">
-          
-        <div class="field full en-content">
-          <div class="field-label">Executive Summary</div>
-          <div class="field-text">Imkan Misr, a real estate company, has signed new contracts worth EGP 3 billion to execute construction works, including residential and administrative buildings, and infrastructure development within the &#x27;Al-Borouj&#x27; project in New Heliopolis City. The company&#x27;s CEO, Ahmed Arif, stated that they prioritize accelerating the execution pace, emphasizing the importance of adhering to timelines. Arif noted that any delays in execution directly affect the final project cost. The &#x27;Al-Borouj&#x27; project has delivered 2,618 residential units so far, with 1,846 families currently residing in the project. The company aims to deliver 600 units this year and an additional 600 in 2027, totaling around 5,000 units in the next three years. The project spans 5 million square meters, comprising 16,000 residential units, with an investment plan of EGP 100 billion. Current project works are valued at EGP 12 billion, including a power station, landscaping, and a sports club. Since 2016, Imkan Misr has invested over $400 million in the project, which will be reinvested in construction, infrastructure, and services, ensuring the project&#x27;s completion by 2031.</div>
-        </div>
-          
-          
-        <div class="field full ar-content" dir="rtl">
-          <div class="field-label">الملخص التنفيذي</div>
-          <div class="field-text">عقدت شركة إمكان مصر العقارية على مشاريع جديدة بقيمة 3 مليارات جنيه لتنفيذ أعمال مقاولات تشمل إنشاء مبانٍ سكنية وإدارية وتنفيذ أعمال البنية الأساسية داخل مشروع البروج بمدينة هليوبوليس الجديدة. وأكد أحمد عارف، الرئيس التنفيذي للشركة، على أهمية تسريع وتيرة التنفيذ، مشيرًا إلى أن التزام شركات المقاولات بالجداول الزمنية يمثل عنصرًا رئيسيًا في نجاح خطة التسليمات. وأشار عارف إلى أن أي تأخير في تنفيذ الأعمال ينعكس بصورة مباشرة على التكلفة النهائية للمشروعات. وقد سلم مشروع البروج حتى الآن 2618 وحدة سكنية، مع إقامة فعلية لنحو 1846 أسرة داخل المشروع. وتستهدف الشركة تسليم 600 وحدة خلال العام الجاري، و600 أخرى إضافية خلال 2027، ليصل الإجمالي إلى نحو 5 آلاف وحدة خلال السنوات الثلاث المقبلة. يمتد مشروع البروج على مساحة 5 ملايين متر مربع، ويضم نحو 16 ألف وحدة سكنية ضمن خطة استثمارية تبلغ 100 مليار جنيه. ويصل حجم الأعمال الجارية بالمشروع إلى 12 مليار جنيه، تشمل تنفيذ محطة كهرباء بالتعاون مع شركة مدكور، وأعمال اللاندسكيب، واستكمال النادي الرياضي، وإنشاء مسجد. وأكد عارف أن الشركة ضخت أكثر من 400 مليون دولار منذ عام 2016 في تطوير البروج، موضحًا أن هذه التدفقات الدولارية أُعيد استثمارها في أعمال الإنشاءات والبنية الأساسية والخدمات.</div>
-        </div>
-          
-        </div>
-        <div class="card-foot"><a class="source-link" href="https://almalnews.com/2128085/«إمكان-مصر»-تبرم-عقود-مقاولات-بـ3-مليارات/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
-      </div>
-    </div>
-    <div class="card card-mid" id="c12" onclick="toggle('c12')">
-      <div class="card-head">
-        <div class="card-title">
-          <span class="title-en">Egypt Central Bank Prepares Sustainable Finance Taxonomy</span>
-          <span class="title-ar" dir="rtl">البنك المركزي المصري يُعد لتصنيف التمويل المستدام</span>
-        </div>
-        <div class="card-head-right">
-          <span class="tier-badge tier-mid">Summary</span>
-          <div class="card-chevron">&#x203A;</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="card-grid">
-          
-        <div class="field full en-content">
-          <div class="field-label">Executive Summary</div>
-          <div class="field-text">The Central Bank of Egypt has begun preparing to issue a &#x27;Sustainable Finance Taxonomy&#x27; to provide accurate and reliable data on sustainable economic activities. A technical working group has been formed, comprising the Ministry of Foreign Affairs, Ministry of Finance, Ministry of Local Development, Ministry of Environment, Ministry of Investment and International Cooperation, and the Financial Regulatory Authority. The group aims to coordinate efforts and participate in the preparation of the taxonomy. The first meeting of the working group was held at the Central Bank of Egypt, where the bank&#x27;s approach to the taxonomy was explained, and international experiences and standards were presented. The meeting agreed to start immediate implementation steps, emphasizing the importance of full coordination among working group members.</div>
-        </div>
-          
-          
-        <div class="field full ar-content" dir="rtl">
-          <div class="field-label">الملخص التنفيذي</div>
-          <div class="field-text">بدأ البنك المركزي المصري في إعداد تصنيف التمويل المستدام لتوفير بيانات دقيقة ومعتمدة حول الأنشطة الاقتصادية المستدامة. تم تشكيل مجموعة عمل فنية تضم وزارات الخارجية والتعاون الدولي والمصريين بالخارج والمالية والتنمية المحلية والبيئة والاستثمار والتجارة الخارجية والهيئة العامة للرقابة المالية. اجتمعت المجموعة في مقر البنك المركزي المصري لشرح توجه البنك في التصنيف المزمع إصداره وعرض الخبرات الدولية والمعايير المتبعة. وافق الاجتماع على البدء في الخطوات التنفيذية مع التأكيد على أهمية التنسيق بين أعضاء المجموعة.</div>
-        </div>
-          
-        </div>
-        <div class="card-foot"><a class="source-link" href="https://almalnews.com/2128130/لتعزيز-الاستثمار-الأخضر-المركزي-المصري-يبدأ-خطوات/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
-      </div>
-    </div>
-    <div class="card card-mid" id="c13" onclick="toggle('c13')">
-      <div class="card-head">
-        <div class="card-title">
-          <span class="title-en">Egyptian Stock Exchange Announces New Shareholder</span>
-          <span class="title-ar" dir="rtl">البورصة المصرية تعلن عن مساهم جديد</span>
-        </div>
-        <div class="card-head-right">
-          <span class="tier-badge tier-mid">Summary</span>
-          <div class="card-chevron">&#x203A;</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="card-grid">
-          
-        <div class="field full en-content">
-          <div class="field-label">Executive Summary</div>
-          <div class="field-text">The Egyptian Stock Exchange announced that a new shareholder, Rashid Abdou Abd El-Halim Hassan, has acquired an 8.656% stake in Egyptian Group Real Estate Company. Hassan purchased 34.63 million shares at an average price of 1.59 EGP per share, totaling approximately 55.05 million EGP. Prior to the transaction, Hassan did not own any shares in the company. The deal was executed through Taiyon Brokerage Company on August 4, 2026. According to the disclosure statement, there are no related parties to the buyer, either under the securities registration rules or the Capital Market Law.</div>
-        </div>
-          
-          
-        <div class="field full ar-content" dir="rtl">
-          <div class="field-label">الملخص التنفيذي</div>
-          <div class="field-text">أعلنت البورصة المصرية عن شراء مساهم جديد، رشيد عبده عبد الحليم حسن، حصة تبلغ 8.656% من رأسمال شركة المجموعة المصرية العقارية. اشترى حسن 34.63 مليون سهم بمعدل سعر شراء 1.59 جنيه للسهم، بقيمة إجمالية تبلغ نحو 55.05 مليون جنيه. ولم يكن حسن يمتلك أي أسهم في الشركة قبل تنفيذ الصفقة. تم تنفيذ الصفقة من خلال شركة تايكون للوساطة في الأوراق المالية، بتاريخ 4 أغسطس 2026. وأظهرت بيانات الإفصاح عدم وجود مجموعات مرتبطة بالمشتري، سواء وفقًا لقواعد قيد الأوراق المالية أو لقانون سوق رأس المال.</div>
-        </div>
-          
-        </div>
-        <div class="card-foot"><a class="source-link" href="https://almalnews.com/2128134/مساهم-جديد-يستحوذ-على-8-66-من/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
-      </div>
-    </div>
-    <div class="card card-mid" id="c14" onclick="toggle('c14')">
-      <div class="card-head">
-        <div class="card-title">
-          <span class="title-en">Egypt&#x27;s Housing Minister Inspects Projects</span>
-          <span class="title-ar" dir="rtl">وزيرة الإسكان تفتش المشروعات السكنية</span>
-        </div>
-        <div class="card-head-right">
-          <span class="tier-badge tier-mid">Summary</span>
-          <div class="card-chevron">&#x203A;</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="card-grid">
-          
-        <div class="field full en-content">
-          <div class="field-label">Executive Summary</div>
-          <div class="field-text">Egypt&#x27;s Minister of Housing, Utilities, and Urban Communities, Randa Mansour, inspected the implementation of several housing projects in New Obour, Sadat, New Suez, New Mansoura, and October Gardens cities. The projects include the presidential initiative &#x27;Housing for All Egyptians&#x27;, &#x27;Diyarna&#x27;, and &#x27;Green Housing&#x27;. Mansour emphasized the importance of continuous field follow-up to ensure the implementation of projects according to the specified timelines and to address any obstacles. She also stressed the need to adhere to the highest quality standards and technical specifications. The minister inspected the sixth phase of the Green Housing project in New Obour, which includes 143 buildings and 3,432 housing units. She also inspected the &#x27;Diyarna&#x27; project, which includes 99 buildings and 2,574 housing units. Additionally, Mansour reviewed the progress of projects in other cities, including New Suez, New Mansoura, and October Gardens, and emphasized the need to accelerate the implementation of the projects and adhere to the technical specifications.</div>
-        </div>
-          
-          
-        <div class="field full ar-content" dir="rtl">
-          <div class="field-label">الملخص التنفيذي</div>
-          <div class="field-text">تفقدت المهندسة راندة المنشاوي، وزيرة الإسكان والمرافق والمجتمعات العمرانية، تنفيذ عدد من المشروعات السكنية بمدن العبور الجديدة والسادات والسويس الجديدة والمنصورة الجديدة وحدائق أكتوبر. وشملت المشروعات مبادرة الرئيس &quot;سكن لكل المصريين&quot; و&quot;ديارنا&quot; والإسكان الأخضر. وأكدت المنشاوي على أهمية المتابعة الميدانية المستمرة لضمان تنفيذ المشروعات وفق البرامج الزمنية المحددة ومواجهة أي معوقات. كما أكدت على ضرورة الالتزام بأعلى معايير الجودة والمواصفات الفنية. وقامت المنشاوي بتفقد المرحلة السادسة من مشروع الإسكان الأخضر بالعبور الجديدة، الذي يضم 143 عمارة و3432 وحدة سكنية. كما تفقدت مشروع &quot;ديارنا&quot; الذي يضم 99 عمارة و2574 وحدة سكنية. بالإضافة إلى ذلك، قامت المنشاوي بمراجعة تقدم المشروعات في المدن الأخرى، بما في ذلك السويس الجديدة والمنصورة الجديدة وحدائق أكتوبر، وشددت على ضرورة تسريع تنفيذ المشروعات والالتزام بالمواصفات الفنية.</div>
-        </div>
-          
-        </div>
-        <div class="card-foot"><a class="source-link" href="https://almalnews.com/2128163/وزيرة-الإسكان-تتابع-تنفيذ-مشروعات-سكنية-بـ5/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
-      </div>
-    </div>
-    <div class="card card-mid" id="c15" onclick="toggle('c15')">
-      <div class="card-head">
-        <div class="card-title">
-          <span class="title-en">Egyptian Real Estate Stocks Performance</span>
-          <span class="title-ar" dir="rtl">أداء أسهم قطاع العقارات المصري</span>
-        </div>
-        <div class="card-head-right">
-          <span class="tier-badge tier-mid">Summary</span>
-          <div class="card-chevron">&#x203A;</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="card-grid">
-          
-        <div class="field full en-content">
-          <div class="field-label">Executive Summary</div>
-          <div class="field-text">The Egyptian real estate sector&#x27;s stock performance varied on Wednesday, with some stocks gaining and others declining. Amer Group&#x27;s stock rose 9.34% to 6.09 EGP, followed by Al Naem Real Estate&#x27;s 6.71% increase to 17.50 EGP. Other stocks that gained include Emaar Misr, Sixth of October Development and Investment (SODIC), and Ismailia New Urban Communities. In contrast, United Housing and Development&#x27;s stock declined 2.16% to 18.12 EGP, followed by Egyptian Real Estate Group&#x27;s 1.84% decrease to 1.60 EGP. Some stocks remained stable, including Al Shams Housing and Development, which closed at 14.15 EGP.</div>
-        </div>
-          
-          
-        <div class="field full ar-content" dir="rtl">
-          <div class="field-label">الملخص التنفيذي</div>
-          <div class="field-text">تباين أداء أسهم قطاع العقارات المصري في ختام تعاملات جلسة الأربعاء، حيث سجلت بعض الأسهم مكاسب قوية، فيما تراجعت أسهم أخرى. ارتفع سهم مجموعة عامر بنسبة 9.34% إلى 6.09 جنيه، تلاه سهم مجموعة النعيم العقارية بنسبة 6.71% إلى 17.50 جنيه. كما ارتفع سهم إعمار مصر، وسهم السادس من أكتوبر للتنمية والاستثمار، وسهم الإسماعيلية الجديدة للتطوير والتنمية العمرانية. في المقابل، تراجع سهم المتحدة للإسكان والتعمير بنسبة 2.16% إلى 18.12 جنيه، تلاه سهم المجموعة المصرية العقارية بنسبة 1.84% إلى 1.60 جنيه. استقر سهم الشمس للإسكان والتعمير عند 14.15 جنيه دون تغيير.</div>
-        </div>
-          
-        </div>
-        <div class="card-foot"><a class="source-link" href="https://almalnews.com/2128167/أسهم-العقارات-تتباين-«عامر-جروب»-و«إعمار-مصر»/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
-      </div>
-    </div>
-    <div class="card card-mid" id="c16" onclick="toggle('c16')">
-      <div class="card-head">
-        <div class="card-title">
-          <span class="title-en">Egypt, Diar Qatari Company Partner on North Coast Development</span>
-          <span class="title-ar" dir="rtl">مصر وشركة الديار القطرية تتعاونان في مشروع تنمية الساحل الشمالي</span>
-        </div>
-        <div class="card-head-right">
-          <span class="tier-badge tier-mid">Summary</span>
-          <div class="card-chevron">&#x203A;</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="card-grid">
-          
-        <div class="field full en-content">
-          <div class="field-label">Executive Summary</div>
-          <div class="field-text">Egypt&#x27;s Prime Minister, Dr. Mostafa Madbouly, held a meeting to follow up on the development project of Al-Alamein area on the North Coast. The meeting was attended by the Minister of Housing, Randa Al-Manshawi, and the CEO of Diar Qatari Company, Sheikh Hamad bin Talal Al Thani. The project aims to establish a new development point on the North Coast, with various projects, including educational, health, residential, hotel, and commercial components, as well as entertainment and services. The CEO of Diar Qatari Company praised the developmental boom in the North Coast and confirmed that the company aims to execute the project at the highest level through partnerships with major global companies.</div>
-        </div>
-          
-          
-        <div class="field full ar-content" dir="rtl">
-          <div class="field-label">الملخص التنفيذي</div>
-          <div class="field-text">عقد رئيس الوزراء المصري، الدكتور مصطفى مدبولي، اجتماعًا لمتابعة مستجدات مشروع تنمية وتطوير منطقة علم الروم بالساحل الشمالي. وحضر الاجتماع وزيرة الإسكان، راندة المنشاوي، والشيخ حمد بن طلال آل ثاني، الرئيس التنفيذي لشركة الديار القطرية. يهدف المشروع إلى إنشاء نقطة جذب تنموية جديدة على ضفاف الساحل الشمالي، تشهد تنفيذ مشروعات متنوعة، في ضوء خطط الدولة للاستفادة المثلى من الأراضي الشاطئية. وأشاد الشيخ حمد بن طلال آل ثاني بالنهضة التنموية التي يشهدها الساحل الشمالي في مصر، مؤكدًا أن الشركة تستهدف تنفيذ المشروع على أعلى مستوى، من خلال شراكات مع كبرى الشركات العالمية.</div>
-        </div>
-          
-        </div>
-        <div class="card-foot"><a class="source-link" href="https://almalnews.com/2128213/باجتماع-مع-مدبولي-رئيس-«الديار»-القطرية-شراكات/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
-      </div>
-    </div>
-    <div class="card card-mid" id="c17" onclick="toggle('c17')">
-      <div class="card-head">
-        <div class="card-title">
-          <span class="title-en">Egypt Signs Cooperation Protocol</span>
-          <span class="title-ar" dir="rtl">مصر توقع بروتوكول تعاون</span>
-        </div>
-        <div class="card-head-right">
-          <span class="tier-badge tier-mid">Summary</span>
-          <div class="card-chevron">&#x203A;</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="card-grid">
-          
-        <div class="field full en-content">
-          <div class="field-label">Executive Summary</div>
-          <div class="field-text">Egypt&#x27;s Prime Minister, Dr. Mostafa Madbouly, witnessed the signing of a cooperation protocol between the Ministry of Housing, Utilities, and Urban Communities, represented by the New Urban Communities Authority, and the Egypt Future Development Sustainable Development Agency. The protocol aims to enhance joint cooperation in exploiting and developing owned lands, implementing developmental and investment projects, and achieving optimal use of assets. The signing ceremony was attended by Dr. Randa Al-Manshawi, Minister of Housing, Utilities, and Urban Communities, and Dr. Bahaa El-Ghanam, Executive Director of the Egypt Future Development Sustainable Development Agency. The protocol includes preparing technical and economic studies, coordinating marketing and promotion efforts, and forming joint technical and financial committees to follow up on project implementation.</div>
-        </div>
-          
-          
-        <div class="field full ar-content" dir="rtl">
-          <div class="field-label">الملخص التنفيذي</div>
-          <div class="field-text">شهد الدكتور مصطفى مدبولي، رئيس الوزراء، توقيع بروتوكول تعاون بين وزارة الإسكان والمرافق والمجتمعات العمرانية ممثلة في هيئة المجتمعات العمرانية الجديدة، وجهاز مستقبل مصر للتنمية المستدامة. يهدف البروتوكول إلى تعزيز التعاون المشترك في استغلال وتطوير الأراضي المملوكة، وتنفيذ مشروعات تنموية واستثمارية تحقق الاستخدام الأمثل للأصول. حضر مراسم التوقيع المهندسة راندة المنشاوي، وزيرة الإسكان والمرافق والمجتمعات العمرانية، والدكتور بهاء الغنام، المدير التنفيذي لجهاز مستقبل مصر للتنمية المستدامة. يتضمن البروتوكول إعداد الدراسات الفنية والاقتصادية، والتنسيق في أعمال التسويق والترويج، وتشكيل لجان فنية ومالية مشتركة لمتابعة تنفيذ المشروعات.</div>
-        </div>
-          
-        </div>
-        <div class="card-foot"><a class="source-link" href="https://almalnews.com/2128215/رئيس-الوزراء-يشهد-توقيع-بروتوكول-بين-هيئة/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
-      </div>
-    </div>
-    <div class="card card-mid" id="c18" onclick="toggle('c18')">
-      <div class="card-head">
-        <div class="card-title">
-          <span class="title-en">Egypt Signs Agreement for New Urban Transport Company</span>
-          <span class="title-ar" dir="rtl">مصر توقع اتفاقية لشركة نقل مدن جديدة</span>
-        </div>
-        <div class="card-head-right">
-          <span class="tier-badge tier-mid">Summary</span>
-          <div class="card-chevron">&#x203A;</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="card-grid">
-          
-        <div class="field full en-content">
-          <div class="field-label">Executive Summary</div>
-          <div class="field-text">Egypt&#x27;s government has signed an investment agreement between &#x27;Madinat Masr for Asset and Facility Management&#x27; and &#x27;Masr Transportation&#x27; to establish &#x27;Madinat Masr Transportation&#x27;, which will operate and manage smart and sustainable transportation systems in new urban cities. The agreement was signed by Engineer Mohamed Mahmoud Abotaleb, CEO of &#x27;Madinat Masr for Asset and Facility Management&#x27;, and Hisham Ahmed Taha, CEO of &#x27;Masr Transportation&#x27;. The new company will operate a fleet of 200 new vehicles and establish an integrated system for fleet management, including central and sub-control rooms, electronic equipment for vehicles, stations, and garages, and an electronic payment system in cooperation with the National Bank of Egypt. The project aims to provide a smart, safe, and sustainable urban transportation service, with the possibility of gradual expansion to cover more new urban cities.</div>
-        </div>
-          
-          
-        <div class="field full ar-content" dir="rtl">
-          <div class="field-label">الملخص التنفيذي</div>
-          <div class="field-text">أقامت الحكومة المصرية اتفاقية استثمار بين شركة &#x27;مدن مصر لإدارة الأصول والمرافق&#x27; وشركة &#x27;مواصلات مصر&#x27; لتأسيس شركة &#x27;مواصلات مدن مصر&#x27;، التي ستتولى تشغيل وإدارة منظومة النقل الذكي والمستدام داخل المدن العمرانية الجديدة. تم التوقيع على الاتفاقية من قبل المهندس محمد محمود أبوطالب، الرئيس التنفيذي لشركة &#x27;مدن مصر لإدارة الأصول والمرافق&#x27;، وهشام أحمد طه، الرئيس التنفيذي لشركة &#x27;مواصلات مصر&#x27;. ستشغل الشركة أسطولًا من 200 مركبة جديدة وتؤسس منظومة متكاملة لإدارة وتشغيل الأسطول، بما في ذلك غرف عمليات مركزية وفرعية، وتجهيزات إلكترونية للمركبات والمحطات والجراجات، ومنظومة للدفع الإلكتروني بالتعاون مع البنك الأهلي المصري. يهدف المشروع إلى توفير خدمة نقل حضري ذكية وآمنة ومستدامة، مع إمكانية التوسع التدريجي لتغطية المزيد من المدن العمرانية الجديدة.</div>
-        </div>
-          
-        </div>
-        <div class="card-foot"><a class="source-link" href="https://almalnews.com/2128217/مدبولي-يشهد-توقيع-اتفاقية-تأسيس-شركة-«مواصلات/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
-      </div>
-    </div>
-    <div class="card card-mid" id="c19" onclick="toggle('c19')">
-      <div class="card-head">
-        <div class="card-title">
-          <span class="title-en">Global Credit Markets Appear Stable</span>
-          <span class="title-ar" dir="rtl">أسواق الائتمان العالمية تظهر استقرارًا</span>
-        </div>
-        <div class="card-head-right">
-          <span class="tier-badge tier-mid">Summary</span>
-          <div class="card-chevron">&#x203A;</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="card-grid">
-          
-        <div class="field full en-content">
-          <div class="field-label">Executive Summary</div>
-          <div class="field-text">Global credit markets appear stable, with strong bond issuances, declining default cases, and controlled credit spreads, despite the Middle East war. However, this picture hides more concentrated pressures on lower-rated borrowers, especially with a large wave of debt maturities approaching. The current situation is characterized by a comfortable position for credit markets at first glance, but it conceals underlying issues for weaker borrowers.</div>
-        </div>
-          
-          
-        <div class="field full ar-content" dir="rtl">
-          <div class="field-label">الملخص التنفيذي</div>
-          <div class="field-text">تظهر أسواق الائتمان العالمية استقرارًا، مع إصدارات سندات قوية، وحالات تعثر في الانخفاض، وفروق عائد ائتماني تحت السيطرة، على الرغم من الحرب في الشرق الأوسط. ومع ذلك، تخفي هذه الصورة ضغوطًا أكثر تركيزًا لدى المقترضين الأضعف تصنيفًا، خاصة مع اقتراب موجة كبيرة من استحقاقات الديون. يتميز الوضع الحالي بموقع مريح لأسواق الائتمان على الأول نظر، لكنه يخفي مشاكل خفية للمقترضين الأضعف.</div>
-        </div>
-          
-        </div>
-        <div class="card-foot"><a class="source-link" href="https://almalnews.com/2128268/أسواق-الائتمان-تتماسك-رغم-الحرب-ومخاطر-التعثر/" target="_blank" rel="noopener">&#x2197; Read on Almal News</a></div>
-      </div>
-    </div>
-    <div class="card card-mid" id="c20" onclick="toggle('c20')">
-      <div class="card-head">
-        <div class="card-title">
-          <span class="title-en">Egypt Weighs $1 Bn Solar Panel Plant</span>
-          <span class="title-ar" dir="rtl">مصر تدرس مشروعا بقيمة 1 مليار دولار لتصنيع اللوحات الشمسية</span>
-        </div>
-        <div class="card-head-right">
-          <span class="tier-badge tier-mid">Summary</span>
-          <div class="card-chevron">&#x203A;</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="card-grid">
-          
-        <div class="field full en-content">
-          <div class="field-label">Executive Summary</div>
-          <div class="field-text">The Egyptian government is considering a USD 1 billion solar panel plant in Zafarana, which would cover the entire value chain from domestic quartz ore to finished panels. The plant, spanning 917 feddans, is planned as a public-private partnership to localize renewable-component manufacturing. This project joins a similar one in New Alamein, where Alamein for Silicon Products is working on a USD 140 million project to produce high-purity silicon from local silica sand. The Zafarana plant aims to address the significant bottleneck of imported panels and cells, which account for roughly 70% of solar project costs. Other solar projects in Egypt include a Chinese-led FDI wave in the Suez Canal Economic Zone, with companies like Elite Solar, Atum Solar, and Sunrev Solar investing in solar component factories. Additionally, the Arab Organization for Industrialization is working on a USD 200-300 million factory with Sweden&#x27;s Sunshine Pro to export 1 GW of panels to Europe annually.</div>
-        </div>
-          
-          
-        <div class="field full ar-content" dir="rtl">
-          <div class="field-label">الملخص التنفيذي</div>
-          <div class="field-text">تدرس الحكومة المصرية مشروعا بقيمة 1 مليار دولار لتصنيع اللوحات الشمسية في ظفرنة، والذي سيغطي سلاسل القيمة الكاملة من خام الكوارتز المحلي إلى اللوحات الجاهزة. سيتم تنفيذ المشروع على مساحة 917 فدانا كشراكة بين القطاعين العام والخاص لتحقيق تصنيع مكونات الطاقة المتجددة محليا. ينضم هذا المشروع إلى مشروع مماثل في العلمين الجديدة، حيث تعمل شركة العلمين لمنتجات السيليكون على مشروع بقيمة 140 مليون دولار لإنتاج سيليكون عالي النقاوة من الرمال السيليكا المحلية. يهدف مشروع ظفرنة إلى解决 العائق الكبير للوحات وخلية الشمس المستوردة، والتي تمثل حوالي 70٪ من تكاليف مشاريع الطاقة الشمسية. تشمل المشاريع الشمسية الأخرى في مصر موجة استثمارات أجنبية مباشرة بقيادة الصين في منطقة قناة السويس الاقتصادية، حيث تستثمر شركات مثل إليت سولار وآتوم سولار وسن ريف سولار في مصانع مكونات الطاقة الشمسية. بالإضافة إلى ذلك، تعمل المنظمة العربية للتنمية الصناعية على مشروع بقيمة 200-300 مليون دولار مع شركة صن شاين برو السويدية لتصدير 1 غيغاواط من اللوحات إلى أوروبا سنويا.</div>
-        </div>
-          
-        </div>
-        <div class="card-foot"><a class="source-link" href="https://enterpriseam.com/egypt/2026/08/06/the-government-is-weighing-a-usd-1-bn-integrated-quartz-to-panel-solar-plant-in-zafarana/" target="_blank" rel="noopener">&#x2197; Read on Enterprise AM</a></div>
       </div>
     </div>
     <div class="card card-mid" id="c21" onclick="toggle('c21')">
@@ -1189,22 +1219,6 @@
       </div>
     </div>
   </section>
-      
-    </div>
-  </div>
-
-  <!-- ARCHIVE -->
-  <div class="tab-panel" id="panel-archive">
-    <div class="archive-note">
-      <span class="archive-note-icon">📁</span>
-      Previous days' intelligence briefings. Each day's articles are appended here automatically when the next day's run completes.
-    </div>
-    <div class="search-wrap">
-      <input type="text" id="q-archive" placeholder="Search archived headlines and summaries…" oninput="filter('archive')"/>
-      <span id="filter-count-archive"></span>
-    </div>
-    <div id="feed-archive">
-      
   <section class="day-group">
     <div class="day-header">
       <span class="day-label">2026-08-05</span>
@@ -11548,7 +11562,7 @@
 
 <script>
 // ── WEATHER PAGINATOR ──────────────────────────────────────────────────────────
-const WX_DATA   = [];
+const WX_DATA   = [{t:"12AM",e:"🌙",c:28,d:"Mainly clear",now:false},{t:"1AM",e:"☁️",c:27,d:"Partly cloudy",now:false},{t:"2AM",e:"☁️",c:26,d:"Partly cloudy",now:false},{t:"3AM",e:"☁️",c:26,d:"Partly cloudy",now:false},{t:"4AM",e:"☁️",c:26,d:"Partly cloudy",now:false},{t:"5AM",e:"☁️",c:25,d:"Partly cloudy",now:false},{t:"6AM",e:"⛅",c:25,d:"Partly cloudy",now:false},{t:"7AM",e:"⛅",c:25,d:"Partly cloudy",now:false},{t:"8AM",e:"⛅",c:26,d:"Partly cloudy",now:false},{t:"9AM",e:"⛅",c:26,d:"Partly cloudy",now:false},{t:"10AM",e:"⛅",c:28,d:"Partly cloudy",now:true},{t:"11AM",e:"🌤️",c:30,d:"Mainly clear",now:false},{t:"12PM",e:"🌤️",c:32,d:"Mainly clear",now:false},{t:"1PM",e:"☀️",c:34,d:"Clear",now:false},{t:"2PM",e:"☀️",c:36,d:"Clear",now:false},{t:"3PM",e:"☀️",c:37,d:"Clear",now:false},{t:"4PM",e:"⛅",c:38,d:"Partly cloudy",now:false},{t:"5PM",e:"⛅",c:38,d:"Partly cloudy",now:false},{t:"6PM",e:"⛅",c:37,d:"Partly cloudy",now:false},{t:"7PM",e:"☁️",c:36,d:"Partly cloudy",now:false},{t:"8PM",e:"☁️",c:35,d:"Partly cloudy",now:false},{t:"9PM",e:"☁️",c:33,d:"Partly cloudy",now:false},{t:"10PM",e:"🌙",c:31,d:"Mainly clear",now:false},{t:"11PM",e:"🌙",c:30,d:"Clear",now:false}];
 let   wxCenter_idx = 0;  // index of the slot shown in the CENTER position
 
 function wxPage(dir) {
